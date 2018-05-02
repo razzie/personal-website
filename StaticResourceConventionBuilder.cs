@@ -4,38 +4,41 @@ using System;
 using System.IO;
 using System.Reflection;
 
-public static class StaticResourceConventionBuilder
+namespace razweb
 {
-    public static Func<NancyContext, string, Response> AddDirectory(string requestedPath, Assembly assembly, string namespacePrefix)
+    public static class StaticResourceConventionBuilder
     {
-        return (context, s) =>
+        public static Func<NancyContext, string, Response> AddDirectory(string requestedPath, Assembly assembly, string namespacePrefix)
         {
-            var path = context.Request.Path;
-
-            if (!path.StartsWith(requestedPath))
+            return (context, s) =>
             {
-                return null;
-            }
+                var path = context.Request.Path;
 
-            string resourcePath;
-            string name;
+                if (!path.StartsWith(requestedPath))
+                {
+                    return null;
+                }
 
-            var adjustedPath = path.Substring(requestedPath.Length + 1);
+                string resourcePath;
+                string name;
 
-            if (adjustedPath.IndexOf('/') >= 0)
-            {
-                name = Path.GetFileName(adjustedPath);
-                resourcePath = namespacePrefix + "." + adjustedPath
-                    .Substring(0, adjustedPath.Length - name.Length - 1)
-                    .Replace('/', '.');
-            }
-            else
-            {
-                name = adjustedPath;
-                resourcePath = namespacePrefix;
-            }
+                var adjustedPath = path.Substring(requestedPath.Length + 1);
 
-            return new EmbeddedFileResponse(assembly, resourcePath, name);
-        };
+                if (adjustedPath.IndexOf('/') >= 0)
+                {
+                    name = Path.GetFileName(adjustedPath);
+                    resourcePath = namespacePrefix + "." + adjustedPath
+                        .Substring(0, adjustedPath.Length - name.Length - 1)
+                        .Replace('/', '.');
+                }
+                else
+                {
+                    name = adjustedPath;
+                    resourcePath = namespacePrefix;
+                }
+
+                return new EmbeddedFileResponse(assembly, resourcePath, name);
+            };
+        }
     }
 }

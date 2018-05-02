@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Content\bootstrap-grid.css.map" />
@@ -73,6 +76,7 @@
     <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.3\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
     </Reference>
@@ -100,25 +104,53 @@
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Octokit, Version=0.29.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Octokit.0.29.0\lib\net45\Octokit.dll</HintPath>
+    </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.5\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Content\Images\favicon.png" />
+    <EmbeddedResource Include="Content\Images\flyff.png" />
+    <EmbeddedResource Include="Content\Images\ground_tool.png" />
+    <EmbeddedResource Include="Content\Images\gtaonline_videos.png" />
+    <EmbeddedResource Include="Content\Images\hexagon.png" />
+    <EmbeddedResource Include="Content\Images\logic_circuit_simulator.png" />
+    <EmbeddedResource Include="Content\Images\minecraft_clone.png" />
+    <EmbeddedResource Include="Content\Images\prepi.png" />
+    <EmbeddedResource Include="Content\Images\process_manager.png" />
+    <EmbeddedResource Include="Content\Images\razzgravitas.png" />
+    <EmbeddedResource Include="Content\Images\razzie_messenger.png" />
+    <EmbeddedResource Include="Content\Images\server_client_application.png" />
+    <EmbeddedResource Include="Content\Images\windows_manager.png" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
-    <EmbeddedResource Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\floating_islands.png" />
+    <Content Include="Content\Images\gglib.png" />
+    <Content Include="Content\Images\potato_game.png" />
+    <EmbeddedResource Include="Content\Stylesheet\bootstrap.min.css" />
+    <EmbeddedResource Include="Content\Javascript\jquery.min.js" />
+    <EmbeddedResource Include="Content\Javascript\paper-full.min.js" />
+    <EmbeddedResource Include="Content\Javascript\jquery.signalR.min.js" />
+    <EmbeddedResource Include="Content\Javascript\bootstrap.bundle.min.js" />
+    <EmbeddedResource Include="Content\Javascript\custom.js" />
+    <EmbeddedResource Include="Content\Stylesheet\custom.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
-    <EmbeddedResource Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -126,28 +158,34 @@
     <Content Include="Scripts\index.d.ts" />
     <Content Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
-    <EmbeddedResource Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery.signalR-2.2.3.js" />
-    <EmbeddedResource Include="Scripts\jquery.signalR-2.2.3.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.3.min.js" />
     <Content Include="Scripts\paper-core.js" />
     <EmbeddedResource Include="Scripts\paper-core.min.js" />
     <Content Include="Scripts\paper-full.js" />
-    <EmbeddedResource Include="Scripts\paper-full.min.js" />
+    <Content Include="Scripts\paper-full.min.js" />
     <Content Include="Scripts\paper-node.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <EmbeddedResource Include="Scripts\popper.min.js" />
+    <EmbeddedResource Include="Content\Javascript\scrollreveal.min.js" />
+    <EmbeddedResource Include="Content\Javascript\tilt.jquery.min.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Hubs\" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomBootstrapper.cs" />
+    <Compile Include="Modules\FavoriteProjects.cs" />
+    <Compile Include="Modules\GithubProjects.cs" />
     <Compile Include="Modules\MainModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Startup.cs" />

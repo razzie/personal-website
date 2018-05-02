@@ -1,0 +1,10 @@
+﻿body {
+    position: relative;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+}

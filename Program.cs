@@ -1,17 +1,20 @@
 ﻿using System;
 using Microsoft.Owin.Hosting;
 
-class Program
+namespace razweb
 {
-    static void Main(string[] args)
+    class Program
     {
-        var url = "http://+:80";
-
-        using (WebApp.Start<Startup>(url))
+        static void Main(string[] args)
         {
-            Console.WriteLine("Running on {0}", url);
-            Console.WriteLine("Press enter to exit");
-            Console.ReadLine();
+            var url = "http://+:80";
+
+            using (WebApp.Start<Startup>(url))
+            {
+                Console.WriteLine("Running on {0}", url);
+                Console.WriteLine("Press enter to exit");
+                Console.ReadLine();
+            }
         }
     }
 }
