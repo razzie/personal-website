@@ -137,9 +137,9 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\floating_islands.png" />
-    <Content Include="Content\Images\gglib.png" />
-    <Content Include="Content\Images\potato_game.png" />
+    <EmbeddedResource Include="Content\Images\floating_islands.png" />
+    <EmbeddedResource Include="Content\Images\gglib.png" />
+    <EmbeddedResource Include="Content\Images\potato_game.png" />
     <EmbeddedResource Include="Content\Stylesheet\bootstrap.min.css" />
     <EmbeddedResource Include="Content\Javascript\jquery.min.js" />
     <EmbeddedResource Include="Content\Javascript\paper-full.min.js" />

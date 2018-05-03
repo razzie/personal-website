@@ -68,7 +68,7 @@ namespace razweb.Modules
             _projects.Add(new Info("razzie_messenger", "Razzie Messenger", "img/razzie_messenger.png",
                 "Razzie Messenger is a messenger client and server I started working on during a one-week vacation at lake Balaton (Hungary). It uses a very simple plain text based protocol for network communication, look at the picture to see it in details. (Since then I prefer binary protocols due to the ineffeciency of string parsing and large packet sizes in case of text protocols.) The user can chose a nickname and pick colors for the name and the text messages. There is no registration and password authentication, however the server rejects the connection if a nickname is already taken in the current session. It is possible to send a file to an other user: in this case the server opens a random port which receives and forwards the file. Both users have to connect to this port, but it is done automatically. This solution was necessary due to the limitations of the text based protocol."));
 
-            _projects.Add(new Info("server_client_app", "Server - client application", "img/server_client_application",
+            _projects.Add(new Info("server_client_app", "Server - client application", "img/server_client_application.png",
                 "Server - client application is a small tool which helps creating and debugging text based network protocols. I developed it while working on Razzie Messenger and it had a great use. On the server tab the user can select one of the connected clients as a message target or just close the connection to them."));
 
             _projects.Add(new Info("windows_manager", "Windows Manager", "img/windows_manager.png",

@@ -13,7 +13,7 @@ namespace razweb.Modules
                 //var user = (IPrincipal)requestEnvironment["server.User"];
 
                 dynamic viewbag = new ExpandoObject();
-                viewbag.fav_projects = FavoriteProjects.Randomized;
+                viewbag.FavoriteProjects = FavoriteProjects.Randomized;
 
                 return View["index", viewbag];
             };
