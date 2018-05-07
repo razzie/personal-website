@@ -114,8 +114,11 @@ namespace razweb.Modules
                     stars.Add(Repo.Create(repo));
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                for (; e != null; e = e.InnerException)
+                    Console.WriteLine(e.Message);
+
                 return;
             }
 
@@ -126,9 +129,10 @@ namespace razweb.Modules
         
         private static IEnumerable<T> ShuffleAndLimit<T>(this IList<T> orig)
         {
+            const int limit = 6;
             var list = new List<T>(orig);
 
-            int n = list.Count > 6 ? 6 : list.Count;
+            int n = list.Count > limit ? limit : list.Count;
             while (n > 1)
             {
                 n--;
@@ -138,7 +142,7 @@ namespace razweb.Modules
                 list[n] = value;
             }
 
-            return list.Take(5);
+            return list.Take(limit);
         }
     }
 }
