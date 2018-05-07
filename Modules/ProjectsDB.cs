@@ -24,7 +24,6 @@ namespace razweb.Modules
             }
         }
 
-        private static Random _rng = new Random(DateTime.Now.Millisecond);
         private static List<Info> _projects = new List<Info>();
 
         static ProjectsDB()
@@ -80,25 +79,7 @@ namespace razweb.Modules
         
         public static IEnumerable<Info> Projects
         {
-            get
-            {
-                var copy = new List<Info>(_projects);
-                copy.Shuffle();
-                return copy;
-            }
-        }
-
-        private static void Shuffle<T>(this IList<T> list)
-        {
-            int n = list.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = _rng.Next(n + 1);
-                T value = list[k];
-                list[k] = list[n];
-                list[n] = value;
-            }
+            get { return _projects; }
         }
     }
 }

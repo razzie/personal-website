@@ -63,7 +63,6 @@ namespace razweb.Modules
         }
 
         private static GitHubClient _github = new GitHubClient(new ProductHeaderValue("razzie-updater"));
-        private static Random _rng = new Random(DateTime.Now.Millisecond);
         private static List<Repo> _projects = new List<Repo>();
         private static List<Repo> _stars = new List<Repo>();
         private static Timer _updater = new Timer();
@@ -84,12 +83,12 @@ namespace razweb.Modules
 
         public static IEnumerable<Repo> Projects
         {
-            get { return _projects.ShuffleAndLimit(); }
+            get { return _projects; }
         }
 
         public static IEnumerable<Repo> Stars
         {
-            get { return _stars.ShuffleAndLimit(); }
+            get { return _stars; }
         }
 
         public static void Update()
@@ -125,24 +124,6 @@ namespace razweb.Modules
             _projects = projects;
             _stars = stars;
             Ready = true;
-        }
-        
-        private static IEnumerable<T> ShuffleAndLimit<T>(this IList<T> orig)
-        {
-            const int limit = 6;
-            var list = new List<T>(orig);
-
-            int n = list.Count > limit ? limit : list.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = _rng.Next(n + 1);
-                T value = list[k];
-                list[k] = list[n];
-                list[n] = value;
-            }
-
-            return list.Take(limit);
         }
     }
 }
