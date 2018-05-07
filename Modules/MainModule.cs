@@ -12,10 +12,13 @@ namespace razweb.Modules
                 //var requestEnvironment = (IDictionary<string, object>)Context.Items["OWIN_REQUEST_ENVIRONMENT"];
                 //var user = (IPrincipal)requestEnvironment["server.User"];
 
-                dynamic viewbag = new ExpandoObject();
-                viewbag.FavoriteProjects = FavoriteProjects.Randomized;
+                dynamic model = new ExpandoObject();
+                model.FavoriteProjects = ProjectsDB.Projects;
+                model.GithubReady = GithubDB.Ready;
+                model.GithubProjects = GithubDB.Projects;
+                model.GithubStars = GithubDB.Stars;
 
-                return View["index", viewbag];
+                return View["index", model];
             };
 
         }

@@ -22,14 +22,13 @@ a:hover {
     color: dimgrey;
 }
 
+p::first-letter {
+    padding-left: 10px;
+}
+
 img {
     float: left;
     margin: 10px;
-}
-
-canvas[resize] {
-    width: 100%;
-    height: 100%;
 }
 
 .hello {
@@ -39,11 +38,6 @@ canvas[resize] {
 .center {
     display: table-cell;
     vertical-align: middle;
-}
-
-.separator {
-    width: 0;
-    min-height: 100%;
 }
 
 .scroll-down {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace razweb.Modules
 {
-    public static class FavoriteProjects
+    public static class ProjectsDB
     {
         public class Info
         {
@@ -24,10 +24,10 @@ namespace razweb.Modules
             }
         }
 
-        private static Random _rng = new Random();
+        private static Random _rng = new Random(DateTime.Now.Millisecond);
         private static List<Info> _projects = new List<Info>();
 
-        static FavoriteProjects()
+        static ProjectsDB()
         {
             _projects.Add(new Info("floating_islands", "Floating Islands", "img/floating_islands.png",
                 "Floating Islands is yet another example of my experiments with procedurally generated terrains. I developed an algorithm that takes island positions and island connections as input parameters and generates a 3D grid world using a Perlin noise internally. I also focused on the cartoonish design with edge outlining and also had an A* pathfinder algorithm set up for the little red cube."));
@@ -42,10 +42,13 @@ namespace razweb.Modules
                 "The idea behind the demo was a game with floating islands. Though this game never made it to the reality, Ground tool was born as a result of experimenting with the rendering of these islands. The user can draw a polygon border to the island and when all points are connected, the program generates an island which can be inspected by zooming and moving the camera around."));
 
             _projects.Add(new Info("gtaonline_videos", "GTA Online videos", "img/gtaonline_videos.png",
-                "<a href=\"https://vimeo.com/razzie/videos\" target=\"_blank\">vimeo.com/razzie/videos</a>"));
+                "<a href=\"https://vimeo.com/razzie/videos\" target=\"_blank\">vimeo.com/razzie/videos</a><br />¯\\_(ツ)_/¯"));
 
             _projects.Add(new Info("hexagon", "Hexagon", "img/hexagon.png",
                 "Hexagon is very similar to the Minecraft clone, but I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes. The underlying datastructure is still a 3D grid of Perlin noise. One of the main differences is that this demo does not use textures, but has a custom shader that draws grass or rock detail based on the normal vectors."));
+
+            _projects.Add(new Info("librazzie", "librazzie", "img/librazzie.png",
+                "<a href=\"https://github.com/razzie/librazzie\" target=\"_blank\">github.com/razzie/librazzie</a><br />¯\\_(ツ)_/¯"));
 
             _projects.Add(new Info("logic_circuit_simulator", "Logic Circuit Simulator", "img/logic_circuit_simulator.png",
                 "Logic Circuit Simulator was a university project I had to finish in a semester. It offers a variety of logic gates and a lot of visual customization options. Some special elements are also available, like seven-segment display, matrix display, JK flip-flop, adjustable timer and module. A selected part of a logic circuit can be converted to a module, where the circuit's input elements (buttons, switches) become the input pins and output elements (LEDs) become the output pins of the module. Modules also support recursion."));
@@ -63,7 +66,7 @@ namespace razweb.Modules
                 "Process Manager is a replacement application for the built-in Windows Task Manager with a lot of additional features. It keeps running in the background after closing the main window and can be brought back from the tray icon or by pressing Ctrl+F12."));
 
             _projects.Add(new Info("razzgravitas", "RazzGravitas", "img/razzgravitas.png",
-                "¯\\_(ツ)_/¯"));
+                "<a href=\"https://github.com/razzie/razzgravitas\" target=\"_blank\">github.com/razzie/razzgravitas</a><br />¯\\_(ツ)_/¯"));
 
             _projects.Add(new Info("razzie_messenger", "Razzie Messenger", "img/razzie_messenger.png",
                 "Razzie Messenger is a messenger client and server I started working on during a one-week vacation at lake Balaton (Hungary). It uses a very simple plain text based protocol for network communication, look at the picture to see it in details. (Since then I prefer binary protocols due to the ineffeciency of string parsing and large packet sizes in case of text protocols.) The user can chose a nickname and pick colors for the name and the text messages. There is no registration and password authentication, however the server rejects the connection if a nickname is already taken in the current session. It is possible to send a file to an other user: in this case the server opens a random port which receives and forwards the file. Both users have to connect to this port, but it is done automatically. This solution was necessary due to the limitations of the text based protocol."));
@@ -75,7 +78,7 @@ namespace razweb.Modules
                 "Windows Manager is a reworked and extended edition of Process Manager. Besides the improved visual appearance it introduces new window tweaking options which you can see in the picture. One can for example change a sticky (always on top) window to act as a normal one."));
         }
         
-        public static List<Info> Randomized
+        public static IEnumerable<Info> Projects
         {
             get
             {

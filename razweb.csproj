@@ -142,11 +142,11 @@
     <EmbeddedResource Include="Content\Images\potato_game.png" />
     <EmbeddedResource Include="Content\Stylesheet\bootstrap.min.css" />
     <EmbeddedResource Include="Content\Javascript\jquery.min.js" />
-    <EmbeddedResource Include="Content\Javascript\paper-full.min.js" />
     <EmbeddedResource Include="Content\Javascript\jquery.signalR.min.js" />
     <EmbeddedResource Include="Content\Javascript\bootstrap.bundle.min.js" />
     <EmbeddedResource Include="Content\Javascript\custom.js" />
     <EmbeddedResource Include="Content\Stylesheet\custom.css" />
+    <EmbeddedResource Include="Content\Images\librazzie.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -163,11 +163,6 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery.signalR-2.2.3.js" />
     <Content Include="Scripts\jquery.signalR-2.2.3.min.js" />
-    <Content Include="Scripts\paper-core.js" />
-    <EmbeddedResource Include="Scripts\paper-core.min.js" />
-    <Content Include="Scripts\paper-full.js" />
-    <Content Include="Scripts\paper-full.min.js" />
-    <Content Include="Scripts\paper-node.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -179,13 +174,11 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Hubs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="CustomBootstrapper.cs" />
-    <Compile Include="Modules\FavoriteProjects.cs" />
-    <Compile Include="Modules\GithubProjects.cs" />
+    <Compile Include="Modules\ProjectsDB.cs" />
+    <Compile Include="Modules\GithubDB.cs" />
     <Compile Include="Modules\MainModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Startup.cs" />

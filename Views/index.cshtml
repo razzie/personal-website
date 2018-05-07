@@ -21,8 +21,8 @@
 					<h1 class="hello">Hello</h1>
 				</div>
 			</div>
-			<div class="row justify-content-center reveal">
-				<div class="col-5 text-right">
+			<div class="row mb-5 justify-content-center reveal">
+				<div class="col-md-6 text-left text-md-right border-right border-danger">
 					<h2 class="text-danger">Personal</h2>
 					<p>My name is <strong>Gabor</strong>, but you may also know me as <strong>Razzie</strong> from the internets. I'm pretty much comfortable with both names.</p>
 					<p>My friends know me as a calm and rather observing kind of person. Unless someone hits one of my favorite topics, then I become excited and competitive.</p>
@@ -31,8 +31,7 @@
 					<p>Psychological and emotional well-being along with self-education are crucial to me and I always find time to include them in my life. I've also took part in a 6 month Mastermind program.</p>
 					<p>I value freedom and creativity over anything else in life, but comfort comes close.</p>
 				</div>
-				<div class="separator border border-danger"></div>
-				<div class="col-5 text-left">
+				<div class="col-md-6 text-left border-left border-danger">
 					<h2 class="text-danger">Professional</h2>
 					<p>For most of my professional career I've been working for large companies and my duties ranged from working on embedded system and desktop application to web frontend and backend development.</p>
 					<p>There is also a significant amount of time I've spend working on a private project at home that was worthy of my time and savings.</p>
@@ -44,6 +43,52 @@
 			</div>
 		</div>
 	</section>
+	@if (Model.GithubReady)
+	{
+	<section>
+		<div class="scroll-down reveal"></div>
+		<div class="row justify-content-center">
+			<div class="col m-5 text-center reveal">
+				<h1>Public work</h1>
+			</div>
+		</div>
+		<div class="row">
+		@foreach (var repo in Model.GithubProjects)
+		{
+			<div class="col-md-6 mb-5 text-left reveal">
+				<div>[@repo.Owner] <a href="@repo.Url" target="_blank">@repo.Name</a></div>
+				<div>@repo.Description</div>
+				<div><ul>
+				@foreach (var commit in repo.TopCommits)
+				{
+					<li><span class="text-danger">[@commit.CommitID]</span> @commit.CommitMessage - @commit.User (@commit.Date)</li>
+				}
+				</ul></div>
+			</div>
+		}
+		</div>
+		<div class="row justify-content-center">
+			<div class="col m-5 text-center reveal">
+				<h1>Projects I like</h1>
+			</div>
+		</div>
+		<div class="row">
+		@foreach (var repo in Model.GithubStars)
+		{
+			<div class="col-md-6 mb-5 text-left reveal">
+				<div>[@repo.Owner] <a href="@repo.Url" target="_blank">@repo.Name</a></div>
+				<div>@repo.Description</div>
+				<div><ul>
+				@foreach (var commit in repo.TopCommits)
+				{
+					<li><span class="text-danger">[@commit.CommitID]</span> @commit.CommitMessage - @commit.User (@commit.Date)</li>
+				}
+				</ul></div>
+			</div>
+		}
+		</div>
+	</sectiom>
+	}
 	<section>
 		<div class="scroll-down reveal"></div>
 		<div class="row justify-content-center">
@@ -54,7 +99,7 @@
 		<div class="row">
 		@foreach (var item in Model.FavoriteProjects)
 		{
-			<div class="col-6 mb-5 text-left reveal">
+			<div class="col-md-6 mb-5 text-left reveal">
 				<img src="@item.ImageUrl" class="img-fluid" />
 				<h3 class="text-danger">@item.Name</h3>
 				<p>@Html.Raw(item.Description)</p>
@@ -62,50 +107,14 @@
 		}
 		</div>
 	</section>
-	<section>
-		<div class="scroll-down reveal"></div>
-		<script type="text/paperscript" canvas="snake">
-			var points = 25;
-			var length = 35;
-
-			var path = new Path({
-				strokeColor: '#E4141B',
-				strokeWidth: 20,
-				strokeCap: 'round'
-			});
-
-			var start = view.center / [10, 1];
-			for (var i = 0; i < points; i++)
-				path.add(start + new Point(i * length, 0));
-
-			function move(point) {
-				path.firstSegment.point = point;
-				for (var i = 0; i < points - 1; i++) {
-					var segment = path.segments[i];
-					var nextSegment = segment.next;
-					var vector = segment.point - nextSegment.point;
-					vector.length = length;
-					nextSegment.point = segment.point - vector;
-				}
-				path.smooth({ type: 'continuous' });
-			}
-
-			function onMouseMove(event) {
-				move(event.point);
-			}
-		</script>
-		<canvas resize="true" id="snake" data-paper-scope="1" width="100%" height="100%"></canvas>
-	</section>
 	<footer class="text-center reveal">
 		<div class="scroll-up"></div>
 		<small>Gábor Görzsöny</small>
 	</footer>
     <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.signalR.min.js"></script>
     <script src="js/tilt.jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scrollreveal.min.js"></script>
-    <script src="js/paper-full.min.js"></script>
     <script src="js/custom.js"></script>
   </body>
 </html>

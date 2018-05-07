@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Owin.Hosting;
+using razweb.Modules;
 
 namespace razweb
 {
@@ -7,11 +8,14 @@ namespace razweb
     {
         static void Main(string[] args)
         {
-            var url = "http://+:80";
+            var options = new StartOptions();
+            options.Urls.Add("http://+:80");
+            options.Urls.Add("https://+:443");
 
-            using (WebApp.Start<Startup>(url))
+            using (WebApp.Start<Startup>(options))
             {
-                Console.WriteLine("Running on {0}", url);
+                GithubDB.Update();
+
                 Console.WriteLine("Press enter to exit");
                 Console.ReadLine();
             }
