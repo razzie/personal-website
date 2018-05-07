@@ -1,4 +1,5 @@
 ﻿using Nancy;
+using Nancy.Security;
 using System;
 using System.Dynamic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace razweb.Modules
         {
             Get["/"] = args =>
             {
+                this.RequiresHttps();
+
                 //var requestEnvironment = (IDictionary<string, object>)Context.Items["OWIN_REQUEST_ENVIRONMENT"];
                 //var user = (IPrincipal)requestEnvironment["server.User"];
 

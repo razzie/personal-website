@@ -10,12 +10,13 @@ namespace razweb
         static void Main(string[] args)
         {
             var options = new StartOptions();
-            options.Urls.Add("http://+:80");
-            options.Urls.Add("https://+:443");
+            //options.Urls.Add("http://+:80");
+            //options.Urls.Add("https://+:443");
+            options.Urls.Add("http://127.0.0.1:8080");
 
             using (WebApp.Start<Startup>(options))
             {
-                ServicePointManager.ServerCertificateValidationCallback += (o, certificate, chain, errors) => true;
+                //ServicePointManager.ServerCertificateValidationCallback += (o, certificate, chain, errors) => true;
                 GithubDB.Update();
 
                 Console.WriteLine("Press enter to exit");

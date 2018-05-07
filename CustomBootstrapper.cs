@@ -2,6 +2,7 @@
 using Nancy.Bootstrapper;
 using Nancy.Conventions;
 using Nancy.Diagnostics;
+using Nancy.Security;
 using Nancy.Session;
 using Nancy.TinyIoc;
 using Nancy.ViewEngines;
@@ -10,7 +11,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-//[assembly: IncludeInNancyAssemblyScanning]
 namespace razweb
 {
     public class CustomBootstrapper : DefaultNancyBootstrapper
@@ -67,6 +67,7 @@ namespace razweb
         {
             base.ApplicationStartup(container, pipelines);
             CookieBasedSessions.Enable(pipelines);
+            SSLProxy.RewriteSchemeUsingForwardedHeaders(pipelines);
         }
 
         protected override IEnumerable<ModuleRegistration> Modules
