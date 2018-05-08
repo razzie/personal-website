@@ -1,7 +1,6 @@
-﻿using System;
-using System.Net;
-using Microsoft.Owin.Hosting;
+﻿using Nancy.Hosting.Self;
 using razweb.Modules;
+using System;
 
 namespace razweb
 {
@@ -9,14 +8,9 @@ namespace razweb
     {
         static void Main(string[] args)
         {
-            var options = new StartOptions();
-            //options.Urls.Add("http://+:80");
-            //options.Urls.Add("https://+:443");
-            options.Urls.Add("http://127.0.0.1:8080");
-
-            using (WebApp.Start<Startup>(options))
+            using (var host = new NancyHost(new Uri("http://localhost:8080")))
             {
-                //ServicePointManager.ServerCertificateValidationCallback += (o, certificate, chain, errors) => true;
+                host.Start();
                 GithubDB.Update();
 
                 Console.WriteLine("Press enter to exit");
