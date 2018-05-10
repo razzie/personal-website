@@ -8,6 +8,7 @@
     <title>Gábor Görzsöny</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+	<base target="_blank">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -57,7 +58,7 @@
 		@foreach (var repo in Model.GithubProjects)
 		{
 			<div class="col-md-6 mb-5 text-left reveal">
-				<div>[@repo.Owner] <a href="@repo.Url" target="_blank">@repo.Name</a></div>
+				<div>[@repo.Owner] <a href="@repo.Url">@repo.Name</a></div>
 				<div>@repo.Description</div>
 				<div><ul>
 				@foreach (var commit in repo.TopCommits)
@@ -81,7 +82,7 @@
 		@foreach (var repo in Model.GithubStars)
 		{
 			<div class="col-md-6 mb-5 text-left reveal">
-				<div>[@repo.Owner] <a href="@repo.Url" target="_blank">@repo.Name</a></div>
+				<div>[@repo.Owner] <a href="@repo.Url">@repo.Name</a></div>
 				<div>@repo.Description</div>
 				<div><ul>
 				@foreach (var commit in repo.TopCommits)

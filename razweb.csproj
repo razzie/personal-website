@@ -92,7 +92,9 @@
     <EmbeddedResource Include="Content\Javascript\scrollreveal.min.js" />
     <EmbeddedResource Include="Content\Javascript\tilt.jquery.min.js" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Modules\ProjectsDB.xml" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomBootstrapper.cs" />
     <Compile Include="Modules\ProjectsDB.cs" />
