@@ -8,7 +8,14 @@ namespace razweb
     {
         static void Main(string[] args)
         {
-            using (var host = new NancyHost(new Uri("http://localhost:8080")))
+            var uri = new Uri("http://localhost:8080");
+            var bootstrapper = new CustomBootstrapper();
+            var hostConfiguration = new HostConfiguration
+            {
+                UrlReservations = new UrlReservations() { CreateAutomatically = true }
+            };
+
+            using (var host = new NancyHost(bootstrapper, hostConfiguration, uri))
             {
                 host.Start();
                 GithubDB.Update();
