@@ -9,6 +9,13 @@ namespace razweb.Modules
     public class MainModule : NancyModule
     {
         private Random _rnd = new Random(DateTime.Now.Millisecond);
+        private static GithubDB _github = new GithubDB("razzie", "b37e88bef5b39e88dab437fc49351aff1c29d853");
+        private static ProjectsDB _projects = new ProjectsDB();
+
+        static MainModule()
+        {
+            _projects.LoadFromAssembly("razweb.Modules.ProjectsDB.xml");
+        }
 
         public MainModule()
         {
@@ -16,14 +23,14 @@ namespace razweb.Modules
             {
                 this.RequiresHttps();
 
-                //var requestEnvironment = (IDictionary<string, object>)Context.Items["OWIN_REQUEST_ENVIRONMENT"];
-                //var user = (IPrincipal)requestEnvironment["server.User"];
-
                 dynamic model = new ExpandoObject();
-                model.FavoriteProjects = ProjectsDB.Projects.OrderBy(x => _rnd.Next());
-                model.GithubReady = GithubDB.Ready;
-                model.GithubProjects = GithubDB.Projects.OrderBy(x => _rnd.Next()).Take(6);
-                model.GithubStars = GithubDB.Stars.OrderBy(x => _rnd.Next()).Take(6);
+                model.FavoriteProjects = _projects.Projects.OrderBy(x => _rnd.Next());
+                model.GithubReady = _github.Ready;
+                if (_github.Ready)
+                {
+                    model.GithubProjects = _github.Projects.OrderBy(x => _rnd.Next()).Take(6);
+                    model.GithubStars = _github.Stars.OrderBy(x => _rnd.Next()).Take(6);
+                }
 
                 return View["index", model];
             };

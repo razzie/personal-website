@@ -1,14 +1,11 @@
 ﻿using Octokit;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Timers;
+using System.Threading;
 
 namespace razweb.Modules
 {
-    public static class GithubDB
+    public class GithubDB
     {
         public class Repo
         {
@@ -34,7 +31,7 @@ namespace razweb.Modules
             public string Url { get; private set; }
             public IEnumerable<Commit> TopCommits { get; private set; }
 
-            public static Repo Create(Repository repo)
+            public static Repo Create(GitHubClient github, Repository repo)
             {
                 var top_commits = new List<Commit>();
 
@@ -42,7 +39,7 @@ namespace razweb.Modules
                 api_options.PageCount = 1;
                 api_options.PageSize = 5;
 
-                var commits = _github.Repository.Commit.GetAll(repo.Id, api_options).Result;
+                var commits = github.Repository.Commit.GetAll(repo.Id, api_options).Result;
                 foreach (var commit in commits)
                 {
                     top_commits.Add(new Commit(commit.Sha, commit.Commit.Message, commit.Commit.Author.Name, commit.Commit.Author.Date));
@@ -62,55 +59,62 @@ namespace razweb.Modules
             }
         }
 
-        private static GitHubClient _github = new GitHubClient(new ProductHeaderValue("razzie-updater"));
-        private static List<Repo> _projects = new List<Repo>();
-        private static List<Repo> _stars = new List<Repo>();
-        private static Timer _updater = new Timer();
+        private List<Repo> _projects;
+        private List<Repo> _stars;
+        private string _user;
+        private GitHubClient _github;
+        private Timer _updater;
+        private object _lock = new object();
 
-        static GithubDB()
+        public GithubDB(string user, string credentials = null)
         {
-            _github.Credentials = new Credentials("b37e88bef5b39e88dab437fc49351aff1c29d853");
+            _user = user;
 
-            _updater.Interval = 1800000; // 30 minutes
-            _updater.Elapsed += (sender, args) => Update();
-            _updater.Start();
+            _github = new GitHubClient(new ProductHeaderValue(user + "-updater"));
+            if (credentials != null)
+                _github.Credentials = new Credentials(credentials);
+
+            _updater = new Timer(_ => Update(), null, TimeSpan.Zero, TimeSpan.FromMinutes(30));
         }
 
-        public static bool Ready
+        public bool Ready
         {
-            get; private set;
+            get
+            {
+                return (_projects != null && _stars != null);
+            }
         }
 
-        public static IEnumerable<Repo> Projects
+        public IEnumerable<Repo> Projects
         {
             get { return _projects; }
         }
 
-        public static IEnumerable<Repo> Stars
+        public IEnumerable<Repo> Stars
         {
             get { return _stars; }
         }
 
-        public static void Update()
+        private void Update()
         {
             var projects = new List<Repo>();
             var stars = new List<Repo>();
 
             try
             {
-                var user_repos = _github.Repository.GetAllForUser("razzie").Result;
+                var user_repos = _github.Repository.GetAllForUser(_user).Result;
                 foreach (var repo in user_repos)
                 {
                     if (!repo.Fork)
-                        projects.Add(Repo.Create(repo));
+                        projects.Add(Repo.Create(_github, repo));
                 }
 
                 var api_connection = new ApiConnection(_github.Connection);
                 var starred_client = new StarredClient(api_connection);
-                var starred_repos = starred_client.GetAllForUser("razzie").Result;
+                var starred_repos = starred_client.GetAllForUser(_user).Result;
                 foreach (var repo in starred_repos)
                 {
-                    stars.Add(Repo.Create(repo));
+                    stars.Add(Repo.Create(_github, repo));
                 }
             }
             catch (Exception e)
@@ -123,7 +127,6 @@ namespace razweb.Modules
 
             _projects = projects;
             _stars = stars;
-            Ready = true;
         }
     }
 }

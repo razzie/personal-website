@@ -6,7 +6,7 @@ using System.Xml;
 
 namespace razweb.Modules
 {
-    public static class ProjectsDB
+    public class ProjectsDB
     {
         public class Info
         {
@@ -34,26 +34,35 @@ namespace razweb.Modules
             }
         }
 
-        private static List<Info> _projects = new List<Info>();
+        private List<Info> _projects = new List<Info>();
 
-        static ProjectsDB()
+        public ProjectsDB()
         {
-            var assembly = Assembly.GetExecutingAssembly();
-            using (Stream stream = assembly.GetManifestResourceStream("razweb.Modules.ProjectsDB.xml"))
-            {
-                XmlDocument doc = new XmlDocument();
-                doc.Load(stream);
-
-                foreach (XmlNode node in doc.SelectNodes("/projects/project"))
-                {
-                    var project = Info.Read(node);
-                    if (project != null)
-                        _projects.Add(project);
-                }
-            }
         }
         
-        public static IEnumerable<Info> Projects
+        public void LoadFromAssembly(string file)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            using (Stream stream = assembly.GetManifestResourceStream(file))
+            {
+                Load(stream);
+            }
+        }
+
+        public void Load(Stream stream)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(stream);
+
+            foreach (XmlNode node in doc.SelectNodes("/projects/project"))
+            {
+                var project = Info.Read(node);
+                if (project != null)
+                    _projects.Add(project);
+            }
+        }
+
+        public IEnumerable<Info> Projects
         {
             get { return _projects; }
         }

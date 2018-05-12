@@ -18,7 +18,6 @@ namespace razweb
             using (var host = new NancyHost(bootstrapper, hostConfiguration, uri))
             {
                 host.Start();
-                GithubDB.Update();
 
                 Console.WriteLine("Press enter to exit");
                 Console.ReadLine();
