@@ -144,7 +144,22 @@
       It keeps running in the background after closing the main window and can be brought back from the tray icon or by pressing Ctrl+F12.
     </description>
   </project>
-  
+
+  <project>
+    <id>razziecraft_vanilla</id>
+    <name>RazzieCraft Vanilla</name>
+    <img>img/razziecraft_vanilla.png</img>
+    <description>
+      RazzieCraft Vanilla is Minecraft version 1.12.2 on steroids!
+      This pack contains a ton of strictly curated mods that enhance the visuals and gameplay of vanilla Minecraft,
+      but without breaking its charm. There are a lot of recipes for uncraftable existing items (like chain armor, slime ball, spawn eggs, etc) and a very few brand new stuff.
+      <br /><br />
+      Download <a href="https://www.technicpack.net/download">TechnicLauncher</a>.<br />
+      Find and download <a href="https://www.technicpack.net/modpack/razziecraft-vanilla.976147">RazzieCraft Vanilla</a> in the launcher.<br />
+      Profit.
+    </description>
+  </project>
+
   <project>
     <id>razzgravitas</id>
     <name>RazzGravitas</name>
