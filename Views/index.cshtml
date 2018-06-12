@@ -44,7 +44,7 @@
 			</div>
 		</div>
 	</section>
-	@if (Model.GithubReady)
+	@if (Model.GithubProjects != null)
 	{
 	<section>
 		<div class="scroll-down reveal"></div>
@@ -57,11 +57,13 @@
 		<div class="row">
 		@foreach (var repo in Model.GithubProjects)
 		{
+			@if (!repo.HasEnoughCommits) continue;
+
 			<div class="col-md-6 mb-5 text-left reveal">
 				<div>[@repo.Owner] <a href="@repo.Url">@repo.Name</a></div>
 				<div>@repo.Description</div>
 				<div><ul>
-				@foreach (var commit in repo.TopCommits)
+				@foreach (var commit in repo.TopCommits(5))
 				{
 					<li><span class="text-danger">[@commit.CommitID]</span> @commit.CommitMessage - @commit.User (@commit.Date)</li>
 				}
@@ -70,6 +72,9 @@
 		}
 		</div>
 	</section>
+	}
+	@if (Model.GithubStars != null)
+	{
 	<section>
 		<div class="scroll-down reveal"></div>
 		<div class="row justify-content-center">
@@ -85,7 +90,7 @@
 				<div>[@repo.Owner] <a href="@repo.Url">@repo.Name</a></div>
 				<div>@repo.Description</div>
 				<div><ul>
-				@foreach (var commit in repo.TopCommits)
+				@foreach (var commit in repo.TopCommits(3))
 				{
 					<li><span class="text-danger">[@commit.CommitID]</span> @commit.CommitMessage - @commit.User (@commit.Date)</li>
 				}

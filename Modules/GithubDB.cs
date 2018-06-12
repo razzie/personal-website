@@ -1,6 +1,7 @@
 ﻿using Octokit;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 
 namespace razweb.Modules
@@ -16,6 +17,10 @@ namespace razweb.Modules
                 public string User { get; private set; }
                 public DateTimeOffset Date { get; private set; }
 
+                public Commit(GitHubCommit commit) : this(commit.Sha, commit.Commit.Message, commit.Commit.Author.Name, commit.Commit.Author.Date)
+                {
+                }
+
                 public Commit(string id, string message, string user, DateTimeOffset date)
                 {
                     CommitID = id.Substring(0, 7);
@@ -29,31 +34,32 @@ namespace razweb.Modules
             public string Description { get; private set; }
             public string Owner { get; private set; }
             public string Url { get; private set; }
-            public IEnumerable<Commit> TopCommits { get; private set; }
+            public Commit[] Commits { get; private set; }
+
+            public IEnumerable<Commit> TopCommits(int num)
+            {
+                return Commits.Take(num);
+            }
+
+            public bool HasEnoughCommits
+            {
+                get { return Commits.Length > 3; }
+            }
 
             public static Repo Create(GitHubClient github, Repository repo)
             {
-                var top_commits = new List<Commit>();
-
                 var api_options = new ApiOptions();
                 api_options.PageCount = 1;
                 api_options.PageSize = 5;
 
                 var commits = github.Repository.Commit.GetAll(repo.Id, api_options).Result;
-                foreach (var commit in commits)
-                {
-                    top_commits.Add(new Commit(commit.Sha, commit.Commit.Message, commit.Commit.Author.Name, commit.Commit.Author.Date));
-
-                    if (top_commits.Count >= 5)
-                        break;
-                }
 
                 var result = new Repo();
                 result.Name = repo.Name;
                 result.Description = repo.Description;
                 result.Owner = repo.Owner.Login;
                 result.Url = repo.HtmlUrl;
-                result.TopCommits = top_commits;
+                result.Commits = commits.Select(commit => new Commit(commit)).ToArray();
 
                 return result;
             }
@@ -77,22 +83,14 @@ namespace razweb.Modules
             _updater = new Timer(_ => Update(), null, TimeSpan.Zero, TimeSpan.FromMinutes(30));
         }
 
-        public bool Ready
-        {
-            get
-            {
-                return (_projects != null && _stars != null);
-            }
-        }
-
         public IEnumerable<Repo> Projects
         {
-            get { return _projects; }
+            get { return _projects?.Count > 0 ? _projects : null; }
         }
 
         public IEnumerable<Repo> Stars
         {
-            get { return _stars; }
+            get { return _stars?.Count > 0 ? _stars : null; }
         }
 
         private void Update()
