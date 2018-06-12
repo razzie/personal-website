@@ -56,8 +56,10 @@
     <name>GTA Online videos</name>
     <img>img/gtaonline_videos.png</img>
     <description>
-      <a href="https://vimeo.com/razzie/videos">vimeo.com/razzie/videos</a><br />
-      ¯\_(ツ)_/¯
+      I have way more playtime in Grand Theft Auto V (or GTA Online to be specific) than I would like to admit and most of that I've spent with friends I've met in the game.
+      It became our little tradition to record funny, exciting or any memorable moments and later create videos of it.
+      At this point there is quite a collection of those videos and I've only uploaded the ones I made to <a href="https://vimeo.com/razzie/videos">vimeo.com/razzie/videos</a>.
+      Most of the content is only meaningful to us, but I still hope viewers fill find them entertaining
     </description>
   </project>
   
@@ -77,8 +79,11 @@
     <name>librazzie</name>
     <img>img/librazzie.png</img>
     <description>
-      <a href="https://github.com/razzie/librazzie">github.com/razzie/librazzie</a><br />
-      ¯\_(ツ)_/¯
+      A header-only multi-purpose library designed to help me get started with my projects.
+      It includes frameworks for logging, events, input, memory, thread and network+serialization and has some additional stuff like:
+      a bitset class with iterators for true and false position, stream manipulators and parsers and an easy to use random number generator.
+      <br />
+      Check out the source code here: <a href="https://github.com/razzie/librazzie">github.com/razzie/librazzie</a><br />
     </description>
   </project>
   
@@ -145,8 +150,13 @@
     <name>RazzGravitas</name>
     <img>img/razzgravitas.png</img>
     <description>
-      <a href="https://github.com/razzie/razzgravitas">github.com/razzie/razzgravitas</a><br />
-      ¯\_(ツ)_/¯
+      RazzGravitas is a simple multiplayer game about gravity.
+      At the time of making it I just gave up on a somewhat larger project and I needed to give myself a smaller task that I can prove to be able to finish.
+      The sole objective was to experiment with something simple with no regrets about design decisions and no promises about the outcome.
+      After about a month of development it ended up having multiplayer support with competitive game rules I'm satisfied with.
+      I consider the game finished.
+      <br />
+      Check out the source code here: <a href="https://github.com/razzie/razzgravitas">github.com/razzie/razzgravitas</a>
     </description>
   </project>
   
