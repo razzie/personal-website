@@ -25,7 +25,7 @@ namespace razweb.Modules
 
                 dynamic model = new ExpandoObject();
                 model.FavoriteProjects = _projects.Projects.OrderBy(x => _rnd.Next());
-                model.GithubProjects = _github.Projects?.OrderBy(x => _rnd.Next()).Take(6);
+                model.GithubProjects = _github.Projects?.Where(x => x.HasEnoughCommits).OrderBy(x => _rnd.Next()).Take(6);
                 model.GithubStars = _github.Stars?.OrderBy(x => _rnd.Next()).Take(6);
 
                 return View["index", model];
