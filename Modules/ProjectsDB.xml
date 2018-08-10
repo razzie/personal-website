@@ -116,7 +116,13 @@
     <name>Potato Game</name>
     <img>img/potato_game.png</img>
     <description>
-      ¯\_(ツ)_/¯
+      PotatoGame is a procedural generated game about little potatoes with customizable AI (which was only done on paper).
+      The goal is to have them win the game for you by gaining world domination.
+      This was my second large game project (in terms of time and effort spent on it), but eventually I lost interest and motivation
+      after forcing myself to work on it and focusing too much on the future outcome.
+      I'm very proud of this project, but I gave up on ever finishing it.
+      <br />
+      Check out the source code here: <a href="https://github.com/razzie/PotatoGame">github.com/razzie/PotatoGame</a><br />
     </description>
   </project>
   
