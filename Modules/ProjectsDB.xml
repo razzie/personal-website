@@ -82,8 +82,8 @@
       A header-only multi-purpose library designed to help me get started with my projects.
       It includes frameworks for logging, events, input, memory, thread and network+serialization and has some additional stuff like:
       a bitset class with iterators for true and false position, stream manipulators and parsers and an easy to use random number generator.
-      <br />
-      Check out the source code here: <a href="https://github.com/razzie/librazzie">github.com/razzie/librazzie</a><br />
+      <br /><br />
+      Source code: <a href="https://github.com/razzie/librazzie">github.com/razzie/librazzie</a><br />
     </description>
   </project>
   
@@ -97,6 +97,8 @@
       Some special elements are also available, like seven-segment display, matrix display, JK flip-flop, adjustable timer and module.
       A selected part of a logic circuit can be converted to a module, where the circuit's input elements (buttons, switches) become the input pins and output elements (LEDs) become the output pins of the module.
       Modules also support recursion.
+      <br /><br />
+      Source code: <a href="https://github.com/razzie/LogicCircuitSimulator">github.com/razzie/LogicCircuitSimulator</a><br />
     </description>
   </project>
   
@@ -121,8 +123,8 @@
       This was my second large game project (in terms of time and effort spent on it), but eventually I lost interest and motivation
       after forcing myself to work on it and focusing too much on the future outcome.
       I'm very proud of this project, but I gave up on ever finishing it.
-      <br />
-      Check out the source code here: <a href="https://github.com/razzie/PotatoGame">github.com/razzie/PotatoGame</a><br />
+      <br /><br />
+      Source code: <a href="https://github.com/razzie/PotatoGame">github.com/razzie/PotatoGame</a><br />
     </description>
   </project>
   
@@ -138,6 +140,8 @@
       Unfortunately the campaign failed, mostly because the lack of media attention (neither of us were expert on the topic).
       Also the game was probably in too early phase to show it to the public.
       Due to the failure of the campaign and smaller disagreements regarding the game design we decided not to continue the development.
+      <br /><br />
+      Source code: <a href="https://github.com/razzie/prepi">github.com/razzie/prepi</a><br />
     </description>
   </project>
   
@@ -176,8 +180,8 @@
       The sole objective was to experiment with something simple with no regrets about design decisions and no promises about the outcome.
       After about a month of development it ended up having multiplayer support with competitive game rules I'm satisfied with.
       I consider the game finished.
-      <br />
-      Check out the source code here: <a href="https://github.com/razzie/razzgravitas">github.com/razzie/razzgravitas</a>
+      <br /><br />
+      Source code: <a href="https://github.com/razzie/razzgravitas">github.com/razzie/razzgravitas</a>
     </description>
   </project>
   
