@@ -156,6 +156,18 @@
   </project>
 
   <project>
+    <id>raztalk</id>
+    <name>RazTalk</name>
+    <img>img/raztalk.png</img>
+    <description>
+      A simple lobby/channel based registration-free webchat.
+      <br /><br />
+      Try it here: <a href="https://talk.gorzsony.com">talk.gorzsony.com</a><br />
+      Source code: <a href="https://github.com/razzie/raztalk">github.com/razzie/raztalk</a>
+    </description>
+  </project>
+
+  <project>
     <id>razziecraft_vanilla</id>
     <name>RazzieCraft Vanilla</name>
     <img>img/razziecraft_vanilla.png</img>
