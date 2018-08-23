@@ -1,19 +1,28 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gábor Görzsöny</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-	<base target="_blank">
+    <base target="_blank">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+    <script src="js/scrollreveal.min.js"></script>
+    <script>
+        window.sr = new ScrollReveal({ reset: true });
+
+        // Add class to <html> if ScrollReveal is supported
+        if (sr.isSupported()) {
+            document.documentElement.classList.add('sr');
+        }
+    </script>
+</head>
   <body class="container">
 	<section>
 		<div class="center">
@@ -125,7 +134,6 @@
 	</footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/tilt.jquery.min.js"></script>
-    <script src="js/scrollreveal.min.js"></script>
     <script src="js/custom.js"></script>
   </body>
 </html>
