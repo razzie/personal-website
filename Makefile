@@ -11,17 +11,13 @@ deps:
 	go get golang.org/x/oauth2/...
 
 ifeq ($(OS),Windows_NT)
-razweb: bindata.go
-	go build -o bin/razweb.exe
-
-bindata.go:
+razweb:
 	go-bindata-assetfs.exe -prefix assets assets/...
+	go build -o bin/razweb.exe
 else
-razweb: bindata.go
-	go build -o bin/razweb
-
-bindata.go:
+razweb:
 	go-bindata-assetfs -prefix assets assets/...
+	go build -o bin/razweb
 endif
 
 clean:

@@ -25,9 +25,10 @@ func main() {
 	}
 
 	go func() {
+		token, _ := Asset("github.token")
 		ticker := time.NewTicker(time.Minute * 30)
 		for ; true; <-ticker.C {
-			repos, stars, err := GetReposAndStars("razzie", "b37e88bef5b39e88dab437fc49351aff1c29d853")
+			repos, stars, err := GetReposAndStars("razzie", string(token))
 			if err != nil {
 				fmt.Println("error:", err)
 				continue

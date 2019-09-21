@@ -1,3 +1,4 @@
 bin/
 pkg/
+assets/github.token
 bindata.go
