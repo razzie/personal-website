@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            /*"options": {
+                "env": {
+                    "GOPATH": "${cwd}"
+                }
+            },*/
+            "command": "make razweb",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
