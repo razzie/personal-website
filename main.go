@@ -19,6 +19,12 @@ func main() {
 		panic(err)
 	}
 
+	tmpl := template.New("index")
+	_, err = tmpl.Parse(string(index))
+	if err != nil {
+		panic(err)
+	}
+
 	Projects, err = LoadProjects()
 	if err != nil {
 		panic(err)
@@ -37,9 +43,6 @@ func main() {
 			Repos, Stars = repos, stars
 		}
 	}()
-
-	tmpl := template.New("index")
-	tmpl.Parse(string(index))
 
 	fs := assetFS()
 	fs.Prefix = ""
