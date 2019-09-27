@@ -98,6 +98,7 @@
       A selected part of a logic circuit can be converted to a module, where the circuit's input elements (buttons, switches) become the input pins and output elements (LEDs) become the output pins of the module.
       Modules also support recursion.
       <br /><br />
+      Download: <a href="https://github.com/razzie/LogicCircuitSimulator/releases/download/v1.0/Logic_Circuit_Simulator.jar">Logic_Circuit_Simulator.jar</a><br />
       Source code: <a href="https://github.com/razzie/LogicCircuitSimulator">github.com/razzie/LogicCircuitSimulator</a><br />
     </description>
   </project>
@@ -129,6 +130,7 @@
       I was the first developer who enabled players to have fun with GTA's unused rope API in a multiplayer environment
       (since it's not synced by default).
       <br /><br />
+      Releases: <a href="https://github.com/razzie/PocceMod/releases">github.com/razzie/PocceMod/releases</a><br />
       Source code: <a href="https://github.com/razzie/PocceMod">github.com/razzie/PocceMod</a><br />
     </description>
   </project>
@@ -144,6 +146,8 @@
       after forcing myself to work on it and focusing too much on the future outcome.
       I'm very proud of this project, but I gave up on ever finishing it.
       <br /><br />
+      Download: <a href="https://github.com/razzie/PotatoGame/releases/download/pre-alpha/demos.zip">demos.zip</a>
+      and <a href="https://github.com/razzie/PotatoGame/releases/download/pre-alpha/development.mp4">development.mp4</a><br />
       Source code: <a href="https://github.com/razzie/PotatoGame">github.com/razzie/PotatoGame</a><br />
     </description>
   </project>
@@ -161,6 +165,7 @@
       Also the game was probably in too early phase to show it to the public.
       Due to the failure of the campaign and smaller disagreements regarding the game design we decided not to continue the development.
       <br /><br />
+      Download: <a href="https://github.com/razzie/prepi/releases/download/pre-alpha/prepi.zip">prepi.zip</a><br />
       Source code: <a href="https://github.com/razzie/prepi">github.com/razzie/prepi</a><br />
     </description>
   </project>
@@ -183,6 +188,8 @@
       A simple lobby/channel based registration-free webchat.
       <br /><br />
       Try it here: <a href="https://talk.gorzsony.com">talk.gorzsony.com</a><br />
+      Download: <a href="https://github.com/razzie/raztalk/releases/download/v1.0/raztalk_v1.0.zip">raztalk_v1.0.zip</a>
+      and <a href="https://github.com/razzie/raztalk/releases/download/v1.0/raztalk.client.exe">raztalk.client.exe</a><br />
       Source code: <a href="https://github.com/razzie/raztalk">github.com/razzie/raztalk</a>
     </description>
   </project>
@@ -213,6 +220,7 @@
       After about a month of development it ended up having multiplayer support with competitive game rules I'm satisfied with.
       I consider the game finished.
       <br /><br />
+      Download: <a href="https://github.com/razzie/razzgravitas/releases/download/v1.0/razzgravitas.exe">razzgravitas.exe</a><br />
       Source code: <a href="https://github.com/razzie/razzgravitas">github.com/razzie/razzgravitas</a>
     </description>
   </project>
