@@ -5,6 +5,8 @@ import (
 	"html/template"
 	"net/http"
 	"time"
+
+	assetfs "github.com/elazarl/go-bindata-assetfs"
 )
 
 var (
@@ -44,12 +46,12 @@ func main() {
 		}
 	}()
 
-	fs := assetFS()
-	fs.Prefix = ""
+	fs := http.FileServer(
+		&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, AssetInfo: nil, Prefix: ""})
 
-	http.Handle("/css/", http.FileServer(fs))
-	http.Handle("/img/", http.FileServer(fs))
-	http.Handle("/js/", http.FileServer(fs))
+	http.Handle("/css/", fs)
+	http.Handle("/img/", fs)
+	http.Handle("/js/", fs)
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
