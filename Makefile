@@ -1,14 +1,6 @@
-.PHONY: all deps razweb clean
+.PHONY: razweb clean
 
-.DEFAULT_GOAL := all
-
-all: deps razweb
-
-deps:
-	go get github.com/jteeuwen/go-bindata/...
-	go get github.com/elazarl/go-bindata-assetfs/...
-	go get github.com/google/go-github/...
-	go get golang.org/x/oauth2/...
+.DEFAULT_GOAL := razweb
 
 ifeq ($(OS),Windows_NT)
 razweb:

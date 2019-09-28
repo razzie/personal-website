@@ -4,12 +4,7 @@
         {
             "label": "Build",
             "type": "shell",
-            /*"options": {
-                "env": {
-                    "GOPATH": "${cwd}"
-                }
-            },*/
-            "command": "make razweb",
+            "command": "make",
             "group": {
                 "kind": "build",
                 "isDefault": true
