@@ -30,13 +30,14 @@
   
   <project>
     <id>gglib</id>
-    <name>gglib</name>
+    <name>gglib &amp; gglib2</name>
     <img>img/gglib.png</img>
     <description>
-      GGlib was a library I used to develop between 2014 and 2016.
-      It served as a sandbox to help me to learn about the new features of the C++11 standard.
-      I also found a great use of it while working on other side projects.
-      Due to some early design choices(including the heavy use of virtual function calls) I finally decided to send it into retirement and started working on its successor: <a href="https://github.com/razzie/librazzie">librazzie</a>.
+      GGlib and GGlib2 were libraries I used to develop between 2013 and 2017.
+      They served as a sandbox to help me to learn about the new features of the C++11 standard.
+      I also found a great use of them while working on other side projects.
+      Due to some early design choices (including too heavy use of virtual function calls) I finally decided to send them into retirement
+      and started working on the successor: <a href="https://github.com/razzie/librazzie">librazzie</a>.
     </description>
   </project>
   
