@@ -5,10 +5,11 @@ import (
 	"html/template"
 )
 
+// Project contains data about one of my hobby projects
 type Project struct {
 	ID          string
 	Name        string
-	ImageUrl    string
+	ImageURL    string
 	Description template.HTML
 }
 
@@ -21,7 +22,7 @@ type xmlProject struct {
 	XMLName     xml.Name       `xml:"project"`
 	ID          string         `xml:"id"`
 	Name        string         `xml:"name"`
-	ImageUrl    string         `xml:"img"`
+	ImageURL    string         `xml:"img"`
 	Description xmlDescription `xml:"description"`
 }
 
@@ -34,10 +35,11 @@ func newProject(proj xmlProject) Project {
 	return Project{
 		ID:          proj.ID,
 		Name:        proj.Name,
-		ImageUrl:    proj.ImageUrl,
+		ImageURL:    proj.ImageURL,
 		Description: template.HTML(proj.Description.InnerXML)}
 }
 
+// LoadProjects parses projects.xml and returns the projects in a slice
 func LoadProjects() ([]Project, error) {
 	data, err := Asset("projects.xml")
 	if err != nil {

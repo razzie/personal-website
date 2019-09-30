@@ -68,7 +68,7 @@
 		<div class="row">
 		{{range .GithubRepos}}
 			<div class="col-md-6 mb-5 text-left reveal">
-				<div>[{{.Owner}}] <a href="{{.Url}}">{{.Name}}</a></div>
+				<div>[{{.Owner}}] <a href="{{.URL}}">{{.Name}}</a></div>
 				<div>{{.Description}}</div>
 				<div><ul>
 				{{range .Commits}}
@@ -92,7 +92,7 @@
 		<div class="row">
 		{{range .GithubStars}}
 			<div class="col-md-6 mb-5 text-left reveal">
-				<div>[{{.Owner}}] <a href="{{.Url}}">{{.Name}}</a></div>
+				<div>[{{.Owner}}] <a href="{{.URL}}">{{.Name}}</a></div>
 				<div>{{.Description}}</div>
 				<div><ul>
 				{{range .Commits}}
@@ -114,7 +114,7 @@
 		<div class="row">
 		{{range .Projects}}
 			<div class="col-md-6 mb-5 text-left reveal">
-				<img src="{{.ImageUrl}}" class="img-fluid" />
+				<img src="{{.ImageURL}}" class="img-fluid" />
 				<h3 class="text-danger">{{.Name}}</h3>
 				<p>{{.Description}}</p>
 			</div>

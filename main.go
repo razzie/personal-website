@@ -10,9 +10,12 @@ import (
 )
 
 var (
+	// Projects contains my hobby projects
 	Projects []Project
-	Repos    []Repo
-	Stars    []Repo
+	// Repos contains my github owned repos
+	Repos []Repo
+	// Stars contains my github starred repos
+	Stars []Repo
 )
 
 func main() {

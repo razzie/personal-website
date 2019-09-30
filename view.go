@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// View contains data used by index.html template
 type View struct {
 	Projects          []Project
 	GithubReposLoaded bool
@@ -34,6 +35,7 @@ func shuffleRepos(repos []Repo, maxRepos int) []Repo {
 	return clone[:min(maxRepos, len(clone))]
 }
 
+// NewView returns a new view using the given projects, owned repos and starred repos
 func NewView(projects []Project, repos []Repo, stars []Repo) View {
 	return View{
 		Projects:          shuffleProjects(projects),

@@ -14,6 +14,7 @@ const (
 	maxCommits = 3
 )
 
+// Commit represents a github commit
 type Commit struct {
 	ID      string
 	Message string
@@ -21,11 +22,12 @@ type Commit struct {
 	Date    time.Time
 }
 
+// Repo represents a github repository
 type Repo struct {
 	Name        string
 	Description string
 	Owner       string
-	Url         string
+	URL         string
 	Commits     []Commit
 }
 
@@ -56,7 +58,7 @@ func newRepo(ctx context.Context, client *github.Client, repo *github.Repository
 		Name:        *repo.Name,
 		Description: *repo.Description,
 		Owner:       *repo.Owner.Login,
-		Url:         *repo.HTMLURL}
+		URL:         *repo.HTMLURL}
 
 	for _, commit := range commits {
 		result.Commits = append(result.Commits, newCommit(commit))
@@ -65,6 +67,7 @@ func newRepo(ctx context.Context, client *github.Client, repo *github.Repository
 	return result
 }
 
+// GetReposAndStars returns the user's owned repos and starred repos as slices
 func GetReposAndStars(user string, token string) (repos []Repo, stars []Repo, err error) {
 	defer func() {
 		if r := recover(); r != nil {
