@@ -9,6 +9,9 @@
       Floating Islands is yet another example of my experiments with procedurally generated terrains.
       I developed an algorithm that takes island positions and island connections as input parameters and generates a 3D grid world using a Perlin noise internally.
       I also focused on the cartoonish design with edge outlining and also had an A* pathfinder algorithm set up for the little red cube.
+      <br /><br />
+      Download: <br />
+      <a href="https://github.com/razzie/home-projects/tree/master/2016/floating-islands">github.com/razzie/home-projects/2016/floating-islands</a>
     </description>
   </project>
   
@@ -38,6 +41,10 @@
       I also found a great use of them while working on other side projects.
       Due to some early design choices (including too heavy use of virtual function calls) I finally decided to send them into retirement
       and started working on the successor: <a href="https://github.com/razzie/librazzie">librazzie</a>.
+      <br /><br />
+      Source code: <br />
+      <a href="https://github.com/razzie/gglib">github.com/razzie/gglib</a><br />
+      <a href="https://github.com/razzie/gglib2">github.com/razzie/gglib2</a>
     </description>
   </project>
   
@@ -49,6 +56,9 @@
       The idea behind the demo was a game with floating islands.
       Though this game never made it to the reality, Ground Tool was born as a result of experimenting with the rendering of these islands.
       The user can draw a polygon border to the island and when all points are connected, the program generates an island which can be inspected by zooming and moving the camera around.
+      <br /><br />
+      Source code and binary: <br />
+      <a href="https://github.com/razzie/home-projects/tree/master/2016/groundtool">github.com/razzie/home-projects/2016/groundtool</a>
     </description>
   </project>
   
@@ -72,6 +82,9 @@
       Hexagon is very similar to the Minecraft clone, but I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes.
       The underlying datastructure is still a 3D grid of Perlin noise.
       One of the main differences is that this demo does not use textures, but has a custom shader that draws grass or rock detail based on the normal vectors.
+      <br /><br />
+      Source code and binary: <br />
+      <a href="https://github.com/razzie/home-projects/tree/master/2015/hexagon">github.com/razzie/home-projects/2015/hexagon</a>
     </description>
   </project>
   
@@ -112,6 +125,10 @@
       Minecraft clone is a graphics project I worked on during the final year of the university.
       Contrary to its name it is not a real clone, it features no game elements.
       My primary motivation was the recreation of a Minecraft-like rendering in C++.
+      <br /><br />
+      Source code and download: <br />
+      <a href="https://github.com/razzie/home-projects/tree/master/2011/minecraft-clone-v1">github.com/razzie/home-projects/2011/minecraft-clone-v1</a><br />
+      <a href="https://github.com/razzie/home-projects/tree/master/2012/minecraft-clone-v2">github.com/razzie/home-projects/2012/minecraft-clone-v2</a>
     </description>
   </project>
   
@@ -178,6 +195,8 @@
     <description>
       Process Manager is a replacement application for the built-in Windows Task Manager with a lot of additional features.
       It keeps running in the background after closing the main window and can be brought back from the tray icon or by pressing Ctrl+F12.
+      <br /><br />
+      Download: <a href="https://github.com/razzie/home-projects/raw/master/2008/process-manager/Process%20Manager.exe">Process Manager.exe</a>
     </description>
   </project>
 
@@ -239,6 +258,9 @@
       It is possible to send a file to an other user: in this case the server opens a random port which receives and forwards the file.
       Both users have to connect to this port, but it is done automatically.
       This solution was necessary due to the limitations of the text based protocol.
+      <br /><br />
+      Download: <br />
+      <a href="https://github.com/razzie/home-projects/tree/master/2008/razzie-messenger">github.com/razzie/home-projects/2008/razzie-messenger</a>
     </description>
   </project>
   
@@ -250,6 +272,8 @@
       Server - client application is a small tool which helps creating and debugging text based network protocols.
       I developed it while working on Razzie Messenger and it had a great use.
       On the server tab the user can select one of the connected clients as a message target or just close the connection to them.
+      <br /><br />
+      Download: <a href="https://github.com/razzie/home-projects/blob/master/2008/server-client/server-client.exe">server-client.exe</a>
     </description>
   </project>
   
@@ -261,6 +285,8 @@
       Windows Manager is a reworked and extended edition of Process Manager.
       Besides the improved visual appearance it introduces new window tweaking options which you can see in the picture.
       One can for example change a sticky (always on top) window to act as a normal one.
+      <br /><br />
+      Download: <a href="https://github.com/razzie/home-projects/raw/master/2008/windows-manager/wmanager.exe">wmanager.exe</a>
     </description>
   </project>
 
