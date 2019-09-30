@@ -9,6 +9,7 @@ import (
 type Project struct {
 	ID          string
 	Name        string
+	Year        string
 	ImageURL    string
 	Description template.HTML
 }
@@ -22,6 +23,7 @@ type xmlProject struct {
 	XMLName     xml.Name       `xml:"project"`
 	ID          string         `xml:"id"`
 	Name        string         `xml:"name"`
+	Year        string         `xml:"year"`
 	ImageURL    string         `xml:"img"`
 	Description xmlDescription `xml:"description"`
 }
@@ -35,6 +37,7 @@ func newProject(proj xmlProject) Project {
 	return Project{
 		ID:          proj.ID,
 		Name:        proj.Name,
+		Year:        proj.Year,
 		ImageURL:    proj.ImageURL,
 		Description: template.HTML(proj.Description.InnerXML)}
 }

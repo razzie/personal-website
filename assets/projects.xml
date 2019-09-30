@@ -4,6 +4,7 @@
   <project>
     <id>floating_islands</id>
     <name>Floating Islands</name>
+    <year>2016</year>
     <img>img/floating_islands.png</img>
     <description>
       Floating Islands is yet another example of my experiments with procedurally generated terrains.
@@ -18,6 +19,7 @@
   <project>
     <id>flyff</id>
     <name>Flyff fansite</name>
+    <year>2007-2010</year>
     <img>img/flyff.png</img>
     <description>
       Flyff.extra.hu was a hungarian fan site of Flyff (Fly For Fun) online game.
@@ -34,6 +36,7 @@
   <project>
     <id>gglib</id>
     <name>gglib &amp; gglib2</name>
+    <year>2013-2017</year>
     <img>img/gglib.png</img>
     <description>
       GGlib and GGlib2 were libraries I used to develop between 2013 and 2017.
@@ -51,6 +54,7 @@
   <project>
     <id>ground_tool</id>
     <name>Ground Tool</name>
+    <year>2016</year>
     <img>img/ground_tool.png</img>
     <description>
       The idea behind the demo was a game with floating islands.
@@ -65,6 +69,7 @@
   <project>
     <id>gtaonline_videos</id>
     <name>GTA Online videos</name>
+    <year>2015-2019</year>
     <img>img/gtaonline_videos.png</img>
     <description>
       I have way more playtime in Grand Theft Auto V (or GTA Online to be specific) than I would like to admit and most of that I've spent with friends I've met in the game.
@@ -77,6 +82,7 @@
   <project>
     <id>hexagon</id>
     <name>Hexagon</name>
+    <year>2015</year>
     <img>img/hexagon.png</img>
     <description>
       Hexagon is very similar to the Minecraft clone, but I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes.
@@ -91,6 +97,7 @@
   <project>
     <id>librazzie</id>
     <name>librazzie</name>
+    <year>2016-2018</year>
     <img>img/librazzie.png</img>
     <description>
       A header-only multi-purpose library designed to help me get started with my projects.
@@ -104,6 +111,7 @@
   <project>
     <id>logic_circuit_simulator</id>
     <name>Logic Circuit Simulator</name>
+    <year>2010</year>
     <img>img/logic_circuit_simulator.png</img>
     <description>
       Logic Circuit Simulator was a university project I had to finish in a semester.
@@ -120,6 +128,7 @@
   <project>
     <id>minecraft_clone</id>
     <name>Minecraft clone</name>
+    <year>2011-2012</year>
     <img>img/minecraft_clone.png</img>
     <description>
       Minecraft clone is a graphics project I worked on during the final year of the university.
@@ -135,6 +144,7 @@
   <project>
     <id>poccemod</id>
     <name>PocceMod</name>
+    <year>2019</year>
     <img>img/poccemod.png</img>
     <description>
       I made this mod originally for my tiny private FiveM server to have some fun with friends.
@@ -156,6 +166,7 @@
   <project>
     <id>potato_game</id>
     <name>Potato Game</name>
+    <year>2017</year>
     <img>img/potato_game.png</img>
     <description>
       PotatoGame is a procedural generated game about little potatoes with customizable AI (which was only done on paper).
@@ -173,6 +184,7 @@
   <project>
     <id>prepi</id>
     <name>Prepi</name>
+    <year>2014</year>
     <img>img/prepi.png</img>
     <description>
       Prepi is an indie game project I was working on together with a friend.
@@ -191,6 +203,7 @@
   <project>
     <id>process_manager</id>
     <name>Process Manager</name>
+    <year>2008</year>
     <img>img/process_manager.png</img>
     <description>
       Process Manager is a replacement application for the built-in Windows Task Manager with a lot of additional features.
@@ -203,6 +216,7 @@
   <project>
     <id>raztalk</id>
     <name>RazTalk</name>
+    <year>2018</year>
     <img>img/raztalk.png</img>
     <description>
       A simple lobby/channel based registration-free webchat.
@@ -217,6 +231,7 @@
   <project>
     <id>razziecraft_vanilla</id>
     <name>RazzieCraft Vanilla</name>
+    <year>2018</year>
     <img>img/razziecraft_vanilla.png</img>
     <description>
       RazzieCraft Vanilla is Minecraft version 1.12.2 on steroids!
@@ -232,6 +247,7 @@
   <project>
     <id>razzgravitas</id>
     <name>RazzGravitas</name>
+    <year>2017</year>
     <img>img/razzgravitas.png</img>
     <description>
       RazzGravitas is a simple multiplayer game about gravity.
@@ -248,6 +264,7 @@
   <project>
     <id>razzie_messenger</id>
     <name>Razzie Messenger</name>
+    <year>2008</year>
     <img>img/razzie_messenger.png</img>
     <description>
       Razzie Messenger is a messenger client and server I started working on during a one-week vacation at lake Balaton (Hungary).
@@ -267,6 +284,7 @@
   <project>
     <id>server_client_app</id>
     <name>Server - client application</name>
+    <year>2008</year>
     <img>img/server_client_application.png</img>
     <description>
       Server - client application is a small tool which helps creating and debugging text based network protocols.
@@ -280,6 +298,7 @@
   <project>
     <id>windows_manager</id>
     <name>Windows Manager</name>
+    <year>2008</year>
     <img>img/windows_manager.png</img>
     <description>
       Windows Manager is a reworked and extended edition of Process Manager.
