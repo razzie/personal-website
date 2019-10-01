@@ -168,7 +168,7 @@
   <project>
     <id>potato_game</id>
     <name>Potato Game</name>
-    <year>2017</year>
+    <year>2016-2017</year>
     <img>img/potato_game.png</img>
     <description>
       PotatoGame is a procedural generated game about little potatoes with customizable AI (which was only done on paper).
