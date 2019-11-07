@@ -301,6 +301,26 @@
   </project>
   
   <project>
+    <id>riddle_solver</id>
+    <name>Riddle Solver</name>
+    <year>2019</year>
+    <img>img/riddle_solver.png</img>
+    <tags>go app</tags>
+    <description>
+      Riddle Solver is a terminal app designed to solve Einstein's 5 house riddle. I think I came across this kind of riddle playing Dishonored2 first as a
+      third option to get inside a locked place. It was written by a fictional genius game character named Kirin Jindosh and it's clearly based on Einstein's
+      five house riddle. It took me (sadly) at least 30 minutes to solve on paper, but it earned me an achievement.<br />
+      Fast forward 3 years, I had the random idea of implementing this riddle solver, which seemed like a simple way to sharpen my
+      Golang skills. I was wrong. Coming up with the UI design and the solver algorithm caused me quite a few sleepness nights,
+      but I'm really proud of the result.
+      <br /><br />
+      Screenshot of <a href="https://raw.githubusercontent.com/razzie/riddle-solver/master/screenshots/dishonored2_jindosh_riddle.jpg">The Jindosh Riddle</a><br />
+      Download: <a href="https://github.com/razzie/riddle-solver/releases/download/v1.0/riddle-solver.exe">riddle-solver.exe</a><br />
+      Source code: <a href="https://github.com/razzie/riddle-solver">github.com/razzie/riddle-solver</a>
+    </description>
+  </project>
+
+  <project>
     <id>server_client_app</id>
     <name>Server - client application</name>
     <year>2008</year>
