@@ -6,7 +6,7 @@
     <name>Floating Islands</name>
     <year>2016</year>
     <img>img/floating_islands.png</img>
-    <tags>cpp 3d</tags>
+    <tags>cpp 3d procedural</tags>
     <description>
       Floating Islands is yet another example of my experiments with procedurally generated terrains.
       I developed an algorithm that takes island positions and island connections as input parameters and generates a 3D grid world using a Perlin noise internally.
@@ -61,7 +61,7 @@
     <name>Ground Tool</name>
     <year>2016</year>
     <img>img/ground_tool.png</img>
-    <tags>cpp 3d</tags>
+    <tags>cpp 3d procedural</tags>
     <description>
       The idea behind the demo was a game with floating islands.
       Though this game never made it to the reality, Ground Tool was born as a result of experimenting with the rendering of these islands.
@@ -91,7 +91,7 @@
     <name>Hexagon</name>
     <year>2015</year>
     <img>img/hexagon.png</img>
-    <tags>cpp 3d</tags>
+    <tags>cpp 3d procedural</tags>
     <description>
       Hexagon is very similar to the Minecraft clone, but I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes.
       The underlying datastructure is still a 3D grid of Perlin noise.
@@ -140,7 +140,7 @@
     <name>Minecraft clone</name>
     <year>2011-2012</year>
     <img>img/minecraft_clone.png</img>
-    <tags>cpp 3d</tags>
+    <tags>cpp 3d procedural</tags>
     <description>
       Minecraft clone is a graphics project I worked on during the final year of the university.
       Contrary to its name it is not a real clone, it features no game elements.
@@ -180,7 +180,7 @@
     <name>Potato Game</name>
     <year>2016-2017</year>
     <img>img/potato_game.png</img>
-    <tags>cpp 3d game</tags>
+    <tags>cpp 3d game procedural</tags>
     <description>
       PotatoGame is a procedural generated game about little potatoes with customizable AI (which was only done on paper).
       The goal is to have them win the game for you by gaining world domination.
