@@ -6,6 +6,7 @@
     <name>Floating Islands</name>
     <year>2016</year>
     <img>img/floating_islands.png</img>
+    <tags>cpp 3d</tags>
     <description>
       Floating Islands is yet another example of my experiments with procedurally generated terrains.
       I developed an algorithm that takes island positions and island connections as input parameters and generates a 3D grid world using a Perlin noise internally.
@@ -21,6 +22,7 @@
     <name>Flyff fansite</name>
     <year>2007-2010</year>
     <img>img/flyff.png</img>
+    <tags>php web</tags>
     <description>
       Flyff.extra.hu was a hungarian fan site of Flyff (Fly For Fun) online game.
       During the 3-4 years of its existence I developed more and more new features to make it a fully functional web portal.
@@ -40,6 +42,7 @@
     <name>gglib &amp; gglib2</name>
     <year>2013-2017</year>
     <img>img/gglib.png</img>
+    <tags>cpp lib</tags>
     <description>
       GGlib and GGlib2 were libraries I used to develop between 2013 and 2017.
       They served as a sandbox to help me to learn about the new features of the C++11 standard.
@@ -58,6 +61,7 @@
     <name>Ground Tool</name>
     <year>2016</year>
     <img>img/ground_tool.png</img>
+    <tags>cpp 3d</tags>
     <description>
       The idea behind the demo was a game with floating islands.
       Though this game never made it to the reality, Ground Tool was born as a result of experimenting with the rendering of these islands.
@@ -73,6 +77,7 @@
     <name>GTA Online videos</name>
     <year>2015-2019</year>
     <img>img/gtaonline_videos.png</img>
+    <tags>hobby video</tags>
     <description>
       I have way more playtime in Grand Theft Auto V (or GTA Online to be specific) than I would like to admit and most of that I've spent with friends I've met in the game.
       It became our little tradition to record funny, exciting or any memorable moments and later create videos of it.
@@ -86,6 +91,7 @@
     <name>Hexagon</name>
     <year>2015</year>
     <img>img/hexagon.png</img>
+    <tags>cpp 3d</tags>
     <description>
       Hexagon is very similar to the Minecraft clone, but I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes.
       The underlying datastructure is still a 3D grid of Perlin noise.
@@ -101,6 +107,7 @@
     <name>librazzie</name>
     <year>2016-2018</year>
     <img>img/librazzie.png</img>
+    <tags>cpp lib</tags>
     <description>
       A header-only multi-purpose library designed to help me get started with my projects.
       It includes frameworks for logging, events, input, memory, thread and network+serialization and has some additional stuff like:
@@ -115,6 +122,7 @@
     <name>Logic Circuit Simulator</name>
     <year>2010</year>
     <img>img/logic_circuit_simulator.png</img>
+    <tags>java app</tags>
     <description>
       Logic Circuit Simulator was a university project I had to finish in a semester.
       It offers a variety of logic gates and a lot of visual customization options.
@@ -132,6 +140,7 @@
     <name>Minecraft clone</name>
     <year>2011-2012</year>
     <img>img/minecraft_clone.png</img>
+    <tags>cpp 3d</tags>
     <description>
       Minecraft clone is a graphics project I worked on during the final year of the university.
       Contrary to its name it is not a real clone, it features no game elements.
@@ -148,6 +157,7 @@
     <name>PocceMod</name>
     <year>2019</year>
     <img>img/poccemod.png</img>
+    <tags>csharp mod game</tags>
     <description>
       I made this mod originally for my tiny private FiveM server to have some fun with friends.
       (FiveM is a modification for Grand Theft Auto V enabling you to play multiplayer on customized dedicated servers.)
@@ -170,6 +180,7 @@
     <name>Potato Game</name>
     <year>2016-2017</year>
     <img>img/potato_game.png</img>
+    <tags>cpp 3d game</tags>
     <description>
       PotatoGame is a procedural generated game about little potatoes with customizable AI (which was only done on paper).
       The goal is to have them win the game for you by gaining world domination.
@@ -188,6 +199,7 @@
     <name>Prepi</name>
     <year>2014</year>
     <img>img/prepi.png</img>
+    <tags>cpp 2d game</tags>
     <description>
       Prepi is an indie game project I was working on together with a friend.
       It was intended to be a rage game with puzzle elements.
@@ -207,6 +219,7 @@
     <name>Process Manager</name>
     <year>2008</year>
     <img>img/process_manager.png</img>
+    <tags>purebasic app</tags>
     <description>
       Process Manager is a replacement application for the built-in Windows Task Manager with a lot of additional features.
       It keeps running in the background after closing the main window and can be brought back from the tray icon or by pressing Ctrl+F12.
@@ -220,6 +233,7 @@
     <name>RazTalk</name>
     <year>2018</year>
     <img>img/raztalk.png</img>
+    <tags>csharp web app</tags>
     <description>
       A simple lobby/channel based registration-free webchat.
       <br /><br />
@@ -235,6 +249,7 @@
     <name>RazzieCraft Vanilla</name>
     <year>2018</year>
     <img>img/razziecraft_vanilla.png</img>
+    <tags>hobby minecraft</tags>
     <description>
       RazzieCraft Vanilla is Minecraft version 1.12.2 on steroids!
       This pack contains a ton of strictly curated mods that enhance the visuals and gameplay of vanilla Minecraft,
@@ -251,6 +266,7 @@
     <name>RazzGravitas</name>
     <year>2017</year>
     <img>img/razzgravitas.png</img>
+    <tags>cpp 2d game</tags>
     <description>
       RazzGravitas is a simple multiplayer game about gravity.
       At the time of making it I just gave up on a somewhat larger project and I needed to give myself a smaller task that I can prove to be able to finish.
@@ -268,6 +284,7 @@
     <name>Razzie Messenger</name>
     <year>2008</year>
     <img>img/razzie_messenger.png</img>
+    <tags>purebasic app</tags>
     <description>
       Razzie Messenger is a messenger client and server I started working on during a one-week vacation at lake Balaton (Hungary).
       It uses a very simple plain text based protocol for network communication, look at the picture to see it in details.
@@ -288,6 +305,7 @@
     <name>Server - client application</name>
     <year>2008</year>
     <img>img/server_client_application.png</img>
+    <tags>purebasic app</tags>
     <description>
       Server - client application is a small tool which helps creating and debugging text based network protocols.
       I developed it while working on Razzie Messenger and it had a great use.
@@ -302,6 +320,7 @@
     <name>Windows Manager</name>
     <year>2008</year>
     <img>img/windows_manager.png</img>
+    <tags>purebasic app</tags>
     <description>
       Windows Manager is a reworked and extended edition of Process Manager.
       Besides the improved visual appearance it introduces new window tweaking options which you can see in the picture.

@@ -11,6 +11,7 @@ type Project struct {
 	Name        string
 	Year        string
 	ImageURL    string
+	Tags        string
 	Description template.HTML
 }
 
@@ -25,6 +26,7 @@ type xmlProject struct {
 	Name        string         `xml:"name"`
 	Year        string         `xml:"year"`
 	ImageURL    string         `xml:"img"`
+	Tags        string         `xml:"tags"`
 	Description xmlDescription `xml:"description"`
 }
 
@@ -39,7 +41,9 @@ func newProject(proj xmlProject) Project {
 		Name:        proj.Name,
 		Year:        proj.Year,
 		ImageURL:    proj.ImageURL,
-		Description: template.HTML(proj.Description.InnerXML)}
+		Tags:        proj.Tags,
+		Description: template.HTML(proj.Description.InnerXML),
+	}
 }
 
 // LoadProjects parses projects.xml and returns the projects in a slice
