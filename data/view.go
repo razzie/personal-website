@@ -67,6 +67,13 @@ func filterRepos(repos []Repo, tag string) (results []Repo) {
 	for _, repo := range repos {
 		if repo.Language == lang {
 			results = append(results, repo)
+			continue
+		}
+		for _, t := range repo.Tags {
+			if t == tag {
+				results = append(results, repo)
+				continue
+			}
 		}
 	}
 	return

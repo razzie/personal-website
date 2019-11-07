@@ -29,6 +29,7 @@ type Repo struct {
 	Owner       string
 	URL         string
 	Language    string
+	Tags        []string
 	Commits     []Commit
 }
 
@@ -61,6 +62,7 @@ func newRepo(ctx context.Context, client *github.Client, repo *github.Repository
 		Description: *repo.Description,
 		Owner:       *repo.Owner.Login,
 		URL:         *repo.HTMLURL,
+		Tags:        repo.Topics,
 		Language:    *repo.Language,
 	}
 
