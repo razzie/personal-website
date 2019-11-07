@@ -6,20 +6,21 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/razzie/gorzsony.com/data"
 	assetfs "github.com/elazarl/go-bindata-assetfs"
 )
 
 var (
 	// Projects contains my hobby projects
-	Projects []Project
+	Projects []data.Project
 	// Repos contains my github owned repos
-	Repos []Repo
+	Repos []data.Repo
 	// Stars contains my github starred repos
-	Stars []Repo
+	Stars []data.Repo
 )
 
 func main() {
-	index, err := Asset("index.html")
+	index, err := data.Asset("index.html")
 	if err != nil {
 		panic(err)
 	}
@@ -30,16 +31,16 @@ func main() {
 		panic(err)
 	}
 
-	Projects, err = LoadProjects()
+	Projects, err = data.LoadProjects()
 	if err != nil {
 		panic(err)
 	}
 
 	go func() {
-		token, _ := Asset("github.token")
+		token, _ := data.Asset("github.token")
 		ticker := time.NewTicker(time.Minute * 30)
 		for ; true; <-ticker.C {
-			repos, stars, err := GetReposAndStars("razzie", string(token))
+			repos, stars, err := data.GetReposAndStars("razzie", string(token))
 			if err != nil {
 				fmt.Println("error:", err)
 				continue
@@ -50,7 +51,7 @@ func main() {
 	}()
 
 	fs := http.FileServer(
-		&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, AssetInfo: nil, Prefix: ""})
+		&assetfs.AssetFS{Asset: data.Asset, AssetDir: data.AssetDir, AssetInfo: nil, Prefix: ""})
 
 	http.Handle("/css/", fs)
 	http.Handle("/img/", fs)
@@ -58,7 +59,7 @@ func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		tmpl.Execute(w, NewView(Projects, Repos, Stars))
+		tmpl.Execute(w, data.NewView(Projects, Repos, Stars))
 	})
 
 	http.ListenAndServe("localhost:8080", nil)

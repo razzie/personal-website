@@ -1,3 +1,4 @@
-bin/
+/razweb
+/razweb.exe
 assets/github.token
 bindata.go

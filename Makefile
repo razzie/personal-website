@@ -1,19 +1,16 @@
 .PHONY: razweb clean
-
 .DEFAULT_GOAL := razweb
-
-#bindata:
-#	go run github.com/jteeuwen/go-bindata/go-bindata/ -prefix assets assets/...
+BINDATA_TOOL := go run github.com/jteeuwen/go-bindata/go-bindata/
 
 ifeq ($(OS),Windows_NT)
-razweb:
-	tools/windows/go-bindata.exe -prefix assets assets/...
-	go build -o bin/razweb.exe
+BINDATA_TOOL = tools/windows/go-bindata.exe
 else
-razweb:
-	tools/linux/go-bindata -prefix assets assets/...
-	go build -o bin/razweb
+BINDATA_TOOL = tools/linux/go-bindata
 endif
+
+razweb:
+	$(BINDATA_TOOL) -prefix assets -o data/bindata.go -pkg data assets/...
+	go build ./cmd/razweb
 
 clean:
 	go clean
