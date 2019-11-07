@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gábor Görzsöny</title>
+    <base href="{{.Base}}" target="_blank">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-    <base target="_blank">
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
@@ -23,6 +23,7 @@
     </script>
 </head>
   <body class="container">
+	{{if not .Tag}}
 	<section>
 		<div class="center">
 			<div class="row justify-content-center">
@@ -56,13 +57,18 @@
 			</div>
 		</div>
 	</section>
+	{{end}}
 	{{if .GithubReposLoaded }}
 	<section>
 		<div class="scroll-down reveal"></div>
 		<div class="row justify-content-center">
 			<div class="col m-5 text-center reveal">
+			{{if .Tag}}
+				<h1>Public repos tagged with <span class="text-danger">{{.Tag}}</span></h1>
+			{{else}}
 				<h1>Public work</h1>
 				<small>(randomly selected)</small>
+			{{end}}
 			</div>
 		</div>
 		<div class="row">
@@ -104,11 +110,16 @@
 		</div>
 	</section>
 	{{end}}
+	{{if .ProjectsLoaded}}
 	<section>
 		<div class="scroll-down reveal"></div>
 		<div class="row justify-content-center">
 			<div class="col m-5 text-center reveal">
+			{{if .Tag}}
+				<h1>Projects tagged with <span class="text-danger">{{.Tag}}</span></h1>
+			{{else}}
 				<h1>Projects I'm proud of</h1>
+			{{end}}
 			</div>
 		</div>
 		<div class="row">
@@ -122,6 +133,7 @@
 		{{end}}
 		</div>
 	</section>
+	{{end}}
 	<footer class="text-center reveal">
 		<div class="scroll-up"></div>
 		<small>Gábor Görzsöny</small>

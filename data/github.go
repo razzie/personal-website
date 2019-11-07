@@ -28,6 +28,7 @@ type Repo struct {
 	Description string
 	Owner       string
 	URL         string
+	Language    string
 	Commits     []Commit
 }
 
@@ -41,7 +42,8 @@ func newCommit(commit *github.RepositoryCommit) Commit {
 		ID:      (*commit.SHA)[:8],
 		Message: msg,
 		User:    *commit.Commit.Author.Name,
-		Date:    *commit.Commit.Author.Date}
+		Date:    *commit.Commit.Author.Date,
+	}
 }
 
 func newRepo(ctx context.Context, client *github.Client, repo *github.Repository) Repo {
@@ -58,7 +60,9 @@ func newRepo(ctx context.Context, client *github.Client, repo *github.Repository
 		Name:        *repo.Name,
 		Description: *repo.Description,
 		Owner:       *repo.Owner.Login,
-		URL:         *repo.HTMLURL}
+		URL:         *repo.HTMLURL,
+		Language:    *repo.Language,
+	}
 
 	for _, commit := range commits {
 		result.Commits = append(result.Commits, newCommit(commit))

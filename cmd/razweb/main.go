@@ -4,10 +4,11 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"strings"
 	"time"
 
-	"github.com/razzie/gorzsony.com/data"
 	assetfs "github.com/elazarl/go-bindata-assetfs"
+	"github.com/razzie/gorzsony.com/data"
 )
 
 var (
@@ -60,6 +61,11 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		tmpl.Execute(w, data.NewView(Projects, Repos, Stars))
+	})
+	http.HandleFunc("/tag/", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+		tag := strings.ToLower(r.URL.Path[5:])
+		tmpl.Execute(w, data.NewTagView(Projects, Repos, tag))
 	})
 
 	http.ListenAndServe("localhost:8080", nil)
