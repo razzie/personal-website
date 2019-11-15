@@ -31,6 +31,11 @@ func main() {
 		panic(err)
 	}
 
+	resume, err := data.Asset("resume.html")
+	if err != nil {
+		panic(err)
+	}
+
 	Projects, err = data.LoadProjects()
 	if err != nil {
 		panic(err)
@@ -65,6 +70,10 @@ func main() {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		tag := r.URL.Path[5:]
 		tmpl.Execute(w, data.NewTagView(Projects, Repos, tag))
+	})
+	http.HandleFunc("/resume", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+		fmt.Fprintf(w, "%s", resume)
 	})
 
 	http.ListenAndServe("localhost:8080", nil)
