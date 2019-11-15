@@ -39,6 +39,7 @@ func shuffleProjects(projects []Project) []Project {
 }
 
 func filterProjects(projects []Project, tag string) (results []Project) {
+	tag = strings.ToLower(tag)
 	for _, proj := range projects {
 		tags := strings.Fields(proj.Tags)
 		for _, t := range tags {
@@ -63,6 +64,7 @@ func limitRepos(repos []Repo, maxRepos int) []Repo {
 }
 
 func filterRepos(repos []Repo, tag string) (results []Repo) {
+	tag = strings.ToLower(tag)
 	lang, _ := tagLangMap[tag]
 	for _, repo := range repos {
 		if repo.Language == lang {
