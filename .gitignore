@@ -1,4 +1,3 @@
 /razweb
 /razweb.exe
-assets/github.token
-bindata.go
+/assets/github.token

@@ -1,5 +1,7 @@
 package main
 
+//go:generate go run ../../tools/go-bindata/ -prefix ../../assets ../../assets/...
+
 import (
 	"fmt"
 	"html/template"
@@ -7,20 +9,20 @@ import (
 	"time"
 
 	assetfs "github.com/elazarl/go-bindata-assetfs"
-	"github.com/razzie/gorzsony.com/data"
+	"github.com/razzie/gorzsony.com/pkg/github"
 )
 
 var (
 	// Projects contains my hobby projects
-	Projects []data.Project
+	Projects []Project
 	// Repos contains my github owned repos
-	Repos []data.Repo
+	Repos []github.Repo
 	// Stars contains my github starred repos
-	Stars []data.Repo
+	Stars []github.Repo
 )
 
 func main() {
-	index, err := data.Asset("index.html")
+	index, err := Asset("index.html")
 	if err != nil {
 		panic(err)
 	}
@@ -31,21 +33,21 @@ func main() {
 		panic(err)
 	}
 
-	resume, err := data.Asset("resume.html")
+	resume, err := Asset("resume.html")
 	if err != nil {
 		panic(err)
 	}
 
-	Projects, err = data.LoadProjects()
+	Projects, err = LoadProjects()
 	if err != nil {
 		panic(err)
 	}
 
 	go func() {
-		token, _ := data.Asset("github.token")
+		token, _ := Asset("github.token")
 		ticker := time.NewTicker(time.Minute * 30)
 		for ; true; <-ticker.C {
-			repos, stars, err := data.GetReposAndStars("razzie", string(token))
+			repos, stars, err := github.GetReposAndStars("razzie", string(token))
 			if err != nil {
 				fmt.Println("error:", err)
 				continue
@@ -56,7 +58,7 @@ func main() {
 	}()
 
 	fs := http.FileServer(
-		&assetfs.AssetFS{Asset: data.Asset, AssetDir: data.AssetDir, AssetInfo: nil, Prefix: ""})
+		&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, AssetInfo: nil, Prefix: ""})
 
 	http.Handle("/css/", fs)
 	http.Handle("/img/", fs)
@@ -64,12 +66,12 @@ func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		tmpl.Execute(w, data.NewView(Projects, Repos, Stars))
+		tmpl.Execute(w, NewView(Projects, Repos, Stars))
 	})
 	http.HandleFunc("/tag/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		tag := r.URL.Path[5:]
-		tmpl.Execute(w, data.NewTagView(Projects, Repos, tag))
+		tmpl.Execute(w, NewTagView(Projects, Repos, tag))
 	})
 	http.HandleFunc("/resume", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")

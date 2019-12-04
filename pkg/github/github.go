@@ -1,11 +1,11 @@
-package data
+package github
 
 import (
 	"context"
 	"fmt"
 	"time"
 
-	"github.com/google/go-github/github"
+	gh "github.com/google/go-github/github"
 	"golang.org/x/oauth2"
 )
 
@@ -33,7 +33,7 @@ type Repo struct {
 	Commits     []Commit
 }
 
-func newCommit(commit *github.RepositoryCommit) Commit {
+func newCommit(commit *gh.RepositoryCommit) Commit {
 	msg := *commit.Commit.Message
 	if len(msg) > 100 {
 		msg = msg[:100] + "..."
@@ -47,8 +47,8 @@ func newCommit(commit *github.RepositoryCommit) Commit {
 	}
 }
 
-func newRepo(ctx context.Context, client *github.Client, repo *github.Repository) Repo {
-	opts := &github.CommitsListOptions{}
+func newRepo(ctx context.Context, client *gh.Client, repo *gh.Repository) Repo {
+	opts := &gh.CommitsListOptions{}
 	opts.Page = 1
 	opts.PerPage = maxCommits
 	commits, _, _ := client.Repositories.ListCommits(ctx, *repo.Owner.Login, *repo.Name, opts)
@@ -87,7 +87,7 @@ func GetReposAndStars(user string, token string) (repos []Repo, stars []Repo, er
 	)
 	tc := oauth2.NewClient(ctx, ts)
 
-	client := github.NewClient(tc)
+	client := gh.NewClient(tc)
 
 	userRepos, _, err := client.Repositories.List(ctx, user, nil)
 	if err != nil {
@@ -105,7 +105,7 @@ func GetReposAndStars(user string, token string) (repos []Repo, stars []Repo, er
 		}
 	}
 
-	starredRepos, _, err := client.Activity.ListStarred(ctx, user, &github.ActivityListStarredOptions{})
+	starredRepos, _, err := client.Activity.ListStarred(ctx, user, &gh.ActivityListStarredOptions{})
 	if err != nil {
 		return nil, nil, err
 	}

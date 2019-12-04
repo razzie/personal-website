@@ -1,9 +1,11 @@
-package data
+package main
 
 import (
 	"math/rand"
 	"strings"
 	"time"
+
+	"github.com/razzie/gorzsony.com/pkg/github"
 )
 
 // View contains data used by index.html template
@@ -13,9 +15,9 @@ type View struct {
 	ProjectsLoaded    bool
 	Projects          []Project
 	GithubReposLoaded bool
-	GithubRepos       []Repo
+	GithubRepos       []github.Repo
 	GithubStarsLoaded bool
-	GithubStars       []Repo
+	GithubStars       []github.Repo
 }
 
 var tagLangMap = map[string]string{
@@ -52,18 +54,18 @@ func filterProjects(projects []Project, tag string) (results []Project) {
 	return
 }
 
-func shuffleRepos(repos []Repo) []Repo {
+func shuffleRepos(repos []github.Repo) []github.Repo {
 	clone := append(repos[:0:0], repos...)
 	rand.Seed(time.Now().UnixNano())
 	rand.Shuffle(len(clone), func(i, j int) { clone[i], clone[j] = clone[j], clone[i] })
 	return clone
 }
 
-func limitRepos(repos []Repo, maxRepos int) []Repo {
+func limitRepos(repos []github.Repo, maxRepos int) []github.Repo {
 	return repos[:min(maxRepos, len(repos))]
 }
 
-func filterRepos(repos []Repo, tag string) (results []Repo) {
+func filterRepos(repos []github.Repo, tag string) (results []github.Repo) {
 	tag = strings.ToLower(tag)
 	lang, _ := tagLangMap[tag]
 	for _, repo := range repos {
@@ -82,7 +84,7 @@ func filterRepos(repos []Repo, tag string) (results []Repo) {
 }
 
 // NewView returns a new view using the given projects, owned repos and starred repos
-func NewView(projects []Project, repos []Repo, stars []Repo) View {
+func NewView(projects []Project, repos []github.Repo, stars []github.Repo) View {
 	return View{
 		Base:              "/",
 		ProjectsLoaded:    len(projects) > 0,
@@ -95,7 +97,7 @@ func NewView(projects []Project, repos []Repo, stars []Repo) View {
 }
 
 // NewTagView returns a new view that lacks intro and shows only tagged projects and repos
-func NewTagView(projects []Project, repos []Repo, tag string) View {
+func NewTagView(projects []Project, repos []github.Repo, tag string) View {
 	projects = filterProjects(projects, tag)
 	repos = filterRepos(repos, tag)
 
