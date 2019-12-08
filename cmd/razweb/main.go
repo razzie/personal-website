@@ -5,6 +5,8 @@ package main
 import (
 	"fmt"
 	"html/template"
+	"log"
+	"net"
 	"net/http"
 	"time"
 
@@ -57,6 +59,11 @@ func main() {
 		}
 	}()
 
+	log := func(r *http.Request) {
+		host, _, _ := net.SplitHostPort(r.RemoteAddr)
+		log.Println(host, r.URL.Path)
+	}
+
 	fs := http.FileServer(
 		&assetfs.AssetFS{Asset: Asset, AssetDir: AssetDir, AssetInfo: nil, Prefix: ""})
 
@@ -67,15 +74,20 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		tmpl.Execute(w, NewView(Projects, Repos, Stars))
+		go log(r)
 	})
+
 	http.HandleFunc("/tag/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		tag := r.URL.Path[5:]
 		tmpl.Execute(w, NewTagView(Projects, Repos, tag))
+		go log(r)
 	})
+
 	http.HandleFunc("/resume", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		fmt.Fprintf(w, "%s", resume)
+		go log(r)
 	})
 
 	http.ListenAndServe("localhost:8080", nil)
