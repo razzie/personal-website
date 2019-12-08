@@ -8,6 +8,7 @@ import (
 	"log"
 	"net"
 	"net/http"
+	"os"
 	"time"
 
 	assetfs "github.com/elazarl/go-bindata-assetfs"
@@ -25,6 +26,8 @@ var (
 )
 
 func main() {
+	log.SetOutput(os.Stdout)
+
 	index, err := Asset("index.html")
 	if err != nil {
 		panic(err)
@@ -52,7 +55,7 @@ func main() {
 		for ; true; <-ticker.C {
 			repos, stars, err := github.GetReposAndStars("razzie", string(token))
 			if err != nil {
-				fmt.Println("error:", err)
+				fmt.Fprintf(os.Stderr, "error: %v", err)
 				continue
 			}
 
