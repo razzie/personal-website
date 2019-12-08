@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"html/template"
 	"log"
-	"net"
 	"net/http"
 	"os"
 	"time"
@@ -64,7 +63,8 @@ func main() {
 	}()
 
 	log := func(r *http.Request) {
-		host, _, _ := net.SplitHostPort(r.RemoteAddr)
+		//host, _, _ := net.SplitHostPort(r.RemoteAddr)
+		host := r.Header.Get("X-REAL-IP")
 		loc, _ := geoloc.GetLocation(host)
 		log.Printf("%s (%s) - %s", host, loc, r.URL.Path)
 	}
