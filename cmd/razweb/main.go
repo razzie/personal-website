@@ -11,6 +11,7 @@ import (
 	"time"
 
 	assetfs "github.com/elazarl/go-bindata-assetfs"
+	"github.com/razzie/gorzsony.com/pkg/geoloc"
 	"github.com/razzie/gorzsony.com/pkg/github"
 )
 
@@ -61,7 +62,8 @@ func main() {
 
 	log := func(r *http.Request) {
 		host, _, _ := net.SplitHostPort(r.RemoteAddr)
-		log.Println(host, r.URL.Path)
+		loc, _ := geoloc.GetLocation(host)
+		log.Printf("%s (%s) - %s", host, loc, r.URL.Path)
 	}
 
 	fs := http.FileServer(
