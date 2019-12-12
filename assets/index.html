@@ -128,8 +128,11 @@
 			<div class="col-md-6 mb-5 text-left reveal">
 				<img src="{{.ImageURL}}" class="img-fluid" />
 				<h3 class="text-danger">{{.Name}}</h3>
-				<p><span class="text-secondary">{{.Year}}</span></p>
 				<p>{{.Description}}</p>
+				<span class="text-secondary">year: {{.Year}}</span><br />
+				<span class="text-secondary">
+					tags: {{range .Tags}}<a href="/tag/{{.}}">{{.}}</a> {{end}}
+				</span>
 			</div>
 		{{end}}
 		</div>

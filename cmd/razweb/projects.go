@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/xml"
 	"html/template"
+	"strings"
 )
 
 // Project contains data about one of my hobby projects
@@ -11,7 +12,7 @@ type Project struct {
 	Name        string
 	Year        string
 	ImageURL    string
-	Tags        string
+	Tags        []string
 	Description template.HTML
 }
 
@@ -41,7 +42,7 @@ func newProject(proj xmlProject) Project {
 		Name:        proj.Name,
 		Year:        proj.Year,
 		ImageURL:    proj.ImageURL,
-		Tags:        proj.Tags,
+		Tags:        strings.Fields(proj.Tags),
 		Description: template.HTML(proj.Description.InnerXML),
 	}
 }

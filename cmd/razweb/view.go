@@ -43,8 +43,7 @@ func shuffleProjects(projects []Project) []Project {
 func filterProjects(projects []Project, tag string) (results []Project) {
 	tag = strings.ToLower(tag)
 	for _, proj := range projects {
-		tags := strings.Fields(proj.Tags)
-		for _, t := range tags {
+		for _, t := range proj.Tags {
 			if t == tag {
 				results = append(results, proj)
 				continue
