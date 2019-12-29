@@ -13,6 +13,7 @@ import (
 	"time"
 
 	assetfs "github.com/elazarl/go-bindata-assetfs"
+	"github.com/mssola/user_agent"
 	"github.com/razzie/gorzsony.com/pkg/geoloc"
 	"github.com/razzie/gorzsony.com/pkg/github"
 )
@@ -69,7 +70,17 @@ func main() {
 		ip := r.Header.Get("X-REAL-IP")
 		loc, _ := geoloc.GetLocation(ip)
 		addr, _ := net.LookupAddr(ip)
-		log.Printf("- %s - %s - %s - %s", ip, strings.Join(addr, ", "), loc, r.URL.Path)
+		ua := user_agent.New(r.UserAgent())
+		browser, ver := ua.Browser()
+
+		log.Printf("- %s - %s - %s - %s - %s %s - path: %s",
+			ip,
+			strings.Join(addr, ", "),
+			loc,
+			ua.OS(),
+			browser,
+			ver,
+			r.URL.Path)
 	}
 
 	fs := http.FileServer(
