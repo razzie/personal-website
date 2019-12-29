@@ -69,7 +69,7 @@ func main() {
 		ip := r.Header.Get("X-REAL-IP")
 		loc, _ := geoloc.GetLocation(ip)
 		addr, _ := net.LookupAddr(ip)
-		log.Printf("%s - %s - %s - %s", ip, strings.Join(addr, ", "), loc, r.URL.Path)
+		log.Printf("- %s - %s - %s - %s", ip, strings.Join(addr, ", "), loc, r.URL.Path)
 	}
 
 	fs := http.FileServer(
