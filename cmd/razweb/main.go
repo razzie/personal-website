@@ -6,8 +6,10 @@ import (
 	"fmt"
 	"html/template"
 	"log"
+	"net"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	assetfs "github.com/elazarl/go-bindata-assetfs"
@@ -63,10 +65,11 @@ func main() {
 	}()
 
 	log := func(r *http.Request) {
-		//host, _, _ := net.SplitHostPort(r.RemoteAddr)
-		host := r.Header.Get("X-REAL-IP")
-		loc, _ := geoloc.GetLocation(host)
-		log.Printf("%s (%s) - %s", host, loc, r.URL.Path)
+		//ip, _, _ := net.SplitHostPort(r.RemoteAddr)
+		ip := r.Header.Get("X-REAL-IP")
+		loc, _ := geoloc.GetLocation(ip)
+		addr, _ := net.LookupAddr(ip)
+		log.Printf("%s - %s - %s - %s", ip, strings.Join(addr, ", "), loc, r.URL.Path)
 	}
 
 	fs := http.FileServer(
