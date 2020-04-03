@@ -91,6 +91,11 @@ func main() {
 	http.Handle("/js/", fs)
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		if len(r.URL.Path) > 1 {
+			http.Redirect(w, r, "/", http.StatusSeeOther)
+			go log(r)
+			return
+		}
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		tmpl.Execute(w, NewView(Projects, Repos, Stars))
 		go log(r)
