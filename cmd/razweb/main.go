@@ -3,6 +3,7 @@ package main
 //go:generate go run ../../tools/go-bindata/ -prefix ../../assets ../../assets/...
 
 import (
+	"context"
 	"fmt"
 	"html/template"
 	"log"
@@ -14,7 +15,7 @@ import (
 
 	assetfs "github.com/elazarl/go-bindata-assetfs"
 	"github.com/mssola/user_agent"
-	"github.com/razzie/gorzsony.com/pkg/geoloc"
+	"github.com/razzie/geoip-server/client"
 	"github.com/razzie/gorzsony.com/pkg/github"
 )
 
@@ -68,7 +69,7 @@ func main() {
 	log := func(r *http.Request) {
 		//ip, _, _ := net.SplitHostPort(r.RemoteAddr)
 		ip := r.Header.Get("X-REAL-IP")
-		loc, _ := geoloc.GetLocation(ip)
+		loc, _ := client.DefaultClient.GetLocation(context.Background(), ip)
 		addr, _ := net.LookupAddr(ip)
 		ua := user_agent.New(r.UserAgent())
 		browser, ver := ua.Browser()
