@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <projects>
-  
+
   <project>
     <id>floating_islands</id>
     <name>Floating Islands</name>
@@ -16,7 +16,7 @@
       <a href="https://github.com/razzie/home-projects/tree/master/2016/floating-islands">github.com/razzie/home-projects/2016/floating-islands</a>
     </description>
   </project>
-  
+
   <project>
     <id>flyff</id>
     <name>Flyff fansite</name>
@@ -36,7 +36,21 @@
       <a href="https://github.com/razzie/home-projects/tree/master/2007/flyff">github.com/razzie/home-projects/2007/flyff</a>
     </description>
   </project>
-  
+
+  <project>
+    <id>geoip</id>
+    <name>geoip-server</name>
+    <year>2020</year>
+    <img>img/geoip.png</img>
+    <tags>go web</tags>
+    <description>
+      Description to be added later.
+      <br /><br />
+      Try it here: <a href="https://geoip.gorzsony.com">geoip.gorzsony.com</a><br />
+      Source code: <a href="https://github.com/razzie/geoip-server">github.com/razzie/geoip-server</a>
+    </description>
+  </project>
+
   <project>
     <id>gglib</id>
     <name>gglib &amp; gglib2</name>
@@ -55,7 +69,7 @@
       <a href="https://github.com/razzie/gglib2">github.com/razzie/gglib2</a>
     </description>
   </project>
-  
+
   <project>
     <id>ground_tool</id>
     <name>Ground Tool</name>
@@ -71,7 +85,7 @@
       <a href="https://github.com/razzie/home-projects/tree/master/2016/groundtool">github.com/razzie/home-projects/2016/groundtool</a>
     </description>
   </project>
-  
+
   <project>
     <id>gtaonline_videos</id>
     <name>GTA Online videos</name>
@@ -85,7 +99,7 @@
       Most of the content is only meaningful to us, but I still hope viewers will find them entertaining
     </description>
   </project>
-  
+
   <project>
     <id>hexagon</id>
     <name>Hexagon</name>
@@ -101,7 +115,7 @@
       <a href="https://github.com/razzie/home-projects/tree/master/2015/hexagon">github.com/razzie/home-projects/2015/hexagon</a>
     </description>
   </project>
-  
+
   <project>
     <id>librazzie</id>
     <name>librazzie</name>
@@ -116,7 +130,7 @@
       Source code: <a href="https://github.com/razzie/librazzie">github.com/razzie/librazzie</a><br />
     </description>
   </project>
-  
+
   <project>
     <id>logic_circuit_simulator</id>
     <name>Logic Circuit Simulator</name>
@@ -134,7 +148,21 @@
       Source code: <a href="https://github.com/razzie/LogicCircuitSimulator">github.com/razzie/LogicCircuitSimulator</a><br />
     </description>
   </project>
-  
+
+  <project>
+    <id>mediaserver</id>
+    <name>mediaserver</name>
+    <year>2020</year>
+    <img>img/mediaserver.png</img>
+    <tags>go web</tags>
+    <description>
+      Description to be added later.
+      <br /><br />
+      Try it here: <a href="https://mediaserver.gorzsony.com/www.youtube.com/watch?v=fVQyYJ8Rl7o">mediaserver.gorzsony.com</a><br />
+      Source code: <a href="https://github.com/razzie/mediaserver">github.com/razzie/mediaserver</a>
+    </description>
+  </project>
+
   <project>
     <id>minecraft_clone</id>
     <name>Minecraft clone</name>
@@ -151,7 +179,7 @@
       <a href="https://github.com/razzie/home-projects/tree/master/2012/minecraft-clone-v2">github.com/razzie/home-projects/2012/minecraft-clone-v2</a>
     </description>
   </project>
-  
+
   <project>
     <id>poccemod</id>
     <name>PocceMod</name>
@@ -193,7 +221,7 @@
       Source code: <a href="https://github.com/razzie/PotatoGame">github.com/razzie/PotatoGame</a><br />
     </description>
   </project>
-  
+
   <project>
     <id>prepi</id>
     <name>Prepi</name>
@@ -213,7 +241,7 @@
       Source code: <a href="https://github.com/razzie/prepi">github.com/razzie/prepi</a><br />
     </description>
   </project>
-  
+
   <project>
     <id>process_manager</id>
     <name>Process Manager</name>
@@ -225,6 +253,34 @@
       It keeps running in the background after closing the main window and can be brought back from the tray icon or by pressing Ctrl+F12.
       <br /><br />
       Download: <a href="https://github.com/razzie/home-projects/raw/master/2008/process-manager/Process%20Manager.exe">Process Manager.exe</a>
+    </description>
+  </project>
+
+  <project>
+    <id>razbox</id>
+    <name>razbox</name>
+    <year>2020</year>
+    <img>img/razbox.png</img>
+    <tags>go web</tags>
+    <description>
+      Description to be added later.
+      <br /><br />
+      Try it here: <a href="https://box.gorzsony.com/x/public/">box.gorzsony.com/x/public/</a><br />
+      Source code: <a href="https://github.com/razzie/razbox">github.com/razzie/razbox</a>
+    </description>
+  </project>
+
+  <project>
+    <id>razlink</id>
+    <name>razlink</name>
+    <year>2019</year>
+    <img>img/razlink.png</img>
+    <tags>go web</tags>
+    <description>
+      Description to be added later.
+      <br /><br />
+      Try it here: <a href="https://link.gorzsony.com">link.gorzsony.com</a><br />
+      Source code: <a href="https://github.com/razzie/razlink">github.com/razzie/razlink</a>
     </description>
   </project>
 
@@ -278,7 +334,7 @@
       Source code: <a href="https://github.com/razzie/razzgravitas">github.com/razzie/razzgravitas</a>
     </description>
   </project>
-  
+
   <project>
     <id>razzie_messenger</id>
     <name>Razzie Messenger</name>
@@ -299,7 +355,7 @@
       <a href="https://github.com/razzie/home-projects/tree/master/2008/razzie-messenger">github.com/razzie/home-projects/2008/razzie-messenger</a>
     </description>
   </project>
-  
+
   <project>
     <id>riddle_solver</id>
     <name>Riddle Solver</name>
@@ -334,7 +390,21 @@
       Download: <a href="https://github.com/razzie/home-projects/blob/master/2008/server-client/server-client.exe">server-client.exe</a>
     </description>
   </project>
-  
+
+  <project>
+    <id>uuid</id>
+    <name>uuid-server</name>
+    <year>2020</year>
+    <img>img/uuid.png</img>
+    <tags>go web</tags>
+    <description>
+      Description to be added later.
+      <br /><br />
+      Try it here: <a href="https://uuid.gorzsony.com">uuid.gorzsony.com</a><br />
+      Source code: <a href="https://github.com/razzie/uuid-server">github.com/razzie/uuid-server</a>
+    </description>
+  </project>
+
   <project>
     <id>windows_manager</id>
     <name>Windows Manager</name>
