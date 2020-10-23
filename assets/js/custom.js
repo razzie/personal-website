@@ -1,17 +1,18 @@
 ﻿$(document).ready(function () {
     $('.scroll-down').click(function (event) {
-        $('html, body').animate({
-            scrollTop: $(this).offset().top + 1
-        }, 500);
+        var scrollTo = $(this).offset().top - 5;
+        if ((scrollTo > $(window).scrollTop() - 5) && (scrollTo < $(window).scrollTop() + 5)) {
+            var scrollers = $('.scroll-down');
+            var target = scrollers.eq((scrollers.index($(this))+1) % scrollers.length);
+            scrollTo = target.offset().top - 5 - target.height();
+        }
+        $('html, body').animate({scrollTop: scrollTo}, 500);
     });
 
     $('.scroll-up').click(function (event) {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
+        $('html, body').animate({scrollTop: 0}, 500);
     });
 
-    //window.sr = ScrollReveal({ reset: true });
     sr.reveal('.reveal');
 
     $('img').tilt({
