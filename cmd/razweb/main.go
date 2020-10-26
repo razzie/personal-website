@@ -11,11 +11,18 @@ import (
 
 func main() {
 	token, _ := internal.Asset("github.token")
-	hello := modules.Hello()
 	projs := modules.Projects()
-	timeline := modules.Timeline()
 	repos, stars := modules.Github(string(token))
 	fs := internal.FS("")
+
+	mainPage := layout.CombineModules("/", "Gábor Görzsöny", modules.Hello(), projs, repos, stars)
+	mainPageHandler := mainPage.Handler
+	mainPage.Handler = func(pr *beepboop.PageRequest) *beepboop.View {
+		if len(pr.RelPath) > 0 {
+			return pr.RedirectView("/")
+		}
+		return mainPageHandler(pr)
+	}
 
 	srv := beepboop.NewServer()
 	srv.Layout = layout.Layout
@@ -24,9 +31,9 @@ func main() {
 		beepboop.AssetFSPage("/css/", fs),
 		beepboop.AssetFSPage("/img/", fs),
 		beepboop.AssetFSPage("/js/", fs),
-		layout.CombineModules("/", "Gábor Görzsöny", hello, projs, repos, stars),
+		mainPage,
 		layout.CombineModules("/tag/", "Gábor Görzsöny", projs, repos),
-		layout.CombineModules("/timeline", "Gábor Görzsöny - Project timeline", timeline),
+		layout.CombineModules("/timeline", "Gábor Görzsöny - Project timeline", modules.Timeline()),
 		layout.CombineModules("/resume", "Gábor Görzsöny - Resume", modules.Resume()),
 	)
 
