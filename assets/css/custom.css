@@ -54,6 +54,10 @@ html.sr .reveal {
     vertical-align: middle;
 }
 
+.smallcaps {
+    font-variant: small-caps;
+}
+
 .scroll-down {
     display: block;
     margin-left: auto;
