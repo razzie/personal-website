@@ -13,6 +13,7 @@ func main() {
 	token, _ := internal.Asset("github.token")
 	hello := modules.Hello()
 	projs := modules.Projects()
+	timeline := modules.Timeline()
 	repos, stars := modules.Github(string(token))
 	fs := internal.FS("")
 
@@ -25,6 +26,7 @@ func main() {
 		beepboop.AssetFSPage("/js/", fs),
 		layout.CombineModules("/", "Gábor Görzsöny", hello, projs, repos, stars),
 		layout.CombineModules("/tag/", "Gábor Görzsöny", projs, repos),
+		layout.CombineModules("/timeline", "Gábor Görzsöny - Project timeline", timeline),
 		layout.CombineModules("/resume", "Gábor Görzsöny - Resume", modules.Resume()),
 	)
 

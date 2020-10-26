@@ -9,7 +9,7 @@
 </div>
 <div class="row">
 {{range .Projects}}
-    <div class="col-md-6 mb-5 text-left reveal">
+    <div class="col-md-6 mb-5 text-left reveal" id="{{.ID}}">
         <img src="{{.ImageURL}}" class="img-fluid" />
         <h3 class="text-danger">{{.Name}}</h3>
         <p>{{.Description}}</p>

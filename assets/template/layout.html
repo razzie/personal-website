@@ -12,7 +12,7 @@
     {{range $name, $content := .Meta}}
         <meta name="{{$name}}" content="{{$content}}" />
     {{end}}
-    <base href="{{.Base}}" target="_blank">
+    <base href="{{.Base}}" target="_self">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
