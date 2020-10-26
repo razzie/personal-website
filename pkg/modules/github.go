@@ -3,6 +3,7 @@ package modules
 import (
 	"log"
 	"math/rand"
+	"sort"
 	"strings"
 	"time"
 
@@ -52,6 +53,12 @@ func filterRepos(repos []github.Repo, tag string) (results []github.Repo) {
 	return
 }
 
+func orderReposByDate(repos []github.Repo) {
+	sort.SliceStable(repos, func(i, j int) bool {
+		return repos[i].Commits[0].Date.After(repos[j].Commits[0].Date)
+	})
+}
+
 // Github returns the github repo and star modules
 func Github(token string) (reposModule *layout.Module, starsModule *layout.Module) {
 	var repos []github.Repo
@@ -66,6 +73,7 @@ func Github(token string) (reposModule *layout.Module, starsModule *layout.Modul
 				continue
 			}
 
+			orderReposByDate(tmpRepos)
 			repos, stars = tmpRepos, tmpStars
 		}
 	}()
@@ -82,11 +90,11 @@ func Github(token string) (reposModule *layout.Module, starsModule *layout.Modul
 			if len(tag) > 0 {
 				v = &githubView{
 					Tag:         tag,
-					GithubRepos: shuffleRepos(filterRepos(repos, tag)),
+					GithubRepos: filterRepos(repos, tag),
 				}
 			} else {
 				v = &githubView{
-					GithubRepos: limitRepos(shuffleRepos(repos), 8),
+					GithubRepos: limitRepos(repos, 8),
 				}
 			}
 			if len(v.GithubRepos) == 0 {
@@ -103,7 +111,7 @@ func Github(token string) (reposModule *layout.Module, starsModule *layout.Modul
 				return nil
 			}
 			v := &githubView{
-				GithubStars: limitRepos(shuffleRepos(stars), 8),
+				GithubStars: limitRepos(shuffleRepos(limitRepos(stars, 30)), 8),
 			}
 			if len(v.GithubStars) == 0 {
 				return nil
