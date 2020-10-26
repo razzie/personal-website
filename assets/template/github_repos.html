@@ -1,0 +1,23 @@
+<div class="row justify-content-center">
+    <div class="col m-5 text-center reveal">
+    {{if .Tag}}
+        <h1>My open source work tagged with <span class="text-danger">{{.Tag}}</span></h1>
+    {{else}}
+        <h1>My open source work</h1>
+        <small>(randomly selected)</small>
+    {{end}}
+    </div>
+</div>
+<div class="row">
+{{range .GithubRepos}}
+    <div class="col-md-6 mb-5 text-left reveal">
+        <div>[{{.Owner}}] <a href="{{.URL}}">{{.Name}}</a></div>
+        <div>{{.Description}}</div>
+        <div><ul>
+        {{range .Commits}}
+            <li><span class="text-danger">[{{.ID}}]</span> {{.Message}} - {{.User}} ({{.Date}})</li>
+        {{end}}
+        </ul></div>
+    </div>
+{{end}}
+</div>

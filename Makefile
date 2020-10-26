@@ -1,5 +1,6 @@
-build:
-	go generate -mod=vendor ./cmd/razweb
-	go build -mod=vendor ./cmd/razweb
+.DEFAULT_GOAL := razweb
+BUILDFLAGS := -mod=vendor -ldflags="-s -w" -gcflags=-trimpath=$(CURDIR)
 
-.PHONY: build
+razweb:
+	go generate $(BUILDFLAGS) ./internal
+	go build $(BUILDFLAGS) ./cmd/razweb

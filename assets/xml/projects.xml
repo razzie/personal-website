@@ -1,5 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <projects>
+  <project>
+    <id>beepboop</id>
+    <name>beepboop</name>
+    <year>2020</year>
+    <img>img/beepboop.png</img>
+    <tags>go web</tags>
+    <description>
+      Description to be added later.
+      <br /><br />
+      Source code: <a href="https://github.com/razzie/beepboop">github.com/razzie/beepboop</a>
+    </description>
+  </project>
 
   <project>
     <id>floating_islands</id>
@@ -266,7 +278,7 @@
     <description>
       Description to be added later.
       <br /><br />
-      Try it here: <a href="https://box.gorzsony.com/x/public/">box.gorzsony.com/x/public/</a><br />
+      Try it here: <a href="https://razbox.xyz">razbox.xyz</a><br />
       Source code: <a href="https://github.com/razzie/razbox">github.com/razzie/razbox</a>
     </description>
   </project>
@@ -286,6 +298,19 @@
   </project>
 
   <project>
+    <id>razproxy</id>
+    <name>razproxy</name>
+    <year>2020</year>
+    <img>img/razproxy.png</img>
+    <tags>go web</tags>
+    <description>
+      Description to be added later.
+      <br /><br />
+      Source code: <a href="https://github.com/razzie/razproxy">github.com/razzie/razproxy</a>
+    </description>
+  </project>
+
+  <project>
     <id>raztalk</id>
     <name>RazTalk</name>
     <year>2018</year>
@@ -298,6 +323,19 @@
       Download: <a href="https://github.com/razzie/raztalk/releases/download/v1.0/raztalk_v1.0.zip">raztalk_v1.0.zip</a>
       and <a href="https://github.com/razzie/raztalk/releases/download/v1.0/raztalk.client.exe">raztalk.client.exe</a><br />
       Source code: <a href="https://github.com/razzie/raztalk">github.com/razzie/raztalk</a>
+    </description>
+  </project>
+
+  <project>
+    <id>razvhost</id>
+    <name>razvhost</name>
+    <year>2020</year>
+    <img>img/razvhost.png</img>
+    <tags>go web</tags>
+    <description>
+      Description to be added later.
+      <br /><br />
+      Source code: <a href="https://github.com/razzie/razvhost">github.com/razzie/razvhost</a>
     </description>
   </project>
 

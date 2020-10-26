@@ -1,0 +1,22 @@
+<div class="row justify-content-center">
+    <div class="col m-5 text-center reveal">
+    {{if .Tag}}
+        <h1>Projects tagged with <span class="text-danger">{{.Tag}}</span></h1>
+    {{else}}
+        <h1>My notable projects</h1>
+    {{end}}
+    </div>
+</div>
+<div class="row">
+{{range .Projects}}
+    <div class="col-md-6 mb-5 text-left reveal">
+        <img src="{{.ImageURL}}" class="img-fluid" />
+        <h3 class="text-danger">{{.Name}}</h3>
+        <p>{{.Description}}</p>
+        <span class="text-secondary">year: {{.Year}}</span><br />
+        <span class="text-secondary">
+            tags: {{range .Tags}}<a href="/tag/{{.}}">{{.}}</a> {{end}}
+        </span>
+    </div>
+{{end}}
+</div>

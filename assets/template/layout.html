@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gábor Görzsöny</title>
+    <meta property="og:title" content="Gábor Görzsöny" />
+    <meta property="og:type" content="website" />
+    <!--<meta property="og:url" content="https://gorzsony.com" />-->
+    <meta property="og:image" content="https://gorzsony.com/img/me.jpg" />
+    {{range $name, $content := .Meta}}
+        <meta name="{{$name}}" content="{{$content}}" />
+    {{end}}
+    <base href="{{.Base}}" target="_blank">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    {{range .Stylesheets}}
+        <link rel="stylesheet" href="{{.}}" />
+    {{end}}
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/scrollreveal.min.js"></script>
+    <script nonce="apply-scrollreveal">
+        window.sr = new ScrollReveal({ reset: true });
+
+        // Add class to <html> if ScrollReveal is supported
+        if (sr.isSupported()) {
+            document.documentElement.classList.add('sr');
+        }
+    </script>
+    {{range .Scripts}}
+        <script src="{{.}}"></script>
+    {{end}}
+</head>
+  <body class="container">
+    {{template "page" .Data}}
+    <footer class="text-center reveal">
+        <div class="scroll-up"></div>
+        <small>Gábor Görzsöny</small>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
