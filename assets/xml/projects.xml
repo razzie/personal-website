@@ -7,7 +7,8 @@
     <img>img/beepboop.png</img>
     <tags>go web</tags>
     <description>
-      Description to be added later.
+      A lightweight webapp framework that powers razbox and this website.<br />
+      Most of the original code was taken from <a href="#razlink">razlink</a>, but it has heavily evolved since.
       <br /><br />
       Source code: <a href="https://github.com/razzie/beepboop">github.com/razzie/beepboop</a>
     </description>
@@ -56,7 +57,9 @@
     <img>img/geoip.png</img>
     <tags>go web</tags>
     <description>
-      Description to be added later.
+      A web service that serves IP address geolocations in JSON format.<br />
+      Instead of relying on a local database it collects data from a (configurable) series of 3rd party providers,
+      converting the results to a commom format. It supports provider fallbacks and caching.
       <br /><br />
       Try it here: <a href="https://geoip.gorzsony.com">geoip.gorzsony.com</a><br />
       Source code: <a href="https://github.com/razzie/geoip-server">github.com/razzie/geoip-server</a>
@@ -168,7 +171,9 @@
     <img>img/mediaserver.png</img>
     <tags>go web</tags>
     <description>
-      Description to be added later.
+      A web service that fetches thumbnails with title from URLs.<br />
+      Originally planned to use it in a chat service to prevent the tracking of users by letting them download
+      images directly.
       <br /><br />
       Try it here: <a href="https://mediaserver.gorzsony.com/www.youtube.com/watch?v=fVQyYJ8Rl7o">mediaserver.gorzsony.com</a><br />
       Source code: <a href="https://github.com/razzie/mediaserver">github.com/razzie/mediaserver</a>
@@ -276,7 +281,7 @@
     <img>img/razbox.png</img>
     <tags>go web</tags>
     <description>
-      Description to be added later.
+      Like Dropbox, but different - powered by <a href="#beepboop">beepboop</a>
       <br /><br />
       Try it here: <a href="https://razbox.xyz">razbox.xyz</a><br />
       Source code: <a href="https://github.com/razzie/razbox">github.com/razzie/razbox</a>
@@ -290,7 +295,8 @@
     <img>img/razlink.png</img>
     <tags>go web</tags>
     <description>
-      Description to be added later.
+      A lightweight link proxy/redirect service with logging.<br />
+      Can be used to create URLs that point to an external resource while tracking visits from users.
       <br /><br />
       Try it here: <a href="https://link.gorzsony.com">link.gorzsony.com</a><br />
       Source code: <a href="https://github.com/razzie/razlink">github.com/razzie/razlink</a>
@@ -304,7 +310,7 @@
     <img>img/razproxy.png</img>
     <tags>go web</tags>
     <description>
-      Description to be added later.
+      SOCKS5 tunneled through TLS connection
       <br /><br />
       Source code: <a href="https://github.com/razzie/razproxy">github.com/razzie/razproxy</a>
     </description>
@@ -333,7 +339,8 @@
     <img>img/razvhost.png</img>
     <tags>go web</tags>
     <description>
-      Description to be added later.
+      A custom virtual hosting service with SSL termination for my VPS.<br />
+      It supports proxying, file/directory serving and redirection using a simple config format.
       <br /><br />
       Source code: <a href="https://github.com/razzie/razvhost">github.com/razzie/razvhost</a>
     </description>
@@ -437,7 +444,10 @@
     <img>img/uuid.png</img>
     <tags>go web</tags>
     <description>
-      Description to be added later.
+      A http server that serves random (version4) UUIDs.<br />
+      It uses my <a href="https://github.com/razzie/random">hybrid pseudo- and true random generator library</a>
+      which periodically takes seeds from <a href="https://random.org">random.org</a>
+      and uses them to generate pseudo-random UUIDs fast.
       <br /><br />
       Try it here: <a href="https://uuid.gorzsony.com">uuid.gorzsony.com</a><br />
       Source code: <a href="https://github.com/razzie/uuid-server">github.com/razzie/uuid-server</a>
