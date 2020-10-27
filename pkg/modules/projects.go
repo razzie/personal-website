@@ -2,6 +2,8 @@ package modules
 
 import (
 	"math/rand"
+	"sort"
+	"strconv"
 	"strings"
 	"time"
 
@@ -35,12 +37,24 @@ func filterProjects(projects []projects.Project, tag string) (results []projects
 	return
 }
 
+func orderProjectsByYear(projects []projects.Project) {
+	getYear := func(i int) int {
+		years := strings.Split(projects[i].Year, "-")
+		year, _ := strconv.Atoi(years[len(years)-1])
+		return year
+	}
+	sort.SliceStable(projects, func(i, j int) bool {
+		return getYear(i) > getYear(j)
+	})
+}
+
 // Projects returns the projects module
 func Projects() *layout.Module {
 	projectList, err := projects.LoadProjects()
 	if err != nil {
 		panic(err)
 	}
+	orderProjectsByYear(projectList)
 	return &layout.Module{
 		Name:            "Projects",
 		ContentTemplate: getContentTemplate("projects"),
@@ -50,11 +64,11 @@ func Projects() *layout.Module {
 			if len(tag) > 0 {
 				v = &projectsView{
 					Tag:      tag,
-					Projects: shuffleProjects(filterProjects(projectList, tag)),
+					Projects: filterProjects(projectList, tag),
 				}
 			} else {
 				v = &projectsView{
-					Projects: shuffleProjects(projectList),
+					Projects: projectList,
 				}
 			}
 			if len(v.Projects) == 0 {
