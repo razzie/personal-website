@@ -31,14 +31,18 @@ img {
     margin: 10px;
 }
 
-ul {
-    list-style-type: square;
+ul.vertical-list {
+    list-style-position: inside;
+    overflow: auto;
+    padding-bottom: 10px;
 }
-li > p {
-    padding-left: 50px;
+.vertical-list > li > * {
+    position: relative;
+    left: -10px;
 }
-li > p > a {
-    margin: 0 0 10px 20px;
+.vertical-list > li {
+    float: left;
+    margin-right: 10px;
 }
 
 html.sr .reveal {

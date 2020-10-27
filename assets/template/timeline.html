@@ -4,15 +4,15 @@
     </div>
 </div>
 <div class="row">
-    <ul style="list-style-type:square">
+    <ul>
         {{range .}}
-            <li>
-                <strong>{{.Year}}:</strong>
-                <p>
-                    {{range $i, $e := .Projects}}
-                        <a href="{{.Link}}">{{.Name}}</a>
+            <li class="reveal">
+                <strong>{{.Year}}</strong>
+                <ul class="vertical-list">
+                    {{range .Projects}}
+                        <li class="reveal"><a href="{{.Link}}">{{.Name}}</a></li>
                     {{end}}
-                </p>
+                </ul>
             </li>
         {{end}}
     </ul>
