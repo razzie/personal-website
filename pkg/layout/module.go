@@ -5,30 +5,18 @@ import (
 	"strings"
 
 	"github.com/razzie/beepboop"
+	"github.com/razzie/gorzsony.com/internal"
 )
 
-var modulePageT = `
-{{if .}}
-	{{range $i, $e := .}}
-		<section>
-			{{if gt $i 0}}
-				<div class="scroll-down reveal"></div>
-			{{end}}
-			{{.}}
-		</section>
-	{{end}}
-{{else}}
-	<section>
-		<div class="center">
-			<div class="row justify-content-center">
-				<div class="col mb-5 text-center reveal">
-					<h1 class="hello">:'(</h1>
-				</div>
-			</div>
-		</div>
-	</section>
-{{end}}
-`
+var modulePageT string
+
+func init() {
+	t, err := internal.Asset("template/layout_modules.html")
+	if err != nil {
+		panic(err)
+	}
+	modulePageT = string(t)
+}
 
 // Module ...
 type Module struct {
