@@ -12,7 +12,7 @@ section {
     min-height: calc(100vh - 32px);
 }
 section > div {
-    margin: 1rem;
+    padding: 1rem;
 }
 
 a {
@@ -103,6 +103,10 @@ html.sr .reveal {
     transform: translateZ(20px);
 }
 
+.proj-img {
+    width: 40%;
+}
+
 .paper {
 	background-color: #ffffff;
     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);
@@ -116,5 +120,10 @@ html.sr .reveal {
     }
     .paper {
         margin: 1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .proj-img {
+        width: 20%;
     }
 }
