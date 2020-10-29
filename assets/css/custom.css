@@ -74,6 +74,7 @@ html.sr .reveal {
     border-top-style: solid;
     border-top-width: 1px;
     border-top-color: black;
+    padding: 0 !important;
 }
 .scroll-down::before {
     content: "";
@@ -96,6 +97,7 @@ html.sr .reveal {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid black;
+    padding: 0 !important;
 }
 
 .item {
