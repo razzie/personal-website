@@ -4,7 +4,6 @@ import (
 	"net/http"
 	"os"
 	"path"
-	"strings"
 
 	assetfs "github.com/elazarl/go-bindata-assetfs"
 )
@@ -21,16 +20,24 @@ type Page struct {
 	OnlyLogOnError  bool
 }
 
-// GetHandler creates a http.HandlerFunc that uses the given layout to render the page
-func (page *Page) GetHandler(layout Layout, getctx ContextGetter) (http.HandlerFunc, error) {
+// GetHandler creates a http.Handler that uses the given layout to render the page
+func (page *Page) GetHandler(layout Layout, getctx ContextGetter) (http.Handler, error) {
 	renderer, err := layout.BindTemplate(page.ContentTemplate, page.Stylesheets, page.Scripts, page.Metadata)
 	if err != nil {
 		return nil, err
 	}
+	return page.getHandler(getctx, layout, renderer), nil
+}
 
-	return func(w http.ResponseWriter, r *http.Request) {
-		ctx := getctx(r.Context())
-		pr := page.newPageRequest(r, renderer, ctx)
+// GetAPIHandler creates a http.Handler that handles API requests of the page
+func (page *Page) GetAPIHandler(getctx ContextGetter) http.Handler {
+	return page.getHandler(getctx, nil, nil)
+}
+
+func (page *Page) getHandler(getctx ContextGetter, layout Layout, renderer LayoutRenderer) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		ctx := getctx(r.Context(), layout)
+		pr := newPageRequest(page, r, ctx, renderer)
 		if !page.OnlyLogOnError {
 			pr.logRequestNonblocking()
 		}
@@ -43,21 +50,14 @@ func (page *Page) GetHandler(layout Layout, getctx ContextGetter) (http.HandlerF
 			view = pr.Respond(nil)
 		}
 
-		view.Render(w)
-	}, nil
-}
-
-func (page *Page) newPageRequest(r *http.Request, renderer LayoutRenderer, ctx *Context) *PageRequest {
-	return &PageRequest{
-		Context:   ctx,
-		Request:   r,
-		RequestID: UniqueID(),
-		RelPath:   strings.TrimPrefix(r.URL.Path, page.Path),
-		RelURI:    strings.TrimPrefix(r.RequestURI, page.Path),
-		IsAPI:     false,
-		Title:     page.Title,
-		renderer:  renderer,
-	}
+		defer view.Close()
+		pr.updateSession(view)
+		if pr.IsAPI {
+			view.RenderAPIResponse(w)
+		} else {
+			view.Render(w)
+		}
+	})
 }
 
 func (page *Page) addMetadata(meta map[string]string) {

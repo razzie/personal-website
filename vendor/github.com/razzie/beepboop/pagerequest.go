@@ -6,9 +6,11 @@ import (
 	"net"
 	"net/http"
 	"strings"
+	"time"
 
-	"github.com/mo7zayed/reqip"
 	"github.com/mssola/user_agent"
+	"github.com/razzie/babble"
+	"github.com/razzie/reqip"
 )
 
 // PageRequest ...
@@ -18,44 +20,65 @@ type PageRequest struct {
 	RequestID string
 	RelPath   string
 	RelURI    string
-	IsAPI     bool
+	PagePath  string
 	Title     string
+	IsAPI     bool
 	renderer  LayoutRenderer
 	logged    bool
+	session   *Session
+}
+
+func newPageRequest(page *Page, r *http.Request, ctx *Context, renderer LayoutRenderer) *PageRequest {
+	pr := &PageRequest{
+		Context:   ctx,
+		Request:   r,
+		RequestID: newRequestID(),
+		PagePath:  page.Path,
+		Title:     page.Title,
+		IsAPI:     renderer == nil,
+		renderer:  renderer,
+	}
+	if pr.IsAPI {
+		pr.RelPath = strings.TrimPrefix(r.URL.Path, "/api"+page.Path)
+		pr.RelURI = strings.TrimPrefix(r.URL.RequestURI(), "/api"+page.Path)
+	} else {
+		pr.RelPath = strings.TrimPrefix(r.URL.Path, page.Path)
+		pr.RelURI = strings.TrimPrefix(r.URL.RequestURI(), page.Path)
+	}
+	return pr
+}
+
+func newRequestID() string {
+	i := uint16(time.Now().UnixNano())
+	babbler := babble.NewBabbler()
+	return fmt.Sprintf("%s-%x", babbler.Babble(), i)
 }
 
 func (r *PageRequest) logRequest() {
 	ip := reqip.GetClientIP(r.Request)
-	if len(ip) == 0 {
-		ip, _, _ = net.SplitHostPort(r.Request.RemoteAddr)
-	}
-
 	ua := user_agent.New(r.Request.UserAgent())
 	browser, ver := ua.Browser()
 
-	logmsg := fmt.Sprintf("[%s]: %s %s\n - IP: %s\n - browser: %s",
-		r.RequestID,
-		r.Request.Method,
-		r.Request.RequestURI,
-		ip,
-		fmt.Sprintf("%s %s %s", ua.OS(), browser, ver))
+	logmsg := fmt.Sprintf("[%s]: %s %s\n • %s, %s %s %s",
+		r.RequestID, r.Request.Method, r.Request.RequestURI,
+		ip, ua.OS(), browser, ver)
 
 	var hasLocation bool
 	if r.Context.GeoIPClient != nil {
 		loc, _ := r.Context.GeoIPClient.GetLocation(context.Background(), ip)
 		if loc != nil {
 			hasLocation = true
-			logmsg += "\n - location: " + loc.String()
+			logmsg += ", " + loc.String()
 		}
 	}
 	if !hasLocation {
 		hostnames, _ := net.LookupAddr(ip)
-		logmsg += "\n - hostnames: " + strings.Join(hostnames, ", ")
+		logmsg += ", " + strings.Join(hostnames, ", ")
 	}
 
 	session, _ := r.Request.Cookie("session")
 	if session != nil {
-		logmsg += "\n - sessionID: " + session.Value
+		logmsg += ", session: " + session.Value
 	}
 
 	r.Context.Logger.Print(logmsg)
@@ -98,4 +121,18 @@ func (r *PageRequest) Respond(data interface{}, opts ...ViewOption) *View {
 		r.renderer(w, r.Request, r.Title, data, v.StatusCode)
 	}
 	return v
+}
+
+// Session returns the current session
+func (r *PageRequest) Session() *Session {
+	if r.session == nil {
+		r.session = newSession(r)
+	}
+	return r.session
+}
+
+func (r *PageRequest) updateSession(view *View) {
+	if r.session != nil {
+		view.cookies = append(view.cookies, r.session.toCookies(r.Context.CookieExpiration)...)
+	}
 }

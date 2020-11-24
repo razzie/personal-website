@@ -15,35 +15,37 @@ import (
 
 // Server ...
 type Server struct {
-	mux         http.ServeMux
-	Layout      Layout
-	FaviconPNG  []byte
-	Metadata    map[string]string
-	DB          *DB
-	Logger      *log.Logger
-	GeoIPClient geoip.Client
-	Limiters    map[string]*RateLimiter
-	Middlewares []Middleware
+	mux              http.ServeMux
+	Layout           Layout
+	FaviconPNG       []byte
+	Header           http.Header
+	Metadata         map[string]string
+	DB               *DB
+	Logger           *log.Logger
+	GeoIPClient      geoip.Client
+	Limiters         map[string]*RateLimiter
+	Middlewares      []Middleware
+	CookieExpiration time.Duration
 }
 
 // NewServer creates a new Server
 func NewServer() *Server {
 	srv := &Server{
-		Layout:      DefaultLayout,
-		FaviconPNG:  favicon,
-		Metadata:    map[string]string{"generator": "https://github.com/razzie/beepboop"},
-		Logger:      log.New(os.Stdout, "", log.LstdFlags),
-		GeoIPClient: geoclient.DefaultClient,
-		Limiters:    make(map[string]*RateLimiter),
+		Layout:           DefaultLayout,
+		FaviconPNG:       favicon,
+		Header:           map[string][]string{"Server": []string{"beepboop"}},
+		Metadata:         map[string]string{"generator": "https://github.com/razzie/beepboop"},
+		Logger:           log.New(os.Stdout, "", log.LstdFlags),
+		GeoIPClient:      geoclient.DefaultClient,
+		Limiters:         make(map[string]*RateLimiter),
+		CookieExpiration: time.Hour * 24 * 7,
 	}
 	srv.mux.HandleFunc("/favicon.png", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "image/png")
 		w.Header().Set("Content-Length", strconv.Itoa(len(srv.FaviconPNG)))
 		_, _ = w.Write(srv.FaviconPNG)
 	})
-	srv.mux.HandleFunc("/favicon.ico", func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "/favicon.png", http.StatusSeeOther)
-	})
+	srv.mux.Handle("/favicon.ico", http.RedirectHandler("/favicon.png", http.StatusMovedPermanently))
 	return srv
 }
 
@@ -60,9 +62,8 @@ func (srv *Server) AddPageWithLayout(page *Page, layout Layout) error {
 		return err
 	}
 
-	api := NewAPI(page)
-	srv.mux.HandleFunc(page.Path, renderer)
-	srv.mux.HandleFunc(api.Path, api.GetHandler(srv.getContext))
+	srv.mux.Handle(page.Path, renderer)
+	srv.mux.Handle("/api"+page.Path, page.GetAPIHandler(srv.getContext))
 	return nil
 }
 
@@ -104,11 +105,16 @@ func (srv *Server) ConnectDB(redisAddr, redisPw string, redisDb int) error {
 }
 
 func (srv *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	h := w.Header()
+	for key, values := range srv.Header {
+		key = http.CanonicalHeaderKey(key)
+		h[key] = append(h[key], values...)
+	}
 	srv.mux.ServeHTTP(w, r)
 }
 
-func (srv *Server) getContext(ctx context.Context) *Context {
-	return newContext(ctx, srv)
+func (srv *Server) getContext(ctx context.Context, layout Layout) *Context {
+	return newContext(ctx, layout, srv)
 }
 
 var favicon, _ = base64.StdEncoding.DecodeString("" +

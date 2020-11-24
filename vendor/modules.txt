@@ -20,17 +20,17 @@ github.com/google/go-github/github
 github.com/google/go-querystring/query
 # github.com/jteeuwen/go-bindata v3.0.7+incompatible
 github.com/jteeuwen/go-bindata
-# github.com/mo7zayed/reqip v0.0.0-20200520084230-ae375eb9322b
-github.com/mo7zayed/reqip
 # github.com/mssola/user_agent v0.5.2
 github.com/mssola/user_agent
 # github.com/razzie/babble v0.0.0-20201015224220-210f32b7a231
 github.com/razzie/babble
-# github.com/razzie/beepboop v0.0.0-20201026051109-27a5f0816fdf
+# github.com/razzie/beepboop v0.0.0-20201124033658-f32cf62b3e05
 github.com/razzie/beepboop
 # github.com/razzie/geoip-server v0.0.0-20201008190457-b5a2cab23ca8
 github.com/razzie/geoip-server/client
 github.com/razzie/geoip-server/geoip
+# github.com/razzie/reqip v0.0.0-20201102012254-b5eb0ae76a05
+github.com/razzie/reqip
 # github.com/thedevsaddam/gojsonq v2.3.0+incompatible
 github.com/thedevsaddam/gojsonq
 # golang.org/x/net v0.0.0-20200202094626-16171245cfb2
