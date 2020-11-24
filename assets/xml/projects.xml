@@ -339,7 +339,7 @@
     <img>img/razvhost.png</img>
     <tags>go web</tags>
     <description>
-      A custom virtual hosting service with SSL termination for my VPS.<br />
+      Virtual hosting/reverse proxy with TLS termination and automatic certificate management.<br />
       It supports proxying, file/directory serving and redirection using a simple config format.
       <br /><br />
       Source code: <a href="https://github.com/razzie/razvhost">github.com/razzie/razvhost</a>
