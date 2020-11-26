@@ -1,4 +1,11 @@
-﻿$(document).ready(function () {
+﻿window.sr = new ScrollReveal({ reset: true });
+
+// Add class to <html> if ScrollReveal is supported
+if (sr.isSupported()) {
+    document.documentElement.classList.add('sr');
+}
+
+$(document).ready(function () {
     $('.scroll-down').click(function (event) {
         var scrollTo = $(this).offset().top - 5;
         if ((scrollTo > $(window).scrollTop() - 5) && (scrollTo < $(window).scrollTop() + 5)) {

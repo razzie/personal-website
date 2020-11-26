@@ -26,10 +26,9 @@ func main() {
 
 	header := http.Header{
 		"Content-Security-Policy": {
-			"default-src 'none'",
 			"script-src 'self' 'nonce-apply-scrollreveal'",
 			"style-src 'self' 'unsafe-inline'",
-			"img-src 'self' data:",
+			"img-src 'self' data: image/svg+xml",
 			"frame-ancestors 'none'",
 			"base-uri 'self'",
 			"form-action 'self'",
