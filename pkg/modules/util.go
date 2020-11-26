@@ -5,11 +5,11 @@ import (
 	"strings"
 
 	"github.com/razzie/beepboop"
-	"github.com/razzie/gorzsony.com/internal"
+	"github.com/razzie/gorzsony.com/pkg/assets"
 )
 
 func getContentTemplate(module string) string {
-	t, err := internal.Asset(fmt.Sprintf("template/%s.html", module))
+	t, err := assets.Asset(fmt.Sprintf("template/%s.html", module))
 	if err != nil {
 		panic(err)
 	}

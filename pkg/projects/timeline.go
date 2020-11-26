@@ -3,7 +3,7 @@ package projects
 import (
 	"encoding/xml"
 
-	"github.com/razzie/gorzsony.com/internal"
+	"github.com/razzie/gorzsony.com/pkg/assets"
 )
 
 // TimelineYear ...
@@ -36,7 +36,7 @@ type xmlTimelineProjects struct {
 
 // LoadTimeline parses project_timeline.xml and returns the years in a slice
 func LoadTimeline() ([]TimelineYear, error) {
-	data, err := internal.Asset("xml/project_timeline.xml")
+	data, err := assets.Asset("xml/project_timeline.xml")
 	if err != nil {
 		return nil, err
 	}

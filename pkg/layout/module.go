@@ -5,13 +5,13 @@ import (
 	"strings"
 
 	"github.com/razzie/beepboop"
-	"github.com/razzie/gorzsony.com/internal"
+	"github.com/razzie/gorzsony.com/pkg/assets"
 )
 
 var modulePageT string
 
 func init() {
-	t, err := internal.Asset("template/layout_modules.html")
+	t, err := assets.Asset("template/layout_modules.html")
 	if err != nil {
 		panic(err)
 	}

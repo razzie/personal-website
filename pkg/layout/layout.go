@@ -5,14 +5,14 @@ import (
 	"net/http"
 
 	"github.com/razzie/beepboop"
-	"github.com/razzie/gorzsony.com/internal"
+	"github.com/razzie/gorzsony.com/pkg/assets"
 )
 
 // Layout ...
 var Layout beepboop.Layout
 
 func init() {
-	t, err := internal.Asset("template/layout.html")
+	t, err := assets.Asset("template/layout.html")
 	if err != nil {
 		panic(err)
 	}

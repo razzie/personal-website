@@ -5,7 +5,7 @@ import (
 	"html/template"
 	"strings"
 
-	"github.com/razzie/gorzsony.com/internal"
+	"github.com/razzie/gorzsony.com/pkg/assets"
 )
 
 // Project contains data about one of my hobby projects
@@ -51,7 +51,7 @@ func newProject(proj xmlProject) Project {
 
 // LoadProjects parses projects.xml and returns the projects in a slice
 func LoadProjects() ([]Project, error) {
-	data, err := internal.Asset("xml/projects.xml")
+	data, err := assets.Asset("xml/projects.xml")
 	if err != nil {
 		return nil, err
 	}

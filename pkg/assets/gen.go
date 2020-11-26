@@ -1,6 +1,6 @@
-package internal
+package assets
 
-//go:generate go run ../tools/go-bindata/ -pkg internal -prefix ../assets ../assets/...
+//go:generate go run ../../tools/go-bindata/ -pkg assets -prefix ../../assets ../../assets/...
 
 import (
 	assetfs "github.com/elazarl/go-bindata-assetfs"
