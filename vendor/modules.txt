@@ -2,8 +2,6 @@
 github.com/asaskevich/govalidator
 # github.com/biter777/countries v1.3.1
 github.com/biter777/countries
-# github.com/elazarl/go-bindata-assetfs v1.0.1
-github.com/elazarl/go-bindata-assetfs
 # github.com/go-redis/redis/v7 v7.4.0
 github.com/go-redis/redis/v7
 github.com/go-redis/redis/v7/internal
@@ -15,16 +13,17 @@ github.com/go-redis/redis/v7/internal/util
 # github.com/golang/protobuf v1.3.2
 github.com/golang/protobuf/proto
 # github.com/google/go-github v17.0.0+incompatible
+## explicit
 github.com/google/go-github/github
 # github.com/google/go-querystring v1.0.0
+## explicit
 github.com/google/go-querystring/query
-# github.com/jteeuwen/go-bindata v3.0.7+incompatible
-github.com/jteeuwen/go-bindata
 # github.com/mssola/user_agent v0.5.2
 github.com/mssola/user_agent
 # github.com/razzie/babble v0.0.0-20201015224220-210f32b7a231
 github.com/razzie/babble
-# github.com/razzie/beepboop v0.0.0-20201124033658-f32cf62b3e05
+# github.com/razzie/beepboop v0.0.0-20210816220402-dffb064e4818
+## explicit
 github.com/razzie/beepboop
 # github.com/razzie/geoip-server v0.0.0-20201008190457-b5a2cab23ca8
 github.com/razzie/geoip-server/client
@@ -37,6 +36,7 @@ github.com/thedevsaddam/gojsonq
 golang.org/x/net/context
 golang.org/x/net/context/ctxhttp
 # golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
+## explicit
 golang.org/x/oauth2
 golang.org/x/oauth2/internal
 # golang.org/x/time v0.0.0-20200630173020-3af7569d3a1e

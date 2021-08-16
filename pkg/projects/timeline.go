@@ -3,7 +3,7 @@ package projects
 import (
 	"encoding/xml"
 
-	"github.com/razzie/gorzsony.com/pkg/assets"
+	"github.com/razzie/gorzsony.com/assets"
 )
 
 // TimelineYear ...

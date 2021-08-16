@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/razzie/beepboop"
-	"github.com/razzie/gorzsony.com/pkg/assets"
+	"github.com/razzie/gorzsony.com/assets"
 	"github.com/razzie/gorzsony.com/pkg/layout"
 	"github.com/razzie/gorzsony.com/pkg/modules"
 )
@@ -13,7 +13,7 @@ func main() {
 	token, _ := assets.Asset("github.token")
 	projs := modules.Projects()
 	repos, stars := modules.Github(string(token))
-	fs := assets.FS("")
+	fs := assets.FS()
 
 	mainPage := layout.CombineModules("/", "Gábor Görzsöny", modules.Hello(), projs, repos, stars)
 	mainPageHandler := mainPage.Handler
@@ -43,9 +43,9 @@ func main() {
 	srv.Layout = layout.Layout
 	srv.FaviconPNG, _ = assets.Asset("img/favicon.png")
 	srv.AddPages(
-		beepboop.AssetFSPage("/css/", fs),
-		beepboop.AssetFSPage("/img/", fs),
-		beepboop.AssetFSPage("/js/", fs),
+		beepboop.FSPage("/css/", fs),
+		beepboop.FSPage("/img/", fs),
+		beepboop.FSPage("/js/", fs),
 		mainPage,
 		layout.CombineModules("/tag/", "Gábor Görzsöny", projs, repos),
 		layout.CombineModules("/timeline", "Gábor Görzsöny - Project timeline", modules.Timeline()),

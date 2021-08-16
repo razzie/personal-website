@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/razzie/beepboop"
-	"github.com/razzie/gorzsony.com/pkg/assets"
+	"github.com/razzie/gorzsony.com/assets"
 )
 
 // Layout ...

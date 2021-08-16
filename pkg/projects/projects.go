@@ -5,7 +5,7 @@ import (
 	"html/template"
 	"strings"
 
-	"github.com/razzie/gorzsony.com/pkg/assets"
+	"github.com/razzie/gorzsony.com/assets"
 )
 
 // Project contains data about one of my hobby projects

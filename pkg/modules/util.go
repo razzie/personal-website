@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/razzie/beepboop"
-	"github.com/razzie/gorzsony.com/pkg/assets"
+	"github.com/razzie/gorzsony.com/assets"
 )
 
 func getContentTemplate(module string) string {
