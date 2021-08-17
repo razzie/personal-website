@@ -58,12 +58,12 @@ func newRepo(ctx context.Context, client *gh.Client, repo *gh.Repository) Repo {
 	}
 
 	result := Repo{
-		Name:        *repo.Name,
-		Description: *repo.Description,
-		Owner:       *repo.Owner.Login,
-		URL:         *repo.HTMLURL,
+		Name:        derefString(repo.Name),
+		Description: derefString(repo.Description),
+		Owner:       derefString(repo.Owner.Login),
+		URL:         derefString(repo.HTMLURL),
 		Tags:        repo.Topics,
-		Language:    *repo.Language,
+		Language:    derefString(repo.Language),
 	}
 
 	for _, commit := range commits {
@@ -116,4 +116,11 @@ func GetReposAndStars(user string, token string) (repos []Repo, stars []Repo, er
 	}
 
 	return repos, stars, nil
+}
+
+func derefString(str *string) string {
+	if str == nil {
+		return ""
+	}
+	return *str
 }

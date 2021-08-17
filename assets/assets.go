@@ -2,7 +2,6 @@ package assets
 
 import (
 	"embed"
-	"io"
 	"io/fs"
 )
 
@@ -14,9 +13,5 @@ func FS() fs.FS {
 }
 
 func Asset(name string) ([]byte, error) {
-	file, err := assets.Open(name)
-	if err != nil {
-		return nil, err
-	}
-	return io.ReadAll(file)
+	return assets.ReadFile(name)
 }
