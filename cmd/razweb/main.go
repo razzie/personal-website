@@ -54,5 +54,5 @@ func main() {
 	)
 	srv.Header = header
 
-	http.ListenAndServe("localhost:8080", srv)
+	http.ListenAndServe(":8080", srv)
 }
