@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/razzie/beepboop"
 	"github.com/razzie/gorzsony.com/assets"
@@ -10,7 +11,7 @@ import (
 )
 
 func main() {
-	token, _ := assets.Asset("github.token")
+	token := os.Getenv("GITHUB_TOKEN")
 	projs := modules.Projects()
 	repos, stars := modules.Github(string(token))
 	fs := assets.FS()
