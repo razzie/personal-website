@@ -1,7 +1,6 @@
 package countries
 
 import (
-	"database/sql/driver"
 	"encoding/json"
 	"fmt"
 )
@@ -80,7 +79,7 @@ func (c CurrencyCode) String() string { //nolint:gocyclo
 		return "Taka"
 	case 52:
 		return "Barbados Dollar"
-	case 974:
+	case 933:
 		return "Belarussian Ruble"
 	case 84:
 		return "Belize Dollar"
@@ -426,8 +425,8 @@ func (c CurrencyCode) Alpha() string { //nolint:gocyclo
 		return "BDT"
 	case 52:
 		return "BBD"
-	case 974:
-		return "BYR"
+	case 933:
+		return "BYN"
 	case 84:
 		return "BZD"
 	case 952:
@@ -769,7 +768,7 @@ func (c CurrencyCode) Countries() []CountryCode { //nolint:gocyclo
 		return []CountryCode{PAN}
 	case CurrencyBBD:
 		return []CountryCode{BRB}
-	case CurrencyBYR:
+	case CurrencyBYN:
 		return []CountryCode{BLR}
 	case CurrencyBZD:
 		return []CountryCode{BLZ}
@@ -1100,7 +1099,7 @@ func AllCurrencies() []CurrencyCode {
 		CurrencyBHD,
 		CurrencyBDT,
 		CurrencyBBD,
-		CurrencyBYR,
+		CurrencyBYN,
 		CurrencyBZD,
 		CurrencyXOF,
 		CurrencyBMD,
@@ -1291,7 +1290,7 @@ func (c CurrencyCode) Digits() int { //nolint:gocyclo
 		return 2
 	case CurrencyBBD:
 		return 2
-	case CurrencyBYR:
+	case CurrencyBYN:
 		return 0
 	case CurrencyBZD:
 		return 2
@@ -1410,7 +1409,7 @@ func (c CurrencyCode) Digits() int { //nolint:gocyclo
 	case CurrencyIRR:
 		return 0
 	case CurrencyIQD:
-		return 0
+		return 3
 	case CurrencyILS:
 		return 2
 	case CurrencyJMD:
@@ -1628,7 +1627,7 @@ func (currency *Currency) Type() string {
 }
 
 // Value implements database/sql/driver.Valuer
-func (currency Currency) Value() (driver.Value, error) {
+func (currency Currency) Value() (Value, error) {
 	return json.Marshal(currency)
 }
 
@@ -1694,8 +1693,8 @@ func CurrencyCodeByName(name string) CurrencyCode { //nolint:gocyclo
 		return CurrencyBDT
 	case "BBD", "BARBADOSDOLLAR":
 		return CurrencyBBD
-	case "BYR", "BELARUSSIANRUBLE":
-		return CurrencyBYR
+	case "BYN", "BELARUSSIANRUBLE":
+		return CurrencyBYN
 	case "BZD", "BELIZEDOLLAR":
 		return CurrencyBZD
 	case "XOF", "CFAFRANCBCEAO":
@@ -1732,9 +1731,9 @@ func CurrencyCodeByName(name string) CurrencyCode { //nolint:gocyclo
 		return CurrencyCAD
 	case "KYD", "CAYMANISLANDSDOLLAR":
 		return CurrencyKYD
-	case "CLF", "UNIDADDEFOMENTO", "CHILE", "CHILI":
+	case "CLF", "UNIDADDEFOMENTO", "UNIDADFOMENTO":
 		return CurrencyCLF
-	case "CLP", "CHILEANPESO":
+	case "CLP", "CHILEANPESO", "CHILE", "CHILI", "CHILLE", "CHILLI", "CHILEAN", "CHILLEAN":
 		return CurrencyCLP
 	case "CNY", "YUANRENMINBI":
 		return CurrencyCNY
