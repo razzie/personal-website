@@ -3,9 +3,11 @@ module github.com/razzie/gorzsony.com
 go 1.18
 
 require (
+	github.com/gomarkdown/markdown v0.0.0-20220731190611-dcdaee8e7a53
 	github.com/google/go-github v17.0.0+incompatible
 	github.com/razzie/beepboop v0.0.0-20220727153421-2c4dc6572fb5
 	golang.org/x/oauth2 v0.0.0-20220722155238-128564f6959c
+	gopkg.in/yaml.v2 v2.4.0
 )
 
 require (

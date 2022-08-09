@@ -1,0 +1,703 @@
+bio:
+  personal: |
+    My name is **Gábor**, but you may also know me as **Razzie** from the internet. I'm pretty much comfortable with both names.  
+
+    My friends know me as a calm and rather observing kind of person unless someone hits one of my favorite topics as then I'm not afraid to stand for my ideas.
+    I enjoy having philosophical and professional discussions. Sharing my knowledge or having greater insight into a certain topic always cheers me up.  
+
+    I love developing ideas over time and then throwing them away later. One always finds me tinkering with my latest and greatest pet project. You may find a few of them below.  
+
+    Ever since my childhood I've always been deeply interested in machines (based on the stories my parents and relatives told me) and my earlier memories are about being wildly fascinated by helicopters.
+    Riding one still remains a life long dream of mine to this day, but I do fly RC helis regularly :)  
+
+    As of my core values, freedom and creativity stand over anything else in life, but comfort comes close.
+
+  professional: |
+    I'm a childhood self-taught developer who found his calling in creating virtual things (though I occasionally 3D print as well).  
+
+    Even though it was video games that got me fascinated enough to learn coding by myself, my interests shifted towards network protocols and backend software.
+    Having used Golang for the first time after 10+ years of C++ development was deeply influential in this.  
+
+    I've been an active coder for over two decades and decided to share [some of my pet projects](https://github.com/razzie/hobby-projects) with the world on [Github](https://github.com/razzie).
+    Many of these [web services](tag/web) are hosted on my own [Kubernetes](https://github.com/razzie/raz-stack) cluster.  
+
+    I take pride in my work - especially in the quality of the ideas behind an implementation - and enjoy discussions and brainstorming session with friends and co-workers.  
+
+    Currently I'm only interested in part-time or deeply flexible **full remote** positions with focus on **Golang** and **cloud development**.
+    Please check out my [resume](/resume) if you are interested in hiring me and send me an email.
+
+
+resume:
+  title: "Write Software: Change the World!"
+  objective: |
+    Enthusiastic professional with over two decades of software craftsmanship  
+    practice is eager to join your company as a **senior/staff software engineer**.
+
+  sections:
+  - title: Competence / skills
+    items:
+    - title: C++
+      url: https://gorzsony.com/tag/cpp
+      description: |
+        10+ years of professional and autodidact experience as a preferred/primary programming language in a wide range of domains.
+        I'm not accepting C++ job roles anymore, but consider it a deep foundation to build upon.
+    - title: Golang
+      url: https://gorzsony.com/tag/go
+      description: |
+        Few years of combined hobbyist and professional experience. Golang amazes me with its simplicity and the strength of its concurrency primities,
+        making it my go-to language for writing tooling and microservices.
+    - title: Other languages
+      description: |
+        Due to my work I've became comfortable enough with **Java**, **C#** and **Python** to be able to patch code or build modules when I have to,
+        and even mentor my colleagues and friends from time to time.
+    - title: Kubernetes
+      url: https://github.com/razzie/raz-stack
+      description: |
+        After manually managing individual servers for years as a hobby, the opportunity of having hands-on experience with Kubernetes was an absolute delight.
+        It motivated me to rewrite or adapt most of my on-prem software to be cloud native.  
+        My go-to tools are **helm** and **helmfile** and prefer the usage of **kubectl** (rather than tools like **k9s**).
+        As ingress controllers I use **nginx** and **traefik**, but I'd like to give **haproxy** a try in the future.
+        I have experience with **OperatorSDK**/**Kubebuilder** and [implemented an operator on my own](https://github.com/razzie/k8s-db-operator) as well just for fun.
+    - title: Docker
+      description: |
+        Probably self-evident (having worked with Kubernetes) that I'm very comfortable working with Docker.
+        Occasionally I've even mentored colleagues with higher job roles.
+    - title: Other tools
+      description: |
+        I know my way around **Makefile**s since the good old C++ days and have slight experience with **Jenkinsfile**s (and can combine the two if the need arises).
+        I'm also a heavy command line user of **git** for 10+ years.
+
+  - title: About me
+    items:
+    - description: |
+        Started programming in elementary school in QBasic — even “borrowed” the compiler and took it home on a floppy
+    - description: |
+        Learned C++ from a friend in 2008 who specializes in game server development and reverse engineering
+    - description: |
+        Defeated the Parallel Wizard ([https://deadlockempire.github.io/](https://deadlockempire.github.io/))
+    - description: |
+        Lifelong admiration of helicopters, airplanes and birds. I also fly RC helicopters.
+
+  - title: Experience
+    items:
+    - title: senior software engineer
+      year: 2021 - present
+      company: Cloudera
+      description: |
+        Took part in the early development of a greenfield project, focusing on the implementation of data ingestion for the main workload app
+        and later working on tenant signup and resource pooling.
+        Right now I'm part of one of the international teams working with data warehouses, but I do get my hands dirty working on the CI/CD pipeline as well.
+    - title: hobbyist backend developer
+      year: "2020"
+      url: https://gorzsony.com/tag/web
+      faded: true
+      description: |
+        Worked on my own self-hosted software stack for fun, implementing most of them in Golang.
+        Years later they have been revived to be moved to my [Kubernetes stack](https://github.com/razzie/raz-stack).
+    - title: backend developer
+      year: "2020"
+      company: VCC Live
+      description: |
+        Worked on a reference implementation of microservice feature flags and benchmarked the memory management of our
+        software telecom switch.
+    - title: freelance game mod developer
+      year: "2019"
+      faded: true
+      description: |
+        Worked on multiple private custom made GTA5 (FiveM) mods and a public reference project:
+        > [PocceMod](https://gorzsony.com/projects/poccemod) — 
+        > After sharing with the cummunity early on, the project went through 2 months of intensive development
+        > (200 commits in the first month and 150 in the second).
+        > It was generally well received, and it was the first mod that enabled players to have fun with GTA's unused rope API
+        > in a multiplayer environment (since it's not synced by default).
+    - title: senior software developer
+      year: 2017 - 2019
+      company: Ericsson
+      description: |
+        Worked on the packet functions of a microwave network device family.
+        Was an unofficial C++ expert in a 10-person team.
+        Implemented a network protocol together with a teammate based on an RFC document and released weeks before the deadline.
+    - title: hobbyist game developer
+      year: 2016 - 2017
+      url: https://gorzsony.com/project/potato_game
+      faded: true
+      description: |
+        Worked on a procedural generated 3D indie game tech demo using a home-built game engine. Was part of a coach guided
+        mastermind program during the development, where participants from multiple fields were boosting each other's projects
+        using the combined power of human minds.
+    - title: software engineer
+      year: 2015 - 2016
+      company: Cognex
+      description: |
+        Participated in multiple mainly GUI related projects while working together with the firmware team to resolve compatibility
+        issues. Took part in greenfield web backend development and database design, while also working on internal tools and exeriments
+        to assist my team.
+    - title: hobbyist game developer
+      year: "2014"
+      url: https://gorzsony.com/project/prepi
+      faded: true
+      description: |
+        Worked on an indie game project as part of a two-person team, focusing on game engine development.
+    - title: software developer
+      year: 2012 - 2014
+      company: Ericsson
+      description: |
+        Worked on a flagship router product in a 3-person team.
+        Was responsible for the network management interface which was highly interconnected with all internal modules.
+        Developed an extension protocol based on RFC document.
+        Spent 5 weeks in Beijing to transfer knowledge to the local team.
+
+  - title: Education
+    items:
+    - title: University of Debrecen
+      year: 2008-2012 (7 semesters without retaking courses)
+      description: |
+        Bachelor's degree in Computer Science Engineering, specializing in computer networks
+
+
+projects:
+- id: beepboop
+  name: beepboop
+  year: 2020-2022
+  tags:
+  - go
+  - web
+  description: |-
+    A lightweight webapp framework that powers razbox and this website.
+    Most of the original code was taken from [razlink](#razlink), but it has heavily evolved since.
+  linkGroups:
+  - name: Source code
+    links:
+    - name: github.com/razzie/beepboop
+      url: https://github.com/razzie/beepboop
+
+- id: floating_islands
+  name: Floating Islands
+  year: "2016"
+  tags:
+  - cpp
+  - 3d
+  - procedural
+  description: |-
+    Floating Islands is yet another example of my experiments with procedurally generated terrains.
+    I developed an algorithm that takes island positions and island connections as input parameters and generates a 3D grid world using a Perlin noise internally.
+    I also focused on the cartoonish design with edge outlining and also had an A* pathfinder algorithm set up for the little red cube.
+  linkGroups:
+  - name: Download
+    links:
+    - name: github.com/razzie/hobby-projects/2016/floating-islands
+      url: https://github.com/razzie/hobby-projects/tree/master/2016/floating-islands
+
+- id: flyff
+  name: Flyff fansite
+  year: 2007-2010
+  tags:
+  - php
+  - web
+  description: |-
+    Flyff.extra.hu was a hungarian fan site of Flyff (Fly For Fun) online game.
+    During the 3-4 years of its existence I developed more and more new features to make it a fully functional web portal.
+    It was very interesting to see it slowly getting attention.
+    Members started generating content in the forms of forum entries, polls, screenshots and news for the home page.
+    The site even had a few moderators and admins.
+    In 2010 extra.hu decided to close its free hosting service and the site went offline.
+    I could have moved it to a different(even paid) hosting service, but most members and I have already lost interest in the game.
+  linkGroups:
+  - name: Source code
+    links:
+    - name: github.com/razzie/hobby-projects/2007/flyff
+      url: https://github.com/razzie/hobby-projects/tree/master/2007/flyff
+
+- id: geoip
+  name: geoip-server
+  year: "2020"
+  tags:
+  - go
+  - web
+  description: |-
+    A web service that serves IP address geolocations in JSON format.
+    Instead of relying on a local database it collects data from a (configurable) series of 3rd party providers,
+    converting the results to a commom format. It supports provider fallbacks and caching.
+  linkGroups:
+  - name: Try it here
+    links:
+    - name: geoip.gorzsony.com
+      url: https://geoip.gorzsony.com
+  - name: Source code
+    links:
+    - name: github.com/razzie/geoip-server
+      url: https://github.com/razzie/geoip-server
+
+- id: gglib
+  name: gglib & gglib2
+  year: 2013-2017
+  tags:
+  - cpp
+  - lib
+  description: |-
+    GGlib and GGlib2 were libraries I used to develop between 2013 and 2017.
+    They served as a sandbox to help me to learn about the new features of the C++11 standard.
+    I also found a great use of them while working on other side projects.
+    Due to some early design choices (including too heavy use of virtual function calls) I finally decided to send them into retirement
+    and started working on the successor: [librazzie](https://github.com/razzie/librazzie).
+  linkGroups:
+  - name: Source code
+    links:
+    - name: github.com/razzie/gglib
+      url: https://github.com/razzie/gglib
+    - name: github.com/razzie/gglib2
+      url: https://github.com/razzie/gglib2
+
+- id: ground_tool
+  name: Ground Tool
+  year: "2016"
+  tags:
+  - cpp
+  - 3d
+  - procedural
+  description: |-
+    The idea behind the demo was a game with floating islands.
+    Though this game never made it to the reality, Ground Tool was born as a result of experimenting with the rendering of these islands.
+    The user can draw a polygon border to the island and when all points are connected, the program generates an island which can be inspected by zooming and moving the camera around.
+  linkGroups:
+  - name: Source code and binary
+    links:
+    - name: github.com/razzie/hobby-projects/2016/groundtool
+      url: https://github.com/razzie/hobby-projects/tree/master/2016/groundtool
+
+- id: gtaonline_videos
+  name: GTA Online videos
+  year: 2015-2019
+  tags:
+  - hobby
+  - video
+  description: |-
+    I have way more playtime in Grand Theft Auto V (or GTA Online to be specific) than I would like to admit and most of that I've spent with friends I've met in the game.
+    It became our little tradition to record funny, exciting or any memorable moments and later create videos of it.
+    At this point there is quite a collection of those videos and I've uploaded the ones I made to [my youtube channel](https://www.youtube.com/c/razzquez).
+    Most of the content is only meaningful to us, but I still hope viewers will find them entertaining
+
+- id: hexagon
+  name: Hexagon
+  year: "2015"
+  tags:
+  - cpp
+  - 3d
+  - procedural
+  description: |-
+    Hexagon is very similar to the Minecraft clone, but I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes.
+    The underlying datastructure is still a 3D grid of Perlin noise.
+    One of the main differences is that this demo does not use textures, but has a custom shader that draws grass or rock detail based on the normal vectors.
+  linkGroups:
+  - name: Source code and binary
+    links:
+    - name: github.com/razzie/hobby-projects/2015/hexagon
+      url: https://github.com/razzie/hobby-projects/tree/master/2015/hexagon
+
+- id: librazzie
+  name: librazzie
+  year: 2016-2018
+  tags:
+  - cpp
+  - lib
+  description: |-
+    A header-only multi-purpose library designed to help me get started with my projects.
+    It includes frameworks for logging, events, input, memory, thread and network+serialization and has some additional stuff like:
+    a bitset class with iterators for true and false position, stream manipulators and parsers and an easy to use random number generator.
+  linkGroups:
+  - name: Source code
+    links:
+    - name: github.com/razzie/librazzie
+      url: https://github.com/razzie/librazzie
+
+- id: logic_circuit_simulator
+  name: Logic Circuit Simulator
+  year: "2010"
+  tags:
+  - java
+  - app
+  description: |-
+    Logic Circuit Simulator was a university project I had to finish in a semester.
+    It offers a variety of logic gates and a lot of visual customization options.
+    Some special elements are also available, like seven-segment display, matrix display, JK flip-flop, adjustable timer and module.
+    A selected part of a logic circuit can be converted to a module, where the circuit's input elements (buttons, switches) become the input pins and output elements (LEDs) become the output pins of the module.
+    Modules also support recursion.
+  linkGroups:
+  - name: Download
+    links:
+    - name: Logic_Circuit_Simulator.jar
+      url: https://github.com/razzie/LogicCircuitSimulator/releases/download/v1.0/Logic_Circuit_Simulator.jar
+  - name: Source code
+    links:
+    - name: github.com/razzie/LogicCircuitSimulator
+      url: https://github.com/razzie/LogicCircuitSimulator
+
+- id: mediaserver
+  name: mediaserver
+  year: "2020"
+  tags:
+  - go
+  - web
+  description: |-
+    A web service that fetches thumbnails with title from URLs.
+    Originally planned to use it in a chat service to prevent the tracking of users by letting them download<BR> images directly.
+  linkGroups:
+  - name: Try it here
+    links:
+    - name: mediaserver.gorzsony.com
+      url: https://mediaserver.gorzsony.com/www.youtube.com/watch?v=fVQyYJ8Rl7o
+  - name: Source code
+    links:
+    - name: github.com/razzie/mediaserver
+      url: https://github.com/razzie/mediaserver
+
+- id: minecraft_clone
+  name: Minecraft clone
+  year: 2011-2012
+  tags:
+  - cpp
+  - 3d
+  - procedural
+  description: |-
+    Minecraft clone is a graphics project I worked on during the final year of the university.
+    Contrary to its name it is not a real clone, it features no game elements.
+    My primary motivation was the recreation of a Minecraft-like rendering in C++.
+  linkGroups:
+  - name: Source code and download
+    links:
+    - name: github.com/razzie/hobby-projects/2011/minecraft-clone-v1
+      url: https://github.com/razzie/hobby-projects/tree/master/2011/minecraft-clone-v1
+    - name: github.com/razzie/hobby-projects/2011/minecraft-clone-v2
+      url: https://github.com/razzie/hobby-projects/tree/master/2012/minecraft-clone-v2
+
+- id: poccemod
+  name: PocceMod
+  year: "2019"
+  tags:
+  - csharp
+  - mod
+  - game
+  description: |-
+    I made this mod originally for my tiny private FiveM server to have some fun with friends.
+    (FiveM is a modification for Grand Theft Auto V enabling you to play multiplayer on customized dedicated servers.)
+    Then I thought, why not share it with others? So I published it and listened to feedback from the community to improve it even more.
+    The project went through 2 months of intensive development (200 commits in the first month and 150 in the second) until I ended up quite pleased with the results.
+    Most of the FiveM player base and modder community is focused on role playing, while the goal of PocceMod was always to be a standalone sandbox entertainment mod.
+    I was the first developer who enabled players to have fun with GTA's unused rope API in a multiplayer environment
+    (since it's not synced by default).
+  linkGroups:
+  - name: Releases
+    links:
+    - name: Official PocceMod page
+      url: https://forum.cfx.re/t/release-poccemod-fun-menu-with-ropes/645529
+    - name: Github releases
+      url: https://github.com/razzie/PocceMod/releases
+  - name: Source code
+    links:
+    - name: github.com/razzie/PocceMod
+      url: https://github.com/razzie/PocceMod
+
+- id: potato_game
+  name: Potato Game
+  year: 2016-2017
+  tags:
+  - cpp
+  - 3d
+  - game
+  - procedural
+  description: |-
+    PotatoGame is a procedural generated game about little potatoes with customizable AI (which was only done on paper).
+    The goal is to have them win the game for you by gaining world domination.
+    This was my second large game project (in terms of time and effort spent on it), but eventually I lost interest and motivation
+    after forcing myself to work on it and focusing too much on the future outcome.
+    I'm very proud of this project, but I gave up on ever finishing it.
+  linkGroups:
+  - name: Download
+    links:
+    - name: demos.zip
+      url: https://github.com/razzie/PotatoGame/releases/download/pre-alpha/demos.zip
+  - name: Videos
+    links:
+    - name: potato.mp4
+      url: https://github.com/razzie/PotatoGame/releases/download/pre-alpha/potato.mp4
+    - name: development.mp4
+      url: https://github.com/razzie/PotatoGame/releases/download/pre-alpha/development.mp4
+  - name: Source code
+    links:
+    - name: github.com/razzie/PotatoGame
+      url: https://github.com/razzie/PotatoGame
+
+- id: prepi
+  name: Prepi
+  year: "2014"
+  tags:
+  - cpp
+  - 2d
+  - game
+  description: |-
+    Prepi is an indie game project I was working on together with a friend.
+    It was intended to be a rage game with puzzle elements.
+    We took it so seriously we both quitted our jobs to be able to work on it full-time.
+    After several month of development we reached a point where we wanted to introduce our game to the public via an Indiegogo campaign.
+    Unfortunately the campaign failed, mostly because the lack of media attention (neither of us were expert on the topic).
+    Also the game was probably in too early phase to show it to the public.
+    Due to the failure of the campaign and smaller disagreements regarding the game design we decided not to continue the development.
+  linkGroups:
+  - name: Download
+    links:
+    - name: prepi.zip
+      url: https://github.com/razzie/prepi/releases/download/pre-alpha/prepi.zip
+  - name: Source code
+    links:
+    - name: github.com/razzie/prepi
+      url: https://github.com/razzie/prepi
+
+- id: process_manager
+  name: Process Manager
+  year: "2008"
+  tags:
+  - purebasic
+  - app
+  description: |-
+    Process Manager is a replacement application for the built-in Windows Task Manager with a lot of additional features.
+    It keeps running in the background after closing the main window and can be brought back from the tray icon or by pressing Ctrl+F12.
+  linkGroups:
+  - name: Download
+    links:
+    - name: Process Manager.exe
+      url: https://github.com/razzie/hobby-projects/raw/master/2008/process-manager/Process%20Manager.exe
+
+- id: razbox
+  name: razbox
+  year: "2020"
+  tags:
+  - go
+  - web
+  description: |-
+    Like Dropbox, but different - powered by [beepboop](#beepboop)
+  linkGroups:
+  - name: Try it here
+    links:
+    - name: razbox.gorzsony.com
+      url: https://razbox.gorzsony.com
+  - name: Source code
+    links:
+    - name: github.com/razzie/razbox
+      url: https://github.com/razzie/razbox
+
+- id: razlink
+  name: razlink
+  year: "2019"
+  tags:
+  - go
+  - web
+  description: |-
+    A lightweight link proxy/redirect service with logging.
+    Can be used to create URLs that point to an external resource while tracking visits from users.
+  linkGroups:
+  - name: Try it here
+    links:
+    - name: link.gorzsony.com
+      url: https://link.gorzsony.com
+  - name: Source code
+    links:
+    - name: github.com/razzie/razlink
+      url: https://github.com/razzie/razlink
+
+- id: razproxy
+  name: razproxy
+  year: "2020"
+  tags:
+  - go
+  - web
+  description: |-
+    SOCKS5 tunneled through TLS connection
+  linkGroups:
+  - name: Source code
+    links:
+    - name: github.com/razzie/razproxy
+      url: https://github.com/razzie/razproxy
+
+- id: raztalk
+  name: RazTalk
+  year: "2018"
+  tags:
+  - csharp
+  - web
+  - app
+  description: |-
+    A simple lobby/channel based registration-free webchat.
+  linkGroups:
+  - name: Try it here
+    links:
+    - name: talk.gorzsony.com
+      url: https://talk.gorzsony.com
+  - name: Download
+    links:
+    - name: raztalk_v1.0.zip
+      url: https://github.com/razzie/raztalk/releases/download/v1.0/raztalk_v1.0.zip
+    - name: raztalk.client.exe
+      url: https://github.com/razzie/raztalk/releases/download/v1.0/raztalk.client.exe
+  - name: Source code
+    links:
+    - name: github.com/razzie/raztalk
+      url: https://github.com/razzie/raztalk
+
+- id: razvhost
+  name: razvhost
+  year: "2020"
+  tags:
+  - go
+  - web
+  description: |-
+    Virtual hosting/reverse proxy with TLS termination and automatic certificate management.
+    It supports proxying, file/directory serving and redirection using a simple config format.
+  linkGroups:
+  - name: Source code
+    links:
+    - name: github.com/razzie/razvhost
+      url: https://github.com/razzie/razvhost
+
+- id: razziecraft_vanilla
+  name: RazzieCraft Vanilla
+  year: "2018"
+  tags:
+  - hobby
+  - minecraft
+  description: |-
+    RazzieCraft Vanilla is Minecraft version 1.12.2 on steroids!
+    This pack contains a ton of strictly curated mods that enhance the visuals and gameplay of vanilla Minecraft,
+    but without breaking its charm. There are a lot of recipes for uncraftable existing items (like chain armor, slime ball, spawn
+    eggs, etc) and a very few brand new stuff.
+  linkGroups:
+  - name: Download
+    links:
+    - name: TechnicLauncher
+      url: https://www.technicpack.net/download
+    - name: RazzieCraft Vanilla mod page
+      url: https://www.technicpack.net/modpack/razziecraft-vanilla.976147
+
+- id: razzgravitas
+  name: RazzGravitas
+  year: "2017"
+  tags:
+  - cpp
+  - 2d
+  - game
+  description: |-
+    RazzGravitas is a simple multiplayer game about gravity.
+    At the time of making it I just gave up on a somewhat larger project and I needed to give myself a smaller task that I can prove to be able to finish.
+    The sole objective was to experiment with something simple with no regrets about design decisions and no promises about the outcome.
+    After about a month of development it ended up having multiplayer support with competitive game rules I'm satisfied with.
+    I consider the game finished.
+  linkGroups:
+  - name: Download
+    links:
+    - name: razzgravitas.exe
+      url: https://github.com/razzie/razzgravitas/releases/download/v1.0/razzgravitas.exe
+  - name: Source code
+    links:
+    - name: github.com/razzie/razzgravitas
+      url: https://github.com/razzie/razzgravitas
+
+- id: razzie_messenger
+  name: Razzie Messenger
+  year: "2008"
+  tags:
+  - purebasic
+  - app
+  description: |-
+    Razzie Messenger is a messenger client and server I started working on during a one-week vacation at lake Balaton (Hungary).
+    It uses a very simple plain text based protocol for network communication, look at the picture to see it in details.
+    (Since then I prefer binary protocols due to the ineffeciency of string parsing and large packet sizes in case of text protocols.)
+    The user can chose a nickname and pick colors for the name and the text messages.
+    There is no registration and password authentication, however the server rejects the connection if a nickname is already taken in the current session.
+    It is possible to send a file to an other user: in this case the server opens a random port which receives and forwards the file.
+    Both users have to connect to this port, but it is done automatically.
+    This solution was necessary due to the limitations of the text based protocol.
+  linkGroups:
+  - name: Download
+    links:
+    - name: github.com/razzie/hobby-projects/2008/razzie-messenger
+      url: https://github.com/razzie/hobby-projects/tree/master/2008/razzie-messenger
+
+- id: riddle_solver
+  name: Riddle Solver
+  year: "2019"
+  tags:
+  - go
+  - app
+  description: |-
+    Riddle Solver is a terminal app designed to solve Einstein's 5 house riddle (also called zebra puzzles in general).
+    I think I came across this kind of riddle playing Dishonored2 first as a third option to get inside a locked place.
+    It was written by a fictional genius game character named Kirin Jindosh and it's clearly based on Einstein's five house riddle.
+    It took me (sadly) at least 30 minutes to solve on paper, but it earned me an achievement.
+    Fast forward 3 years, I had the random idea of implementing this riddle solver, which seemed like a simple way to sharpen my Golang skills.
+    I was wrong. Coming up with the UI design and the solver algorithm caused me quite a few sleepness nights, but I'm really proud of the result.
+  linkGroups:
+  - name: Riddles
+    links:
+    - name: The Jindosh Riddle
+      url: https://raw.githubusercontent.com/razzie/riddle-solver/master/screenshots/dishonored2_jindosh_riddle.jpg
+  - name: Download
+    links:
+    - name: riddle-solver-gui.exe
+      url: https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-gui.exe
+    - name: riddle-solver-tui.exe
+      url: https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-tui.exe
+  - name: Source code
+    links:
+    - name: github.com/razzie/riddle-solver
+      url: https://github.com/razzie/riddle-solver
+
+- id: server_client_application
+  name: Server - client application
+  year: "2008"
+  tags:
+  - purebasic
+  - app
+  description: |-
+    Server - client application is a small tool which helps creating and debugging text based network protocols.
+    I developed it while working on Razzie Messenger and it had a great use.
+    On the server tab the user can select one of the connected clients as a message target or just close the connection to them.
+  linkGroups:
+  - name: Download
+    links:
+    - name: server-client.exe
+      url: https://github.com/razzie/hobby-projects/blob/master/2008/server-client/server-client.exe
+
+- id: uuid
+  name: uuid-server
+  year: "2020"
+  tags:
+  - go
+  - web
+  description: |-
+    A http server that serves random (version4) UUIDs.
+    It uses my [hybrid pseudo- and true random generator](https://github.com/razzie/random) library which periodically takes seeds from [random.org](https://random.org)
+    and uses them to generate pseudo-random UUIDs fast.
+  linkGroups:
+  - name: Try it here
+    links:
+    - name: uuid.gorzsony.com
+      url: https://uuid.gorzsony.com
+  - name: Source code
+    links:
+    - name: github.com/razzie/uuid-server
+      url: https://github.com/razzie/uuid-server
+
+- id: windows_manager
+  name: Windows Manager
+  year: "2008"
+  tags:
+  - purebasic
+  - app
+  description: |-
+    Windows Manager is a reworked and extended edition of Process Manager.
+    Besides the improved visual appearance it introduces new window tweaking options which you can see in the picture.
+    One can for example change a sticky (always on top) window to act as a normal one.
+  linkGroups:
+  - name: Download
+    links:
+    - name: wmanager.exe
+      url: https://github.com/razzie/hobby-projects/raw/master/2008/windows-manager/wmanager.exe

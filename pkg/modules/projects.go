@@ -1,30 +1,27 @@
 package modules
 
 import (
-	"math/rand"
-	"sort"
-	"strconv"
 	"strings"
-	"time"
 
 	"github.com/razzie/beepboop"
+	"github.com/razzie/gorzsony.com/assets"
+	"github.com/razzie/gorzsony.com/pkg/content"
 	"github.com/razzie/gorzsony.com/pkg/layout"
-	"github.com/razzie/gorzsony.com/pkg/projects"
 )
 
 type projectsView struct {
 	Tag      string
-	Projects []projects.Project
+	Projects []content.Project
 }
 
-func shuffleProjects(projects []projects.Project) []projects.Project {
+/*func shuffleProjects(projects []content.Project) []content.Project {
 	clone := append(projects[:0:0], projects...)
 	rand.Seed(time.Now().UnixNano())
 	rand.Shuffle(len(clone), func(i, j int) { clone[i], clone[j] = clone[j], clone[i] })
 	return clone
-}
+}*/
 
-func filterProjects(projects []projects.Project, tag string) (results []projects.Project) {
+func filterProjects(projects []content.Project, tag string) (results []content.Project) {
 	tag = strings.ToLower(tag)
 	for _, proj := range projects {
 		for _, t := range proj.Tags {
@@ -37,41 +34,51 @@ func filterProjects(projects []projects.Project, tag string) (results []projects
 	return
 }
 
-func orderProjectsByYear(projects []projects.Project) {
-	getYear := func(i int) int {
-		years := strings.Split(projects[i].Year, "-")
-		year, _ := strconv.Atoi(years[len(years)-1])
-		return year
+func getTag(pr *beepboop.PageRequest) string {
+	if strings.HasPrefix(pr.Request.URL.Path, "/tag/") {
+		return pr.RelPath
 	}
-	sort.SliceStable(projects, func(i, j int) bool {
-		return getYear(i) > getYear(j)
-	})
+	return ""
+}
+
+func getProjectID(pr *beepboop.PageRequest) string {
+	if strings.HasPrefix(pr.Request.URL.Path, "/project/") {
+		return pr.RelPath
+	}
+	return ""
 }
 
 // Projects returns the projects module
-func Projects() *layout.Module {
-	projectList, err := projects.LoadProjects()
-	if err != nil {
-		panic(err)
-	}
-	orderProjectsByYear(projectList)
+func Projects(loader *assets.AssetLoader) *layout.Module {
 	return &layout.Module{
 		Name:            "Projects",
 		ContentTemplate: getContentTemplate("projects"),
 		Handler: func(pr *beepboop.PageRequest) interface{} {
 			var v *projectsView
+			projects := loader.Content().Projects
 			tag := getTag(pr)
-			if len(tag) > 0 {
+			projectID := getProjectID(pr)
+			switch {
+			case len(tag) > 0:
 				v = &projectsView{
 					Tag:      tag,
-					Projects: filterProjects(projectList, tag),
+					Projects: filterProjects(projects, tag),
 				}
-			} else {
+			case len(projectID) > 0:
+				for _, project := range projects {
+					if project.ID == projectID {
+						v = &projectsView{
+							Projects: []content.Project{project},
+						}
+						break
+					}
+				}
+			default:
 				v = &projectsView{
-					Projects: projectList,
+					Projects: projects,
 				}
 			}
-			if len(v.Projects) == 0 {
+			if v == nil || len(v.Projects) == 0 {
 				return nil
 			}
 			return v

@@ -12,7 +12,7 @@ import (
 var Layout beepboop.Layout
 
 func init() {
-	t, err := assets.Asset("template/layout.html")
+	t, err := assets.StaticAsset("template/layout.html")
 	if err != nil {
 		panic(err)
 	}

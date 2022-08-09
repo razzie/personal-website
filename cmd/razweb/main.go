@@ -10,13 +10,26 @@ import (
 	"github.com/razzie/gorzsony.com/pkg/modules"
 )
 
+func envOrDefault(envVar, defaultVal string) string {
+	if val := os.Getenv(envVar); len(val) > 0 {
+		return val
+	}
+	return defaultVal
+}
+
 func main() {
 	token := os.Getenv("GITHUB_TOKEN")
-	projs := modules.Projects()
-	repos, stars := modules.Github(string(token))
-	fs := assets.FS()
+	cacheDir := envOrDefault("CACHE_DIR", "./cache")
+	remoteDir := envOrDefault("REMOTE_DIR", "https://raw.githubusercontent.com/razzie/gorzsony.com/master/assets/")
+	os.MkdirAll(cacheDir, os.ModeDir)
 
-	mainPage := layout.CombineModules("/", "Gábor Görzsöny", modules.Hello(), projs, repos, stars)
+	loader := assets.NewAssetLoader(cacheDir, remoteDir)
+	bio := modules.Hello(loader)
+	projs := modules.Projects(loader)
+	repos, stars := modules.Github(token)
+	resume := modules.Resume(loader)
+
+	mainPage := layout.CombineModules("/", "Gábor Görzsöny", bio, projs, repos, stars)
 	mainPageHandler := mainPage.Handler
 	mainPage.Handler = func(pr *beepboop.PageRequest) *beepboop.View {
 		if len(pr.RelPath) > 0 {
@@ -42,15 +55,15 @@ func main() {
 
 	srv := beepboop.NewServer()
 	srv.Layout = layout.Layout
-	srv.FaviconPNG, _ = assets.Asset("img/favicon.png")
+	srv.FaviconPNG, _ = assets.StaticAsset("img/favicon.png")
 	srv.AddPages(
-		beepboop.FSPage("/css/", fs),
-		beepboop.FSPage("/img/", fs),
-		beepboop.FSPage("/js/", fs),
+		beepboop.FSPage("/css/", assets.StaticFS()),
+		beepboop.FSPage("/img/", loader),
+		beepboop.FSPage("/js/", assets.StaticFS()),
 		mainPage,
 		layout.CombineModules("/tag/", "Gábor Görzsöny", projs, repos),
-		layout.CombineModules("/timeline", "Gábor Görzsöny - Project timeline", modules.Timeline()),
-		layout.CombineModules("/resume", "Gábor Görzsöny - Resume", modules.Resume()),
+		layout.CombineModules("/project/", "Gábor Görzsöny", projs),
+		layout.CombineModules("/resume", "Gábor Görzsöny - Resume", resume),
 	)
 	srv.Header = header
 

@@ -5,6 +5,7 @@ import (
 	"math/rand"
 	"sort"
 	"strings"
+	"sync/atomic"
 	"time"
 
 	"github.com/razzie/beepboop"
@@ -37,7 +38,7 @@ func limitRepos(repos []github.Repo, maxRepos int) []github.Repo {
 
 func filterRepos(repos []github.Repo, tag string) (results []github.Repo) {
 	tag = strings.ToLower(tag)
-	lang, _ := tagLangMap[tag]
+	lang := tagLangMap[tag]
 	for _, repo := range repos {
 		if repo.Language == lang {
 			results = append(results, repo)
@@ -61,11 +62,11 @@ func orderReposByDate(repos []github.Repo) {
 
 // Github returns the github repo and star modules
 func Github(token string) (reposModule *layout.Module, starsModule *layout.Module) {
-	var repos []github.Repo
-	var stars []github.Repo
+	var repos atomic.Value
+	var stars atomic.Value
 
 	go func() {
-		ticker := time.NewTicker(time.Minute * 30)
+		ticker := time.NewTicker(time.Hour)
 		for ; true; <-ticker.C {
 			tmpRepos, tmpStars, err := github.GetReposAndStars("razzie", token)
 			if err != nil {
@@ -74,7 +75,8 @@ func Github(token string) (reposModule *layout.Module, starsModule *layout.Modul
 			}
 
 			orderReposByDate(tmpRepos)
-			repos, stars = tmpRepos, tmpStars
+			repos.Store(tmpRepos)
+			stars.Store(tmpStars)
 		}
 	}()
 
@@ -82,6 +84,7 @@ func Github(token string) (reposModule *layout.Module, starsModule *layout.Modul
 		Name:            "Github Repos",
 		ContentTemplate: getContentTemplate("github_repos"),
 		Handler: func(pr *beepboop.PageRequest) interface{} {
+			repos, _ := repos.Load().([]github.Repo)
 			if len(repos) == 0 {
 				return nil
 			}
@@ -107,6 +110,7 @@ func Github(token string) (reposModule *layout.Module, starsModule *layout.Modul
 		Name:            "Github Stars",
 		ContentTemplate: getContentTemplate("github_stars"),
 		Handler: func(pr *beepboop.PageRequest) interface{} {
+			stars, _ := stars.Load().([]github.Repo)
 			if len(stars) == 0 {
 				return nil
 			}

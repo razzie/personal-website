@@ -11,7 +11,7 @@ import (
 var modulePageT string
 
 func init() {
-	t, err := assets.Asset("template/layout_modules.html")
+	t, err := assets.StaticAsset("template/layout_modules.html")
 	if err != nil {
 		panic(err)
 	}
