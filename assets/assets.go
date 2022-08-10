@@ -58,7 +58,8 @@ func NewAssetLoader(cacheDir, remoteDir string) *AssetLoader {
 
 	go func() {
 		ticker := time.NewTicker(time.Hour)
-		for ; true; <-ticker.C {
+		for {
+			<-ticker.C
 			content, err := loader.loadContent()
 			if err != nil {
 				log.Println(err)

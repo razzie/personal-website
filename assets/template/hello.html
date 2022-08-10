@@ -1,17 +1,17 @@
-<div class="center">
+<div class="center p-4">
     <div class="row justify-content-center">
         <div class="col mb-5 text-center reveal">
             <h1 class="hello">Hello</h1>
         </div>
     </div>
-    <div class="row mb-5 justify-content-center reveal">
-        <div class="col-md-6 text-left text-md-right border-right border-danger">
+    <div class="row mb-5 justify-content-center">
+        <div class="bio col-lg-6 text-left text-lg-right border-right border-danger reveal">
             <h2 class="text-danger">Personal</h2>
-            {{- .Personal }}
+            {{- .PersonalHTML }}
         </div>
-        <div class="col-md-6 text-left border-left border-danger">
+        <div class="bio col-lg-6 text-left border-left border-danger reveal">
             <h2 class="text-danger">Professional</h2>
-            {{- .Professional }}
+            {{- .ProfessionalHTML }}
         </div>
         <img src="img/contact.png" />
     </div>

@@ -28,8 +28,9 @@ bio:
 
 
 resume:
-  title: "Write Software: Change the World!"
-  objective: |
+  header: |
+    ### Write Software: Change the World!  
+      
     Enthusiastic professional with over two decades of software craftsmanship  
     practice is eager to join your company as a **senior/staff software engineer**.
 

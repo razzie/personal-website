@@ -1,11 +1,8 @@
 <div class="center">
     <div class="col p-4 paper">
-        <div class="text-center mb-4 reveal"><h1>Gábor Görzsöny</h1></div>
-        <div class="text-center mb-4 reveal"><h4 class="smallcaps">{{ .Title }}</h4></div>
-        <div class="text-center reveal">{{ .Objective }}</div>
-        <div class="row justify-content-center m-0 reveal">
-            <img src="img/contact.png" class="m-0" />
-        </div>
+        <div class="text-center mb-4 mt-n4 print-only"><h1>Gábor Görzsöny</h1></div>
+        <div class="text-center reveal">{{ .HeaderHTML }}</div>
+        <div class="float-right m-0 reveal"><img src="img/contact.png" class="m-0" /></div>
         <hr />
         {{ range .Sections }}
         <div class="mb-4">
@@ -18,7 +15,7 @@
                     {{ if .Title }}<strong>{{ .Title }}</strong>{{ end }}
                     {{ if .URL }} — <a href="{{ .URL }}">{{ .URL }}</a>{{ end }}
                     {{ if .Title }}<br />{{ end }}
-                    {{ .Description }}
+                    {{ .DescriptionHTML }}
                 </li>
                 {{ end }}
             </ul>

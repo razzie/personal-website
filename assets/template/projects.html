@@ -1,5 +1,5 @@
-<div class="row justify-content-center">
-    <div class="col m-5 text-center reveal">
+<div class="justify-content-center">
+    <div class="m-5 text-center reveal">
     {{ $projCount := len .Projects }}
     {{ if .Tag }}
         <h1>Projects tagged with <span class="text-danger">{{ .Tag }}</span></h1>
@@ -10,12 +10,12 @@
     {{ end }}
     </div>
 </div>
-<div class="row">
+<div class="row m-0 p-4">
 {{ range .Projects }}
-    <div class="col-md-6 mb-5 text-left reveal" id="{{ .ID }}">
+    <div class="col-lg-6 mb-5 text-left reveal" id="{{ .ID }}">
         <img src="img/{{ .ID }}.png" class="img-fluid proj-img" />
         <h3 class="text-danger">{{ .Name }}</h3>
-        <p>{{ .Description }}</p>
+        <p>{{ .DescriptionHTML }}</p>
         {{ range .LinkGroups }}
         <span class="text-secondary">
             {{ .Name }}:<br />
