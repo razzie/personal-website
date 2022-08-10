@@ -41,7 +41,7 @@ resume:
       url: https://gorzsony.com/tag/cpp
       description: |
         10+ years of professional and autodidact experience as a preferred/primary programming language in a wide range of domains.
-        I'm not accepting C++ job roles anymore, but consider it a deep foundation to build upon.
+        I'm not accepting C++ job roles anymore, but consider it a solid foundation to build upon.
     - title: Golang
       url: https://gorzsony.com/tag/go
       description: |
@@ -57,12 +57,16 @@ resume:
         After manually managing individual servers for years as a hobby, the opportunity of having hands-on experience with Kubernetes was an absolute delight.
         It motivated me to rewrite or adapt most of my on-prem software to be cloud native.  
         My go-to tools are **helm** and **helmfile** and prefer the usage of **kubectl** (rather than tools like **k9s**).
-        As ingress controllers I use **nginx** and **traefik**, but I'd like to give **haproxy** a try in the future.
-        I have experience with **OperatorSDK**/**Kubebuilder** and [implemented an operator on my own](https://github.com/razzie/k8s-db-operator) as well just for fun.
+        As ingress controllers I use **nginx** and **traefik**, combined with **cert-manager** and a custom webhook.
+        I have experience with **OperatorSDK**/**Kubebuilder** and [implemented an operator](https://github.com/razzie/k8s-db-operator) as well just for fun.
     - title: Docker
       description: |
         Probably self-evident (having worked with Kubernetes) that I'm very comfortable working with Docker.
         Occasionally I've even mentored colleagues with higher job roles.
+    - title: Databases
+      description: |
+        I prefer using **PostgreSQL** if I need ACID guarantees on my data and go with **Redis** (or compatible tools like **Kvrocks**) for caching or simple key-value use-cases
+        (though I've used **Consul KV** before).
     - title: Other tools
       description: |
         I know my way around **Makefile**s since the good old C++ days and have slight experience with **Jenkinsfile**s (and can combine the two if the need arises).
@@ -159,7 +163,7 @@ resume:
 projects:
 - id: beepboop
   name: beepboop
-  year: 2020-2022
+  year: 2020 - 2022
   tags:
   - go
   - web
@@ -191,7 +195,7 @@ projects:
 
 - id: flyff
   name: Flyff fansite
-  year: 2007-2010
+  year: 2007 - 2010
   tags:
   - php
   - web
@@ -231,7 +235,7 @@ projects:
 
 - id: gglib
   name: gglib & gglib2
-  year: 2013-2017
+  year: 2013 - 2017
   tags:
   - cpp
   - lib
@@ -268,7 +272,7 @@ projects:
 
 - id: gtaonline_videos
   name: GTA Online videos
-  year: 2015-2019
+  year: 2015 - 2019
   tags:
   - hobby
   - video
@@ -297,7 +301,7 @@ projects:
 
 - id: librazzie
   name: librazzie
-  year: 2016-2018
+  year: 2016 - 2018
   tags:
   - cpp
   - lib
@@ -354,7 +358,7 @@ projects:
 
 - id: minecraft_clone
   name: Minecraft clone
-  year: 2011-2012
+  year: 2011 - 2012
   tags:
   - cpp
   - 3d
@@ -400,7 +404,7 @@ projects:
 
 - id: potato_game
   name: Potato Game
-  year: 2016-2017
+  year: 2016 - 2017
   tags:
   - cpp
   - 3d
@@ -470,7 +474,7 @@ projects:
 
 - id: razbox
   name: razbox
-  year: "2020"
+  year: 2020 - 2021
   tags:
   - go
   - web
@@ -546,7 +550,7 @@ projects:
 
 - id: razvhost
   name: razvhost
-  year: "2020"
+  year: 2020 - 2022
   tags:
   - go
   - web
@@ -624,7 +628,7 @@ projects:
 
 - id: riddle_solver
   name: Riddle Solver
-  year: "2019"
+  year: 2019 - 2021
   tags:
   - go
   - app

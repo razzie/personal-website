@@ -24,9 +24,9 @@
             {{ end }}
         </span><br />
         {{ end }}
-        <span class="text-secondary">year: {{ .Year }}</span><br />
+        <span class="text-secondary">Year: {{ .Year }}</span><br />
         <span class="text-secondary">
-            tags: {{ range .Tags }}<a href="/tag/{{ . }}">{{ . }}</a> {{ end }}
+            Tags: {{ range .Tags }}<a href="/tag/{{ . }}">{{ . }}</a> {{ end }}
         </span>
     </div>
 {{ end }}
