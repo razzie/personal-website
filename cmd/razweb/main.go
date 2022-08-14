@@ -21,7 +21,7 @@ func main() {
 	token := os.Getenv("GITHUB_TOKEN")
 	cacheDir := envOrDefault("CACHE_DIR", "./cache")
 	remoteDir := envOrDefault("REMOTE_DIR", "https://raw.githubusercontent.com/razzie/gorzsony.com/master/assets/")
-	os.MkdirAll(cacheDir, os.ModeDir)
+	os.MkdirAll(cacheDir, os.ModeDir|os.ModePerm)
 
 	loader := assets.NewAssetLoader(cacheDir, remoteDir)
 	bio := modules.Hello(loader)
