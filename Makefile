@@ -1,4 +1,4 @@
-VERSION := `git describe --tags`
+VERSION ?= `git describe --tags`
 BUILDFLAGS := -mod=vendor -ldflags="-s -w" -gcflags=-trimpath=$(CURDIR)
 IMAGE_NAME := gorzsony.com
 IMAGE_REGISTRY ?= ghcr.io/razzie
