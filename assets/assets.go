@@ -126,6 +126,8 @@ func downloadFile(osPath string, url string) (err error) {
 		return fmt.Errorf("cannot download %q, bad status: %s", url, resp.Status)
 	}
 
+	os.MkdirAll(path.Dir(osPath), os.ModePerm)
+
 	out, err := os.Create(osPath)
 	if err != nil {
 		return err
