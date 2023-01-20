@@ -276,7 +276,6 @@ projects:
   name: GTA Online videos
   year: 2015 - 2019
   tags:
-  - hobby
   - video
   - game
   description: |-
@@ -379,6 +378,28 @@ projects:
       url: https://github.com/razzie/hobby-projects/tree/master/2011/minecraft-clone-v1
     - name: github.com/razzie/hobby-projects/2011/minecraft-clone-v2
       url: https://github.com/razzie/hobby-projects/tree/master/2012/minecraft-clone-v2
+
+- id: pizzabot
+  name: Telegram PizzaBot
+  year: "2021"
+  tags:
+  - go
+  - bot
+  - pizza
+  - lib
+  description: |-
+    Do you love pizza so much that you keep talking about it in your Telegram group chat?
+    Now you can include this bot and with the right permissions it will respond with a pizza sticker or interesting pizza fact
+    to any mentions of pizza.
+  linkGroups:
+  - name: Try it here
+    links:
+    - name: t.me/razpizzabot
+      url: https://t.me/razpizzabot
+  - name: Source code
+    links:
+    - name: github.com/razzie/pizzabot
+      url: https://github.com/razzie/pizzabot
 
 - id: poccemod
   name: PocceMod
@@ -597,9 +618,9 @@ projects:
   name: RazzieCraft Vanilla
   year: "2018"
   tags:
-  - hobby
   - minecraft
   - game
+  - mod
   description: |-
     RazzieCraft Vanilla is Minecraft version 1.12.2 on steroids!
     This pack contains a ton of strictly curated mods that enhance the visuals and gameplay of vanilla Minecraft,
