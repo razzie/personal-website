@@ -183,6 +183,7 @@ projects:
   - cpp
   - 3d
   - procedural
+  - demo
   description: |-
     Floating Islands is yet another example of my experiments with procedurally generated terrains.
     I developed an algorithm that takes island positions and island connections as input parameters and generates a 3D grid world using a Perlin noise internally.
@@ -260,6 +261,7 @@ projects:
   - cpp
   - 3d
   - procedural
+  - demo
   description: |-
     The idea behind the demo was a game with floating islands.
     Though this game never made it to the reality, Ground Tool was born as a result of experimenting with the rendering of these islands.
@@ -276,6 +278,7 @@ projects:
   tags:
   - hobby
   - video
+  - game
   description: |-
     I have way more playtime in Grand Theft Auto V (or GTA Online to be specific) than I would like to admit and most of that I've spent with friends I've met in the game.
     It became our little tradition to record funny, exciting or any memorable moments and later create videos of it.
@@ -289,6 +292,7 @@ projects:
   - cpp
   - 3d
   - procedural
+  - demo
   description: |-
     Hexagon is very similar to the Minecraft clone, but I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes.
     The underlying datastructure is still a 3D grid of Perlin noise.
@@ -363,6 +367,7 @@ projects:
   - cpp
   - 3d
   - procedural
+  - demo
   description: |-
     Minecraft clone is a graphics project I worked on during the final year of the university.
     Contrary to its name it is not a real clone, it features no game elements.
@@ -410,6 +415,7 @@ projects:
   - 3d
   - game
   - procedural
+  - demo
   description: |-
     PotatoGame is a procedural generated game about little potatoes with customizable AI (which was only done on paper).
     The goal is to have them win the game for you by gaining world domination.
@@ -496,6 +502,7 @@ projects:
   tags:
   - go
   - web
+  - game
   description: |-
     I've had a sudden spark of interest in chess as of late 2022 and decided to build my own web chess app with focus on simplicity and ease of use.
     Also I didn't want to waste time convincing friends to register to [insert your favorite chess platform here]. With RazChess you just visit the website,
@@ -592,6 +599,7 @@ projects:
   tags:
   - hobby
   - minecraft
+  - game
   description: |-
     RazzieCraft Vanilla is Minecraft version 1.12.2 on steroids!
     This pack contains a ton of strictly curated mods that enhance the visuals and gameplay of vanilla Minecraft,
