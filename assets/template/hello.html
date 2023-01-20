@@ -4,15 +4,17 @@
             <h1 class="hello">Hello</h1>
         </div>
     </div>
-    <div class="row mb-5 justify-content-center">
-        <div class="bio col-lg-6 text-left text-lg-right border-right border-danger reveal">
+    <div class="row mb-5 justify-content-center hello-section">
+        <div class="bio col-lg-6 col-md-12 text-left text-lg-right border-right border-danger reveal">
             <h2 class="text-danger">Personal</h2>
             {{- .PersonalHTML }}
         </div>
-        <div class="bio col-lg-6 text-left border-left border-danger reveal">
+        <div class="bio col-lg-6 col-md-12 text-left border-left border-danger reveal">
             <h2 class="text-danger">Professional</h2>
             {{- .ProfessionalHTML }}
         </div>
-        <img class="reveal" src="img/contact.png" />
+        <div class="col-sm-12 text-center">
+            <img class="reveal" src="img/contact.png" />
+        </div>
     </div>
 </div>

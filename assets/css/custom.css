@@ -45,11 +45,6 @@ p::first-letter {
     padding-left: 10px;
 }
 
-img {
-    float: left;
-    margin: 10px;
-}
-
 ul.vertical-list {
     list-style-position: inside;
     overflow: auto;
@@ -121,8 +116,16 @@ html.sr .reveal {
     transform: translateZ(20px);
 }
 
+.hello-section {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .proj-img {
-    width: 40%;
+    width: 35%;
+    float: left;
+    margin: 10px;
 }
 
 .paper {
@@ -139,19 +142,9 @@ html.sr .reveal {
     visibility: hidden;
 }
 
-@media screen and (min-width: 1200px) {
-    body {
-        max-width: 1140px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
 @media screen and (max-width: 990px) {
     .bio {
         border: none !important;
-    }
-    .proj-img {
-        max-width: 25%;
     }
     .paper {
         box-shadow: none;

@@ -3,13 +3,13 @@
     {{range $i, $e := .}}
         <section>
             {{if gt $i 0}}
-                <div class="scroll-down reveal"></div>
+                <div class="scroll-down reveal col-sm-10 col-lg-8 col-xl-6"></div>
             {{end}}
             {{.}}
         </section>
     {{end}}
     {{if gt $count 1}}
-        <footer class="text-center reveal">
+        <footer class="text-center reveal col-sm-12">
             <div class="scroll-up"></div>
             <small>Gábor Görzsöny</small>
         </footer>

@@ -4,7 +4,7 @@
     {{ if .Tag }}
         <h1>Projects tagged with <span class="text-danger">{{ .Tag }}</span></h1>
     {{ else if eq $projCount 1 }}
-        <h1>{{ range .Projects }}{{ .Name }}{{ end }}</h1>
+        <!--<h1>{{ range .Projects }}{{ .Name }}{{ end }}</h1>-->
     {{ else }}
         <h1>My notable projects</h1>
     {{ end }}
@@ -12,9 +12,9 @@
 </div>
 <div class="row m-0 p-4">
 {{ range .Projects }}
-    <div class="col-lg-6 mb-5 text-left reveal" id="{{ .ID }}">
+    <div class="col-xl-4 col-lg-6 col-sm-12 mb-5 text-left reveal" id="{{ .ID }}">
         <img src="img/{{ .ID }}.png" class="img-fluid proj-img" />
-        <h3 class="text-danger">{{ .Name }}</h3>
+        <a href="/project/{{ .ID }}"><h3 class="text-danger">{{ .Name }}</h3></a>
         <p>{{ .DescriptionHTML }}</p>
         {{ range .LinkGroups }}
         <span class="text-secondary">
