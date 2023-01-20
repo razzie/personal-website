@@ -98,6 +98,11 @@ html.sr .reveal {
     border-right: 20px solid transparent;
     border-top: 20px solid black;
 }
+.scroll-down:hover::before {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid red;
+}
 
 .scroll-up {
     display: block;
@@ -109,6 +114,11 @@ html.sr .reveal {
     border-right: 10px solid transparent;
     border-bottom: 10px solid black;
     padding: 0 !important;
+}
+.scroll-up:hover {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid red;
 }
 
 .item {
@@ -122,7 +132,10 @@ html.sr .reveal {
     margin-right: auto;
 }
 
-.proj-img {
+.project:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+.project img {
     width: 35%;
     float: left;
     margin: 10px;

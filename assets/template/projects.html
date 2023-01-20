@@ -12,8 +12,8 @@
 </div>
 <div class="row m-0 p-4">
 {{ range .Projects }}
-    <div class="col-xl-4 col-lg-6 col-sm-12 mb-5 text-left reveal" id="{{ .ID }}">
-        <img src="img/{{ .ID }}.png" class="img-fluid proj-img" />
+    <div class="col-xl-4 col-lg-6 col-sm-12 mb-5 text-left reveal project" id="{{ .ID }}">
+        <img src="img/{{ .ID }}.png" class="img-fluid" />
         <a href="/project/{{ .ID }}"><h3 class="text-danger">{{ .Name }}</h3></a>
         <p>{{ .DescriptionHTML }}</p>
         {{ range .LinkGroups }}
