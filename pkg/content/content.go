@@ -76,7 +76,7 @@ func LoadContent(r io.Reader) (*Content, error) {
 func orderProjectsByYear(projects []Project) {
 	getYear := func(i int) int {
 		years := strings.Split(projects[i].Year, "-")
-		year, _ := strconv.Atoi(years[len(years)-1])
+		year, _ := strconv.Atoi(strings.TrimSpace(years[len(years)-1]))
 		return year
 	}
 	sort.SliceStable(projects, func(i, j int) bool {
