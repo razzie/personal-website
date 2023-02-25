@@ -48,7 +48,7 @@ github.com/razzie/reqip
 # github.com/thedevsaddam/gojsonq v2.3.0+incompatible
 ## explicit
 github.com/thedevsaddam/gojsonq
-# golang.org/x/net v0.0.0-20220802222814-0bcc04d9c69b
+# golang.org/x/net v0.7.0
 ## explicit; go 1.17
 golang.org/x/net/context
 golang.org/x/net/context/ctxhttp

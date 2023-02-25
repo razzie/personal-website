@@ -21,7 +21,7 @@ require (
 	github.com/razzie/geoip-server v0.0.0-20220718075856-1975413ec71f // indirect
 	github.com/razzie/reqip v0.0.0-20201102012254-b5eb0ae76a05 // indirect
 	github.com/thedevsaddam/gojsonq v2.3.0+incompatible // indirect
-	golang.org/x/net v0.0.0-20220802222814-0bcc04d9c69b // indirect
+	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/time v0.0.0-20220722155302-e5dcc9cfc0b9 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
