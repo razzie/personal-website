@@ -909,18 +909,18 @@ func syntaxRange(data []byte, iout *int) (int, int) {
 
 		// strip all whitespace at the beginning and the end
 		// of the {} block
-		for syn > 0 && isSpace(data[syntaxStart]) {
+		for syn > 0 && IsSpace(data[syntaxStart]) {
 			syntaxStart++
 			syn--
 		}
 
-		for syn > 0 && isSpace(data[syntaxStart+syn-1]) {
+		for syn > 0 && IsSpace(data[syntaxStart+syn-1]) {
 			syn--
 		}
 
 		i++
 	} else {
-		for i < n && !isSpace(data[i]) {
+		for i < n && !IsSpace(data[i]) {
 			syn++
 			i++
 		}
@@ -1419,6 +1419,16 @@ gatherlines:
 
 		chunk := data[line+indentIndex : i]
 
+		// If there is a fence line (marking starting of a code block)
+		// without indent do not process it as part of the list.
+		if p.extensions&FencedCode != 0 {
+			fenceLineEnd, _ := isFenceLine(chunk, nil, "")
+			if fenceLineEnd > 0 && indent == 0 {
+				*flags |= ast.ListItemEndOfList
+				break gatherlines
+			}
+		}
+
 		// evaluate how this line fits in
 		switch {
 		// is this a nested list item?
@@ -1767,7 +1777,7 @@ func skipUntilChar(data []byte, i int, c byte) int {
 
 func skipAlnum(data []byte, i int) int {
 	n := len(data)
-	for i < n && isAlnum(data[i]) {
+	for i < n && IsAlnum(data[i]) {
 		i++
 	}
 	return i
@@ -1775,7 +1785,7 @@ func skipAlnum(data []byte, i int) int {
 
 func skipSpace(data []byte, i int) int {
 	n := len(data)
-	for i < n && isSpace(data[i]) {
+	for i < n && IsSpace(data[i]) {
 		i++
 	}
 	return i

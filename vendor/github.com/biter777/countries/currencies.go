@@ -35,7 +35,7 @@ func (c CurrencyCode) Emoji() string {
 
 // TotalCurrencies - returns number of currencies in the package, countries.TotalCurrencies() == len(countries.AllCurrencies()) but static value for performance
 func TotalCurrencies() int {
-	return 168
+	return 169
 }
 
 // Type implements Typer interface
@@ -44,6 +44,7 @@ func (c CurrencyCode) Type() string {
 }
 
 // String - implements fmt.Stringer, returns a english name of currency
+//
 //nolint:gocyclo
 func (c CurrencyCode) String() string { //nolint:gocyclo
 	switch c {
@@ -371,8 +372,10 @@ func (c CurrencyCode) String() string { //nolint:gocyclo
 		return "Uzbekistan Sum"
 	case 548:
 		return "Vatu"
-	case 937:
+	case 928:
 		return "Bolivar"
+	case 937:
+		return "Bolivar (deprecated)"
 	case 704:
 		return "Dong"
 	case 886:
@@ -390,6 +393,7 @@ func (c CurrencyCode) String() string { //nolint:gocyclo
 }
 
 // Alpha - returns a default ISO 3166-1 Alpha (3 chars) code of currency
+//
 //nolint:gocyclo
 func (c CurrencyCode) Alpha() string { //nolint:gocyclo
 	switch c {
@@ -717,6 +721,8 @@ func (c CurrencyCode) Alpha() string { //nolint:gocyclo
 		return "UZS"
 	case 548:
 		return "VUV"
+	case 928:
+		return "VES"
 	case 937:
 		return "VEF"
 	case 704:
@@ -741,6 +747,7 @@ func (c CurrencyCode) IsValid() bool {
 }
 
 // Countries - returns a country codes of currency using
+//
 //nolint:gocyclo
 func (c CurrencyCode) Countries() []CountryCode { //nolint:gocyclo
 	switch c {
@@ -774,6 +781,8 @@ func (c CurrencyCode) Countries() []CountryCode { //nolint:gocyclo
 		return []CountryCode{BLZ}
 	case CurrencyBMD:
 		return []CountryCode{BMU}
+	case CurrencyVES:
+		return []CountryCode{VEN}
 	case CurrencyVEF:
 		return []CountryCode{VEN}
 	case CurrencyBOB:
@@ -1245,6 +1254,7 @@ func AllCurrencies() []CurrencyCode {
 		CurrencyUYU,
 		CurrencyUZS,
 		CurrencyVUV,
+		CurrencyVES,
 		CurrencyVEF,
 		CurrencyVND,
 		CurrencyYER,
@@ -1255,6 +1265,7 @@ func AllCurrencies() []CurrencyCode {
 }
 
 // Digits - returns a number of digits used for each currency
+//
 //nolint:gocyclo
 func (c CurrencyCode) Digits() int { //nolint:gocyclo
 	switch c {
@@ -1582,7 +1593,7 @@ func (c CurrencyCode) Digits() int { //nolint:gocyclo
 		return 0
 	case CurrencyVUV:
 		return 0
-	case CurrencyVEF:
+	case CurrencyVES, CurrencyVEF:
 		return 2
 	case CurrencyVND:
 		return 0
@@ -1658,6 +1669,7 @@ func AllCurrenciesInfo() []*Currency {
 }
 
 // CurrencyCodeByName - return CurrencyCode by currencyCode Alpha name, case-insensitive, example: currencyUSD := CurrencyCodeByName("usd") OR currencyUSD := CurrencyCodeByName("USD")
+//
 //nolint:gocyclo
 func CurrencyCodeByName(name string) CurrencyCode { //nolint:gocyclo
 	switch textPrepare(name) {
@@ -1987,7 +1999,9 @@ func CurrencyCodeByName(name string) CurrencyCode { //nolint:gocyclo
 		return CurrencyUZS
 	case "VUV", "VATU":
 		return CurrencyVUV
-	case "VEF", "BOLIVAR":
+	case "VES", "BOLIVAR", "BOLÍVAR", "BOLÍVARFUERTE", "VENEZUELANBOLÍVARFUERTE", "BOLIVARFUERTE", "VENEZUELANBOLIVARFUERTE", "VENEZUELA", "VENESUELA":
+		return CurrencyVES
+	case "VEF":
 		return CurrencyVEF
 	case "VND", "DONG":
 		return CurrencyVND

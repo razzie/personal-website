@@ -19,14 +19,15 @@ func main() {
 	fmt.Printf("Country ccTLD domain: %v\n", countryJapan.Domain())             // .jp
 	fmt.Printf("Country UN M.49 region name: %v\n", countryJapan.Region())      // Asia
 	fmt.Printf("Country UN M.49 region code: %d\n", countryJapan.Region())      // 142
-	fmt.Printf("Country emoji/flag: %v\n\n", countryJapan.Emoji())              // 🇯🇵
+	fmt.Printf("Country emoji/flag: %v\n", countryJapan.Emoji())                // 🇯🇵
+	fmt.Printf("Country Subdivisions: %v\n", countryJapan.Subdivisions())       // Hokkaido Aomori Iwate Miyagi Akita Yamagata Fukushima Ibaraki Tochigi Gunma Saitama Chiba Tokyo Kanagawa Niigata Toyama Ishikawa Fukui Yamanashi Nagano Gifu Shizuoka Aichi Mie Shiga Kyoto Osaka Hyogo Nara Wakayama Tottori Shimane Okayama Hiroshima Yamaguchi Tokushima Kagawa Ehime Kochi Fukuoka Saga Nagasaki Kumamoto Oita Miyazaki Kagoshima Okinawa
 
 	currencyJapan := countryJapan.Currency()
 	fmt.Printf("Country ISO-4217 Currency name in english: %v\n", currencyJapan)           // Yen
 	fmt.Printf("Country ISO-4217 Currency digit code: %d\n", currencyJapan)                // 392
 	fmt.Printf("Country ISO-4217 Currency Alpha code: %v\n", currencyJapan.Alpha())        // JPY
 	fmt.Printf("Country Currency emoji: %v\n", currencyJapan.Emoji())                      // 💴
-	fmt.Printf("Country of Currency %v: %v\n\n", currencyJapan, currencyJapan.Countries()) // Japan
+	fmt.Printf("Country of Currency %v: %v\n", currencyJapan, currencyJapan.Countries()) // Japan
 
 	// OR you can alternative use:
 	japanInfo := countries.Japan.Info()
@@ -45,6 +46,7 @@ func main() {
 	fmt.Printf("Country ISO-4217 Currency name in english: %v\n", japanInfo.Currency)    // Yen
 	fmt.Printf("Country ISO-4217 Currency digit code: %d\n", japanInfo.Currency)         // 392
 	fmt.Printf("Country ISO-4217 Currency Alpha code: %v\n", japanInfo.Currency.Alpha()) // JPY
+	fmt.Printf("Country Subdivisions: %v\n", japanInfo.Subdivisions)                     // Hokkaido Aomori Iwate Miyagi Akita Yamagata Fukushima Ibaraki Tochigi Gunma Saitama Chiba Tokyo Kanagawa Niigata Toyama Ishikawa Fukui Yamanashi Nagano Gifu Shizuoka Aichi Mie Shiga Kyoto Osaka Hyogo Nara Wakayama Tottori Shimane Okayama Hiroshima Yamaguchi Tokushima Kagawa Ehime Kochi Fukuoka Saga Nagasaki Kumamoto Oita Miyazaki Kagoshima Okinawa
 
 	// Detection usage
 	// Detect by name
@@ -154,6 +156,7 @@ func (_ CountryCode) Type() string {
 }
 
 // String - implements fmt.Stringer, returns a english name of country
+//
 //nolint:gocyclo
 func (c CountryCode) String() string { //nolint:gocyclo
 	switch c {
@@ -214,7 +217,7 @@ func (c CountryCode) String() string { //nolint:gocyclo
 	case 74:
 		return "Bouvet Island"
 	case 76:
-		return "Brazil"
+		return "Brazil (deprecated)"
 	case 86:
 		return "British Indian Ocean Territory"
 	case 96:
@@ -661,6 +664,8 @@ func (c CountryCode) String() string { //nolint:gocyclo
 		return "South Sudan"
 	case 900:
 		return "Kosovo"
+	case 986:
+		return "Brazil"
 	case 998:
 		return "None"
 	case 999:
@@ -690,6 +695,7 @@ func (c CountryCode) String() string { //nolint:gocyclo
 }
 
 // StringRus - returns a russian name of country
+//
 //nolint:gocyclo
 func (c CountryCode) StringRus() string { //nolint:gocyclo
 	switch c {
@@ -750,7 +756,7 @@ func (c CountryCode) StringRus() string { //nolint:gocyclo
 	case 74:
 		return "остров Буве"
 	case 76:
-		return "Бразилия"
+		return "Бразилия (устарело)"
 	case 86:
 		return "Британские территории Индийского океана"
 	case 96:
@@ -1197,6 +1203,8 @@ func (c CountryCode) StringRus() string { //nolint:gocyclo
 		return "Южный Судан"
 	case 900:
 		return "Косово"
+	case 986:
+		return "Бразилия"
 	case None:
 		return "Отсутствует"
 	case International:
@@ -1226,6 +1234,7 @@ func (c CountryCode) StringRus() string { //nolint:gocyclo
 }
 
 // Alpha2 - returns a default Alpha (Alpha-2/ISO2, 2 chars) code of country
+//
 //nolint:gocyclo
 func (c CountryCode) Alpha2() string { //nolint:gocyclo
 	switch c {
@@ -1285,7 +1294,7 @@ func (c CountryCode) Alpha2() string { //nolint:gocyclo
 		return "BW"
 	case 74:
 		return "BV"
-	case 76:
+	case 76, 986:
 		return "BR"
 	case 86:
 		return "IO"
@@ -1762,6 +1771,7 @@ func (c CountryCode) Alpha2() string { //nolint:gocyclo
 }
 
 // Alpha3 - returns a Alpha-3 (ISO3, 3 chars) code of country
+//
 //nolint:gocyclo
 func (c CountryCode) Alpha3() string { //nolint:gocyclo
 	switch c {
@@ -1821,7 +1831,7 @@ func (c CountryCode) Alpha3() string { //nolint:gocyclo
 		return "BWA"
 	case 74:
 		return "BVT"
-	case 76:
+	case 76, 986:
 		return "BRA"
 	case 86:
 		return "IOT"
@@ -2321,6 +2331,7 @@ func (c CountryCode) FIFA() string {
 }
 
 // IOC - returns The International Olympic Committee (IOC) three-letter abbreviation country codes
+//
 //nolint:gocyclo
 func (c CountryCode) IOC() string { //nolint:gocyclo
 	switch c {
@@ -2509,6 +2520,7 @@ func (c CountryCode) IOC() string { //nolint:gocyclo
 }
 
 // Currency - returns a currency of the country
+//
 //nolint:gocyclo
 func (c CountryCode) Currency() CurrencyCode { //nolint:gocyclo
 	switch c {
@@ -2589,7 +2601,7 @@ func (c CountryCode) Currency() CurrencyCode { //nolint:gocyclo
 	case HUN:
 		return CurrencyHUF
 	case VEN:
-		return CurrencyVEF
+		return CurrencyVES
 	case VGB:
 		return CurrencyUSD
 	case VIR:
@@ -2961,7 +2973,7 @@ func (c CountryCode) Currency() CurrencyCode { //nolint:gocyclo
 	case CZE:
 		return CurrencyCZK
 	case CHL:
-		return CurrencyCLF
+		return CurrencyCLP
 	case CHE:
 		return CurrencyCHF
 	case SWE:
@@ -3284,6 +3296,7 @@ func AllNonCountries() []CountryCode {
 }
 
 // CallCodes - return calling code of country
+//
 //nolint:gocyclo
 func (c CountryCode) CallCodes() []CallCode { //nolint:gocyclo
 	switch c {
@@ -3830,6 +3843,7 @@ func (c CountryCode) Domain() DomainCode {
 }
 
 // Region - return Region code ot the country
+//
 //nolint:gocyclo
 func (c CountryCode) Region() RegionCode { //nolint:gocyclo
 	switch c {
@@ -4347,6 +4361,7 @@ func (c CountryCode) Region() RegionCode { //nolint:gocyclo
 }
 
 // Capital - return a capital of country
+//
 //nolint:gocyclo
 func (c CountryCode) Capital() CapitalCode { //nolint:gocyclo
 	switch c {
@@ -4913,7 +4928,6 @@ func (country *Country) Scan(src interface{}) error {
 	return nil
 }
 
-//
 // AllInfo - return all currencies as []Currency
 func AllInfo() []*Country {
 	all := All()
@@ -4926,6 +4940,7 @@ func AllInfo() []*Country {
 
 // ByName - return CountryCode by country Alpha-2 / Alpha-3 / name, case-insensitive, example: rus := ByName("Ru") OR rus := ByName("russia"),
 // returns countries.Unknown, if country name not found or not valid
+//
 //nolint:misspell,gocyclo
 func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 	switch textPrepare(name) {
@@ -4991,7 +5006,7 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return BIH
 	case "BW", "BWA", "BOTSWANA", "BOTSWANNA", "BOTSVANA", "BOTSVANNA":
 		return BWA
-	case "BR", "BRA", "BRAZIL", "BRAZILIA", "BRAZILIAN", "BRASILIEN":
+	case "BR", "BRA", "BRAZIL", "BRAZILIA", "BRAZILIYA", "BRAZILIAN", "BRASILIEN", "REPUBLICOFBRAZIL", "FEDERATIVEREPUBLICOFBRAZIL":
 		return BRA
 	case "IO", "IOT", "BRITISHINDIANOCEANTERRITORY", "BRITISHINDIANTERRITORY", "BRITISCHESTERRITORIUM", "BRITISCHESTERRITORIUMIMINDISCHENOZEAN":
 		return IOT
@@ -5005,15 +5020,15 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return BTN
 	case "VU", "VUT", "NHB", "VANUATU", "NH", "NHVU":
 		return VUT
-	case "VA", "VAT", "HOLYSEEVATICAN", "HOLYSEE", "VATICAN", "VATICANCITYSTATE", "VATICANSTATE", "HOLYSEEVATIKAN", "VATIKAN", "VATIKANCITYSTATE", "VATIKANSTATE", "HOLYSEEVATIKANCITYSTATE", "VATIKANSTADT":
+	case "VA", "VAT", "HOLYSEEVATICAN", "HOLYSEE", "VATICAN", "VATICANCITYSTATE", "VATICANSTATE", "HOLYSEEVATIKAN", "VATIKAN", "VATIKANCITYSTATE", "VATIKANSTATE", "HOLYSEEVATIKANCITYSTATE", "VATIKANSTADT", "VATICANCITY", "CITYVATICAN":
 		return VAT
 	case "GB", "DG", "GBR", "ADN", "DGA", "UNITEDKINGDOM", "UNITEDKINDOM", "UK", "GREATBRITAN", "GREATBRITAIN", "NORTHERNIRELAND", "BRITAN", "BRITAIN", "GROSSBRITANNIEN", "VEREINIGTESKÖNIGREICH", "VEREINIGTESKOENIGREICH": //nolint
 		return GBR
 	case "HU", "HUN", "HUNGARY", "HUNGAR", "HUNGARI", "VENGRIYA", "VENGRIA", "UNGARN":
 		return HUN
-	case "VE", "VEN", "VENEZUELA", "VENEZUELLA", "VENECUELA", "VENECUELLA", "YV": //nolint
+	case "VE", "VEN", "VENEZUELA", "VENEZUELLA", "VENECUELA", "VENECUELLA", "YV", "BOLIVARIANREPUBLICOF", "BOLIVARIANREPUBLIC", "REPUBLICOFBOLIVARIAN", "REPUBLICBOLIVARIAN", "BOLIVARIAN": //nolint
 		return VEN
-	case "VG", "VGB", "IVB", "VIRGINISLANDSBRITISH", "VIRGINISLANDSBRITIH", "VIRGINISLSBRITIH", "VIRGINISLSBRITISH", "VIRGINISLANDSGB", "VIRGINISLANDSUK", "BRITISCHEJUNGFERNINSELN":
+	case "VG", "VGB", "IVB", "VIRGINISLANDSBRITISH", "VIRGINISLANDSBRITIH", "VIRGINISLSBRITIH", "VIRGINISLSBRITISH", "VIRGINISLANDSGB", "VIRGINISLANDSUK", "BRITISCHEJUNGFERNINSELN", "BRITISHVIRGINISLANDS":
 		return VGB
 	case "VI", "VIR", "ISV", "VIRGINISLANDSUS", "USVIRGINISLANDS", "USVI", "AMERIKANISCHEJUNGFERNINSELN":
 		return VIR
@@ -5059,7 +5074,7 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return GUM
 	case "DK", "DNK", "DENMARK", "DANMARK", "DÄNEMARK", "DAENEMARK", "KONGERIGETDANMARK", "DANMARKKONGERIGET", "DANIYA":
 		return DNK
-	case "CD", "COD", "ZRE", "ZAR", "ZR", "ZRCD", "CONGODEMOCRATICREPUBLIC", "DEMOCRATICREPUBLICOFTHECONGO", "CONGODEMOCRATICREP", "CONGODEMOCRATIC", "CONGOTHEDEMOCRATICREPUBLICOF", "KONGODEMOCRACTICREPUBLIC", "KONGODEMOCRATICREP", "KONGODEMOCRATIC", "KONGOTHEDEMOCRATICREPUBLICOF", "ZAIRE", "ZAIR", "DEMOKRATISCHEREPUBLIKKONGO", "CONGOREPUBLIC", "KONGOREPUBLIC", "REPUBLICOFCONGO", "REPUBLICOFKONGO", "CONGOTHEDEMOCRATICREPUBLICOFTHE":
+	case "CD", "COD", "ZRE", "ZAR", "ZR", "ZRCD", "CONGODEMOCRATICREPUBLIC", "DEMOCRATICREPUBLICOFTHECONGO", "CONGODEMOCRATICREP", "CONGODEMOCRATIC", "CONGOTHEDEMOCRATICREPUBLICOF", "CONGOTHEDEMOCRATICREPUBLIC", "KONGODEMOCRACTICREPUBLIC", "KONGODEMOCRATICREP", "KONGODEMOCRATIC", "KONGOTHEDEMOCRATICREPUBLICOF", "ZAIRE", "ZAIR", "DEMOKRATISCHEREPUBLIKKONGO", "CONGOREPUBLIC", "KONGOREPUBLIC", "REPUBLICOFCONGO", "REPUBLICOFKONGO", "CONGOTHEDEMOCRATICREPUBLICOFTHE", "DRCONGO":
 		return COD
 	case "DJ", "DJI", "AFI", "DJIBOUTI", "AIDJ", "DSCHIBUTI":
 		return DJI
@@ -5075,7 +5090,7 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return ESH
 	case "ZW", "ZWE", "ZIM", "RHO", "RSR", "ZIMBABWE", "ZIMBABVE", "RH", "RHZW", "SIMBABWE":
 		return ZWE
-	case "IL", "ISR", "ISRAEL", "IZRAIL":
+	case "IL", "ISR", "ISRAEL", "IZRAIL", "ISRAIL", "ISRAILIAN", "IZRAILEN":
 		return ISR
 	case "IN", "IND", "INDIA", "INDIAN", "INDIYA", "SKM", "SKIN", "INDIEN":
 		return IND
@@ -5085,7 +5100,7 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return JOR
 	case "IQ", "IRQ", "IRAQ", "IRAK":
 		return IRQ
-	case "IR", "IRN", "IRI", "IRAN", "IRANISLAMICREPUBLICOF":
+	case "IR", "IRN", "IRI", "IRAN", "IRANISLAMICREPUBLICOF", "IRANISLAMICREPUBLIC", "IRANIAN":
 		return IRN
 	case "IE", "IRL", "IRELAND", "IRLAND":
 		return IRL
@@ -5127,7 +5142,7 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return COG
 	case "KP", "PRK", "DEMOCRATICPEOPLESREPUBLICOFKOREA", "KOREADEMOCRATICPEOPLESREPUBLICOF", "KOREADEMOCRATICPEOPLESREPUBLIC", "KOREANORTH", "NORTHKOREA", "NORDKOREA":
 		return PRK
-	case "KR", "KOR", "ROK", "KOREA", "KOREYA", "SOUTHKOREA", "KOREAREPUBLICOF", "REPUBLICOFKOREA", "KOREAREPOF", "SÜDKOREA", "SUEDKOREA":
+	case "KR", "KOR", "ROK", "KOREA", "KOREYA", "SOUTHKOREA", "KOREAREPUBLICOF", "KOREAREPUBLIC", "REPUBLICOFKOREA", "KOREAREPOF", "SÜDKOREA", "SUEDKOREA":
 		return KOR
 	case "CR", "CRI", "COSTARICA", "KOSTARIKA", "KOSTARICA", "COSTARIKA":
 		return CRI
@@ -5167,7 +5182,7 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return MYT
 	case "MO", "MAC", "MACAUCHINA", "MACAU", "MACAO", "MACAUSAR", "MACAOSAR":
 		return MAC
-	case "MK", "MKD", "MACEDONIA", "MACEDONIAFYRO", "MACEDONIATHEFORMERYUGOSLAVREPUBLICOF", "REPUBLICOFNORTHMACEDONIA", "REPUBLICOFMACEDONIA", "NORTHMACEDONIA", "MACEDONIANORTH", "NORDMAZEDONIEN":
+	case "MK", "MKD", "MACEDONIA", "MACEDONIAFYRO", "MACEDONIATHEFORMERYUGOSLAVREPUBLICOF", "MACEDONIATHEFORMERYUGOSLAV", "MACEDONIATHEFORMERYUGOSLAVREPUBLIC", "REPUBLICOFNORTHMACEDONIA", "REPUBLICOFMACEDONIA", "NORTHMACEDONIA", "MACEDONIANORTH", "NORDMAZEDONIEN", "THEFORMERYUGOSLAVREPUBLICOF", "THEFORMERYUGOSLAVREPUBLIC", "FORMERYUGOSLAVREPUBLICOF", "FORMERYUGOSLAVREPUBLIC", "MACEDONIAFORMERYUGOSLAVREPUBLICOF", "MACEDONIAFORMERYUGOSLAVREPUBLIC", "YUGOSLAVREPUBLIC":
 		return MKD
 	case "MW", "MWI", "MAW", "MALAWI", "MALAVI":
 		return MWI
@@ -5189,21 +5204,21 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return MHL
 	case "MX", "MEX", "MEXICO", "MEXIKO":
 		return MEX
-	case "FM", "FSM", "MICRONESIA", "MICRONESIAFEDERATEDSTATESOF", "MICRONESIAFEDST", "MIKRONESIEN":
+	case "FM", "FSM", "MICRONESIA", "MICRONESIAFEDERATEDSTATESOF", "MICRONESIAFEDST", "MIKRONESIEN", "FEDERATEDSTATESOFMICRONESIA", "STATESOFMICRONESIA", "FEDERATEDSTATESMICRONESIA", "STATESMICRONESIA":
 		return FSM
 	case "MZ", "MOZ", "MOZAMBIQUE", "MOZAMBIQ", "MOSAMBIK":
 		return MOZ
-	case "MD", "MDA", "MOLDOVA", "MOLDAVIA", "REPUBLIKMOLDOVA", "REPUBLICOFMOLDOVA":
+	case "MD", "MDA", "MOLDOVA", "MOLDAVIA", "MOLDAVIAN", "MOLDAVIYA", "REPUBLIKMOLDOVA", "REPUBLICOFMOLDOVA", "MOLDOVAREPUBLICOF", "MOLDOVAREPUBLIC":
 		return MDA
 	case "MC", "MCO", "MONACO", "MONAKO":
 		return MCO
-	case "MN", "MNG", "MONGOLIA", "MONGOLEI":
+	case "MN", "MNG", "MONGOLIA", "MONGOLIAN", "MONGOLIYA", "MONGOLEI":
 		return MNG
 	case "MS", "MSR", "MONTSERRAT":
 		return MSR
 	case "MM", "BU", "MMR", "BUMM", "MYANMAR", "BURMA":
 		return MMR
-	case "NA", "NAM", "NAMIBIA", "NAMIBIE":
+	case "NA", "NAM", "NAMIBIA", "NAMIBIAN", "NAMIBIYA", "NAMIBIE":
 		return NAM
 	case "NR", "NRU", "NAURU":
 		return NRU
@@ -5211,9 +5226,9 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return NPL
 	case "NE", "NER", "NIGER", "NIGGER", "RN":
 		return NER
-	case "NG", "NGA", "NGR", "WAN", "NIGERIA", "NIGERIYA", "NIGGERIA", "NIGGERIYA":
+	case "NG", "NGA", "NGR", "WAN", "NIGERIA", "NIGERIAN", "NIGGERIAN", "NIGERIYA", "NIGGERIA", "NIGGERIYA":
 		return NGA
-	case "NL", "NLD", "NED", "NETHERLANDS", "NETHERLAND", "HOLLAND", "HOLLANDIA", "HOLLANDIYA", "NIEDERLANDE":
+	case "NL", "NLD", "NED", "NETHERLANDS", "NETHERLAND", "HOLLAND", "HOLLANDIA", "HOLLANDIYA", "NIEDERLANDE", "HOLAND", "HOLANDIA", "HOLANDIYA":
 		return NLD
 	case "NI", "NIC", "NICARAGUA":
 		return NIC
@@ -5241,19 +5256,19 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return SHN
 	case "WF", "WLF", "WALLISANDFUTUNAISLANDS", "WALLISFUTUNAISLANDS", "WALLISANDFUTUNA", "WALLISFUTUNA", "WALLISUNDFUTUNA":
 		return WLF
-	case "HM", "HMD", "HEARDISLANDANDMCDONALDISLANDS", "HEARDISLAND", "HEARDUNDMCDONALDINSELN":
+	case "HM", "HMD", "HEARDISLANDANDMCDONALDISLANDS", "HEARDISLAND", "HEARDUNDMCDONALDINSELN", "HEARDANDMCDONALDISLANDS":
 		return HMD
-	case "CV", "CPV", "CAPEVERDE", "KAPVERDE":
+	case "CV", "CPV", "CAPEVERDE", "KAPVERDE", "CABOVERDE":
 		return CPV
 	case "CK", "COK", "COOKISLANDS", "COOKINSELN":
 		return COK
 	case "WS", "WSM", "SAMOA":
 		return WSM
-	case "SJ", "SJM", "SVALBARDANDJANMAYENISLANDS", "SVALBARD", "SVALBARDUNDJANMAYEN":
+	case "SJ", "SJM", "SVALBARDANDJANMAYENISLANDS", "SVALBARD", "SVALBARDUNDJANMAYEN", "SVALBARDANDJANMAYEN":
 		return SJM
 	case "TC", "TCA", "TURKSANDCAICOSISLANDS", "TURKSANDCAICOSIS", "CAICOSISLANDS", "CACOSISLANDS", "TURKSUNDCACIOINSELN":
 		return TCA
-	case "UM", "UMI", "UNITEDSTATESMINOROUTLYINGISLANDS", "MINOROUTLYINGISLANDS", "MINOROUTLYING", "USMI", "JT", "JTN", "JTUM", "MI", "MID", "MIUM", "PU", "PUS", "PUUM", "WK", "WAK", "WKUM", "KLEINEINSELBESITZUNGENDERVEREINIGTENSTAATEN":
+	case "UM", "UMI", "UNITEDSTATESMINOROUTLYINGISLANDS", "MINOROUTLYINGISLANDS", "MINOROUTLYING", "USMI", "JT", "JTN", "JTUM", "MI", "MID", "MIUM", "PU", "PUS", "PUUM", "WK", "WAK", "WKUM", "KLEINEINSELBESITZUNGENDERVEREINIGTENSTAATEN", "USOUTLYINGISLANDS":
 		return UMI
 	case "PK", "PAK", "PAKISTAN", "PACISTAN":
 		return PAK
@@ -5287,11 +5302,11 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return SLV
 	case "SM", "SMR", "RSM", "SANMARINO":
 		return SMR
-	case "ST", "STP", "SAOTOMEANDPRINCIPE", "SAOTOME", "SAOTOMEUNDPRINCIPE":
+	case "ST", "STP", "SAOTOMEANDPRINCIPE", "SAOTOME", "SAOTOMEUNDPRINCIPE", "SÃOTOMÉANDPRÍNCIPE":
 		return STP
 	case "SA", "SAU", "SAUDIARABIA", "SAUDI", "SAUDIARABIEN":
 		return SAU
-	case "SZ", "SWZ", "SWAZILAND", "SWASILAND":
+	case "SZ", "SWZ", "SWAZILAND", "SWASILAND", "ESWATINI", "KINGDOMOFESWATINI", "KINGDOMESWATINI", "SVAZILEND":
 		return SWZ
 	case "SC", "SYC", "SEYCHELLES", "SEYCHELLEN":
 		return SYC
@@ -5299,7 +5314,7 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return SEN
 	case "PM", "SPM", "SAINTPIERREANDMIQUELON", "SAINTPIERRE", "STPIERREANDMIQUELON", "STPIERRE", "SANKTPIERRE", "SANKTPIERREUNDMIQUELON":
 		return SPM
-	case "VC", "VCT", "SAINTVINCENTANDTHEGRENADINES", "SAINTVINCENT", "STVINCENTANDTHEGRENADINES", "STVINCENT", "WV", "STVINCENTUNDDIEGRENADINEN":
+	case "VC", "VCT", "SAINTVINCENTANDTHEGRENADINES", "SAINTVINCENT", "STVINCENTANDTHEGRENADINES", "STVINCENT", "WV", "STVINCENTUNDDIEGRENADINEN", "STVINCENTANDGRENADINES":
 		return VCT
 	case "KN", "KNA", "SAINTKITTSANDNEVIS", "SAINTKITTSNEVIS", "SAINTKITTS", "STKITTSANDNEVIS", "STKITTSNEVIS", "STKITTS", "SANKTKITTSUNDNEVIS":
 		return KNA
@@ -5327,11 +5342,11 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return SLE
 	case "TJ", "TJK", "TAJIKISTAN", "TADJIKISTAN", "TADSCHIKISTAN":
 		return TJK
-	case "TW", "TWN", "TPE", "TAIWAN":
+	case "TW", "TWN", "TPE", "TAIWAN", "TAIWANIAN", "PROVINCEOFCHINA", "PROVINCECHINA":
 		return TWN
-	case "TH", "THA", "THAILAND", "TAILAND", "THAI":
+	case "TH", "THA", "THAILAND", "TAILAND", "THAI", "THAYLAND", "TAYLAND":
 		return THA
-	case "TZ", "TZA", "EAT", "EAZ", "TANZANIA", "TANZANIYA", "TANSANIA", "TANZANIAUNITEDREPUBLICOF":
+	case "TZ", "TZA", "EAT", "EAZ", "TANZANIA", "TANZANIYA", "TANSANIA", "TANZANIAUNITEDREPUBLICOF", "TANZANIAUNITEDREPUBLIC", "REPUBLICOFTANZANIA", "TANZANIAREPUBLIC":
 		return TZA
 	case "TG", "TGO", "TOGO":
 		return TGO
@@ -5347,7 +5362,7 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return TUN
 	case "TM", "TKM", "TMN", "TURKMENISTAN", "TURKMENISTON", "TURKMENI", "TURKMENIA", "TURKMENIYA":
 		return TKM
-	case "TR", "TUR", "TURKEY", "TURCIA", "TURKISH", "TÜRKEI", "TUERKEI":
+	case "TR", "TUR", "TURKEY", "TURCIA", "TURKISH", "TÜRKEI", "TUERKEI", "TÜRKIYE", "REPUBLICOFTÜRKIYE", "TÜRKIYEREPUBLICOF", "TÜRKIYEREPUBLIC", "REPUBLICTÜRKIYE":
 		return TUR
 	case "UG", "UGA", "EAU", "UGANDA":
 		return UGA
@@ -5355,7 +5370,7 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return UZB
 	case "UA", "UKR", "UKRAINE", "UKRAINA": //nolint
 		return UKR
-	case "UY", "URY", "URUGUAY":
+	case "UY", "URY", "URUGUAY", "URUGWAY":
 		return URY
 	case "XW", "XWA", "WALES":
 		return XWA
@@ -5383,13 +5398,13 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return CAF
 	case "TD", "TCD", "CHAD", "TSCHAD":
 		return TCD
-	case "CZ", "CZE",  "CZECHIA", "CZECHIYA", "CZECHREPUBLIC", "REPUBLICOFCZECH", "CZECH", "TSCHECHIEN", "CHEHIA", "CHEHIYA":
+	case "CZ", "CZE", "CZECHIA", "CZECHIYA", "CZECHREPUBLIC", "REPUBLICOFCZECH", "CZECH", "TSCHECHIEN", "CHEHIA", "CHEHIYA":
 		return CZE
-	case "CL", "CHL", "RCH", "CHILE":
+	case "CL", "CHL", "RCH", "CHILE", "CHILI", "CHILLE":
 		return CHL
-	case "CH", "CHE", "SWITZERLAND", "SWISS", "SCHWEIZ", "SUISSE", "SVIZZERA", "SVIZRA", "HELVETIA":
+	case "CH", "CHE", "SWITZERLAND", "SWISS", "SCHWEIZ", "SUISSE", "SVIZZERA", "SVIZRA", "HELVETIA", "SHVEYCARIA", "SHVEYCARIYA":
 		return CHE
-	case "SE", "SWE", "SWEDEN", "SCHWEDEN":
+	case "SE", "SWE", "SWEDEN", "SCHWEDEN", "SHWEDEN", "SHVECIA", "SHVECIYA":
 		return SWE
 	case "XS", "XSC", "SCOTLAND", "SCHOTTLAND":
 		return XSC
@@ -5415,13 +5430,13 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return JAM
 	case "ME", "MNE", "MONTENEGRO":
 		return MNE
-	case "BL", "BLM", "SAINTBARTHELEMY", "STBARTHELEMY":
+	case "BL", "BLM", "SAINTBARTHELEMY", "STBARTHELEMY", "SAINTBARTHÉLEMY", "STBARTHÉLEMY":
 		return BLM
 	case "SX", "SXM", "SINTMAARTENDUTCH", "SAINTMAARTEN", "SINTMAARTEN", "STMAARTEN":
 		return SXM
 	case "RS", "SRB", "CSXX", "SERBIA", "SERBIYA", "SERBIEN":
 		return SRB
-	case "AX", "ALA", "ALANDISLANDS", "ISLANDSALAND", "ALAND":
+	case "AX", "ALA", "ALANDISLANDS", "ISLANDSALAND", "ALAND", "ÅLANDISLANDS", "ÅLAND", "ISLANDSÅLAND":
 		return ALA
 	case "BQ", "BES", "BONAIRE", "BONAIR", "BONEIRU", "BONAIRESINTEUSTATIUSANDSABA", "BONAIRESINTEUSTATIUSSABA", "BONAIRESTEUSTANDSABA", "BONAIRESTEUSTSABA", "SINTEUSTATIUSANDSABA", "SINTEUSTATIUS", "CARIBBEANNETHERLANDS":
 		return BES
@@ -5433,7 +5448,7 @@ func ByName(name string) CountryCode { //nolint:misspell,gocyclo
 		return CUW
 	case "MF", "MAF", "SAINTMARTINFRENCH", "STMARTINFRENCH", "SANKTMARTIN", "SAINTMARTIN":
 		return MAF
-	case "SS", "SSD", "SOUTHSUDAN", "SOUTHSUDANE", "REPUBLICOFSOUTHSUDAN", "SOUTHSUDANREPUBLICOF", "PAGUOTTHUDÄN", "SÜDSUDAN", "SUEDSUDAN":
+	case "SS", "SSD", "SOUTHSUDAN", "SOUTHSUDANE", "REPUBLICOFSOUTHSUDAN", "SOUTHSUDANREPUBLICOF", "SOUTHSUDANREPUBLIC", "PAGUOTTHUDÄN", "SÜDSUDAN", "SUEDSUDAN":
 		return SSD
 	case "JP", "JPN", "JAPAN":
 		return JPN

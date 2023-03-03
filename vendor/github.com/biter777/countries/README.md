@@ -1,8 +1,20 @@
 # countries
 
-Countries - ISO 3166 (ISO3166-1, ISO3166, Digit, Alpha-2, Alpha-3) countries codes with subdivisions and names (on eng and rus), ISO4217 currency designators, ITU-T E.164 IDD calling phone codes, countries capitals, UN M.49 regions codes, IANA ccTLD countries domains, IOC/NOC and FIFA codes, **VERY VERY FAST**, NO maps[], NO slices[], NO init() funcs, NO external links/files/data, NO interface{}, NO specific dependencies, Databases/JSON/GOB/XML/CSV compatible, Emoji countries flags and currencies support, full support ISO 3166-1,ISO 3166-2, ISO 4217, ITU-T E.164, Unicode CLDR and IANA ccTLD standarts.
+Countries - ISO 3166 (ISO3166-1, ISO3166, Digit, Alpha-2, Alpha-3) countries codes with subdivisions and names (on eng and rus), ISO4217 currency designators, ITU-T E.164 IDD calling phone codes, countries capitals, UN M.49 regions codes, IANA ccTLD countries domains, IOC/NOC and FIFA codes, **VERY VERY FAST**, NO maps[], NO slices[], NO init() funcs, NO external links/files/data, NO interface{}, NO specific dependencies, compatible with Databases/JSON/BSON/GOB/XML/CSV, Emoji countries flags and currencies support, UN M.49, FIFA codes, full support ISO 3166-1, ISO 3166-2, ISO 4217, ITU-T E.164, Unicode CLDR and IANA ccTLD standarts.
 
-Full support ISO 3166-1, ISO 3166-2, ISO 4217, ITU-T E.164, Unicode CLDR and IANA ccTLD standarts!
+**Supported standarts:**
+   - ISO 3166-1
+   - ISO 3166-2
+   - ISO 4217
+   - ITU-T E.164
+   - IANA ccTLD
+   - UN M.49
+   - IOC
+   - NOC
+   - FIFA
+   - Unicode CLDR 
+   - Unicode Emoticons Flags
+   - Unicode Emoticons Currencies 
 
 [![GoDev](https://img.shields.io/badge/godev-reference-5b77b3)](https://pkg.go.dev/github.com/biter777/countries?tab=doc)
 [![GoAwesome](https://img.shields.io/badge/awesome%20go-reference-5b77b3)](https://awesome-go.com/utilities/)
@@ -25,7 +37,6 @@ Full support ISO 3166-1, ISO 3166-2, ISO 4217, ITU-T E.164, Unicode CLDR and IAN
 [![M49](https://img.shields.io/badge/powered%20by-UN%20M49-brightgreen)](https://unstats.un.org/unsd/methodology/m49/)
 [![CLDR](https://img.shields.io/badge/powered%20by-CLDR-brightgreen)](https://cldr.unicode.org/)
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-brightgreen.svg)](https://opensource.org/licenses/BSD-2-Clause)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/biter777/countries.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/biter777/countries/alerts/)
 [![Build Status](https://travis-ci.org/biter777/countries.svg?branch=master)](https://travis-ci.org/biter777/countries)
 [![Build status](https://ci.appveyor.com/api/projects/status/t9lpor9o8tpacpmr/branch/master?svg=true)](https://ci.appveyor.com/project/biter777/countries/branch/master)
 [![Semaphore Status](https://biter777.semaphoreci.com/badges/countries.svg?style=shields)](https://biter777.semaphoreci.com/projects/countries)
@@ -62,7 +73,8 @@ fmt.Printf("Country ITU-T E.164 call code: %v\n", countryJapan.CallCodes()) // +
 fmt.Printf("Country ccTLD domain: %v\n", countryJapan.Domain())             // .jp
 fmt.Printf("Country UN M.49 region name: %v\n", countryJapan.Region())      // Asia
 fmt.Printf("Country UN M.49 region code: %d\n", countryJapan.Region())      // 142
-fmt.Printf("Country emoji/flag: %v\n\n", countryJapan.Emoji())              // 🇯🇵
+fmt.Printf("Country emoji/flag: %v\n", countryJapan.Emoji())                // 🇯🇵
+fmt.Printf("Country Subdivisions: %v\n", countryJapan.Subdivisions())       // Hokkaido Aomori Iwate Miyagi Akita Yamagata Fukushima Ibaraki Tochigi Gunma Saitama Chiba Tokyo Kanagawa Niigata Toyama Ishikawa Fukui Yamanashi Nagano Gifu Shizuoka Aichi Mie Shiga Kyoto Osaka Hyogo Nara Wakayama Tottori Shimane Okayama Hiroshima Yamaguchi Tokushima Kagawa Ehime Kochi Fukuoka Saga Nagasaki Kumamoto Oita Miyazaki Kagoshima Okinawa
 
 currencyJapan := countryJapan.Currency()
 fmt.Printf("Country ISO-4217 Currency name in english: %v\n", currencyJapan)           // Yen
@@ -88,6 +100,7 @@ fmt.Printf("Country emoji/flag: %v\n", japanInfo.Emoji)                         
 fmt.Printf("Country ISO-4217 Currency name in english: %v\n", japanInfo.Currency)    // Yen
 fmt.Printf("Country ISO-4217 Currency digit code: %d\n", japanInfo.Currency)         // 392
 fmt.Printf("Country ISO-4217 Currency Alpha code: %v\n", japanInfo.Currency.Alpha()) // JPY
+fmt.Printf("Country Subdivisions: %v\n", japanInfo.Subdivisions)                     // Hokkaido Aomori Iwate Miyagi Akita Yamagata Fukushima Ibaraki Tochigi Gunma Saitama Chiba Tokyo Kanagawa Niigata Toyama Ishikawa Fukui Yamanashi Nagano Gifu Shizuoka Aichi Mie Shiga Kyoto Osaka Hyogo Nara Wakayama Tottori Shimane Okayama Hiroshima Yamaguchi Tokushima Kagawa Ehime Kochi Fukuoka Saga Nagasaki Kumamoto Oita Miyazaki Kagoshima Okinawa
 
 // Detection usage
 // Detect by name
@@ -148,11 +161,12 @@ For more complex options, consult the [documentation](http://godoc.org/github.co
 2. **Donate** - a donation isn't necessary, but it's welcome.
 
 	<noscript><a href="https://liberapay.com/biter777/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
-	[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I61D1XZ) <a href="https://pay.cloudtips.ru/p/94fc4268" target="_blank"><img height="30" src="https://usa.visa.com/dam/VCOM/regional/lac/ENG/Default/Partner%20With%20Us/Payment%20Technology/visapos/full-color-800x450.jpg"></a> <a href="https://pay.cloudtips.ru/p/94fc4268" target="_blank"><img height="30" src="https://brand.mastercard.com/content/dam/mccom/brandcenter/thumbnails/mastercard_debit_sym_decal_web_105px.png"></a> <a href="https://pay.cloudtips.ru/p/94fc4268" target="_blank"><img height="30" src="https://developer.apple.com/assets/elements/icons/apple-pay/apple-pay.svg"></a> <a href="https://pay.cloudtips.ru/p/94fc4268" target="_blank"><img height="30" src="https://developers.google.com/pay/api/images/brand-guidelines/google-pay-mark.png"></a> <a href="https://money.yandex.ru/to/4100164702007" target="_blank"><img width="125" height="25" src="https://yastatic.net/q/logoaas/v1/Yandex%20Money.svg"></a><br/>
+	[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I61D1XZ) <a href="https://pay.cloudtips.ru/p/94fc4268" target="_blank"><img height="30" src="https://usa.visa.com/dam/VCOM/regional/lac/ENG/Default/Partner%20With%20Us/Payment%20Technology/visapos/full-color-800x450.jpg"></a> <a href="https://pay.cloudtips.ru/p/94fc4268" target="_blank"><img height="30" src="https://brand.mastercard.com/content/dam/mccom/brandcenter/thumbnails/mastercard_debit_sym_decal_web_105px.png"></a> <a href="https://pay.cloudtips.ru/p/94fc4268" target="_blank"><img height="30" src="https://developer.apple.com/assets/elements/icons/apple-pay/apple-pay.svg"></a> <a href="https://pay.cloudtips.ru/p/94fc4268" target="_blank"><img height="30" src="https://developers.google.com/pay/api/images/brand-guidelines/google-pay-mark.png"></a> <br/>
 
-3. **Star us**
+3. **Star us** - give us a star, please, if it's not against your religion :)
 
-	Give us a star, please, if it's not against your religion :)
+
+	[![Stars](https://img.shields.io/github/stars/biter777/countries?label=Please%20like%20us&style=social)](https://github.com/biter777/countries/stargazers)
 
 ## Updating ISO 3166
 
