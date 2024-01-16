@@ -3,7 +3,7 @@ module github.com/razzie/gorzsony.com
 go 1.18
 
 require (
-	github.com/gomarkdown/markdown v0.0.0-20221013030248-663e2500819c
+	github.com/gomarkdown/markdown v0.0.0-20231222211730-1d6d20845b47
 	github.com/google/go-github v17.0.0+incompatible
 	github.com/razzie/beepboop v0.0.0-20230303215351-5cae95914bd5
 	golang.org/x/oauth2 v0.5.0
