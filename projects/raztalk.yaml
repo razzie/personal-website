@@ -1,0 +1,19 @@
+name: RazTalk
+year: "2018"
+tags:
+- csharp
+- web
+- app
+description: |-
+  A simple lobby/channel based registration-free webchat.
+linkGroups:
+- name: Download
+  links:
+  - name: raztalk_v1.0.zip
+    url: https://github.com/razzie/raztalk/releases/download/v1.0/raztalk_v1.0.zip
+  - name: raztalk.client.exe
+    url: https://github.com/razzie/raztalk/releases/download/v1.0/raztalk.client.exe
+- name: Source code
+  links:
+  - name: github.com/razzie/raztalk
+    url: https://github.com/razzie/raztalk

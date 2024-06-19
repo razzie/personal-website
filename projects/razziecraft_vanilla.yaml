@@ -1,0 +1,18 @@
+name: RazzieCraft Vanilla
+year: "2018"
+tags:
+- minecraft
+- game
+- mod
+description: |-
+  RazzieCraft Vanilla is Minecraft version 1.12.2 on steroids!
+  This pack contains a ton of strictly curated mods that enhance the visuals and gameplay of vanilla Minecraft,
+  but without breaking its charm. There are a lot of recipes for uncraftable existing items (like chain armor, slime ball, spawn
+  eggs, etc) and a very few brand new stuff.
+linkGroups:
+- name: Download
+  links:
+  - name: TechnicLauncher
+    url: https://www.technicpack.net/download
+  - name: RazzieCraft Vanilla mod page
+    url: https://www.technicpack.net/modpack/razziecraft-vanilla.976147

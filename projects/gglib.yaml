@@ -1,0 +1,18 @@
+name: gglib & gglib2
+year: 2013 - 2017
+tags:
+- cpp
+- lib
+description: |-
+  GGlib and GGlib2 were libraries I used to develop between 2013 and 2017.
+  They served as a sandbox to help me to learn about the new features of the C++11 standard.
+  I also found a great use of them while working on other side projects.
+  Due to some early design choices (including too heavy use of virtual function calls) I finally decided to send them into retirement
+  and started working on the successor: [librazzie](https://github.com/razzie/librazzie).
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/gglib
+    url: https://github.com/razzie/gglib
+  - name: github.com/razzie/gglib2
+    url: https://github.com/razzie/gglib2

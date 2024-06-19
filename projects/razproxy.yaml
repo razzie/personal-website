@@ -1,0 +1,12 @@
+name: razproxy
+year: "2020"
+tags:
+- go
+- web
+description: |-
+  SOCKS5 tunneled through TLS connection
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/razproxy
+    url: https://github.com/razzie/razproxy

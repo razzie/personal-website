@@ -1,0 +1,19 @@
+name: Razzie Messenger
+year: "2008"
+tags:
+- purebasic
+- app
+description: |-
+  Razzie Messenger is a messenger client and server I started working on during a one-week vacation at lake Balaton (Hungary).
+  It uses a very simple plain text based protocol for network communication, look at the picture to see it in details.
+  (Since then I prefer binary protocols due to the ineffeciency of string parsing and large packet sizes in case of text protocols.)
+  The user can chose a nickname and pick colors for the name and the text messages.
+  There is no registration and password authentication, however the server rejects the connection if a nickname is already taken in the current session.
+  It is possible to send a file to an other user: in this case the server opens a random port which receives and forwards the file.
+  Both users have to connect to this port, but it is done automatically.
+  This solution was necessary due to the limitations of the text based protocol.
+linkGroups:
+- name: Download
+  links:
+  - name: github.com/razzie/hobby-projects/2008/razzie-messenger
+    url: https://github.com/razzie/hobby-projects/tree/master/2008/razzie-messenger

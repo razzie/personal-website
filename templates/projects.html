@@ -1,0 +1,12 @@
+{{ define "projects" }}
+	{{ $total := len . }}
+	{{ $perDiv := 2 }}
+	{{ range $i, $item := . }}
+		{{ if eq (mod $i $perDiv) 0 }}
+			{{ if ne $i 0 }}</div>{{ end }}
+			<div class="grid">
+		{{ end }}
+		<div>{{ template "project" $item }}</div>
+		{{ if eq (add $i 1) $total }}</div>{{ end }}
+	{{ end }}
+{{ end }}

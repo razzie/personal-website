@@ -1,0 +1,16 @@
+name: Ground Tool
+year: "2016"
+tags:
+- cpp
+- 3d
+- procedural
+- demo
+description: |-
+  The idea behind the demo was a game with floating islands.
+  Though this game never made it to the reality, Ground Tool was born as a result of experimenting with the rendering of these islands.
+  The user can draw a polygon border to the island and when all points are connected, the program generates an island which can be inspected by zooming and moving the camera around.
+linkGroups:
+- name: Source code and binary
+  links:
+  - name: github.com/razzie/hobby-projects/2016/groundtool
+    url: https://github.com/razzie/hobby-projects/tree/master/2016/groundtool

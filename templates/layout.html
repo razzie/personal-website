@@ -1,0 +1,32 @@
+{{ define "layout" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+	<base href="{{ .Base }}" target="_self">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+	<link rel="icon" href="/static/favicon.png" type="image/png">
+	<script src="https://unpkg.com/htmx.org@2.0.0"></script>
+</head>
+<body hx-boost="true">
+	<main class="container">
+		<nav>
+			<ul>
+				<li><h1>{{ .Title }}</h1></li>
+			</ul>
+			<ul>
+			{{ $pageID := .PageID }}
+			{{ range .Nav }}
+				{{ if ne .ID $pageID }}
+				<li><a href="{{ .ID }}">{{ .Name }}</a></li>
+				{{ end }}
+			{{ end }}
+			</ul>
+		</nav>
+		{{ CallTemplate .PageID .Data }}
+	</main>
+</body>
+</html>
+{{ end }}

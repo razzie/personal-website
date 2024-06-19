@@ -1,0 +1,20 @@
+name: Telegram PizzaBot
+year: "2021"
+tags:
+- go
+- bot
+- pizza
+- lib
+description: |-
+  Do you love pizza so much that you keep talking about it in your Telegram group chat?
+  Now you can include this bot and with the right permissions it will respond with a pizza sticker or interesting pizza fact
+  to any mentions of pizza.
+linkGroups:
+- name: Try it here
+  links:
+  - name: t.me/razpizzabot
+    url: https://t.me/razpizzabot
+- name: Source code
+  links:
+  - name: github.com/razzie/pizzabot
+    url: https://github.com/razzie/pizzabot

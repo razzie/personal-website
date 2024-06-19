@@ -1,0 +1,119 @@
+.timeline {
+	position: relative;
+}
+
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: calc( var(--pico-border-radius) * -1 );
+	border: var(--pico-border-radius) solid var(--pico-color);
+	border-radius: var(--pico-border-radius);
+}
+
+.timeline-left, .timeline-right {
+	position: relative;
+	background-color: inherit;
+	width: calc(50% - 2rem);
+	padding: 1rem 1.5rem;
+	margin-bottom: 0.5rem;
+	background-color: var(--pico-card-background-color);
+	border-radius: var(--pico-border-radius);
+	box-shadow: var(--pico-card-box-shadow);
+}
+
+.timeline-left::after, .timeline-right::after {
+	content: '';
+	position: absolute;
+	width: 1rem;
+	height: 1rem;
+	right: -2.5rem;
+	background-color: var(--pico-background-color);
+	border: var(--pico-border-radius) solid var(--pico-color);
+	top: 2rem;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.timeline-left {
+	left: 0;
+}
+
+.timeline-left::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 1.5rem;
+	width: 0;
+	z-index: 1;
+	right: -1rem;
+	border: medium solid var(--pico-card-background-color);
+	border-width: 1rem 0 1rem 1rem;
+	border-color: transparent transparent transparent var(--pico-card-background-color);
+}
+
+.timeline-right {
+	left: calc(50% + 2rem);
+}
+
+.timeline-right::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 1.5rem;
+	width: 0;
+	z-index: 1;
+	left: -1rem;
+	border: medium solid var(--pico-card-background-color);
+	border-width: 1rem 1rem 1rem 0;
+	border-color: transparent var(--pico-card-background-color) transparent transparent;
+}
+
+.timeline-right::after {
+	left: -2.5rem;
+}
+
+@media screen and (max-width: 800px) {
+	.timeline::after {
+		left: 1rem;
+	}
+	
+	.timeline-left, .timeline-right {
+		width: calc(100% - 3rem);
+		margin-left: 3rem;
+		padding-left: 3rem;
+		padding-right: 1rem;
+	}
+	
+	.timeline-left::before, .timeline-right::before {
+		left: 2rem;
+		border: medium solid var(--pico-card-background-color);
+		border-width: 1rem 1rem 1rem 0;
+		border-color: transparent var(--pico-card-background-color) transparent transparent;
+	}
+
+	.timeline-left::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 1.5rem;
+		width: 0;
+		z-index: 1;
+		left: -1rem;
+		border: medium solid var(--pico-card-background-color);
+		border-width: 1rem 1rem 1rem 0;
+		border-color: transparent var(--pico-card-background-color) transparent transparent;
+	}
+
+	.timeline-left::after, .timeline-right::after {
+		left: -2.5rem;
+	}
+	
+	.timeline-right {
+		left: 0%;
+	}
+}

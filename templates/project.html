@@ -1,0 +1,27 @@
+{{ define "project" }}
+<article>
+	<header>{{ .Name }}</header>
+	<div class="grid">
+		<div>
+			<img src="/static/projects/{{ .ID }}.png">
+		</div>
+		<div>
+			{{ range .LinkGroups }}
+			<p>
+				{{ .Name }}:<br>
+				{{ range .Links }}
+				<a href="{{ .URL }}">{{ .Name }}</a><br>
+				{{ end }}
+			</p>
+			{{ end }}
+			<p>Year: {{ .Year }}</p>
+			<span>
+				Tags: {{ range .Tags }}<code>{{ . }}</code> {{ end }}
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p>{{ .DescriptionHTML }}</p>
+	</footer>
+</article>
+{{ end }}

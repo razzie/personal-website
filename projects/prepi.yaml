@@ -1,0 +1,23 @@
+name: Prepi
+year: "2014"
+tags:
+- cpp
+- 2d
+- game
+description: |-
+  Prepi is an indie game project I was working on together with a friend.
+  It was intended to be a rage game with puzzle elements.
+  We took it so seriously we both quitted our jobs to be able to work on it full-time.
+  After several month of development we reached a point where we wanted to introduce our game to the public via an Indiegogo campaign.
+  Unfortunately the campaign failed, mostly because the lack of media attention (neither of us were expert on the topic).
+  Also the game was probably in too early phase to show it to the public.
+  Due to the failure of the campaign and smaller disagreements regarding the game design we decided not to continue the development.
+linkGroups:
+- name: Download
+  links:
+  - name: prepi.zip
+    url: https://github.com/razzie/prepi/releases/download/pre-alpha/prepi.zip
+- name: Source code
+  links:
+  - name: github.com/razzie/prepi
+    url: https://github.com/razzie/prepi

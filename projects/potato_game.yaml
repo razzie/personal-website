@@ -1,0 +1,29 @@
+name: Potato Game
+year: 2016 - 2017
+tags:
+- cpp
+- 3d
+- game
+- procedural
+- demo
+description: |-
+  PotatoGame is a procedural generated game about little potatoes with customizable AI (which was only done on paper).
+  The goal is to have them win the game for you by gaining world domination.
+  This was my second large game project (in terms of time and effort spent on it), but eventually I lost interest and motivation
+  after forcing myself to work on it and focusing too much on the future outcome.
+  I'm very proud of this project, but I gave up on ever finishing it.
+linkGroups:
+- name: Download
+  links:
+  - name: demos.zip
+    url: https://github.com/razzie/PotatoGame/releases/download/pre-alpha/demos.zip
+- name: Videos
+  links:
+  - name: potato.mp4
+    url: https://github.com/razzie/PotatoGame/releases/download/pre-alpha/potato.mp4
+  - name: development.mp4
+    url: https://github.com/razzie/PotatoGame/releases/download/pre-alpha/development.mp4
+- name: Source code
+  links:
+  - name: github.com/razzie/PotatoGame
+    url: https://github.com/razzie/PotatoGame

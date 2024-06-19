@@ -1,12 +1,12 @@
 VERSION ?= `git describe --tags`
 BUILDFLAGS := -mod=vendor -ldflags="-s -w" -gcflags=-trimpath=$(CURDIR)
-IMAGE_NAME := gorzsony.com
+IMAGE_NAME := personal-website
 IMAGE_REGISTRY ?= ghcr.io/razzie
 FULL_IMAGE_NAME := $(IMAGE_REGISTRY)/$(IMAGE_NAME):$(VERSION)
 
 .PHONY: build
 build:
-	go build $(BUILDFLAGS) ./cmd/razweb
+	go build $(BUILDFLAGS) -o server .
 
 .PHONY: docker-build
 docker-build:

@@ -1,0 +1,20 @@
+name: Logic Circuit Simulator
+year: "2010"
+tags:
+- java
+- app
+description: |-
+  Logic Circuit Simulator was a university project I had to finish in a semester.
+  It offers a variety of logic gates and a lot of visual customization options.
+  Some special elements are also available, like seven-segment display, matrix display, JK flip-flop, adjustable timer and module.
+  A selected part of a logic circuit can be converted to a module, where the circuit's input elements (buttons, switches) become the input pins and output elements (LEDs) become the output pins of the module.
+  Modules also support recursion.
+linkGroups:
+- name: Download
+  links:
+  - name: Logic_Circuit_Simulator.jar
+    url: https://github.com/razzie/LogicCircuitSimulator/releases/download/v1.0/Logic_Circuit_Simulator.jar
+- name: Source code
+  links:
+  - name: github.com/razzie/LogicCircuitSimulator
+    url: https://github.com/razzie/LogicCircuitSimulator

@@ -1,0 +1,21 @@
+name: RazChess
+year: 2022 - 2023
+tags:
+- go
+- web
+- game
+description: |-
+  I've had a sudden spark of interest in chess as of late 2022 and decided to build my own web chess app with focus on simplicity and ease of use.
+  Also I didn't want to waste time convincing friends to register to [insert your favorite chess platform here]. With RazChess you just visit the website,
+  copy the link of the session and pass it to the person you want to play with.
+  As weeks passed I kept adding new features like chess puzzles (mate in two steps), Fischer random (chess960) game, included chess openings encyclopedia,
+  custom games and the ability to download your matches as GIFs. There is also Redis support to restore active games after a restart.
+linkGroups:
+- name: Try it here
+  links:
+  - name: chess.gorzsony.com
+    url: https://chess.gorzsony.com
+- name: Source code
+  links:
+  - name: github.com/razzie/razchess
+    url: https://github.com/razzie/razchess

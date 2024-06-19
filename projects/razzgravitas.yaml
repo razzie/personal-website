@@ -1,0 +1,21 @@
+name: RazzGravitas
+year: "2017"
+tags:
+- cpp
+- 2d
+- game
+description: |-
+  RazzGravitas is a simple multiplayer game about gravity.
+  At the time of making it I just gave up on a somewhat larger project and I needed to give myself a smaller task that I can prove to be able to finish.
+  The sole objective was to experiment with something simple with no regrets about design decisions and no promises about the outcome.
+  After about a month of development it ended up having multiplayer support with competitive game rules I'm satisfied with.
+  I consider the game finished.
+linkGroups:
+- name: Download
+  links:
+  - name: razzgravitas.exe
+    url: https://github.com/razzie/razzgravitas/releases/download/v1.0/razzgravitas.exe
+- name: Source code
+  links:
+  - name: github.com/razzie/razzgravitas
+    url: https://github.com/razzie/razzgravitas

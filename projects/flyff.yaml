@@ -1,0 +1,18 @@
+name: Flyff fansite
+year: 2007 - 2010
+tags:
+- php
+- web
+description: |-
+  Flyff.extra.hu was a hungarian fan site of Flyff (Fly For Fun) online game.
+  During the 3-4 years of its existence I developed more and more new features to make it a fully functional web portal.
+  It was very interesting to see it slowly getting attention.
+  Members started generating content in the forms of forum entries, polls, screenshots and news for the home page.
+  The site even had a few moderators and admins.
+  In 2010 extra.hu decided to close its free hosting service and the site went offline.
+  I could have moved it to a different(even paid) hosting service, but most members and I have already lost interest in the game.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/hobby-projects/2007/flyff
+    url: https://github.com/razzie/hobby-projects/tree/master/2007/flyff

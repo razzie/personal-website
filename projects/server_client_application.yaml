@@ -1,0 +1,14 @@
+name: Server - client application
+year: "2008"
+tags:
+- purebasic
+- app
+description: |-
+  Server - client application is a small tool which helps creating and debugging text based network protocols.
+  I developed it while working on Razzie Messenger and it had a great use.
+  On the server tab the user can select one of the connected clients as a message target or just close the connection to them.
+linkGroups:
+- name: Download
+  links:
+  - name: server-client.exe
+    url: https://github.com/razzie/hobby-projects/blob/master/2008/server-client/server-client.exe

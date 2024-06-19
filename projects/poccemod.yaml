@@ -1,0 +1,25 @@
+name: PocceMod
+year: "2019"
+tags:
+- csharp
+- mod
+- game
+description: |-
+  I made this mod originally for my tiny private FiveM server to have some fun with friends.
+  (FiveM is a modification for Grand Theft Auto V enabling you to play multiplayer on customized dedicated servers.)
+  Then I thought, why not share it with others? So I published it and listened to feedback from the community to improve it even more.
+  The project went through 2 months of intensive development (200 commits in the first month and 150 in the second) until I ended up quite pleased with the results.
+  Most of the FiveM player base and modder community is focused on role playing, while the goal of PocceMod was always to be a standalone sandbox entertainment mod.
+  I was the first developer who enabled players to have fun with GTA's unused rope API in a multiplayer environment
+  (since it's not synced by default).
+linkGroups:
+- name: Releases
+  links:
+  - name: Official PocceMod page
+    url: https://forum.cfx.re/t/release-poccemod-fun-menu-with-ropes/645529
+  - name: Github releases
+    url: https://github.com/razzie/PocceMod/releases
+- name: Source code
+  links:
+  - name: github.com/razzie/PocceMod
+    url: https://github.com/razzie/PocceMod

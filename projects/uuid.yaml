@@ -1,0 +1,18 @@
+name: uuid-server
+year: "2020"
+tags:
+- go
+- web
+description: |-
+  A http server that serves random (version4) UUIDs.
+  It uses my [hybrid pseudo- and true random generator](https://github.com/razzie/random) library which periodically takes seeds from [random.org](https://random.org)
+  and uses them to generate pseudo-random UUIDs fast.
+linkGroups:
+- name: Try it here
+  links:
+  - name: uuid.gorzsony.com
+    url: https://uuid.gorzsony.com
+- name: Source code
+  links:
+  - name: github.com/razzie/uuid-server
+    url: https://github.com/razzie/uuid-server

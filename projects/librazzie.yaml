@@ -1,0 +1,14 @@
+name: librazzie
+year: 2016 - 2018
+tags:
+- cpp
+- lib
+description: |-
+  A header-only multi-purpose library designed to help me get started with my projects.
+  It includes frameworks for logging, events, input, memory, thread and network+serialization and has some additional stuff like:
+  a bitset class with iterators for true and false position, stream manipulators and parsers and an easy to use random number generator.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/librazzie
+    url: https://github.com/razzie/librazzie

@@ -1,0 +1,12 @@
+name: razbox
+year: 2020 - 2021
+tags:
+- go
+- web
+description: |-
+  Like Dropbox, but different - powered by [beepboop](#beepboop)
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/razbox
+    url: https://github.com/razzie/razbox

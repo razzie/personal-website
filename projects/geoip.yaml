@@ -1,0 +1,18 @@
+name: geoip-server
+year: "2020"
+tags:
+- go
+- web
+description: |-
+  A web service that serves IP address geolocations in JSON format.
+  Instead of relying on a local database it collects data from a (configurable) series of 3rd party providers,
+  converting the results to a commom format. It supports provider fallbacks and caching.
+linkGroups:
+- name: Try it here
+  links:
+  - name: geoip.gorzsony.com
+    url: https://geoip.gorzsony.com
+- name: Source code
+  links:
+  - name: github.com/razzie/geoip-server
+    url: https://github.com/razzie/geoip-server
