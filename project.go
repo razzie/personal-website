@@ -34,6 +34,15 @@ type Project struct {
 	} `yaml:"linkGroups"`
 }
 
+func (p *Project) containsTag(tag string) bool {
+	for _, ptag := range p.Tags {
+		if ptag == tag {
+			return true
+		}
+	}
+	return false
+}
+
 func convertMD(input string, output *template.HTML) {
 	htmlRenderer := html.NewRenderer(html.RendererOptions{
 		Flags: html.CommonFlags | html.HrefTargetBlank | html.UseXHTML,
@@ -52,6 +61,16 @@ func orderProjectsByYear(projects []Project) {
 	sort.SliceStable(projects, func(i, j int) bool {
 		return getYear(i) > getYear(j)
 	})
+}
+
+func filterProjectsByTag(projects []Project, tag string) []Project {
+	taggedProjects := make([]Project, 0, len(projects))
+	for _, p := range projects {
+		if p.containsTag(tag) {
+			taggedProjects = append(taggedProjects, p)
+		}
+	}
+	return taggedProjects
 }
 
 func LoadProjects() (projects []Project, tags []string) {

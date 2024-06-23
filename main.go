@@ -98,6 +98,54 @@ func main() {
 			}
 		})
 	}
+	r.HandleFunc("GET /projects/tag/{tag}", func(w http.ResponseWriter, r *http.Request) {
+		tag := r.PathValue("tag")
+		if len(tag) == 0 {
+			http.Redirect(w, r, "/projects", http.StatusSeeOther)
+			return
+		}
+		taggedProjects := filterProjectsByTag(projects, tag)
+		if len(taggedProjects) == 0 {
+			http.Redirect(w, r, "/projects", http.StatusSeeOther)
+			return
+		}
+		view := View{
+			Nav:    navPages,
+			Title:  "Projects (" + tag + ")",
+			PageID: "projects",
+			Data:   taggedProjects,
+		}
+		if err := t.ExecuteTemplate(w, "layout", view); err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+		}
+	})
+	r.HandleFunc("GET /projects/id/{id}", func(w http.ResponseWriter, r *http.Request) {
+		id := r.PathValue("id")
+		if len(id) == 0 {
+			http.Redirect(w, r, "/projects", http.StatusSeeOther)
+			return
+		}
+		var proj *Project
+		for _, p := range projects {
+			if p.ID == id {
+				proj = &p
+				break
+			}
+		}
+		if proj == nil {
+			http.Redirect(w, r, "/projects", http.StatusSeeOther)
+			return
+		}
+		view := View{
+			Nav:    navPages,
+			Title:  proj.Name,
+			PageID: "project",
+			Data:   proj,
+		}
+		if err := t.ExecuteTemplate(w, "layout", view); err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+		}
+	})
 
 	http.ListenAndServe(":8080", &r)
 }

@@ -1,6 +1,6 @@
 {{ define "project" }}
 <article id="{{ .ID }}">
-	<header>{{ .Name }}</header>
+	<header><a href="/projects/id/{{ .ID }}" class="secondary">{{ .Name }}</a></header>
 	<div class="grid">
 		<div>
 			<img src="/static/projects/{{ .ID }}.png">
@@ -16,7 +16,10 @@
 			{{ end }}
 			<p>Year: {{ .Year }}</p>
 			<span>
-				Tags: {{ range .Tags }}<code>{{ . }}</code> {{ end }}
+				Tags:
+				{{ range .Tags }}
+				<code><a href="/projects/tag/{{ . }}" class="secondary">{{ . }}</a></code>
+				{{ end }}
 			</span>
 		</div>
 	</div>
