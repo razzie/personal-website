@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"embed"
 	"html/template"
+	"io"
 	"mime"
 	"net/http"
 	"path/filepath"
@@ -54,26 +55,26 @@ func main() {
 	r.HandleFunc("GET /static/", func(w http.ResponseWriter, r *http.Request) {
 		filename := r.URL.Path[1:]
 		ext := filepath.Ext(filename)
-		f, err := assets.ReadFile(filename)
+		f, err := assets.Open(filename)
 		if err != nil {
 			http.Error(w, "Not Found", http.StatusNotFound)
 			return
 		}
 		w.Header().Add("Content-Type", mime.TypeByExtension(ext))
 		w.WriteHeader(http.StatusOK)
-		w.Write(f)
+		io.Copy(w, f)
 	})
 	r.HandleFunc("GET /static/projects/", func(w http.ResponseWriter, r *http.Request) {
 		filename := r.URL.Path[8:]
 		ext := filepath.Ext(filename)
-		f, err := assets.ReadFile(filename)
+		f, err := assets.Open(filename)
 		if err != nil {
 			http.Error(w, "Not Found", http.StatusNotFound)
 			return
 		}
 		w.Header().Add("Content-Type", mime.TypeByExtension(ext))
 		w.WriteHeader(http.StatusOK)
-		w.Write(f)
+		io.Copy(w, f)
 	})
 	for _, page := range navPages {
 		r.HandleFunc("GET /"+page.ID, func(w http.ResponseWriter, r *http.Request) {
