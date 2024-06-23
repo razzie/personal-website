@@ -4,7 +4,7 @@ tags:
 - go
 - web
 description: |-
-  Like Dropbox, but different - powered by [beepboop](#beepboop)
+  Like Dropbox, but different - powered by [beepboop](/projects/id/beepboop)
 linkGroups:
 - name: Source code
   links:
