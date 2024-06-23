@@ -18,9 +18,9 @@
 				<li><h1 data-loading-aria-busy>{{ .Title }}</h1></li>
 			</ul>
 			<ul>
-			{{ $pageID := .PageID }}
+			{{ $title := .Title }}
 			{{ range .Nav }}
-				{{ if ne .ID $pageID }}
+				{{ if ne .Name $title }}
 				<li><a href="/{{ .ID }}">{{ .Name }}</a></li>
 				{{ end }}
 			{{ end }}
