@@ -89,7 +89,6 @@ func main() {
 			view := View{
 				Nav:    navPages,
 				Title:  page.Name,
-				Base:   "/",
 				PageID: page.ID,
 				Data:   page.Data,
 			}
