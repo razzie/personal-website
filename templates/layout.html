@@ -9,13 +9,14 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 	<link rel="icon" href="/static/favicon.png" type="image/png">
 	<script src="https://unpkg.com/htmx.org@2.0.0"></script>
+	<script src="https://unpkg.com/htmx-ext-loading-states@2.0.0/loading-states.js"></script>
 	<script src="/static/email.js" defer></script>
 </head>
-<body hx-boost="true">
+<body hx-boost="true" hx-ext="loading-states">
 	<main class="container">
 		<nav>
 			<ul>
-				<li><h1>{{ .Title }}</h1></li>
+				<li><h1 data-loading-aria-busy>{{ .Title }}</h1></li>
 			</ul>
 			<ul>
 			{{ $pageID := .PageID }}
