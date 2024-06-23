@@ -26,6 +26,16 @@
 	box-shadow: var(--pico-card-box-shadow);
 }
 
+.timeline-left::before, .timeline-right::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 1.5rem;
+	width: 0;
+	z-index: 1;
+	border: medium solid var(--pico-card-sectioning-background-color);
+}
+
 .timeline-left::after, .timeline-right::after {
 	content: '';
 	position: absolute;
@@ -44,14 +54,7 @@
 }
 
 .timeline-left::before {
-	content: " ";
-	height: 0;
-	position: absolute;
-	top: 1.5rem;
-	width: 0;
-	z-index: 1;
 	right: -1rem;
-	border: medium solid var(--pico-card-sectioning-background-color);
 	border-width: 1rem 0 1rem 1rem;
 	border-color: transparent transparent transparent var(--pico-card-sectioning-background-color);
 }
@@ -61,14 +64,7 @@
 }
 
 .timeline-right::before {
-	content: " ";
-	height: 0;
-	position: absolute;
-	top: 1.5rem;
-	width: 0;
-	z-index: 1;
 	left: -1rem;
-	border: medium solid var(--pico-card-sectioning-background-color);
 	border-width: 1rem 1rem 1rem 0;
 	border-color: transparent var(--pico-card-sectioning-background-color) transparent transparent;
 }
