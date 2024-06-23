@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"embed"
+	"flag"
 	"html/template"
 	"io"
 	"mime"
@@ -27,6 +28,9 @@ type View struct {
 }
 
 func main() {
+	addr := flag.String("addr", ":8080", "HTTP listener address")
+	flag.Parse()
+
 	var t *template.Template
 	t = template.Must(template.New("").Funcs(map[string]interface{}{
 		"CallTemplate": func(name string, data interface{}) (ret template.HTML, err error) {
@@ -139,5 +143,5 @@ func main() {
 		}
 	})
 
-	http.ListenAndServe(":8080", &r)
+	http.ListenAndServe(*addr, &r)
 }
