@@ -1,0 +1,13 @@
+name: commander
+year: 2023 - 2024
+tags:
+- go
+- lib
+- bot
+description: |-
+  Execute Go functions from CLI or from a chatbot
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/commander
+    url: https://github.com/razzie/commander

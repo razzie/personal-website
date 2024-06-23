@@ -1,0 +1,16 @@
+name: json2go
+year: 2023 - 2024
+tags:
+- go
+- web
+description: |-
+  A webapp that helps you write client libraries for JSON web APIs
+linkGroups:
+- name: Try it here
+  links:
+  - name: json2go.razzie.xyz
+    url: https://json2go.razzie.xyz
+- name: Source code
+  links:
+  - name: github.com/razzie/json2go
+    url: https://github.com/razzie/json2go

@@ -1,0 +1,15 @@
+name: k8s-db-operator
+year: 2022 - 2023
+tags:
+- go
+- app
+description: |-
+  Kubernetes operator to provide access to shared PostgreSQL and Redis.
+  It relies on the DatabaseClaim CRD, but unlike most other operators,
+  this one only deploys Kubernetes secrets containing connection strings.
+  Databases and Redis namespaces are not shared between dbclaims.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/k8s-db-operator
+    url: https://github.com/razzie/k8s-db-operator

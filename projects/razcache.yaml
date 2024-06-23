@@ -1,0 +1,12 @@
+name: razcache
+year: 2023 - 2024
+tags:
+- go
+- lib
+description: |-
+  A minimalist abstraction layer above Redis, Badger and a custom in-memory cache
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/razcache
+    url: https://github.com/razzie/razcache

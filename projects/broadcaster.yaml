@@ -1,0 +1,12 @@
+name: broadcaster
+year: 2023 - 2024
+tags:
+- go
+- lib
+description: |-
+  Broadcast messages from one channel to many, with timeouts, server sent events and much more
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/broadcaster
+    url: https://github.com/razzie/broadcaster
