@@ -21,18 +21,9 @@ type Page struct {
 type View struct {
 	Nav    []Page
 	Title  string
-	Base   string
 	PageID string
 	Data   any
 }
-
-/*func getBase(r *http.Request) string {
-	slashes := strings.Count(r.URL.Path, "/")
-	if slashes > 1 {
-		return strings.Repeat("../", slashes-1)
-	}
-	return "/"
-}*/
 
 func main() {
 	var t *template.Template
