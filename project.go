@@ -73,6 +73,15 @@ func filterProjectsByTag(projects []Project, tag string) []Project {
 	return taggedProjects
 }
 
+func findProjectByID(projects []Project, id string) int {
+	for i, p := range projects {
+		if p.ID == id {
+			return i
+		}
+	}
+	return -1
+}
+
 func LoadProjects() (projects []Project, tags []string) {
 	tagMap := make(map[string]struct{})
 
