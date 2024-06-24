@@ -4,7 +4,7 @@ tags:
 - go
 - web
 description: |-
-  A lightweight webapp framework that powers razbox and this website.
+  A lightweight webapp framework that powers razbox.
   Most of the original code was taken from [razlink](/projects/id/razlink), but it has heavily evolved since.
 linkGroups:
 - name: Source code
