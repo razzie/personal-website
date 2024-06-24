@@ -39,8 +39,6 @@ func main() {
 			ret = template.HTML(buf.String())
 			return
 		},
-		"mod": func(a, b int) int { return a % b },
-		"add": func(a, b int) int { return a + b },
 	}).ParseFS(assets, "templates/*.html"))
 
 	projects, _ := LoadProjects()
