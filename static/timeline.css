@@ -81,8 +81,6 @@
 	.timeline-left, .timeline-right {
 		width: calc(100% - 3rem);
 		margin-left: 3rem;
-		padding-left: 3rem;
-		padding-right: 1rem;
 	}
 	
 	.timeline-left::before, .timeline-right::before {
