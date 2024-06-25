@@ -14,19 +14,6 @@ import (
 //go:embed static/* projects/*.png templates/*.html
 var assets embed.FS
 
-type Page struct {
-	ID   string
-	Name string
-	Data any
-}
-
-type View struct {
-	Nav    []Page
-	Title  string
-	PageID string
-	Data   any
-}
-
 func main() {
 	addr := flag.String("addr", ":8080", "HTTP listener address")
 	flag.Parse()
@@ -41,21 +28,49 @@ func main() {
 		},
 	}).ParseFS(assets, "templates/*.html"))
 
-	projects, _ := LoadProjects()
+	projects, tags := LoadProjects()
+	projectViews := make(map[string]Project)
+	for _, p := range projects {
+		projectViews[p.ID] = p
+	}
+	tagViews := make(map[string]map[string]any)
+	for _, tag := range tags {
+		tagViews[tag] = map[string]any{
+			"Projects": filterProjectsByTag(projects, tag),
+		}
+	}
 
-	navPages := []Page{
-		{ID: "hello", Name: "Hello"},
-		{ID: "skills", Name: "Skills"},
-		{ID: "experience", Name: "Experience"},
-		{ID: "projects", Name: "Projects", Data: projects},
+	navPages := []struct {
+		ID   string
+		Name string
+		Data any
+	}{
+		{
+			ID:   "hello",
+			Name: "Hello",
+		},
+		{
+			ID:   "skills",
+			Name: "Skills",
+		},
+		{
+			ID:   "experience",
+			Name: "Experience",
+		},
+		{
+			ID:   "projects",
+			Name: "Projects",
+			Data: map[string]any{
+				"Projects": projects,
+			}},
 	}
 
 	render := func(w http.ResponseWriter, title, pageID string, data any) {
-		view := View{
-			Nav:    navPages,
-			Title:  title,
-			PageID: pageID,
-			Data:   data,
+		view := map[string]any{
+			"Nav":    navPages,
+			"Title":  title,
+			"PageID": pageID,
+			"Data":   data,
 		}
 		w.Header().Add("Content-Type", "text/html")
 		if err := t.ExecuteTemplate(w, "layout", view); err != nil {
@@ -85,23 +100,23 @@ func main() {
 
 	http.HandleFunc("GET /projects/tag/{tag}", func(w http.ResponseWriter, r *http.Request) {
 		tag := r.PathValue("tag")
-		taggedProjects := filterProjectsByTag(projects, tag)
-		if len(taggedProjects) == 0 {
+		view := tagViews[tag]
+		if view == nil {
 			http.Redirect(w, r, "/projects", http.StatusSeeOther)
 			return
 		}
 		title := "Projects (" + tag + ")"
-		render(w, title, "projects", taggedProjects)
+		render(w, title, "projects", view)
 	})
 
 	http.HandleFunc("GET /projects/id/{id}", func(w http.ResponseWriter, r *http.Request) {
 		id := r.PathValue("id")
-		idx := findProjectByID(projects, id)
-		if idx < 0 {
+		p, ok := projectViews[id]
+		if !ok {
 			http.Redirect(w, r, "/projects", http.StatusSeeOther)
 			return
 		}
-		render(w, projects[idx].Name, "project", projects[idx])
+		render(w, p.Name, "project", p)
 	})
 
 	http.ListenAndServe(*addr, nil)
