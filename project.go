@@ -94,6 +94,7 @@ func LoadProjects() (projects []Project, tags []string) {
 			for _, tag := range p.Tags {
 				tagMap[tag] = struct{}{}
 			}
+			sort.Strings(p.Tags)
 			projects = append(projects, p)
 		}
 		return nil
