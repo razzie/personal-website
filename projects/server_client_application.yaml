@@ -2,7 +2,7 @@ name: Server - client application
 year: "2008"
 tags:
 - purebasic
-- app
+- desktop
 description: |-
   Server - client application is a small tool which helps creating and debugging text based network protocols.
   I developed it while working on Razzie Messenger and it had a great use.

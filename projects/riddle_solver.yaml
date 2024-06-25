@@ -2,7 +2,7 @@ name: Riddle Solver
 year: 2019 - 2021
 tags:
 - go
-- app
+- desktop
 description: |-
   Riddle Solver is a terminal app designed to solve Einstein's 5 house riddle (also called zebra puzzles in general).
   I think I came across this kind of riddle playing Dishonored2 first as a third option to get inside a locked place.

@@ -2,7 +2,7 @@ name: Process Manager
 year: "2008"
 tags:
 - purebasic
-- app
+- desktop
 description: |-
   Process Manager is a replacement application for the built-in Windows Task Manager with a lot of additional features.
   It keeps running in the background after closing the main window and can be brought back from the tray icon or by pressing Ctrl+F12.

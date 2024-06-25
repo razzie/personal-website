@@ -2,7 +2,7 @@ name: Razzie Messenger
 year: "2008"
 tags:
 - purebasic
-- app
+- desktop
 description: |-
   Razzie Messenger is a messenger client and server I started working on during a one-week vacation at lake Balaton (Hungary).
   It uses a very simple plain text based protocol for network communication, look at the picture to see it in details.

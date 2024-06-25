@@ -5,6 +5,7 @@ tags:
 - 3d
 - procedural
 - demo
+- desktop
 description: |-
   Floating Islands is yet another example of my experiments with procedurally generated terrains.
   I developed an algorithm that takes island positions and island connections as input parameters and generates a 3D grid world using a Perlin noise internally.

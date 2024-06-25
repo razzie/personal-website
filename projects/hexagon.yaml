@@ -5,6 +5,7 @@ tags:
 - 3d
 - procedural
 - demo
+- desktop
 description: |-
   Hexagon is very similar to the Minecraft clone, but I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes.
   The underlying datastructure is still a 3D grid of Perlin noise.

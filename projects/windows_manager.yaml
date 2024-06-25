@@ -2,7 +2,7 @@ name: Windows Manager
 year: "2008"
 tags:
 - purebasic
-- app
+- desktop
 description: |-
   Windows Manager is a reworked and extended edition of Process Manager.
   Besides the improved visual appearance it introduces new window tweaking options which you can see in the picture.

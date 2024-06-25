@@ -4,6 +4,7 @@ tags:
 - cpp
 - 2d
 - game
+- desktop
 description: |-
   RazzGravitas is a simple multiplayer game about gravity.
   At the time of making it I just gave up on a somewhat larger project and I needed to give myself a smaller task that I can prove to be able to finish.

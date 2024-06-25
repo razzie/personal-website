@@ -3,6 +3,7 @@ year: 2020 - 2022
 tags:
 - go
 - web
+- lib
 description: |-
   A lightweight webapp framework that powers razbox.
   Most of the original code was taken from [razlink](/projects/id/razlink), but it has heavily evolved since.

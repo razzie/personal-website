@@ -6,6 +6,7 @@ tags:
 - game
 - procedural
 - demo
+- desktop
 description: |-
   PotatoGame is a procedural generated game about little potatoes with customizable AI (which was only done on paper).
   The goal is to have them win the game for you by gaining world domination.
