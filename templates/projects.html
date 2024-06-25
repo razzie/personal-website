@@ -1,4 +1,21 @@
 {{ define "projects" }}
+{{ if .Tags }}
+<details open>
+	<summary>Tags</summary>
+	<p>
+		{{ $tag := .Tag }}
+		{{ range .Tags }}
+		<code style="margin-bottom: 0.25rem;">
+			{{ if eq . $tag }}
+			<a href="/projects" class="secondary"><del>{{ . }}</del></a>
+			{{ else }}
+			<a href="/projects/tag/{{ . }}" class="secondary">{{ . }}</a>
+			{{ end }}
+		</code>
+		{{ end }}
+	</p>
+</details>
+{{ end }}
 <div class="project-grid">
 	<style>
 	.project-grid {

@@ -37,6 +37,8 @@ func main() {
 	for _, tag := range tags {
 		tagViews[tag] = map[string]any{
 			"Projects": filterProjectsByTag(projects, tag),
+			"Tags":     tags,
+			"Tag":      tag,
 		}
 	}
 
@@ -62,6 +64,7 @@ func main() {
 			Name: "Projects",
 			Data: map[string]any{
 				"Projects": projects,
+				"Tags":     tags,
 			}},
 	}
 
