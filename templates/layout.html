@@ -20,9 +20,7 @@
 			<ul>
 			{{ $title := .Title }}
 			{{ range .Nav }}
-				{{ if ne .Name $title }}
-				<li><a href="/{{ .ID }}">{{ .Name }}</a></li>
-				{{ end }}
+				<li><a href="/{{ .ID }}"{{ if eq .Name $title }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
 			{{ end }}
 			</ul>
 		</nav>
