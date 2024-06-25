@@ -1,0 +1,19 @@
+name: 0x40 Hues
+year: "2023"
+tags:
+- go
+- javascript
+- web
+description: |-
+  I've come across Kepstin's amazing [0x40hues](https://github.com/kepstin/0x40hues-html5) project and caught myself listening to it a lot.
+  After finding community resource packs to try, it quickly became troublesome to configure and run them.
+  This motivated me to fork the project and after a great deal of refactoring, it now supports loading many respacks and on-the-fly configuration.
+linkGroups:
+- name: Try it here
+  links:
+  - name: hues.razzie.xyz
+    url: https://hues.razzie.xyz
+- name: Source code
+  links:
+  - name: github.com/razzie/0x40hues
+    url: https://github.com/razzie/0x40hues

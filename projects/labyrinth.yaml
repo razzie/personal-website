@@ -1,0 +1,16 @@
+name: Labyrinth
+year: "2010"
+tags:
+- cpp
+- 3d
+- desktop
+description: |-
+  Labyrinth is a small university project I developed together with a friend.
+  It features random labyrinth generation with size, multi-level options.
+  The user could select the wall and floor texturess or the optional bush wall (instead of the rock one).
+  I have done the rendering part (using Irrlicht 3D engine) while my friend worked on the random generator algorithm and the bush modeling.
+linkGroups:
+- name: Download
+  links:
+  - name: github.com/razzie/hobby-projects/2010/Labirintus
+    url: https://github.com/razzie/hobby-projects/tree/master/2010/Labirintus
