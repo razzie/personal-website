@@ -3,6 +3,7 @@ year: "2019"
 tags:
 - go
 - web
+- proxy
 description: |-
   A lightweight link proxy/redirect service with logging.
   Can be used to create URLs that point to an external resource while tracking visits from users.

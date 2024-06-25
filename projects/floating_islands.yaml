@@ -3,8 +3,6 @@ year: "2016"
 tags:
 - cpp
 - 3d
-- procedural
-- demo
 - desktop
 description: |-
   Floating Islands is yet another example of my experiments with procedurally generated terrains.

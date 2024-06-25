@@ -2,6 +2,7 @@ name: RazChess
 year: 2022 - 2023
 tags:
 - go
+- javascript
 - web
 - game
 description: |-

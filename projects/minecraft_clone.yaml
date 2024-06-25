@@ -3,9 +3,8 @@ year: 2011 - 2012
 tags:
 - cpp
 - 3d
-- procedural
-- demo
 - desktop
+- minecraft
 description: |-
   Minecraft clone is a graphics project I worked on during the final year of the university.
   Contrary to its name it is not a real clone, it features no game elements.
@@ -15,5 +14,5 @@ linkGroups:
   links:
   - name: github.com/razzie/hobby-projects/2011/minecraft-clone-v1
     url: https://github.com/razzie/hobby-projects/tree/master/2011/minecraft-clone-v1
-  - name: github.com/razzie/hobby-projects/2011/minecraft-clone-v2
+  - name: github.com/razzie/hobby-projects/2012/minecraft-clone-v2
     url: https://github.com/razzie/hobby-projects/tree/master/2012/minecraft-clone-v2

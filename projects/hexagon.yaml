@@ -3,8 +3,6 @@ year: "2015"
 tags:
 - cpp
 - 3d
-- procedural
-- demo
 - desktop
 description: |-
   Hexagon is very similar to the Minecraft clone, but I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes.

@@ -3,6 +3,7 @@ year: 2020 - 2022
 tags:
 - go
 - web
+- proxy
 description: |-
   Virtual hosting/reverse proxy with TLS termination and automatic certificate management.
   It supports proxying, file/directory serving and redirection using a simple config format.

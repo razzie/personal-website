@@ -2,8 +2,10 @@ name: RazTalk
 year: "2018"
 tags:
 - csharp
+- javascript
 - web
 - desktop
+- chat
 description: |-
   A simple lobby/channel based registration-free webchat.
 linkGroups:
