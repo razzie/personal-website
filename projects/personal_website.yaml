@@ -1,0 +1,37 @@
+name: Personal website
+year: 2015 - 2024
+tags:
+- php
+- csharp
+- go
+- web
+description: |-
+  * ###### 2015 version
+    The site made use of user friendly URLs (thanks to Apache web server's mod_rewrite) and loaded pages dynamically via jQuery's AJAX API.
+    A server side PHP script automatically parsed the static HTML pages for sections, which could then be accessed individually by the user.
+    It wasn't very CPU friendly, but made it easy for me to add new content to the page without using a database.
+    Later my Twitter feed was integrated as a news feed, using OAuth and Twitter's API.
+
+  * ###### 2018 version
+    Implemented in C# using NancyFX and a brand new design.
+    It used Github API to list my latest open-source interests and contributions.
+    Project data was stored in XML.
+
+  * ###### 2019 version
+    Everything completely rewritten in Go.
+    Data was still stored in XML files initially, but later all the content (including resume) was moved to
+    a single yaml file, which was periodically updated directly from the repository.
+
+  * ###### 2024 version
+    Completely rewritten everythign again, using Go + PicoCSS + HTMX stack.
+    It supports light and dark themes (based on user preferences reported by the browser) and features HTMX
+    boosted page loads and loading spinner.
+    Project data is stored in individual yaml files, everything else is in HTML template.
+    It does not rely on third party feeds anymore.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/first_personal_website
+    url: https://github.com/razzie/first_personal_website
+  - name: github.com/razzie/personal-website
+    url: https://github.com/razzie/personal-website

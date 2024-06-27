@@ -1,0 +1,14 @@
+name: RazTracer
+year: "2019"
+tags:
+- go
+- desktop
+description: |-
+  Command line debug information explorer and function call tracer for Linux, based on the Ptrace API.
+  I was in the process of implementing a GUI for the project (borrowing elements from [Riddle Solver](/projects/id/riddle_solver)),
+  but lost interest in continuing the project.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/raztracer
+    url: https://github.com/razzie/raztracer

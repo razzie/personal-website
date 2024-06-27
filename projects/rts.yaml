@@ -1,0 +1,21 @@
+name: RTS game
+year: "2005"
+tags:
+- 2d
+- purebasic
+- desktop
+- game
+description: |-
+  This was my very first coded game (after finishing some games in an early version of GameMaker).
+  I've created all the graphics in Microsoft Paint, so the game looks terrible.
+  The goal is to destroy the enemy's base.
+  The player needs to collect resources (money and energy) to deploy buildings and produce units (soldiers, tanks, citizens, etc).
+  Energy can be harvested by building windmills, while money can be gathered by mining.
+  The enemy's AI is very basic: its units are moving randomly and once they notice a player building or unit, they just attack it.
+  They also deploy new buildings randomly once they have enough resources.
+  Due to the lack of timing, the more units appeared in the game, the slower they became.
+linkGroups:
+- name: Download
+  links:
+  - name: github.com/razzie/hobby-projects/2005/specialarea
+    url: https://github.com/razzie/hobby-projects/tree/master/2005/specialarea
