@@ -1,4 +1,4 @@
-name: geoip-server
+name: Geoip server
 year: "2020"
 tags:
 - go

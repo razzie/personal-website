@@ -1,11 +1,13 @@
-name: razproxy
+name: Razproxy
 year: "2020"
 tags:
 - go
 - web
 - proxy
 description: |-
-  SOCKS5 tunneled through TLS connection
+  SOCKS5 tunneled through TLS connection.
+  The project consists of a custom server and client, which enable encrypted traffic between them.
+  The client opens a SOCKS5 port locally which can be used by multiple applications (like web browsers) running in parallel.
 linkGroups:
 - name: Source code
   links:

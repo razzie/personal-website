@@ -4,7 +4,7 @@ tags:
 - purebasic
 - desktop
 description: |-
-  Windows Manager is a reworked and extended edition of Process Manager.
+  Windows Manager is a reworked and extended edition of [Process Manager](/projects/id/process_manager).
   Besides the improved visual appearance it introduces new window tweaking options which you can see in the picture.
   One can for example change a sticky (always on top) window to act as a normal one.
 linkGroups:

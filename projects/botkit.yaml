@@ -1,11 +1,15 @@
-name: botkit
+name: Botkit
 year: 2023 - 2024
 tags:
 - go
 - lib
 - bot
 description: |-
-  A Telegram bot library designed to handle commands and dialogs
+  A Telegram bot library designed to handle [commands](/projects/id/commander) and dialogs.
+  Both of these support replying with sticker, photo, video, audio, album or file (even files not directly uploaded by the bot).
+  Dialogs are composed of one or more queries, which can be single choice, multi choice or file queries.
+  In theory you could run multiple instances to help balance the load,
+  as long as they share the same Redis database.
 linkGroups:
 - name: Source code
   links:

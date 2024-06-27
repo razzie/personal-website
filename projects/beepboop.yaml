@@ -1,12 +1,16 @@
-name: beepboop
+name: Beepboop
 year: 2020 - 2022
 tags:
 - go
 - web
 - lib
 description: |-
-  A lightweight webapp framework that powers razbox.
-  Most of the original code was taken from [razlink](/projects/id/razlink), but it has heavily evolved since.
+  A lightweight webapp framework that powers [Razbox](/projects/id/razbox).
+  Most of the original code was taken from [Razlink](/projects/id/razlink), but it has heavily evolved since.
+  The core mechanic consists of registering pages (which are mostly a template + handler bundle)
+  and returning view objects from inside the handlers.
+  There are some utilities for session handling, access management and logging too, but this library is
+  not suitable for production use.
 linkGroups:
 - name: Source code
   links:

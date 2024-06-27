@@ -1,11 +1,16 @@
-name: commander
+name: Commander
 year: 2023 - 2024
 tags:
 - go
 - lib
 - bot
 description: |-
-  Execute Go functions from CLI or from a chatbot
+  Execute Go functions from CLI or from a chatbot.
+  Register any function as a command, then supply a context variable and a string slice as input arguments.
+  If the original function has Context parameter(s), the context variable will be passed,
+  otherwise the arguments from the string slice will be converted using Sscanf.
+  The function's return values are converted into a []any slice and if any of these values is an error,
+  it will be extracted into a separate error return value.
 linkGroups:
 - name: Source code
   links:

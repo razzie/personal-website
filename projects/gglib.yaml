@@ -1,4 +1,4 @@
-name: gglib & gglib2
+name: GGlib & GGlib2
 year: 2013 - 2017
 tags:
 - cpp
@@ -8,7 +8,7 @@ description: |-
   They served as a sandbox to help me to learn about the new features of the C++11 standard.
   I also found a great use of them while working on other side projects.
   Due to some early design choices (including too heavy use of virtual function calls) I finally decided to send them into retirement
-  and started working on the successor: [librazzie](/projects/id/librazzie).
+  and started working on the successor: [LibRazzie](/projects/id/librazzie).
 linkGroups:
 - name: Source code
   links:

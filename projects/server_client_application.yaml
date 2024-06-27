@@ -5,7 +5,7 @@ tags:
 - desktop
 description: |-
   Server - client application is a small tool which helps creating and debugging text based network protocols.
-  I developed it while working on Razzie Messenger and it had a great use.
+  I developed it while working on [Razzie Messenger](/projects/id/razzie_messenger) and it had a great use.
   On the server tab the user can select one of the connected clients as a message target or just close the connection to them.
 linkGroups:
 - name: Download

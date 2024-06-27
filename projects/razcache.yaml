@@ -1,10 +1,17 @@
-name: razcache
+name: RazCache
 year: 2023 - 2024
 tags:
 - go
 - lib
 description: |-
-  A minimalist abstraction layer above Redis, Badger and a custom in-memory cache
+  A minimalist abstraction layer above Redis, Badger and a custom in-memory cache.
+  As many of my self-hosted services rely on Redis for caching or data storage,
+  I often had to fire up a local instance for manual testing.
+  This process was too cumbersone for me, so I figured I could come up with a wrapper
+  around Redis supporting the functionaly only I use the most, and during development
+  it should mimic this functionality in-process.
+  Supporting key expirations was a mandatory requirement, so the in-memory cache implements
+  a "janitor" goroutine that cleans up these keys exactly when they expire, one at a time.
 linkGroups:
 - name: Source code
   links:

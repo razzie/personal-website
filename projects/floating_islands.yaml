@@ -7,7 +7,7 @@ tags:
 description: |-
   Floating Islands is yet another example of my experiments with procedurally generated terrains.
   I developed an algorithm that takes island positions and island connections as input parameters and generates a 3D grid world using a Perlin noise internally.
-  I also focused on the cartoonish design with edge outlining and also had an A* pathfinder algorithm set up for the little red cube.
+  I focused on the cartoonish design with edge outlining and also had an A* pathfinder algorithm set up for the little red cube.
 linkGroups:
 - name: Download
   links:

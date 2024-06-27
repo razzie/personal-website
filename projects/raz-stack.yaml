@@ -7,7 +7,7 @@ description: |-
   A simple Kubernetes stack that hosts many of my own projects plus an email service (Dovecot + Postfix) and Nextcloud.
   The goal of this project is simplified deployment and cost saving, horizontal autoscaling is not implemented.
   Many of the hosted webapps use a shared Redis (Kvrocks) instance with separate namespaces, thanks to [k8s-db-operator](/projects/id/k8s-db-operator).
-  Deployment is done via Helmfile and Helm.
+  Deployment is done via Helmfile and Helm under the hood, but is handled my a Makefile to make it even simpler.
 linkGroups:
 - name: Source code
   links:

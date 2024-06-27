@@ -1,10 +1,18 @@
-name: json2go
+name: Json2Go
 year: 2023 - 2024
 tags:
 - go
 - web
 description: |-
-  A webapp that helps you write client libraries for JSON web APIs
+  A webapp that helps you write Go client libraries for JSON web APIs.
+  One of my experiments required building a database that included data from many third party JSON web APIs.
+  The process of deserializing data into manually crafted Go structs quickly got exhausting,
+  so I had to come up with a solution. Json2Go is by no means perfect (it only looks at the fields of the first item of a JSON array),
+  but it gets the job done.
+  You can input a JSON or a URL that returns a JSON.
+  Field names are automatically converted into camel case, stripped of unsupported characters
+  and correctly annotated with the original name.
+  The resulting generated structure is formatted and uses syntax highlighting.
 linkGroups:
 - name: Try it here
   links:

@@ -1,4 +1,4 @@
-name: razlink
+name: Razlink
 year: "2019"
 tags:
 - go
@@ -7,6 +7,7 @@ tags:
 description: |-
   A lightweight link proxy/redirect service with logging.
   Can be used to create URLs that point to an external resource while tracking visits from users.
+  Uses Redis for data storage.
 linkGroups:
 - name: Source code
   links:

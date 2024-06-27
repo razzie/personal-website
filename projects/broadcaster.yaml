@@ -1,10 +1,12 @@
-name: broadcaster
+name: Broadcaster
 year: 2023 - 2024
 tags:
 - go
 - lib
 description: |-
   Broadcast messages from one channel to many, with timeouts, server sent events and much more
+  Zero external dependencies.
+  Designed for scenarios when it's unpractical to connect to the same event source using many parallel connections.
 linkGroups:
 - name: Source code
   links:

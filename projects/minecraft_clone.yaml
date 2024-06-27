@@ -7,8 +7,9 @@ tags:
 - minecraft
 description: |-
   Minecraft clone is a graphics project I worked on during the final year of the university.
-  Contrary to its name it is not a real clone, it features no game elements.
-  My primary motivation was the recreation of a Minecraft-like rendering in C++.
+  Contrary to its name it is not a real clone, it features no game elements aside from placing and removing blocks.
+  My primary motivation was the recreation of a Minecraft-like rendering in C++,
+  focusing on optimizations like omitting hidden block sides and dynamic loading of chunks/zones.
 linkGroups:
 - name: Source code and download
   links:
