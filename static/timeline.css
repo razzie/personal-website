@@ -1,5 +1,6 @@
 .timeline {
 	position: relative;
+	margin-bottom: 4rem;
 }
 
 .timeline::after {
@@ -20,7 +21,7 @@
 	background-color: inherit;
 	width: calc(50% - 2rem);
 	padding: 1rem 1.5rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: -4rem;
 	background-color: var(--pico-card-sectioning-background-color);
 	border-radius: var(--pico-border-radius);
 	box-shadow: var(--pico-card-box-shadow);
@@ -30,7 +31,7 @@
 	content: " ";
 	height: 0;
 	position: absolute;
-	top: 1.5rem;
+	top: 1rem;
 	width: 0;
 	z-index: 1;
 	border: medium solid var(--pico-card-sectioning-background-color);
@@ -41,10 +42,10 @@
 	position: absolute;
 	width: 1rem;
 	height: 1rem;
+	top: 1.5rem;
 	right: -2.5rem;
 	background-color: var(--pico-background-color);
 	border: var(--pico-border-radius) solid var(--pico-color);
-	top: 2rem;
 	border-radius: 50%;
 	z-index: 1;
 }
@@ -73,7 +74,65 @@
 	left: -2.5rem;
 }
 
+@media screen and (max-width: 1536px) {
+	.timeline {
+		margin-bottom: 5rem;
+	}
+
+	.timeline-left, .timeline-right {
+		margin-bottom: -5rem;
+	}
+
+	.timeline-left::before, .timeline-right::before {
+		top: 1.5rem;
+	}
+
+	.timeline-left::after, .timeline-right::after {
+		top: 2rem;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.timeline {
+		margin-bottom: 6rem;
+	}
+
+	.timeline-left, .timeline-right {
+		margin-bottom: -6rem;
+	}
+
+	.timeline-left::before, .timeline-right::before {
+		top: 2rem;
+	}
+
+	.timeline-left::after, .timeline-right::after {
+		top: 2.5rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.timeline {
+		margin-bottom: 7rem;
+	}
+
+	.timeline-left, .timeline-right {
+		margin-bottom: -7rem;
+	}
+
+	.timeline-left::before, .timeline-right::before {
+		top: 2.5rem;
+	}
+
+	.timeline-left::after, .timeline-right::after {
+		top: 3rem;
+	}
+}
+
 @media screen and (max-width: 768px) {
+	.timeline {
+		margin-bottom: 0;
+	}
+
 	.timeline::after {
 		left: 1rem;
 	}
@@ -81,15 +140,18 @@
 	.timeline-left, .timeline-right {
 		width: calc(100% - 3rem);
 		margin-left: 3rem;
+		margin-bottom: 0.5rem;
 	}
 	
 	.timeline-left::before, .timeline-right::before {
+		top: 1.75rem;
 		left: -1rem;
 		border-width: 1rem 1rem 1rem 0;
 		border-color: transparent var(--pico-card-sectioning-background-color) transparent transparent;
 	}
 
 	.timeline-left::after, .timeline-right::after {
+		top: 2.25rem;
 		left: -2.5rem;
 	}
 	
