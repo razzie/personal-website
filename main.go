@@ -9,6 +9,8 @@ import (
 	"mime"
 	"net/http"
 	"path/filepath"
+	"strconv"
+	"time"
 )
 
 //go:embed static/* projects/*.png templates/*.html
@@ -65,10 +67,13 @@ func main() {
 			Data: map[string]any{
 				"Projects": projects,
 				"Tags":     tags,
-			}},
+			},
+		},
 	}
 
 	render := func(w http.ResponseWriter, title, pageID string, data any) {
+		const maxAge = 24 * 60 * 60
+		expires := time.Now().Add(time.Duration(maxAge) * time.Second).Format(http.TimeFormat)
 		view := map[string]any{
 			"Nav":    navPages,
 			"Title":  title,
@@ -76,6 +81,8 @@ func main() {
 			"Data":   data,
 		}
 		w.Header().Add("Content-Type", "text/html")
+		w.Header().Add("Cache-Control", "public, max-age="+strconv.Itoa(maxAge))
+		w.Header().Add("Expires", expires)
 		if err := t.ExecuteTemplate(w, "layout", view); err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 		}
@@ -132,7 +139,11 @@ func serveAsset(w http.ResponseWriter, filename string) {
 		http.Error(w, "Not Found", http.StatusNotFound)
 		return
 	}
+	const maxAge = 7 * 24 * 60 * 60
+	expires := time.Now().Add(time.Duration(maxAge) * time.Second).Format(http.TimeFormat)
 	w.Header().Add("Content-Type", mime.TypeByExtension(ext))
+	w.Header().Add("Cache-Control", "public, max-age="+strconv.Itoa(maxAge))
+	w.Header().Add("Expires", expires)
 	w.WriteHeader(http.StatusOK)
-	io.Copy(w, f)
+	_, _ = io.Copy(w, f)
 }
