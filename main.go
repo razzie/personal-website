@@ -88,27 +88,29 @@ func main() {
 		}
 	}
 
-	http.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
+	var mux http.ServeMux
+
+	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/hello", http.StatusSeeOther)
 	})
 
-	http.HandleFunc("GET /static/", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("GET /static/", func(w http.ResponseWriter, r *http.Request) {
 		filename := r.URL.Path[1:]
 		serveAsset(w, filename)
 	})
 
-	http.HandleFunc("GET /static/projects/", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("GET /static/projects/", func(w http.ResponseWriter, r *http.Request) {
 		filename := r.URL.Path[8:]
 		serveAsset(w, filename)
 	})
 
 	for _, page := range navPages {
-		http.HandleFunc("GET /"+page.ID, func(w http.ResponseWriter, r *http.Request) {
+		mux.HandleFunc("GET /"+page.ID, func(w http.ResponseWriter, r *http.Request) {
 			render(w, page.Name, page.ID, page.Data)
 		})
 	}
 
-	http.HandleFunc("GET /projects/tag/{tag}", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("GET /projects/tag/{tag}", func(w http.ResponseWriter, r *http.Request) {
 		tag := r.PathValue("tag")
 		view := tagViews[tag]
 		if view == nil {
@@ -119,7 +121,7 @@ func main() {
 		render(w, title, "projects", view)
 	})
 
-	http.HandleFunc("GET /projects/id/{id}", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("GET /projects/id/{id}", func(w http.ResponseWriter, r *http.Request) {
 		id := r.PathValue("id")
 		p, ok := projectViews[id]
 		if !ok {
@@ -129,7 +131,7 @@ func main() {
 		render(w, p.Name, "project", p)
 	})
 
-	http.ListenAndServe(*addr, nil)
+	http.ListenAndServe(*addr, GzipMiddleware(&mux))
 }
 
 func serveAsset(w http.ResponseWriter, filename string) {
