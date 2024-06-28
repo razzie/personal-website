@@ -94,6 +94,10 @@ func main() {
 		http.Redirect(w, r, "/hello", http.StatusSeeOther)
 	})
 
+	mux.HandleFunc("GET /robots.txt", func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "/static/robots.txt", http.StatusMovedPermanently)
+	})
+
 	mux.HandleFunc("GET /static/", func(w http.ResponseWriter, r *http.Request) {
 		filename := r.URL.Path[1:]
 		serveAsset(w, filename)
