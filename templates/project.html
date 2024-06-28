@@ -3,7 +3,7 @@
 	<header><a href="/projects/id/{{ .ID }}" class="secondary">{{ .Name }}</a></header>
 	<div class="grid">
 		<div>
-			<img src="/static/projects/{{ .ID }}.png">
+			<img src="/static/projects/{{ .ID }}.webp" alt="Thumbnail of {{ .Name }}" width="256">
 		</div>
 		<div>
 			{{ range .LinkGroups }}

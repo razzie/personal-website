@@ -13,7 +13,7 @@ import (
 	"time"
 )
 
-//go:embed static/* projects/*.png templates/*.html
+//go:embed static/* projects/*.webp templates/*.html
 var assets embed.FS
 
 func main() {
