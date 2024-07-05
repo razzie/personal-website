@@ -3,6 +3,7 @@ year: 2022 - 2023
 tags:
 - go
 - k8s
+- docker
 description: |-
   Kubernetes operator to provide access to shared PostgreSQL and Redis.
   It relies on the DatabaseClaim CRD, but unlike most other operators,

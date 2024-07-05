@@ -3,11 +3,12 @@ year: 2022 - 2024
 tags:
 - k8s
 - web
+- docker
 description: |-
-  A simple Kubernetes stack that hosts many of my own projects plus an email service (Dovecot + Postfix) and Nextcloud.
-  The goal of this project is simplified deployment and cost saving, horizontal autoscaling is not implemented.
-  Many of the hosted webapps use a shared Redis (Kvrocks) instance with separate namespaces, thanks to [k8s-db-operator](/projects/id/k8s-db-operator).
-  Deployment is done via Helmfile and Helm under the hood, but is handled my a Makefile to make it even simpler.
+  A simple Kubernetes stack that hosted many of my own projects plus an email service (Dovecot + Postfix) and Nextcloud.
+  The goal of this project was simplified deployment and cost saving, without horizontal autoscaling, though I picked K8s to be able to scale in the future.
+  Many of the hosted webapps used a shared Redis (Kvrocks) instance with separate namespaces, thanks to [k8s-db-operator](/projects/id/k8s-db-operator).
+  Deployment was done via Helmfile and Helm under the hood, but it was managed by a Makefile to make things even simpler.
 linkGroups:
 - name: Source code
   links:

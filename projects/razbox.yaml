@@ -3,6 +3,7 @@ year: 2020 - 2021
 tags:
 - go
 - web
+- docker
 description: |-
   Super simple cloud file storage with almost zero configuration - powered by [Beepboop](/projects/id/beepboop)
   Razbox stores all configuration and metadata in JSON files on the local filesystem and doesn't rely on a relational database

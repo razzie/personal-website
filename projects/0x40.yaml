@@ -4,6 +4,7 @@ tags:
 - go
 - javascript
 - web
+- docker
 description: |-
   I've come across Kepstin's amazing [0x40hues](https://github.com/kepstin/0x40hues-html5) project and caught myself listening to it a lot.
   After finding community resource packs to try, it quickly became troublesome to configure and run them.
@@ -11,8 +12,8 @@ description: |-
 linkGroups:
 - name: Try it here
   links:
-  - name: hues.razzie.xyz
-    url: https://hues.razzie.xyz
+  - name: hues.razzie.cloud
+    url: https://hues.razzie.cloud
 - name: Source code
   links:
   - name: github.com/razzie/0x40hues

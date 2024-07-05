@@ -3,6 +3,7 @@ year: "2020"
 tags:
 - go
 - web
+- docker
 description: |-
   A web service that fetches thumbnails with title from URLs.
   Originally planned to use it in a chat service to prevent the tracking of users by letting them download images directly.

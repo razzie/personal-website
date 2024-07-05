@@ -6,6 +6,7 @@ tags:
 - web
 - desktop
 - chat
+- docker
 description: |-
   A simple lobby/channel based registration-free webchat.
   Implemented using NancyFX and SignalR packages and support dynamic loading of bot libraries during runtime.

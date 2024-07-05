@@ -5,6 +5,7 @@ tags:
 - javascript
 - web
 - game
+- docker
 description: |-
   I've had a sudden spark of interest in chess as of late 2022 and decided to build my own web chess app with focus on simplicity and ease of use.
   Also I didn't want to waste time convincing friends to register to [insert your favorite chess platform here]. With RazChess you just visit the website,
@@ -16,6 +17,8 @@ linkGroups:
   links:
   - name: chess.gorzsony.com
     url: https://chess.gorzsony.com
+  - name: chess.razzie.cloud
+    url: https://chess.razzie.cloud
 - name: Source code
   links:
   - name: github.com/razzie/razchess

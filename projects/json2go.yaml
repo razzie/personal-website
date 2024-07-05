@@ -3,6 +3,7 @@ year: 2023 - 2024
 tags:
 - go
 - web
+- docker
 description: |-
   A webapp that helps you write Go client libraries for JSON web APIs.
   One of my experiments required building a database that included data from many third party JSON web APIs.
@@ -16,8 +17,8 @@ description: |-
 linkGroups:
 - name: Try it here
   links:
-  - name: json2go.razzie.xyz
-    url: https://json2go.razzie.xyz
+  - name: json2go.razzie.cloud
+    url: https://json2go.razzie.cloud
 - name: Source code
   links:
   - name: github.com/razzie/json2go

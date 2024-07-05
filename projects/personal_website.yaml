@@ -5,6 +5,7 @@ tags:
 - csharp
 - go
 - web
+- docker
 description: |-
   * ###### 2015 version
     The site made use of user friendly URLs (thanks to Apache web server's mod_rewrite) and loaded pages dynamically via jQuery's AJAX API.
@@ -26,7 +27,7 @@ description: |-
     Completely rewritten everythign again, using Go + PicoCSS + HTMX stack.
     It supports light and dark themes (based on user preferences reported by the browser) and features HTMX
     boosted page loads and loading spinner.
-    Project data is stored in individual yaml files, everything else is in HTML template.
+    Project data is stored in individual yaml files, everything else is in HTML templates.
     It does not rely on third party feeds anymore.
 linkGroups:
 - name: Source code
