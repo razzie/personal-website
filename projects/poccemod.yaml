@@ -5,14 +5,9 @@ tags:
 - mod
 - game
 description: |-
-  I made this mod originally for my tiny private FiveM server to have some fun with friends.
-  (FiveM is a modification for Grand Theft Auto V enabling you to play multiplayer on customized dedicated servers.)
-  Then I thought, why not share it with others?
-  
-  So I published it and listened to feedback from the community to improve it even more.
-  The project went through 2 months of intensive development (200 commits in the first month and 150 in the second) until I ended up quite pleased with the results.
-  Most of the FiveM player base and modder community is focused on role playing, while the goal of PocceMod was always to be a standalone sandbox entertainment mod.
-  I was the first developer who enabled players to have fun with GTA's unused rope API in a multiplayer environment.
+  Created the first GTA5 (FiveM) game mod that allowed players to have fun with GTA's unused and undocumented rope API in a multiplayer environment.
+  After sharing it with the community early on to receive feedback, the project went through 2 months of intensive development, adding many of the requested features and changes.
+  The project quickly gained popularity due to its uniqueness and led to community members requesting my services with other private mod projects.
 linkGroups:
 - name: Releases
   links:

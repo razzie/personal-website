@@ -5,12 +5,10 @@ tags:
 - 2d
 - game
 description: |-
-  Prepi is an indie game project I was working on together with a friend.
-  It was intended to be a rage game with puzzle elements.
-  We took it so seriously we both quitted our jobs to be able to work on it full-time.
-  After several month of development we reached a point where we wanted to introduce our game to the public via an Indiegogo campaign.
-  Unfortunately the campaign failed, mostly because the lack of media attention (neither of us were expert on the topic).
-  Also the game was probably in too early phase to show it to the public.
+  Prepi is an indie rage game project I was working on together with a friend.
+  It has been a serious project requiring both of our full-time commitment.
+  Having zero clue about sales and with the mindset of "great products sell themselves" we tried to finance the project via an Indiegogo campaign,
+  which failed (though the game received Steam GreenLight later).
   Due to the failure of the campaign and smaller disagreements regarding the game design we decided not to continue the development.
 linkGroups:
 - name: Download

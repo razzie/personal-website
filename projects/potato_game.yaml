@@ -1,5 +1,5 @@
 name: Potato Game
-year: 2016 - 2017
+year: "2017"
 tags:
 - cpp
 - 3d
@@ -7,11 +7,13 @@ tags:
 - desktop
 - video
 description: |-
-  PotatoGame is a procedural generated game about little potatoes with customizable AI (which was only done on paper).
-  The goal is to have them win the game for you by gaining world domination.
-  This was my second large game project (in terms of time and effort spent on it), but eventually I lost interest and motivation
-  after forcing myself to work on it and focusing too much on the future outcome.
-  I'm very proud of this project, but I gave up on ever finishing it.
+  PotatoGame was meant to be a game about little potatoes with customizable AI gaining world domination,
+  though my real motivation was to make art.
+  I wanted to try something out of the box and build a tech demo of a completely procedurally generated abstract looking 3D game world.
+  During the development I've been a part of a coach guided mastermind program, where participants could follow the progress of graphical designs
+  and world map and level generator algorithms.
+  At the end of the mastermind program I had the chance to publicly talk about the project in front of an audience,
+  where one person told me I inspired him to learn programming. This has been one of my proudest moments in life.
 linkGroups:
 - name: Download
   links:
