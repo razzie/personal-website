@@ -1,0 +1,19 @@
+name: RazTools
+year: 2018-2020
+tags:
+- csharp
+- lib
+description: |-
+  A collection of reusable helper classes:
+  * *ArchiveReader* and *ArchiveWriter*, based on [Doboz.NET](/projects/id/doboz)
+  * 2 alternative versions of *CommandParser*
+  * *FileSystem* class that seamlessly integrates local OS filesystem + ArchiveReader
+  * *ObjectDeserializer* to construct objects from a custom text format
+  * *PluginManager* & *RemoteLoader* simplify interaction with plugins using remoting
+  * *Timeout* class with *Expired* event
+  * *XmlReader* static class which returns dynamic objects
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/raztools
+    url: https://github.com/razzie/raztools

@@ -9,7 +9,7 @@ tags:
 - docker
 description: |-
   A simple lobby/channel based registration-free webchat.
-  Implemented using NancyFX and SignalR packages and support dynamic loading of bot libraries during runtime.
+  Implemented using NancyFX + Razor + SignalR stack and relies on [RazTools](/projects/id/raztools) to support dynamic loading of bot libraries during runtime.
   The repo contains (outdated) bot implementations for CleverBot, Giphy, Imgur and Reddit.
   There is also a standalone desktop client, which is just a wrapper around the web interface.
 linkGroups:
