@@ -1,0 +1,12 @@
+name: Doboz.NET
+year: "2019"
+tags:
+- csharp
+- lib
+description: |-
+  C# port of Attila Áfra's Doboz compression library
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/Doboz.NET
+    url: https://github.com/razzie/Doboz.NET
