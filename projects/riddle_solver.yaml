@@ -5,7 +5,7 @@ tags:
 - desktop
 description: |-
   Riddle Solver is a terminal app designed to solve Einstein's 5 house riddle (also called zebra puzzles in general).
-  I think I came across this kind of riddle playing Dishonored2 first as a third option to get inside a locked place.
+  I think I came across this kind of riddle playing Dishonored 2 first, as a third option to get inside a locked place.
   It was written by a fictional genius game character named Kirin Jindosh and it's clearly based on Einstein's five house riddle.
   It took me (sadly) at least 30 minutes to solve on paper, but it earned me an achievement.
   Fast forward 3 years, I had the random idea of implementing this riddle solver, which seemed like a simple way to sharpen my Golang skills.
