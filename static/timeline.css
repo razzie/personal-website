@@ -16,7 +16,7 @@
 	border-radius: var(--pico-border-radius);
 }
 
-.timeline-left, .timeline-right {
+.timeline > *:nth-child(even), .timeline > *:nth-child(odd) {
 	position: relative;
 	background-color: inherit;
 	width: calc(50% - 2rem);
@@ -27,7 +27,7 @@
 	box-shadow: var(--pico-card-box-shadow);
 }
 
-.timeline-left::before, .timeline-right::before {
+.timeline > *:nth-child(even)::before, .timeline > *:nth-child(odd)::before {
 	content: " ";
 	height: 0;
 	position: absolute;
@@ -37,7 +37,7 @@
 	border: medium solid var(--pico-card-sectioning-background-color);
 }
 
-.timeline-left::after, .timeline-right::after {
+.timeline > *:nth-child(even)::after, .timeline > *:nth-child(odd)::after {
 	content: '';
 	position: absolute;
 	width: 1rem;
@@ -50,27 +50,27 @@
 	z-index: 1;
 }
 
-.timeline-left {
+.timeline > *:nth-child(even) {
 	left: 0;
 }
 
-.timeline-left::before {
+.timeline > *:nth-child(even)::before {
 	right: -1rem;
 	border-width: 1rem 0 1rem 1rem;
 	border-color: transparent transparent transparent var(--pico-card-sectioning-background-color);
 }
 
-.timeline-right {
+.timeline > *:nth-child(odd) {
 	left: calc(50% + 2rem);
 }
 
-.timeline-right::before {
+.timeline > *:nth-child(odd)::before {
 	left: -1rem;
 	border-width: 1rem 1rem 1rem 0;
 	border-color: transparent var(--pico-card-sectioning-background-color) transparent transparent;
 }
 
-.timeline-right::after {
+.timeline > *:nth-child(odd)::after {
 	left: -2.5rem;
 }
 
@@ -79,15 +79,15 @@
 		margin-bottom: 5rem;
 	}
 
-	.timeline-left, .timeline-right {
+	.timeline > *:nth-child(even), .timeline > *:nth-child(odd) {
 		margin-bottom: -5rem;
 	}
 
-	.timeline-left::before, .timeline-right::before {
+	.timeline > *:nth-child(even)::before, .timeline > *:nth-child(odd)::before {
 		top: 1.5rem;
 	}
 
-	.timeline-left::after, .timeline-right::after {
+	.timeline > *:nth-child(even)::after, .timeline > *:nth-child(odd)::after {
 		top: 2rem;
 	}
 }
@@ -97,15 +97,15 @@
 		margin-bottom: 6rem;
 	}
 
-	.timeline-left, .timeline-right {
+	.timeline > *:nth-child(even), .timeline > *:nth-child(odd) {
 		margin-bottom: -6rem;
 	}
 
-	.timeline-left::before, .timeline-right::before {
+	.timeline > *:nth-child(even)::before, .timeline > *:nth-child(odd)::before {
 		top: 2rem;
 	}
 
-	.timeline-left::after, .timeline-right::after {
+	.timeline > *:nth-child(even)::after, .timeline > *:nth-child(odd)::after {
 		top: 2.5rem;
 	}
 }
@@ -115,15 +115,15 @@
 		margin-bottom: 7rem;
 	}
 
-	.timeline-left, .timeline-right {
+	.timeline > *:nth-child(even), .timeline > *:nth-child(odd) {
 		margin-bottom: -7rem;
 	}
 
-	.timeline-left::before, .timeline-right::before {
+	.timeline > *:nth-child(even)::before, .timeline > *:nth-child(odd)::before {
 		top: 2.5rem;
 	}
 
-	.timeline-left::after, .timeline-right::after {
+	.timeline > *:nth-child(even)::after, .timeline > *:nth-child(odd)::after {
 		top: 3rem;
 	}
 }
@@ -137,25 +137,25 @@
 		left: 1rem;
 	}
 	
-	.timeline-left, .timeline-right {
+	.timeline > *:nth-child(even), .timeline > *:nth-child(odd) {
 		width: calc(100% - 3rem);
 		margin-left: 3rem;
 		margin-bottom: 0.5rem;
 	}
 	
-	.timeline-left::before, .timeline-right::before {
+	.timeline > *:nth-child(even)::before, .timeline > *:nth-child(odd)::before {
 		top: 1.75rem;
 		left: -1rem;
 		border-width: 1rem 1rem 1rem 0;
 		border-color: transparent var(--pico-card-sectioning-background-color) transparent transparent;
 	}
 
-	.timeline-left::after, .timeline-right::after {
+	.timeline > *:nth-child(even)::after, .timeline > *:nth-child(odd)::after {
 		top: 2.25rem;
 		left: -2.5rem;
 	}
 	
-	.timeline-right {
+	.timeline > *:nth-child(odd) {
 		left: 0%;
 	}
 }
