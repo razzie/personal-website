@@ -7,7 +7,7 @@
 		{{ range .Tags }}
 		<code style="margin-bottom: 0.25rem;">
 			{{ if eq . $tag }}
-			<a href="/projects" class="secondary"><del>{{ . }}</del></a>
+			<a href="/projects">{{ . }}</a>
 			{{ else }}
 			<a href="/projects/tag/{{ . }}" class="secondary">{{ . }}</a>
 			{{ end }}
