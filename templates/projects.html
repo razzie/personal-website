@@ -1,20 +1,17 @@
 {{ define "projects" }}
 {{ if .Tags }}
-<details open>
-	<summary>Tags</summary>
-	<p>
-		{{ $tag := .Tag }}
-		{{ range .Tags }}
-		<code style="margin-bottom: 0.25rem;">
-			{{ if eq . $tag }}
-			<a href="/projects">{{ . }}</a>
-			{{ else }}
-			<a href="/projects/tag/{{ . }}" class="secondary">{{ . }}</a>
-			{{ end }}
-		</code>
+<p>
+	{{ $tag := .Tag }}
+	{{ range .Tags }}
+	<code style="margin-bottom: 0.25rem;">
+		{{ if eq . $tag }}
+		<a href="/projects">{{ . }}</a>
+		{{ else }}
+		<a href="/projects/tag/{{ . }}" class="secondary">{{ . }}</a>
 		{{ end }}
-	</p>
-</details>
+	</code>
+	{{ end }}
+</p>
 {{ end }}
 <div class="project-grid">
 	<style scoped>
