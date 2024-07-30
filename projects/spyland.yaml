@@ -1,0 +1,15 @@
+name: SpyLand
+year: "2003"
+tags:
+- 2d
+- desktop
+- game
+description: |-
+  SpyLand is one of my earliest games, made in Game Maker.
+  It had been sitting on an unreadable floppy disk for 21 years, as it was written by a drive with misaligned head.
+  I managed to recover it using GreaseWeazle and KryoFlux DTC.
+linkGroups:
+- name: Download
+  links:
+  - name: github.com/razzie/hobby-projects/2003/SpyLand
+    url: https://github.com/razzie/hobby-projects/tree/master/2003/SpyLand
