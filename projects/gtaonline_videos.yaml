@@ -6,5 +6,10 @@ tags:
 description: |-
   I have way more playtime in Grand Theft Auto V (or GTA Online to be specific) than I would like to admit and most of that I've spent with friends I've met in the game.
   It became our little tradition to record funny, exciting or any memorable moments and later create videos of it.
-  At this point there is quite a collection of those videos and I've uploaded the ones I made to [my youtube channel](https://www.youtube.com/c/razzquez).
-  Most of the content is only meaningful to us, but I still hope viewers will find them entertaining
+  At this point there is quite a collection of those videos and I've uploaded the ones I made to my youtube channel.
+  Most of the content is only meaningful to us, but I still hope viewers will find them entertaining.
+linkGroups:
+- name: YouTube channel
+  links:
+  - name: www.youtube.com/c/razzquez
+    url: https://www.youtube.com/c/razzquez
