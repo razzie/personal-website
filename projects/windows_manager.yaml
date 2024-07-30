@@ -1,7 +1,6 @@
 name: Windows Manager
 year: "2008"
 tags:
-- purebasic
 - desktop
 description: |-
   Windows Manager is a reworked and extended edition of [Process Manager](/projects/id/process_manager).

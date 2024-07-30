@@ -1,7 +1,6 @@
 name: Process Manager
 year: "2008"
 tags:
-- purebasic
 - desktop
 description: |-
   Process Manager is a replacement application for the built-in Windows Task Manager with a lot of additional features.

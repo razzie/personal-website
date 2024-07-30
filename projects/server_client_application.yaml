@@ -1,7 +1,6 @@
 name: Server - client application
 year: "2008"
 tags:
-- purebasic
 - desktop
 description: |-
   Server - client application is a small tool which helps creating and debugging text based network protocols.
