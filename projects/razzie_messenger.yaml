@@ -1,7 +1,7 @@
 name: Razzie Messenger
 year: "2008"
 tags:
-- desktop
+- gui
 - chat
 description: |-
   Razzie Messenger is a messenger client and server I started working on during a one-week vacation at lake Balaton (Hungary).

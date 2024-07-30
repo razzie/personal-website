@@ -2,7 +2,7 @@ name: Logic Circuit Simulator
 year: "2010"
 tags:
 - java
-- desktop
+- gui
 description: |-
   Logic Circuit Simulator was a university project I had to finish in a semester.
   It offers a variety of logic gates and a lot of visual customization options.

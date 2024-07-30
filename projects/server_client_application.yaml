@@ -1,7 +1,7 @@
 name: Server - client application
 year: "2008"
 tags:
-- desktop
+- gui
 description: |-
   Server - client application is a small tool which helps creating and debugging text based network protocols.
   I developed it while working on [Razzie Messenger](/projects/id/razzie_messenger) and it had a great use.

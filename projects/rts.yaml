@@ -2,7 +2,6 @@ name: RTS game
 year: "2005"
 tags:
 - 2d
-- desktop
 - game
 description: |-
   This was my very first coded game (after finishing some games in an early version of GameMaker).

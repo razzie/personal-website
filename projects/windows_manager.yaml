@@ -1,7 +1,7 @@
 name: Windows Manager
 year: "2008"
 tags:
-- desktop
+- gui
 description: |-
   Windows Manager is a reworked and extended edition of [Process Manager](/projects/id/process_manager).
   Besides the improved visual appearance it introduces new window tweaking options which you can see in the picture.
