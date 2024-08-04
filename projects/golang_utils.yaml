@@ -1,0 +1,22 @@
+name: Golang utils
+year: 2021 - 2024
+tags:
+- go
+- lib
+description: |-
+  This is my collection of Golang utilities and experiments that are not notable/worthy enough to get their own project tile.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/dlutil
+    url: https://github.com/razzie/dlutil
+  - name: github.com/razzie/razgio
+    url: https://github.com/razzie/razgio
+  - name: github.com/razzie/jsontime
+    url: https://github.com/razzie/jsontime
+  - name: github.com/razzie/jsonchan
+    url: https://github.com/razzie/jsonchan
+  - name: github.com/razzie/fakewriteseeker
+    url: https://github.com/razzie/fakewriteseeker
+  - name: github.com/razzie/sleepsort
+    url: https://github.com/razzie/sleepsort

@@ -9,7 +9,7 @@ description: |-
   It was written by a fictional genius game character named Kirin Jindosh and it's clearly based on Einstein's five house riddle.
   It took me (sadly) at least 30 minutes to solve on paper, but it earned me an achievement.
   Fast forward 3 years, I had the random idea of implementing this riddle solver, which seemed like a simple way to sharpen my Golang skills.
-  I was wrong. Coming up with the UI design and the solver algorithm caused me quite a few sleepness nights, but I'm really proud of the result.
+  I was wrong. Coming up with the UI design and the solver algorithm caused me some sleepness nights, but I'm really proud of the result.
 linkGroups:
 - name: Riddles
   links:
@@ -25,3 +25,7 @@ linkGroups:
   links:
   - name: github.com/razzie/riddle-solver
     url: https://github.com/razzie/riddle-solver
+- name: Component library
+  links:
+  - name: github.com/razzie/razgio
+    url: https://github.com/razzie/razgio

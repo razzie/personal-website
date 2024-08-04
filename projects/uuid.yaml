@@ -6,7 +6,7 @@ tags:
 - docker
 description: |-
   A http server that serves random (version4) UUIDs.
-  It uses my [hybrid pseudo- and true random generator](https://github.com/razzie/random) library which periodically takes seeds from [random.org](https://random.org)
+  It uses my hybrid pseudo- and true random generator library which periodically takes seeds from [random.org](https://random.org)
   and uses them to generate pseudo-random UUIDs fast.
 linkGroups:
 - name: Try it here
@@ -17,3 +17,5 @@ linkGroups:
   links:
   - name: github.com/razzie/uuid-server
     url: https://github.com/razzie/uuid-server
+  - name: github.com/razzie/random
+    url: https://github.com/razzie/random
