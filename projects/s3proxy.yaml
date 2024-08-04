@@ -1,0 +1,14 @@
+name: S3proxy
+year: "2020"
+tags:
+- go
+- docker
+description: |-
+  A super simple S3 proxy server that obfuscates file content before transmitting the request to the target.
+  Obfuscation is done via a lookup table which is generated from a user provided key.
+  Only signature v2 authentication is supported.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/s3proxy
+    url: https://github.com/razzie/s3proxy
