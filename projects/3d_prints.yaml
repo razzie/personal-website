@@ -1,0 +1,16 @@
+name: 3D prints
+year: 2022-2024
+tags:
+- 3d
+description: |-
+  I've been fascinated by magnets even since I was a kid, but it only turned into experimentation
+  when I came across a video about Halbach arrays.
+  I wondered whether I could come up with an unassisted levitation design, so I got myself an FLSUN Q5 delta 3D printer,
+  a few dozens of magnetic cubes and learned how to create models in TinkerCad.
+  Even though I did not succeed in my initial plan, I still ended up with some fun magnetic toys I can show my guests
+  and a bunch of rock-paper-scissors dices for boardgames.
+linkGroups:
+- name: Download
+  links:
+  - name: github.com/razzie/hobby-projects/2022/3D_print_models
+    url: https://github.com/razzie/hobby-projects/tree/master/2022/3D_print_models
