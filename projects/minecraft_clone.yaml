@@ -4,7 +4,6 @@ tags:
 - cpp
 - 3d
 - demo
-- minecraft
 description: |-
   Minecraft clone is a graphics project I worked on during the final year of the university.
   Contrary to its name it is not a real clone, it features no game elements aside from placing and removing blocks.
