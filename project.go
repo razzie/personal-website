@@ -2,16 +2,12 @@ package main
 
 import (
 	"embed"
-	"html/template"
 	"io/fs"
 	"log/slog"
 	"sort"
 	"strconv"
 	"strings"
 
-	"github.com/gomarkdown/markdown"
-	"github.com/gomarkdown/markdown/html"
-	"github.com/gomarkdown/markdown/parser"
 	"gopkg.in/yaml.v2"
 )
 
@@ -19,13 +15,12 @@ import (
 var projFS embed.FS
 
 type Project struct {
-	ID              string        `yaml:"-"`
-	Name            string        `yaml:"name"`
-	Year            string        `yaml:"year"`
-	Tags            []string      `yaml:"tags"`
-	Description     string        `yaml:"description"`
-	DescriptionHTML template.HTML `yaml:"-"`
-	LinkGroups      []struct {
+	ID          string   `yaml:"-"`
+	Name        string   `yaml:"name"`
+	Year        string   `yaml:"year"`
+	Tags        []string `yaml:"tags"`
+	Description Markdown `yaml:"description"`
+	LinkGroups  []struct {
 		Name  string `yaml:"name"`
 		Links []struct {
 			Name string `yaml:"name"`
@@ -41,15 +36,6 @@ func (p *Project) containsTag(tag string) bool {
 		}
 	}
 	return false
-}
-
-func convertMD(input string, output *template.HTML) {
-	htmlRenderer := html.NewRenderer(html.RendererOptions{
-		Flags: html.CommonFlags | html.HrefTargetBlank | html.UseXHTML,
-	})
-	mdParser := parser.NewWithExtensions(parser.CommonExtensions | parser.NoEmptyLineBeforeBlock)
-	html := markdown.ToHTML([]byte(input), mdParser, htmlRenderer)
-	*output = template.HTML(html)
 }
 
 func orderProjectsByYear(projects []Project) {
@@ -90,7 +76,6 @@ func LoadProjects() (projects []Project, tags []string) {
 				return nil
 			}
 			p.ID = name[:len(name)-5]
-			convertMD(p.Description, &p.DescriptionHTML)
 			for _, tag := range p.Tags {
 				tagMap[tag] = struct{}{}
 			}
