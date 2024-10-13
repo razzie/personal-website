@@ -1,7 +1,15 @@
 {{ define "skills" }}
-<div class="grid" style="row-gap: 0;">
+<div>
+	<style scoped>
+		@media screen and (min-width: 768px) {
+			#skills {
+				columns: 2;
+				column-gap: 3rem;
+			}
+		}
+	</style>
 	<div>
-		<ul>
+		<ul id="skills">
 			<li>
 				<p>
 					<strong>Go</strong>/Golang (2+ years in production) has been my preferred programming language <strong>since 2019</strong>.
@@ -50,10 +58,6 @@
 					<strong>AWS</strong> (2 years): IAM, RDS, S3, EC2, EKS, ELB, Route53, VPC
 				</p>
 			</li>
-		</ul>
-	</div>
-	<div>
-		<ul>
 			<li>
 				<p>
 					<strong>Kubernetes</strong> (2+ years) in production combined with <strong>Istio</strong> service-mesh and <strong>Nginx</strong> or <strong>Traefik</strong> ingress controllers.

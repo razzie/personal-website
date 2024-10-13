@@ -1,6 +1,14 @@
 {{ define "hello" }}
-<div class="grid" style="row-gap: 0;">
-	<div>
+<div>
+	<div id="hello">
+		<style scoped>
+			@media screen and (min-width: 768px) {
+				#hello {
+					columns: 2;
+					column-gap: 1rem;
+				}
+			}
+		</style>
 		<p>
 			My name is <strong>Gábor Görzsöny</strong>, but you might also know me as <strong>Razzie</strong> from my online presence.
 			With a strong foundation in software engineering,
@@ -16,8 +24,6 @@
 			I enjoy working on open-source projects, many of which are self-hosted.
 			My recent ventures include developing a cloud platform and a range of Go-based software tools.
 		</p>
-	</div>
-	<div>
 		<p>
 			I am deeply passionate about continuous learning and knowledge sharing.
 			My friends and colleagues know me as someone who thrives on engaging in philosophical and technical discussions.
