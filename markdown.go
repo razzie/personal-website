@@ -18,3 +18,13 @@ func (md Markdown) ToHTML() template.HTML {
 	html := markdown.ToHTML([]byte(md), mdParser, htmlRenderer)
 	return template.HTML(html)
 }
+
+type MarkdownSlice []Markdown
+
+func (mds MarkdownSlice) ToHTML() []template.HTML {
+	results := make([]template.HTML, len(mds))
+	for i, md := range mds {
+		results[i] = md.ToHTML()
+	}
+	return results
+}

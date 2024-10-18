@@ -1,0 +1,13 @@
+{{ define "columns" }}
+<div class="columns">
+	<style scoped>
+		@media screen and (min-width: 768px) {
+			.columns {
+				columns: 2;
+				column-gap: 1rem;
+			}
+		}
+	</style>
+	{{ . }}
+</div>
+{{ end }}

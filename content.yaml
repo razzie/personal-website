@@ -1,0 +1,168 @@
+hello: |
+  My name is **Gábor Görzsöny**, but you might also know me as **Razzie** from my online presence.
+  With a strong foundation in software engineering,
+  I bring over 7 years of formal experience across multiple sectors and programming languages, which doubles when including hobby projects.
+  I am confident that I can deliver valuable solutions for you, your business partners and customers.
+
+  My career began with a fascination for video games, which spurred me to self-learn coding from a young age.
+  This journey has evolved significantly, steering me towards learning industry-standard techniques and cutting-edge technologies.
+
+  In addition to my professional work, I am an avid hobbyist developer.
+  I enjoy working on open-source projects, many of which are self-hosted.
+  My recent ventures include developing a cloud platform and a range of Go-based software tools.
+  
+  I am deeply passionate about continuous learning and knowledge sharing.
+  My friends and colleagues know me as someone who thrives on engaging in philosophical and technical discussions.
+  Creativity and curiosity are the cornerstones of my work ethic, driving me to explore and innovate constantly.
+  
+  In my opinion, the greatest achievements in human history have resulted from collaborative efforts spearheaded by visionary leaders.
+  My aspiration is to become one of these key individuals.
+  
+  I am currently open to full remote positions, with a strong preference for roles focused on Golang and cloud development.
+  If my [skills](/skills) and [experiences](/experience) align with your needs, please feel free to reach out to me via email at <span id="email"></span>.
+  I look forward to potential collaborations that challenge and inspire me.
+
+skills: |
+  - **Go**/Golang (2+ years in production) has been my preferred programming language **since 2019**.
+    Used it both in production and in dozens of my projects on [Github](https://github.com/razzie?tab=repositories&language=go).
+    <br>
+    Read [Effective Go](https://go.dev/doc/effective_go), [A Guide to the Go Garbage Collector](https://tip.golang.org/doc/gc-guide) by the Go   authors
+    and [Efficient Go](https://www.oreilly.com/library/view/efficient-go/9781098105709/) by Bartlomiej Plotka.
+    
+  - 4+ formal years of **C++** experience.
+    Considered an expert by my colleagues who asked for my **mentorship**.
+    <br>
+    Also worked on **C#/.NET**, **Java** (1-1 year) and **Python** (&lt;1 year) projects.
+    
+  - **HTML5**, **CSS** (+ **Tailwind**), **JavaScript** + seen and worked with **React**.
+    Rapid prototyping using **htmx**.
+    
+  - APIs: versioned **RESTful APIs** using Gin/Chi/Echo/stdlib,
+    **Swagger**, **OpenAPI**, **gRPC/Protobuf**,
+    **websocket** (+ **JSON-RPC**)
+    
+  - SQL/noSQL: **PostgreSQL**, **Redis** and **MongoDB**.
+    Used multiple **ORM**s and implemented **migrations**.
+    
+  - **Docker** and **docker-compose**, both in production and as a hobby.
+    Even **mentored** colleagues with higher job roles.
+    
+  - **AWS** (2 years): IAM, RDS, S3, EC2, EKS, ELB, Route53, VPC
+    
+  - **Kubernetes** (2+ years) in production combined with **Istio** service-mesh and **Nginx** or **Traefik** ingress controllers.
+    Experimented with **KubeBuilder** and **Kustomize**.
+    
+  - IAC: **Helm**/Helmfile, some **Terraform** and in-house tools
+    
+  - CI/CD: **Jenkins** and **Github Actions**
+    
+  - Logging/metrics: **Prometheus**, **Grafana**, **Fluentd**,
+    **OpenTelemetry**, **Elasticsearch** Query Language/DSL
+    
+  - Messaging/streams: aware of **Kafka**, **RabbitMQ** and **Redis Pub/Sub** use-cases
+    
+  - Software Development Lifecycle (**SDLC**),
+    unit/integration/smoke/e2e **testing**, micro/macro **benchmarking**, health checks, **git**,
+    event-driven architecture, **microservices**, DDD, TDD, BDD, Agile (Scrum & Kanban), CleanCode, SOLID, DRY, KISS
+    
+  - Good understanding of **concurrency and parallelism** (async/await, threads, coroutines, race conditions, locks, atomic ops).
+    <br>
+    Defeated the Parallel Wizard at [deadlockempire.github.io](https://deadlockempire.github.io/)
+
+experience:
+- |-
+  ### 2023+ | sabbatical leave
+
+  Had a long mental list of projects I could attend to, including an [online chess game](/projects/id/razchess)
+  and many tools and libraries I now rely on:
+  - [broadcaster](/projects/id/broadcaster):
+    add zero, one or many more listeners to an event source
+  - [razcache](/projects/id/razcache):
+    abstraction layer over Redis, Badger and an in-memory store (similar to kvgo but with expirations)
+  - [botkit](/projects/id/botkit) and [commander](/projects/id/commander):
+    libraries to build Telegram chatbots
+  - [json2go](/projects/id/json2go):
+    map third-party JSON APIs to Go structs
+
+  Currently working on a custom cloud platform for personal use.
+
+- |-
+  ### 2021 - 2022 | Cloudera | senior software engineer
+
+  Took part in a proof-of-concept project, implementing data ingestion for the main workload app and later working on tenant signup and resource pooling.
+  Earned **Commitment Award** for prioritizing and achieving data driven results.<br>
+  Later worked with one of the international data warehouse teams and got my hands dirty with the CI pipeline as well.
+
+- |-
+  ### 2020 | sabbatical leave
+
+  Wanted to modernize and extend my open source software stack, implementing some microservices along the way:
+  - [razvhost](/projects/id/razvhost):
+    a reverse proxy with many features, similar to Caddy
+  - [razbox](/projects/id/razbox) and [beepboop](/projects/id/beepboop):
+    a lightweight and easy to launch file hosting service and the library that powers it
+  - [razproxy](/projects/id/razproxy):
+    my own VPN alternative, but way less resource hungry
+  - [geoip-server](/projects/id/geoip) and [mediaserver](/projects/id/mediaserver):
+    just some lightweight microservices implemented for fun
+
+- |-
+  ### 2020 | VCC Live | backend developer
+
+  Worked on a reference implementation of microservice feature flags and benchmarked the memory management of our software telecom switch.
+  Left due to lack of exposure to Golang projects.
+
+- |-
+  ### 2019 | sabbatical leave | [PocceMod](/projects/id/poccemod)
+
+  Created the first GTA5 (FiveM) game mod that allowed players to have fun with GTA's unused and undocumented rope API in a multiplayer environment.
+  After sharing it with the community early on to receive feedback, the mod went through 2 months of intensive development, adding many of the requested features and changes.
+  The project quickly gained popularity due to its uniqueness and led to community members requesting my services.
+
+  This period also marked the beginning of my pursuit of Golang development, leading to one of my first public projects:
+  [Riddle Solver](/projects/id/riddle_solver)
+
+- |-
+  ### 2017 - 2019 | Ericsson | senior software developer
+
+  Worked on the packet functions of a microwave network device family.
+  Was an unofficial C++ expert in a 10-person team.
+  Implemented a network protocol together with a teammate based on an RFC document and released weeks before the deadline.
+
+- |-
+  ### 2017 | sabbatical leave | [Potato Game](/projects/id/potato_game)
+
+  Wanted to try something out of the box and build a tech demo of a completely procedurally generated abstract looking 3D game world.
+  During the development I've been a part of a coach guided mastermind program, where participants could follow the progress of graphical designs
+  and world map and level generator algorithms.
+  At the end of the mastermind program I had the chance to publicly talk about the project in front of an audience,
+  where one person told me I inspired him to learn programming. This has been one of my proudest moments in life.
+
+- |-
+  ### 2015 - 2016 | Cognex | software engineer
+
+  Participated in multiple mainly GUI related projects while working together with the firmware team to resolve compatibility issues.
+  Took part in greenfield web backend development and database design, while also working on internal tools and experiments to assist my team.
+
+- |-
+  ### 2014 | sabbatical leave | [Prepi](/projects/id/prepi)
+
+  Worked on an indie rage game project as part of a two-person team, focusing on game engine development.
+  It has been a serious project requiring both of our full-time commitment.
+  Having zero clue about sales and with the mindset of "great products sell themselves" we tried to finance the project via an Indiegogo campaign,
+  which failed (though the game received Steam GreenLight later).
+  Due to the failure of the campaign and smaller disagreements regarding the game design we decided not to continue the development.
+
+- |-
+  ### 2012 - 2014 | Ericsson | software developer
+
+  Worked on a flagship router product in a 3-person team.
+  Was responsible for the network management interface which was highly interconnected with all internal modules.
+  Developed an extension protocol based on RFC document.
+  Spent 5 weeks in Beijing to transfer knowledge to the local team.
+
+- |-
+  ### 2008 - 2012 | University of Debrecen | student
+
+  Completed a 7-semester standard curriculum in Computer Science and Engineering without any course retakes,
+  earning a Bachelor's Degree with good qualifications and a specialization in Info-Communication Networks.

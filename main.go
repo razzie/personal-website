@@ -1,91 +1,56 @@
 package main
 
 import (
-	"bytes"
-	"embed"
 	"flag"
-	"html/template"
-	"io"
-	"mime"
 	"net/http"
-	"path/filepath"
-	"strconv"
-	"time"
 )
-
-//go:embed static/* projects/*.webp templates/*.html
-var assets embed.FS
 
 func main() {
 	addr := flag.String("addr", ":8080", "HTTP listener address")
 	flag.Parse()
 
-	var t *template.Template
-	t = template.Must(template.New("").Funcs(map[string]interface{}{
-		"CallTemplate": func(name string, data interface{}) (ret template.HTML, err error) {
-			var buf bytes.Buffer
-			err = t.ExecuteTemplate(&buf, name, data)
-			ret = template.HTML(buf.String())
-			return
-		},
-	}).ParseFS(assets, "templates/*.html"))
-
-	projects, tags := LoadProjects()
+	content := LoadContent()
 	projectViews := make(map[string]Project)
-	for _, p := range projects {
+	for _, p := range content.Projects {
 		projectViews[p.ID] = p
 	}
 	tagViews := make(map[string]map[string]any)
-	for _, tag := range tags {
+	for _, tag := range content.ProjectTags {
 		tagViews[tag] = map[string]any{
-			"Projects": filterProjectsByTag(projects, tag),
-			"Tags":     tags,
+			"Projects": filterProjectsByTag(content.Projects, tag),
+			"Tags":     content.ProjectTags,
 			"Tag":      tag,
 		}
 	}
 
-	navPages := []struct {
-		ID   string
-		Name string
-		Data any
-	}{
+	navPages := []Page{
 		{
-			ID:   "hello",
-			Name: "Hello",
+			ID:       "hello",
+			Title:    "Hello",
+			Template: "columns",
+			Data:     content.Hello.ToHTML(),
 		},
 		{
-			ID:   "skills",
-			Name: "Skills",
+			ID:       "skills",
+			Title:    "Skills",
+			Template: "columns",
+			Data:     content.Skills.ToHTML(),
 		},
 		{
-			ID:   "experience",
-			Name: "Experience",
+			ID:       "experience",
+			Title:    "Experience",
+			Template: "timeline",
+			Data:     content.Experience.ToHTML(),
 		},
 		{
-			ID:   "projects",
-			Name: "Projects",
+			ID:       "projects",
+			Title:    "Projects",
+			Template: "projects",
 			Data: map[string]any{
-				"Projects": projects,
-				"Tags":     tags,
+				"Projects": content.Projects,
+				"Tags":     content.ProjectTags,
 			},
 		},
-	}
-
-	render := func(w http.ResponseWriter, title, pageID string, data any) {
-		const maxAge = 24 * 60 * 60
-		expires := time.Now().Add(time.Duration(maxAge) * time.Second).Format(http.TimeFormat)
-		view := map[string]any{
-			"Nav":    navPages,
-			"Title":  title,
-			"PageID": pageID,
-			"Data":   data,
-		}
-		w.Header().Add("Content-Type", "text/html")
-		w.Header().Add("Cache-Control", "public, max-age="+strconv.Itoa(maxAge))
-		w.Header().Add("Expires", expires)
-		if err := t.ExecuteTemplate(w, "layout", view); err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-		}
 	}
 
 	var mux http.ServeMux
@@ -110,7 +75,7 @@ func main() {
 
 	for _, page := range navPages {
 		mux.HandleFunc("GET /"+page.ID, func(w http.ResponseWriter, r *http.Request) {
-			render(w, page.Name, page.ID, page.Data)
+			page.Render(w, navPages)
 		})
 	}
 
@@ -121,8 +86,12 @@ func main() {
 			http.Redirect(w, r, "/projects", http.StatusSeeOther)
 			return
 		}
-		title := "Projects (" + tag + ")"
-		render(w, title, "projects", view)
+		Page{
+			Title:    "Projects (" + tag + ")",
+			ID:       "projects",
+			Template: "projects",
+			Data:     view,
+		}.Render(w, navPages)
 	})
 
 	mux.HandleFunc("GET /projects/id/{id}", func(w http.ResponseWriter, r *http.Request) {
@@ -132,24 +101,13 @@ func main() {
 			http.Redirect(w, r, "/projects", http.StatusSeeOther)
 			return
 		}
-		render(w, p.Name, "project", p)
+		Page{
+			Title:    p.Name,
+			ID:       p.ID,
+			Template: "project",
+			Data:     p,
+		}.Render(w, navPages)
 	})
 
 	http.ListenAndServe(*addr, GzipMiddleware(&mux))
-}
-
-func serveAsset(w http.ResponseWriter, filename string) {
-	ext := filepath.Ext(filename)
-	f, err := assets.Open(filename)
-	if err != nil {
-		http.Error(w, "Not Found", http.StatusNotFound)
-		return
-	}
-	const maxAge = 7 * 24 * 60 * 60
-	expires := time.Now().Add(time.Duration(maxAge) * time.Second).Format(http.TimeFormat)
-	w.Header().Add("Content-Type", mime.TypeByExtension(ext))
-	w.Header().Add("Cache-Control", "public, max-age="+strconv.Itoa(maxAge))
-	w.Header().Add("Expires", expires)
-	w.WriteHeader(http.StatusOK)
-	_, _ = io.Copy(w, f)
 }

@@ -1,0 +1,10 @@
+{{ define "timeline" }}
+<div class="timeline">
+	<style scoped>@import url("/static/timeline.css?1");</style>
+	{{ range . }}
+	<div>
+		{{ . }}
+	</div>
+	{{ end }}
+</div>
+{{ end }}

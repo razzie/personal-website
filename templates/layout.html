@@ -41,11 +41,11 @@
 			<ul>
 			{{ $pageID := .PageID }}
 			{{ range .Nav }}
-				<li><a href="/{{ .ID }}"{{ if eq .ID $pageID }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+				<li><a href="/{{ .ID }}"{{ if eq .ID $pageID }} aria-current="page"{{ end }}>{{ .Title }}</a></li>
 			{{ end }}
 			</ul>
 		</nav>
-		{{ CallTemplate .PageID .Data }}
+		{{ CallTemplate .Template .Data }}
 	</main>
 </body>
 </html>
