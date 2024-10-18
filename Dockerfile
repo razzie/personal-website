@@ -5,5 +5,5 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 make
 
 FROM alpine
 WORKDIR /
-COPY --from=builder /workspace/server .
-ENTRYPOINT ["/server"]
+COPY --from=builder /workspace/personal-website .
+ENTRYPOINT ["/personal-website"]

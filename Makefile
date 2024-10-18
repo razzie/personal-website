@@ -6,7 +6,12 @@ FULL_IMAGE_NAME := $(IMAGE_REGISTRY)/$(IMAGE_NAME):$(VERSION)
 
 .PHONY: build
 build:
-	go build $(BUILDFLAGS) -o server .
+	go build $(BUILDFLAGS) .
+	./personal-website build
+
+.PHONY: run
+run: build
+	./personal-website serve
 
 .PHONY: docker-build
 docker-build:
