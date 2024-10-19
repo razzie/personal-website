@@ -17,8 +17,8 @@ var serveCmd = &cobra.Command{
 	Args: cobra.NoArgs,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		addr, _ := cmd.Flags().GetString("addr")
-		dist, _ := cmd.Flags().GetString("dist")
-		log.Printf("Serving directory %q on %s", dist, addr)
-		return http.ListenAndServe(addr, http.FileServer(http.Dir(dist)))
+		dir, _ := cmd.Flags().GetString("o")
+		log.Printf("Serving directory %q on %s", dir, addr)
+		return http.ListenAndServe(addr, http.FileServer(http.Dir(dir)))
 	},
 }

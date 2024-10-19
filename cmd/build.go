@@ -17,7 +17,7 @@ var buildCmd = &cobra.Command{
 	Use:  "build [flags]",
 	Args: cobra.NoArgs,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		dist, _ := cmd.Flags().GetString("dist")
+		outDir, _ := cmd.Flags().GetString("o")
 		content := internal.LoadContent(".")
 		navPages := []internal.Page{
 			{
@@ -50,26 +50,26 @@ var buildCmd = &cobra.Command{
 		}
 		render := internal.LoadTemplateRenderer(navPages)
 
-		if err := os.MkdirAll(filepath.Join(dist, "projects"), 0770); err != nil {
+		if err := os.MkdirAll(filepath.Join(outDir, "projects"), 0770); err != nil {
 			return err
 		}
 
 		staticFiles, _ := filepath.Glob("static/*")
 		for _, filename := range staticFiles {
-			if err := internal.CopyFile(filename, filepath.Join(dist, filepath.Base(filename))); err != nil {
+			if err := internal.CopyFile(filename, filepath.Join(outDir, filepath.Base(filename))); err != nil {
 				return err
 			}
 		}
 
 		projectImages, _ := filepath.Glob("projects/*.webp")
 		for _, filename := range projectImages {
-			if err := internal.CopyFile(filename, filepath.Join(dist, "projects", filepath.Base(filename))); err != nil {
+			if err := internal.CopyFile(filename, filepath.Join(outDir, "projects", filepath.Base(filename))); err != nil {
 				return err
 			}
 		}
 
 		for _, page := range navPages {
-			if err := createPage(dist, page, render); err != nil {
+			if err := createPage(outDir, page, render); err != nil {
 				return err
 			}
 		}
@@ -81,7 +81,7 @@ var buildCmd = &cobra.Command{
 				Template: "project",
 				Data:     p,
 			}
-			if err := createPage(dist, page, render); err != nil {
+			if err := createPage(outDir, page, render); err != nil {
 				return err
 			}
 		}
@@ -98,7 +98,7 @@ var buildCmd = &cobra.Command{
 				Template: "projects",
 				Data:     view,
 			}
-			if err := createPage(dist, page, render); err != nil {
+			if err := createPage(outDir, page, render); err != nil {
 				return err
 			}
 		}
