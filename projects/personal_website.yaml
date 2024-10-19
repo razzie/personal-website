@@ -24,11 +24,9 @@ description: |-
     a single yaml file, which was periodically updated directly from the repository.
 
   * ###### 2024 version
-    Completely rewritten everythign again, using Go + PicoCSS + HTMX stack.
-    It supports light and dark themes (based on user preferences reported by the browser) and features HTMX
-    boosted page loads and loading spinner.
-    Project data is stored in individual yaml files, everything else is in HTML templates.
-    It does not rely on third party feeds anymore.
+    Completely rewritten everythign again using Go + PicoCSS + HTMX stack, featuring static site building with Github Actions.
+    It supports light and dark themes (based on user preferences reported by the browser) and uses HTMX boosted page loads and loading spinner.
+    Content is stored in a main content.yaml and individual project yaml files, everything else is in HTML templates.
 linkGroups:
 - name: Source code
   links:
