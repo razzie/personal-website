@@ -23,6 +23,6 @@ func LoadContent(dir string) (content Content) {
 	if err := yaml.Unmarshal(contentRaw, &content); err != nil {
 		panic(err)
 	}
-	content.Projects, content.ProjectTags = loadProjects(dir)
+	content.Projects, content.ProjectTags = loadProjects(filepath.Join(dir, "projects"))
 	return
 }
