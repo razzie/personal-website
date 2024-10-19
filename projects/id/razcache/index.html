@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>RazCache</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">RazCache</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="razcache">
+	<header><a href="/projects/id/razcache" class="secondary">RazCache</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razcache.webp" alt="Thumbnail of RazCache" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razcache" target="_blank">github.com/razzie/razcache</a><br>
+				
+			</p>
+			
+			<p>Year: 2023 - 2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/lib" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A minimalist abstraction layer above Redis, Badger and a custom in-memory cache.
+As many of my self-hosted services rely on Redis for caching or data storage,
+I often had to fire up a local instance for manual testing.
+This process was too cumbersone for me, so I figured I could come up with a wrapper
+around Redis supporting the functionaly only I use the most, and during development
+it should mimic this functionality in-process.
+Supporting key expirations was a mandatory requirement, so the in-memory cache implements
+a &ldquo;janitor&rdquo; goroutine that cleans up these keys exactly when they expire, one at a time.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

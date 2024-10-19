@@ -1,0 +1,161 @@
+.timeline {
+	position: relative;
+	margin-bottom: 4rem;
+}
+
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: calc( var(--pico-border-radius) * -1 );
+	border: var(--pico-border-radius) solid var(--pico-color);
+	border-radius: var(--pico-border-radius);
+}
+
+.timeline > *:nth-child(even), .timeline > *:nth-child(odd) {
+	position: relative;
+	background-color: inherit;
+	width: calc(50% - 2rem);
+	padding: 1rem 1.5rem;
+	margin-bottom: -4rem;
+	background-color: var(--pico-card-sectioning-background-color);
+	border-radius: var(--pico-border-radius);
+	box-shadow: var(--pico-card-box-shadow);
+}
+
+.timeline > *:nth-child(even)::before, .timeline > *:nth-child(odd)::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 1rem;
+	width: 0;
+	z-index: 1;
+	border: medium solid var(--pico-card-sectioning-background-color);
+}
+
+.timeline > *:nth-child(even)::after, .timeline > *:nth-child(odd)::after {
+	content: '';
+	position: absolute;
+	width: 1rem;
+	height: 1rem;
+	top: 1.5rem;
+	right: -2.5rem;
+	background-color: var(--pico-background-color);
+	border: var(--pico-border-radius) solid var(--pico-color);
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.timeline > *:nth-child(even) {
+	left: 0;
+}
+
+.timeline > *:nth-child(even)::before {
+	right: -1rem;
+	border-width: 1rem 0 1rem 1rem;
+	border-color: transparent transparent transparent var(--pico-card-sectioning-background-color);
+}
+
+.timeline > *:nth-child(odd) {
+	left: calc(50% + 2rem);
+}
+
+.timeline > *:nth-child(odd)::before {
+	left: -1rem;
+	border-width: 1rem 1rem 1rem 0;
+	border-color: transparent var(--pico-card-sectioning-background-color) transparent transparent;
+}
+
+.timeline > *:nth-child(odd)::after {
+	left: -2.5rem;
+}
+
+@media screen and (max-width: 1536px) {
+	.timeline {
+		margin-bottom: 5rem;
+	}
+
+	.timeline > *:nth-child(even), .timeline > *:nth-child(odd) {
+		margin-bottom: -5rem;
+	}
+
+	.timeline > *:nth-child(even)::before, .timeline > *:nth-child(odd)::before {
+		top: 1.5rem;
+	}
+
+	.timeline > *:nth-child(even)::after, .timeline > *:nth-child(odd)::after {
+		top: 2rem;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.timeline {
+		margin-bottom: 6rem;
+	}
+
+	.timeline > *:nth-child(even), .timeline > *:nth-child(odd) {
+		margin-bottom: -6rem;
+	}
+
+	.timeline > *:nth-child(even)::before, .timeline > *:nth-child(odd)::before {
+		top: 2rem;
+	}
+
+	.timeline > *:nth-child(even)::after, .timeline > *:nth-child(odd)::after {
+		top: 2.5rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.timeline {
+		margin-bottom: 7rem;
+	}
+
+	.timeline > *:nth-child(even), .timeline > *:nth-child(odd) {
+		margin-bottom: -7rem;
+	}
+
+	.timeline > *:nth-child(even)::before, .timeline > *:nth-child(odd)::before {
+		top: 2.5rem;
+	}
+
+	.timeline > *:nth-child(even)::after, .timeline > *:nth-child(odd)::after {
+		top: 3rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.timeline {
+		margin-bottom: 0;
+	}
+
+	.timeline::after {
+		left: 1rem;
+	}
+	
+	.timeline > *:nth-child(even), .timeline > *:nth-child(odd) {
+		width: calc(100% - 3rem);
+		margin-left: 3rem;
+		margin-bottom: 0.5rem;
+	}
+	
+	.timeline > *:nth-child(even)::before, .timeline > *:nth-child(odd)::before {
+		top: 1.75rem;
+		left: -1rem;
+		border-width: 1rem 1rem 1rem 0;
+		border-color: transparent var(--pico-card-sectioning-background-color) transparent transparent;
+	}
+
+	.timeline > *:nth-child(even)::after, .timeline > *:nth-child(odd)::after {
+		top: 2.25rem;
+		left: -2.5rem;
+	}
+	
+	.timeline > *:nth-child(odd) {
+		left: 0%;
+	}
+}

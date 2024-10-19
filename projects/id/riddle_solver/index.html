@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>Riddle Solver</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">Riddle Solver</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="riddle_solver">
+	<header><a href="/projects/id/riddle_solver" class="secondary">Riddle Solver</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/riddle_solver.webp" alt="Thumbnail of Riddle Solver" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Riddles:<br>
+				
+				<a href="https://raw.githubusercontent.com/razzie/riddle-solver/master/screenshots/dishonored2_jindosh_riddle.jpg" target="_blank">The Jindosh Riddle</a><br>
+				
+			</p>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-gui.exe" target="_blank">riddle-solver-gui.exe</a><br>
+				
+				<a href="https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-tui.exe" target="_blank">riddle-solver-tui.exe</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/riddle-solver" target="_blank">github.com/razzie/riddle-solver</a><br>
+				
+			</p>
+			
+			<p>
+				Component library:<br>
+				
+				<a href="https://github.com/razzie/razgio" target="_blank">github.com/razzie/razgio</a><br>
+				
+			</p>
+			
+			<p>Year: 2019 - 2021</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/gui" class="secondary">gui</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Riddle Solver is a terminal app designed to solve Einstein&rsquo;s 5 house riddle (also called zebra puzzles in general).
+I think I came across this kind of riddle playing Dishonored 2 first, as a third option to get inside a locked place.
+It was written by a fictional genius game character named Kirin Jindosh and it&rsquo;s clearly based on Einstein&rsquo;s five house riddle.
+It took me (sadly) at least 30 minutes to solve on paper, but it earned me an achievement.
+Fast forward 3 years, I had the random idea of implementing this riddle solver, which seemed like a simple way to sharpen my Golang skills.
+I was wrong. Coming up with the UI design and the solver algorithm caused me some sleepness nights, but I&rsquo;m really proud of the result.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

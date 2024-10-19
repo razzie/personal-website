@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>Razproxy</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">Razproxy</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="razproxy">
+	<header><a href="/projects/id/razproxy" class="secondary">Razproxy</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razproxy.webp" alt="Thumbnail of Razproxy" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razproxy" target="_blank">github.com/razzie/razproxy</a><br>
+				
+			</p>
+			
+			<p>Year: 2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/proxy" class="secondary">proxy</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>SOCKS5 tunneled through TLS connection.
+The project consists of a custom server and client, which enable encrypted traffic between them.
+The client opens a SOCKS5 port locally which can be used by multiple applications (like web browsers) running in parallel.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

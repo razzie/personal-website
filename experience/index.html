@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>Experience</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">Experience</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience" aria-current="page">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<div class="timeline">
+	<style scoped>@import url("/timeline.css?1");</style>
+	
+	<div>
+		<h3>2023+ | sabbatical leave</h3>
+
+<p>Had a long mental list of projects I could attend to, including an <a href="/projects/id/razchess">online chess game</a>
+and many tools and libraries I now rely on:</p>
+
+<ul>
+<li><a href="/projects/id/broadcaster">broadcaster</a>:
+add zero, one or many more listeners to an event source</li>
+<li><a href="/projects/id/razcache">razcache</a>:
+abstraction layer over Redis, Badger and an in-memory store (similar to kvgo but with expirations)</li>
+<li><a href="/projects/id/botkit">botkit</a> and <a href="/projects/id/commander">commander</a>:
+libraries to build Telegram chatbots</li>
+<li><a href="/projects/id/json2go">json2go</a>:
+map third-party JSON APIs to Go structs</li>
+</ul>
+
+<p>Currently working on a custom cloud platform for personal use.</p>
+
+	</div>
+	
+	<div>
+		<h3>2021 - 2022 | Cloudera | senior software engineer</h3>
+
+<p>Took part in a proof-of-concept project, implementing data ingestion for the main workload app and later working on tenant signup and resource pooling.
+Earned <strong>Commitment Award</strong> for prioritizing and achieving data driven results.<br>
+Later worked with one of the international data warehouse teams and got my hands dirty with the CI pipeline as well.</p>
+
+	</div>
+	
+	<div>
+		<h3>2020 | sabbatical leave</h3>
+
+<p>Wanted to modernize and extend my open source software stack, implementing some microservices along the way:</p>
+
+<ul>
+<li><a href="/projects/id/razvhost">razvhost</a>:
+a reverse proxy with many features, similar to Caddy</li>
+<li><a href="/projects/id/razbox">razbox</a> and <a href="/projects/id/beepboop">beepboop</a>:
+a lightweight and easy to launch file hosting service and the library that powers it</li>
+<li><a href="/projects/id/razproxy">razproxy</a>:
+my own VPN alternative, but way less resource hungry</li>
+<li><a href="/projects/id/geoip">geoip-server</a> and <a href="/projects/id/mediaserver">mediaserver</a>:
+just some lightweight microservices implemented for fun</li>
+</ul>
+
+	</div>
+	
+	<div>
+		<h3>2020 | VCC Live | backend developer</h3>
+
+<p>Worked on a reference implementation of microservice feature flags and benchmarked the memory management of our software telecom switch.
+Left due to lack of exposure to Golang projects.</p>
+
+	</div>
+	
+	<div>
+		<h3>2019 | sabbatical leave | <a href="/projects/id/poccemod">PocceMod</a></h3>
+
+<p>Created the first GTA5 (FiveM) game mod that allowed players to have fun with GTA&rsquo;s unused and undocumented rope API in a multiplayer environment.
+After sharing it with the community early on to receive feedback, the mod went through 2 months of intensive development, adding many of the requested features and changes.
+The project quickly gained popularity due to its uniqueness and led to community members requesting my services.</p>
+
+<p>This period also marked the beginning of my pursuit of Golang development, leading to one of my first public projects:
+<a href="/projects/id/riddle_solver">Riddle Solver</a></p>
+
+	</div>
+	
+	<div>
+		<h3>2017 - 2019 | Ericsson | senior software developer</h3>
+
+<p>Worked on the packet functions of a microwave network device family.
+Was an unofficial C++ expert in a 10-person team.
+Implemented a network protocol together with a teammate based on an RFC document and released weeks before the deadline.</p>
+
+	</div>
+	
+	<div>
+		<h3>2017 | sabbatical leave | <a href="/projects/id/potato_game">Potato Game</a></h3>
+
+<p>Wanted to try something out of the box and build a tech demo of a completely procedurally generated abstract looking 3D game world.
+During the development I&rsquo;ve been a part of a coach guided mastermind program, where participants could follow the progress of graphical designs
+and world map and level generator algorithms.
+At the end of the mastermind program I had the chance to publicly talk about the project in front of an audience,
+where one person told me I inspired him to learn programming. This has been one of my proudest moments in life.</p>
+
+	</div>
+	
+	<div>
+		<h3>2015 - 2016 | Cognex | software engineer</h3>
+
+<p>Participated in multiple mainly GUI related projects while working together with the firmware team to resolve compatibility issues.
+Took part in greenfield web backend development and database design, while also working on internal tools and experiments to assist my team.</p>
+
+	</div>
+	
+	<div>
+		<h3>2014 | sabbatical leave | <a href="/projects/id/prepi">Prepi</a></h3>
+
+<p>Worked on an indie rage game project as part of a two-person team, focusing on game engine development.
+It has been a serious project requiring both of our full-time commitment.
+Having zero clue about sales and with the mindset of &ldquo;great products sell themselves&rdquo; we tried to finance the project via an Indiegogo campaign,
+which failed (though the game received Steam GreenLight later).
+Due to the failure of the campaign and smaller disagreements regarding the game design we decided not to continue the development.</p>
+
+	</div>
+	
+	<div>
+		<h3>2012 - 2014 | Ericsson | software developer</h3>
+
+<p>Worked on a flagship router product in a 3-person team.
+Was responsible for the network management interface which was highly interconnected with all internal modules.
+Developed an extension protocol based on RFC document.
+Spent 5 weeks in Beijing to transfer knowledge to the local team.</p>
+
+	</div>
+	
+	<div>
+		<h3>2008 - 2012 | University of Debrecen | student</h3>
+
+<p>Completed a 7-semester standard curriculum in Computer Science and Engineering without any course retakes,
+earning a Bachelor&rsquo;s Degree with good qualifications and a specialization in Info-Communication Networks.</p>
+
+	</div>
+	
+</div>
+
+	</main>
+</body>
+</html>

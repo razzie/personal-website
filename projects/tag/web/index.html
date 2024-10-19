@@ -1,0 +1,856 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>Projects (web)</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">Projects (web)</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+
+<p>
+	
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/2d" class="secondary">2d</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/3d" class="secondary">3d</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/bot" class="secondary">bot</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/chat" class="secondary">chat</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/cpp" class="secondary">cpp</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/csharp" class="secondary">csharp</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/demo" class="secondary">demo</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/docker" class="secondary">docker</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/game" class="secondary">game</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/go" class="secondary">go</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/gui" class="secondary">gui</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/java" class="secondary">java</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/javascript" class="secondary">javascript</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/k8s" class="secondary">k8s</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/lib" class="secondary">lib</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/mod" class="secondary">mod</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/php" class="secondary">php</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/proxy" class="secondary">proxy</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/video" class="secondary">video</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects">web</a>
+		
+	</code>
+	
+</p>
+
+<div class="project-grid">
+	<style scoped>
+	.project-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1rem;
+		align-items: start;
+	}
+	@media screen and (max-width: 768px) {
+		.project-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+	</style>
+	
+		
+<article id="json2go">
+	<header><a href="/projects/id/json2go" class="secondary">Json2Go</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/json2go.webp" alt="Thumbnail of Json2Go" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://json2go.razzie.cloud" target="_blank">json2go.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/json2go" target="_blank">github.com/razzie/json2go</a><br>
+				
+			</p>
+			
+			<p>Year: 2023 - 2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A webapp that helps you write Go client libraries for JSON web APIs.
+One of my experiments required building a database that included data from many third party JSON web APIs.
+The process of deserializing data into manually crafted Go structs quickly got exhausting,
+so I had to come up with a solution. Json2Go is by no means perfect (it only looks at the fields of the first item of a JSON array),
+but it gets the job done.
+You can input a JSON or a URL that returns a JSON.
+Field names are automatically converted into camel case, stripped of unsupported characters
+and correctly annotated with the original name.
+The resulting generated structure is formatted and uses syntax highlighting.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="personal_website">
+	<header><a href="/projects/id/personal_website" class="secondary">Personal website</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/personal_website.webp" alt="Thumbnail of Personal website" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/first_personal_website" target="_blank">github.com/razzie/first_personal_website</a><br>
+				
+				<a href="https://github.com/razzie/personal-website" target="_blank">github.com/razzie/personal-website</a><br>
+				
+			</p>
+			
+			<p>Year: 2015 - 2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/csharp" class="secondary">csharp</a></code>
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/php" class="secondary">php</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><ul>
+<li>
+<h6>2015 version</h6>
+
+<p>The site made use of user friendly URLs (thanks to Apache web server&rsquo;s mod_rewrite) and loaded pages dynamically via jQuery&rsquo;s AJAX API.
+A server side PHP script automatically parsed the static HTML pages for sections, which could then be accessed individually by the user.
+It wasn&rsquo;t very CPU friendly, but made it easy for me to add new content to the page without using a database.
+Later my Twitter feed was integrated as a news feed, using OAuth and Twitter&rsquo;s API.</p></li>
+
+<li>
+<h6>2018 version</h6>
+
+<p>Implemented in C# using NancyFX and a brand new design.
+It used Github API to list my latest open-source interests and contributions.
+Project data was stored in XML.</p></li>
+
+<li>
+<h6>2019 version</h6>
+
+<p>Everything completely rewritten in Go.
+Data was still stored in XML files initially, but later all the content (including resume) was moved to
+a single yaml file, which was periodically updated directly from the repository.</p></li>
+
+<li>
+<h6>2024 version</h6>
+
+<p>Completely rewritten everythign again, using Go + PicoCSS + HTMX stack.
+It supports light and dark themes (based on user preferences reported by the browser) and features HTMX
+boosted page loads and loading spinner.
+Project data is stored in individual yaml files, everything else is in HTML templates.
+It does not rely on third party feeds anymore.</p></li>
+</ul>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="raz-stack">
+	<header><a href="/projects/id/raz-stack" class="secondary">Raz-Stack</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/raz-stack.webp" alt="Thumbnail of Raz-Stack" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/raz-stack" target="_blank">github.com/razzie/raz-stack</a><br>
+				
+			</p>
+			
+			<p>Year: 2022 - 2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/k8s" class="secondary">k8s</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A simple Kubernetes stack that hosted many of my own projects plus an email service (Dovecot + Postfix) and Nextcloud.
+The goal of this project was simplified deployment and cost saving, without horizontal autoscaling, though I picked K8s to be able to scale in the future.
+Many of the hosted webapps used a shared Redis (Kvrocks) instance with separate namespaces, thanks to <a href="/projects/id/k8s-db-operator">k8s-db-operator</a>.
+Deployment was done via Helmfile and Helm under the hood, but it was managed by a Makefile to make things even simpler.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="0x40">
+	<header><a href="/projects/id/0x40" class="secondary">0x40 Hues</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/0x40.webp" alt="Thumbnail of 0x40 Hues" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://hues.razzie.cloud" target="_blank">hues.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/0x40hues" target="_blank">github.com/razzie/0x40hues</a><br>
+				
+			</p>
+			
+			<p>Year: 2023</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/javascript" class="secondary">javascript</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>I&rsquo;ve come across Kepstin&rsquo;s amazing <a href="https://github.com/kepstin/0x40hues-html5" target="_blank">0x40hues</a> project and caught myself listening to it a lot.
+After finding community resource packs to try, it quickly became troublesome to configure and run them.
+This motivated me to fork the project and after a great deal of refactoring, it now supports loading many respacks and on-the-fly configuration.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="razchess">
+	<header><a href="/projects/id/razchess" class="secondary">RazChess</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razchess.webp" alt="Thumbnail of RazChess" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://chess.gorzsony.com" target="_blank">chess.gorzsony.com</a><br>
+				
+				<a href="https://chess.razzie.cloud" target="_blank">chess.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razchess" target="_blank">github.com/razzie/razchess</a><br>
+				
+			</p>
+			
+			<p>Year: 2022 - 2023</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/javascript" class="secondary">javascript</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>I&rsquo;ve had a sudden spark of interest in chess as of late 2022 and decided to build my own web chess app with focus on simplicity and ease of use.
+Also I didn&rsquo;t want to waste time convincing friends to register to [insert your favorite chess platform here]. With RazChess you just visit the website,
+copy the link of the session and pass it to the person you want to play with.
+As weeks passed I kept adding new features like chess puzzles (mate in two steps), Fischer random (chess960) game, included chess openings encyclopedia,
+custom games and the ability to download your matches as GIFs. There is also Redis support to restore active games after a restart.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="beepboop">
+	<header><a href="/projects/id/beepboop" class="secondary">Beepboop</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/beepboop.webp" alt="Thumbnail of Beepboop" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/beepboop" target="_blank">github.com/razzie/beepboop</a><br>
+				
+			</p>
+			
+			<p>Year: 2020 - 2022</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/lib" class="secondary">lib</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A lightweight webapp framework that powers <a href="/projects/id/razbox">Razbox</a>.
+Most of the original code was taken from <a href="/projects/id/razlink">Razlink</a>, but it has heavily evolved since.
+The core mechanic consists of registering pages (which are mostly a template + handler bundle)
+and returning view objects from inside the handlers.
+There are some utilities for session handling, access management and logging too, but this library is
+not suitable for production use.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="razvhost">
+	<header><a href="/projects/id/razvhost" class="secondary">Razvhost</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razvhost.webp" alt="Thumbnail of Razvhost" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razvhost" target="_blank">github.com/razzie/razvhost</a><br>
+				
+			</p>
+			
+			<p>Year: 2020 - 2022</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/proxy" class="secondary">proxy</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Virtual hosting/reverse proxy with TLS termination and automatic certificate management.
+It supports proxying, file/directory serving, redirection, accessing SFTP or S3 buckets, hosting PHP projects or even tailing log files.
+The configuration is loaded from a single file that contains simple <code>hostname -&gt; target</code> rules,
+where even templates are supported (check readme in repo).
+Changes to the config files are detected and applied during runtime.
+It can even watch Docker containers with VIRTUAL_HOST and VIRTUAL_PORT environment variables and direct traffic to them
+(though it would&rsquo;ve been better to check labels instead, but it didn&rsquo;t cross my mind at the time).</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="razbox">
+	<header><a href="/projects/id/razbox" class="secondary">Razbox</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razbox.webp" alt="Thumbnail of Razbox" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razbox" target="_blank">github.com/razzie/razbox</a><br>
+				
+			</p>
+			
+			<p>Year: 2020 - 2021</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Super simple cloud file storage with almost zero configuration - powered by <a href="/projects/id/beepboop">Beepboop</a>
+Razbox stores all configuration and metadata in JSON files on the local filesystem and doesn&rsquo;t rely on a relational database
+(though it has opt-in support for Redis caching).
+Each folder can contain a <em>.razbox</em> file (which can be generated by included tools) and the content is ready to be served.
+Read and write access to these folders can rely on separate passwords, so you can share read access only if you want.
+Subfolders are also supported and they inherit the read/write passwords, unless a <em>.razbox</em> file is generated for them.
+Uploaded files can have an arbitrary number of tags that allow filtering.
+Thumbnails are generated for media files (using ffmpeg for videos!), which are visible in gallery view.
+Some archive formats are also supported for read-only browsing.
+Individual files can be shared publicly, this making them readable without any password.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="geoip">
+	<header><a href="/projects/id/geoip" class="secondary">Geoip server</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/geoip.webp" alt="Thumbnail of Geoip server" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://geoip.razzie.cloud" target="_blank">geoip.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/geoip-server" target="_blank">github.com/razzie/geoip-server</a><br>
+				
+			</p>
+			
+			<p>Year: 2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A web service that serves IP address geolocations in JSON format.
+Instead of relying on a local database it collects data from a (configurable) series of 3rd party providers,
+converting the results to a commom format. It supports provider fallbacks and caching.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="mediaserver">
+	<header><a href="/projects/id/mediaserver" class="secondary">Mediaserver</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/mediaserver.webp" alt="Thumbnail of Mediaserver" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/mediaserver" target="_blank">github.com/razzie/mediaserver</a><br>
+				
+			</p>
+			
+			<p>Year: 2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A web service that fetches thumbnails with title from URLs.
+Originally planned to use it in a chat service to prevent the tracking of users by letting them download images directly.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="uuid">
+	<header><a href="/projects/id/uuid" class="secondary">UUID server</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/uuid.webp" alt="Thumbnail of UUID server" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://uuid.razzie.cloud" target="_blank">uuid.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/uuid-server" target="_blank">github.com/razzie/uuid-server</a><br>
+				
+				<a href="https://github.com/razzie/random" target="_blank">github.com/razzie/random</a><br>
+				
+			</p>
+			
+			<p>Year: 2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A http server that serves random (version4) UUIDs.
+It uses my hybrid pseudo- and true random generator library which periodically takes seeds from <a href="https://random.org" target="_blank">random.org</a>
+and uses them to generate pseudo-random UUIDs fast.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="razlink">
+	<header><a href="/projects/id/razlink" class="secondary">Razlink</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razlink.webp" alt="Thumbnail of Razlink" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razlink" target="_blank">github.com/razzie/razlink</a><br>
+				
+			</p>
+			
+			<p>Year: 2019</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/proxy" class="secondary">proxy</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A lightweight link proxy/redirect service with logging.
+Can be used to create URLs that point to an external resource while tracking visits from users.
+Uses Redis for data storage.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="raztalk">
+	<header><a href="/projects/id/raztalk" class="secondary">RazTalk</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/raztalk.webp" alt="Thumbnail of RazTalk" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/raztalk/releases/download/v1.0/raztalk_v1.0.zip" target="_blank">raztalk_v1.0.zip</a><br>
+				
+				<a href="https://github.com/razzie/raztalk/releases/download/v1.0/raztalk.client.exe" target="_blank">raztalk.client.exe</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/raztalk" target="_blank">github.com/razzie/raztalk</a><br>
+				
+			</p>
+			
+			<p>Year: 2018</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/chat" class="secondary">chat</a></code>
+				
+				<code><a href="/projects/tag/csharp" class="secondary">csharp</a></code>
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/gui" class="secondary">gui</a></code>
+				
+				<code><a href="/projects/tag/javascript" class="secondary">javascript</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A simple lobby/channel based registration-free webchat.
+Implemented using NancyFX + Razor + SignalR stack and relies on <a href="/projects/id/raztools">RazTools</a> to support dynamic loading of bot libraries during runtime.
+The repo contains (outdated) bot implementations for CleverBot, Giphy, Imgur and Reddit.
+There is also a standalone desktop client, which is just a wrapper around the web interface.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="flyff">
+	<header><a href="/projects/id/flyff" class="secondary">Flyff fansite</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/flyff.webp" alt="Thumbnail of Flyff fansite" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2007/flyff" target="_blank">github.com/razzie/hobby-projects/2007/flyff</a><br>
+				
+			</p>
+			
+			<p>Year: 2007 - 2010</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/php" class="secondary">php</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Flyff.extra.hu was a hungarian fan site of Flyff (Fly For Fun) online game.
+During the 3-4 years of its existence I developed more and more new features to make it a fully functional web portal.
+It was very interesting to see it slowly getting attention.
+Members started generating content in the forms of forum entries, polls, screenshots and news for the home page.
+The site even had a few moderators and admins.
+In 2010 extra.hu decided to close its free hosting service and the site went offline.
+I could have moved it to a different(even paid) hosting service, but most members and I have already lost interest in the game.</p>
+</p>
+	</footer>
+</article>
+
+	
+</div>
+
+	</main>
+</body>
+</html>

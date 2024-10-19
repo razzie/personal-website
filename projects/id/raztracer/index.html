@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>RazTracer</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">RazTracer</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="raztracer">
+	<header><a href="/projects/id/raztracer" class="secondary">RazTracer</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/raztracer.webp" alt="Thumbnail of RazTracer" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/raztracer" target="_blank">github.com/razzie/raztracer</a><br>
+				
+			</p>
+			
+			<p>Year: 2019</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Command line debug information explorer and function call tracer for Linux, based on the Ptrace API.
+I was in the process of implementing a GUI for the project (borrowing elements from <a href="/projects/id/riddle_solver">Riddle Solver</a>),
+but lost interest in continuing the project.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

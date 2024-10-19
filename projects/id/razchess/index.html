@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>RazChess</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">RazChess</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="razchess">
+	<header><a href="/projects/id/razchess" class="secondary">RazChess</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razchess.webp" alt="Thumbnail of RazChess" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://chess.gorzsony.com" target="_blank">chess.gorzsony.com</a><br>
+				
+				<a href="https://chess.razzie.cloud" target="_blank">chess.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razchess" target="_blank">github.com/razzie/razchess</a><br>
+				
+			</p>
+			
+			<p>Year: 2022 - 2023</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/javascript" class="secondary">javascript</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>I&rsquo;ve had a sudden spark of interest in chess as of late 2022 and decided to build my own web chess app with focus on simplicity and ease of use.
+Also I didn&rsquo;t want to waste time convincing friends to register to [insert your favorite chess platform here]. With RazChess you just visit the website,
+copy the link of the session and pass it to the person you want to play with.
+As weeks passed I kept adding new features like chess puzzles (mate in two steps), Fischer random (chess960) game, included chess openings encyclopedia,
+custom games and the ability to download your matches as GIFs. There is also Redis support to restore active games after a restart.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>3D prints</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">3D prints</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="3d_prints">
+	<header><a href="/projects/id/3d_prints" class="secondary">3D prints</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/3d_prints.webp" alt="Thumbnail of 3D prints" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2022/3D_print_models" target="_blank">github.com/razzie/hobby-projects/2022/3D_print_models</a><br>
+				
+			</p>
+			
+			<p>Year: 2022-2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/3d" class="secondary">3d</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>I&rsquo;ve been fascinated by magnets even since I was a kid, but it only turned into experimentation
+when I came across a video about Halbach arrays.
+I wondered whether I could come up with an unassisted levitation design, so I got myself an FLSUN Q5 delta 3D printer,
+a few dozens of magnetic cubes and learned how to create models in TinkerCad.
+Even though I did not succeed in my initial plan, I still ended up with some fun magnetic toys I can show my guests
+and a bunch of rock-paper-scissors dices for boardgames.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

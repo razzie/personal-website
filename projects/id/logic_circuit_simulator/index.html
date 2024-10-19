@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>Logic Circuit Simulator</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">Logic Circuit Simulator</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="logic_circuit_simulator">
+	<header><a href="/projects/id/logic_circuit_simulator" class="secondary">Logic Circuit Simulator</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/logic_circuit_simulator.webp" alt="Thumbnail of Logic Circuit Simulator" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/LogicCircuitSimulator/releases/download/v1.0/Logic_Circuit_Simulator.jar" target="_blank">Logic_Circuit_Simulator.jar</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/LogicCircuitSimulator" target="_blank">github.com/razzie/LogicCircuitSimulator</a><br>
+				
+			</p>
+			
+			<p>Year: 2010</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/gui" class="secondary">gui</a></code>
+				
+				<code><a href="/projects/tag/java" class="secondary">java</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Logic Circuit Simulator was a university project I had to finish in a semester.
+It offers a variety of logic gates and a lot of visual customization options.
+Some special elements are also available, like seven-segment display, matrix display, JK flip-flop, adjustable timer and module.
+A selected part of a logic circuit can be converted to a module, where the circuit&rsquo;s input elements (buttons, switches) become the input pins and output elements (LEDs) become the output pins of the module.
+Modules also support recursion.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>Telegram PizzaBot</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">Telegram PizzaBot</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="pizzabot">
+	<header><a href="/projects/id/pizzabot" class="secondary">Telegram PizzaBot</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/pizzabot.webp" alt="Thumbnail of Telegram PizzaBot" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://t.me/razpizzabot" target="_blank">t.me/razpizzabot</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/pizzabot" target="_blank">github.com/razzie/pizzabot</a><br>
+				
+			</p>
+			
+			<p>Year: 2021</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/bot" class="secondary">bot</a></code>
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/lib" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Do you love pizza so much that you keep talking about it in your Telegram group chat?
+Now you can include this bot and with the right permissions it will respond with a pizza sticker or interesting pizza fact
+to any mentions of pizza.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

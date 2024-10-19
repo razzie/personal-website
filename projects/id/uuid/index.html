@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>UUID server</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">UUID server</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="uuid">
+	<header><a href="/projects/id/uuid" class="secondary">UUID server</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/uuid.webp" alt="Thumbnail of UUID server" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://uuid.razzie.cloud" target="_blank">uuid.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/uuid-server" target="_blank">github.com/razzie/uuid-server</a><br>
+				
+				<a href="https://github.com/razzie/random" target="_blank">github.com/razzie/random</a><br>
+				
+			</p>
+			
+			<p>Year: 2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A http server that serves random (version4) UUIDs.
+It uses my hybrid pseudo- and true random generator library which periodically takes seeds from <a href="https://random.org" target="_blank">random.org</a>
+and uses them to generate pseudo-random UUIDs fast.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

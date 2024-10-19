@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>Broadcaster</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">Broadcaster</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="broadcaster">
+	<header><a href="/projects/id/broadcaster" class="secondary">Broadcaster</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/broadcaster.webp" alt="Thumbnail of Broadcaster" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/broadcaster" target="_blank">github.com/razzie/broadcaster</a><br>
+				
+			</p>
+			
+			<p>Year: 2023 - 2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/lib" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Broadcast messages from one channel to many, with timeouts, server sent events and much more.
+Zero external dependencies.
+Designed for scenarios when it&rsquo;s unpractical to connect to the same event source using many parallel connections.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

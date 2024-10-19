@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>Ground Tool</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">Ground Tool</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="ground_tool">
+	<header><a href="/projects/id/ground_tool" class="secondary">Ground Tool</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/ground_tool.webp" alt="Thumbnail of Ground Tool" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code and binary:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2016/groundtool" target="_blank">github.com/razzie/hobby-projects/2016/groundtool</a><br>
+				
+			</p>
+			
+			<p>Year: 2016</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/3d" class="secondary">3d</a></code>
+				
+				<code><a href="/projects/tag/cpp" class="secondary">cpp</a></code>
+				
+				<code><a href="/projects/tag/demo" class="secondary">demo</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>The idea behind the demo was a game with floating islands.
+Though this game never made it to the reality, Ground Tool was born as a result of experimenting with the rendering of these islands.
+The user can draw a polygon border to the island and when all points are connected, the program generates an island which can be inspected by zooming and moving the camera around.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

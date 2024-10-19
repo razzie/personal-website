@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>RTS game</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">RTS game</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="rts">
+	<header><a href="/projects/id/rts" class="secondary">RTS game</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/rts.webp" alt="Thumbnail of RTS game" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2005/specialarea" target="_blank">github.com/razzie/hobby-projects/2005/specialarea</a><br>
+				
+			</p>
+			
+			<p>Year: 2005</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/2d" class="secondary">2d</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>This was my very first coded game (after finishing some games in an early version of GameMaker).
+I&rsquo;ve created all the graphics in Microsoft Paint, so the game looks terrible.
+The goal is to destroy the enemy&rsquo;s base.
+The player needs to collect resources (money and energy) to deploy buildings and produce units (soldiers, tanks, citizens, etc).
+Energy can be harvested by building windmills, while money can be gathered by mining.
+The enemy&rsquo;s AI is very basic: its units are moving randomly and once they notice a player building or unit, they just attack it.
+They also deploy new buildings randomly once they have enough resources.
+Due to the lack of timing, the more units appeared in the game, the slower they became.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

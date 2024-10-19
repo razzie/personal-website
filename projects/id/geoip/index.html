@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>Geoip server</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">Geoip server</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="geoip">
+	<header><a href="/projects/id/geoip" class="secondary">Geoip server</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/geoip.webp" alt="Thumbnail of Geoip server" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://geoip.razzie.cloud" target="_blank">geoip.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/geoip-server" target="_blank">github.com/razzie/geoip-server</a><br>
+				
+			</p>
+			
+			<p>Year: 2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A web service that serves IP address geolocations in JSON format.
+Instead of relying on a local database it collects data from a (configurable) series of 3rd party providers,
+converting the results to a commom format. It supports provider fallbacks and caching.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

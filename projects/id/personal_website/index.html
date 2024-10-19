@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>Personal website</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">Personal website</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="personal_website">
+	<header><a href="/projects/id/personal_website" class="secondary">Personal website</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/personal_website.webp" alt="Thumbnail of Personal website" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/first_personal_website" target="_blank">github.com/razzie/first_personal_website</a><br>
+				
+				<a href="https://github.com/razzie/personal-website" target="_blank">github.com/razzie/personal-website</a><br>
+				
+			</p>
+			
+			<p>Year: 2015 - 2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/csharp" class="secondary">csharp</a></code>
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/php" class="secondary">php</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><ul>
+<li>
+<h6>2015 version</h6>
+
+<p>The site made use of user friendly URLs (thanks to Apache web server&rsquo;s mod_rewrite) and loaded pages dynamically via jQuery&rsquo;s AJAX API.
+A server side PHP script automatically parsed the static HTML pages for sections, which could then be accessed individually by the user.
+It wasn&rsquo;t very CPU friendly, but made it easy for me to add new content to the page without using a database.
+Later my Twitter feed was integrated as a news feed, using OAuth and Twitter&rsquo;s API.</p></li>
+
+<li>
+<h6>2018 version</h6>
+
+<p>Implemented in C# using NancyFX and a brand new design.
+It used Github API to list my latest open-source interests and contributions.
+Project data was stored in XML.</p></li>
+
+<li>
+<h6>2019 version</h6>
+
+<p>Everything completely rewritten in Go.
+Data was still stored in XML files initially, but later all the content (including resume) was moved to
+a single yaml file, which was periodically updated directly from the repository.</p></li>
+
+<li>
+<h6>2024 version</h6>
+
+<p>Completely rewritten everythign again, using Go + PicoCSS + HTMX stack.
+It supports light and dark themes (based on user preferences reported by the browser) and features HTMX
+boosted page loads and loading spinner.
+Project data is stored in individual yaml files, everything else is in HTML templates.
+It does not rely on third party feeds anymore.</p></li>
+</ul>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

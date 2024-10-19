@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>LibRazzie</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">LibRazzie</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+<article id="librazzie">
+	<header><a href="/projects/id/librazzie" class="secondary">LibRazzie</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/librazzie.webp" alt="Thumbnail of LibRazzie" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/librazzie" target="_blank">github.com/razzie/librazzie</a><br>
+				
+			</p>
+			
+			<p>Year: 2016 - 2018</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cpp" class="secondary">cpp</a></code>
+				
+				<code><a href="/projects/tag/lib" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A header-only multi-purpose library designed to help me get started with my projects.
+It includes helpers for logging, events, input, memory, thread and network+serialization and has some additional stuff like:
+a bitset class with iterators for true and false position, stream manipulators and parsers and an easy to use random number generator.
+Examples are provided for each of them.</p>
+</p>
+	</footer>
+</article>
+
+	</main>
+</body>
+</html>

@@ -1,0 +1,684 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Gábor Görzsöny's personal website">
+    <title>Projects (game)</title>
+	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
+	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+	<script src="/htmx.min.js" defer></script>
+	<script src="/loading-states.min.js" defer></script>
+	<script src="/email.js" defer></script>
+	<style>
+	@media screen and (max-width: 768px) {
+		#title {
+			display: none;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-bottom: var(--pico-typography-spacing-vertical);
+		}
+		nav ul li {
+			font-size: 1.5rem;
+		}
+		a[aria-current="page"] {
+			font-weight: bold;
+		}
+	}
+	</style>
+</head>
+<body hx-boost="true" hx-ext="loading-states">
+	<main class="container">
+		<nav>
+			<ul id="title">
+				<li><h1 data-loading-aria-busy data-loading-delay="250">Projects (game)</h1></li>
+			</ul>
+			<ul>
+			
+			
+				<li><a href="/">Hello</a></li>
+			
+				<li><a href="/skills">Skills</a></li>
+			
+				<li><a href="/experience">Experience</a></li>
+			
+				<li><a href="/projects">Projects</a></li>
+			
+			</ul>
+		</nav>
+		
+
+<p>
+	
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/2d" class="secondary">2d</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/3d" class="secondary">3d</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/bot" class="secondary">bot</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/chat" class="secondary">chat</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/cpp" class="secondary">cpp</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/csharp" class="secondary">csharp</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/demo" class="secondary">demo</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/docker" class="secondary">docker</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects">game</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/go" class="secondary">go</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/gui" class="secondary">gui</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/java" class="secondary">java</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/javascript" class="secondary">javascript</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/k8s" class="secondary">k8s</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/lib" class="secondary">lib</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/mod" class="secondary">mod</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/php" class="secondary">php</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/proxy" class="secondary">proxy</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/video" class="secondary">video</a>
+		
+	</code>
+	
+	<code style="margin-bottom: 0.25rem;">
+		
+		<a href="/projects/tag/web" class="secondary">web</a>
+		
+	</code>
+	
+</p>
+
+<div class="project-grid">
+	<style scoped>
+	.project-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1rem;
+		align-items: start;
+	}
+	@media screen and (max-width: 768px) {
+		.project-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+	</style>
+	
+		
+<article id="razchess">
+	<header><a href="/projects/id/razchess" class="secondary">RazChess</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razchess.webp" alt="Thumbnail of RazChess" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://chess.gorzsony.com" target="_blank">chess.gorzsony.com</a><br>
+				
+				<a href="https://chess.razzie.cloud" target="_blank">chess.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razchess" target="_blank">github.com/razzie/razchess</a><br>
+				
+			</p>
+			
+			<p>Year: 2022 - 2023</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/docker" class="secondary">docker</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/go" class="secondary">go</a></code>
+				
+				<code><a href="/projects/tag/javascript" class="secondary">javascript</a></code>
+				
+				<code><a href="/projects/tag/web" class="secondary">web</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>I&rsquo;ve had a sudden spark of interest in chess as of late 2022 and decided to build my own web chess app with focus on simplicity and ease of use.
+Also I didn&rsquo;t want to waste time convincing friends to register to [insert your favorite chess platform here]. With RazChess you just visit the website,
+copy the link of the session and pass it to the person you want to play with.
+As weeks passed I kept adding new features like chess puzzles (mate in two steps), Fischer random (chess960) game, included chess openings encyclopedia,
+custom games and the ability to download your matches as GIFs. There is also Redis support to restore active games after a restart.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="gtaonline_videos">
+	<header><a href="/projects/id/gtaonline_videos" class="secondary">GTA Online videos</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/gtaonline_videos.webp" alt="Thumbnail of GTA Online videos" width="256">
+		</div>
+		<div>
+			
+			<p>
+				YouTube channel:<br>
+				
+				<a href="https://www.youtube.com/c/razzquez" target="_blank">www.youtube.com/c/razzquez</a><br>
+				
+			</p>
+			
+			<p>Year: 2015 - 2019</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/video" class="secondary">video</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>I have way more playtime in Grand Theft Auto V (or GTA Online to be specific) than I would like to admit and most of that I&rsquo;ve spent with friends I&rsquo;ve met in the game.
+It became our little tradition to record funny, exciting or any memorable moments and later create videos of it.
+At this point there is quite a collection of those videos and I&rsquo;ve uploaded the ones I made to my youtube channel.
+Most of the content is only meaningful to us, but I still hope viewers will find them entertaining.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="poccemod">
+	<header><a href="/projects/id/poccemod" class="secondary">PocceMod</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/poccemod.webp" alt="Thumbnail of PocceMod" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Releases:<br>
+				
+				<a href="https://forum.cfx.re/t/release-poccemod-fun-menu-with-ropes/645529" target="_blank">Official PocceMod page</a><br>
+				
+				<a href="https://github.com/razzie/PocceMod/releases" target="_blank">Github releases</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/PocceMod" target="_blank">github.com/razzie/PocceMod</a><br>
+				
+			</p>
+			
+			<p>Year: 2019</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/csharp" class="secondary">csharp</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/mod" class="secondary">mod</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Created the first GTA5 (FiveM) game mod that allowed players to have fun with GTA&rsquo;s unused and undocumented rope API in a multiplayer environment.
+After sharing it with the community early on to receive feedback, the mod went through 2 months of intensive development, adding many of the requested features and changes.
+The project quickly gained popularity due to its uniqueness and led to community members requesting my services.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="razziecraft_vanilla">
+	<header><a href="/projects/id/razziecraft_vanilla" class="secondary">RazzieCraft Vanilla</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razziecraft_vanilla.webp" alt="Thumbnail of RazzieCraft Vanilla" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://www.technicpack.net/download" target="_blank">TechnicLauncher</a><br>
+				
+				<a href="https://www.technicpack.net/modpack/razziecraft-vanilla.976147" target="_blank">RazzieCraft Vanilla mod page</a><br>
+				
+			</p>
+			
+			<p>Year: 2018</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/mod" class="secondary">mod</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>RazzieCraft Vanilla is Minecraft version 1.12.2 on steroids!
+This pack contains a ton of strictly curated mods that enhance the visuals and gameplay of vanilla Minecraft,
+but without breaking its charm. There are a lot of recipes for uncraftable existing items (like chain armor, slime ball, spawn
+eggs, etc) and a very few brand new stuff.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="potato_game">
+	<header><a href="/projects/id/potato_game" class="secondary">Potato Game</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/potato_game.webp" alt="Thumbnail of Potato Game" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/PotatoGame/releases/download/pre-alpha/demos.zip" target="_blank">demos.zip</a><br>
+				
+			</p>
+			
+			<p>
+				Videos:<br>
+				
+				<a href="https://github.com/razzie/PotatoGame/releases/download/pre-alpha/potato.mp4" target="_blank">potato.mp4</a><br>
+				
+				<a href="https://github.com/razzie/PotatoGame/releases/download/pre-alpha/development.mp4" target="_blank">development.mp4</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/PotatoGame" target="_blank">github.com/razzie/PotatoGame</a><br>
+				
+			</p>
+			
+			<p>Year: 2017</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/3d" class="secondary">3d</a></code>
+				
+				<code><a href="/projects/tag/cpp" class="secondary">cpp</a></code>
+				
+				<code><a href="/projects/tag/demo" class="secondary">demo</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/video" class="secondary">video</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>PotatoGame was meant to be a game about little potatoes with customizable AI gaining world domination,
+though my real motivation was to make art.
+I wanted to try something out of the box and build a tech demo of a completely procedurally generated abstract looking 3D game world.
+During the development I&rsquo;ve been a part of a coach guided mastermind program, where participants could follow the progress of graphical designs
+and world map and level generator algorithms.
+At the end of the mastermind program I had the chance to publicly talk about the project in front of an audience,
+where one person told me I inspired him to learn programming. This has been one of my proudest moments in life.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="razzgravitas">
+	<header><a href="/projects/id/razzgravitas" class="secondary">RazzGravitas</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razzgravitas.webp" alt="Thumbnail of RazzGravitas" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/razzgravitas/releases/download/v1.0/razzgravitas.exe" target="_blank">razzgravitas.exe</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razzgravitas" target="_blank">github.com/razzie/razzgravitas</a><br>
+				
+			</p>
+			
+			<p>Year: 2017</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/2d" class="secondary">2d</a></code>
+				
+				<code><a href="/projects/tag/cpp" class="secondary">cpp</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>RazzGravitas is a simple multiplayer game about gravity.
+At the time of making it I just gave up on a somewhat larger project and I needed to give myself a smaller task that I can prove to be able to finish.
+The sole objective was to experiment with something simple with no regrets about design decisions and no promises about the outcome.
+After about a month of development it ended up having multiplayer support with competitive game rules I&rsquo;m satisfied with.
+I consider the game finished.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="prepi">
+	<header><a href="/projects/id/prepi" class="secondary">Prepi</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/prepi.webp" alt="Thumbnail of Prepi" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/prepi/releases/download/pre-alpha/prepi.zip" target="_blank">prepi.zip</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/prepi" target="_blank">github.com/razzie/prepi</a><br>
+				
+			</p>
+			
+			<p>Year: 2014</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/2d" class="secondary">2d</a></code>
+				
+				<code><a href="/projects/tag/cpp" class="secondary">cpp</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Prepi is an indie rage game project I was working on together with a friend.
+It has been a serious project requiring both of our full-time commitment.
+Having zero clue about sales and with the mindset of &ldquo;great products sell themselves&rdquo; we tried to finance the project via an Indiegogo campaign,
+which failed (though the game received Steam GreenLight later).
+Due to the failure of the campaign and smaller disagreements regarding the game design we decided not to continue the development.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="labyrinth">
+	<header><a href="/projects/id/labyrinth" class="secondary">Labyrinth</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/labyrinth.webp" alt="Thumbnail of Labyrinth" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2010/Labirintus" target="_blank">github.com/razzie/hobby-projects/2010/Labirintus</a><br>
+				
+			</p>
+			
+			<p>Year: 2010</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/3d" class="secondary">3d</a></code>
+				
+				<code><a href="/projects/tag/cpp" class="secondary">cpp</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Labyrinth is a small university project I developed together with a friend.
+It features random labyrinth generation with size, multi-level options.
+The user could select the wall and floor texturess or the optional bush wall (instead of the rock one).
+I have done the rendering part (using Irrlicht 3D engine) while my friend worked on the random generator algorithm and the bush modeling.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="rts">
+	<header><a href="/projects/id/rts" class="secondary">RTS game</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/rts.webp" alt="Thumbnail of RTS game" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2005/specialarea" target="_blank">github.com/razzie/hobby-projects/2005/specialarea</a><br>
+				
+			</p>
+			
+			<p>Year: 2005</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/2d" class="secondary">2d</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>This was my very first coded game (after finishing some games in an early version of GameMaker).
+I&rsquo;ve created all the graphics in Microsoft Paint, so the game looks terrible.
+The goal is to destroy the enemy&rsquo;s base.
+The player needs to collect resources (money and energy) to deploy buildings and produce units (soldiers, tanks, citizens, etc).
+Energy can be harvested by building windmills, while money can be gathered by mining.
+The enemy&rsquo;s AI is very basic: its units are moving randomly and once they notice a player building or unit, they just attack it.
+They also deploy new buildings randomly once they have enough resources.
+Due to the lack of timing, the more units appeared in the game, the slower they became.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="powerman">
+	<header><a href="/projects/id/powerman" class="secondary">PowerMan</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/powerman.webp" alt="Thumbnail of PowerMan" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2003/PowerMan" target="_blank">github.com/razzie/hobby-projects/2003/PowerMan</a><br>
+				
+			</p>
+			
+			<p>Year: 2003</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/2d" class="secondary">2d</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>PowerMan is one of my earliest games, made in Game Maker.
+It had been sitting on an unreadable floppy disk for 21 years, as it was written by a drive with misaligned head.
+I managed to recover it using GreaseWeazle and KryoFlux DTC.</p>
+</p>
+	</footer>
+</article>
+
+	
+		
+<article id="spyland">
+	<header><a href="/projects/id/spyland" class="secondary">SpyLand</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/spyland.webp" alt="Thumbnail of SpyLand" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2003/SpyLand" target="_blank">github.com/razzie/hobby-projects/2003/SpyLand</a><br>
+				
+			</p>
+			
+			<p>Year: 2003</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/2d" class="secondary">2d</a></code>
+				
+				<code><a href="/projects/tag/game" class="secondary">game</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>SpyLand is one of my earliest games, made in Game Maker.
+It had been sitting on an unreadable floppy disk for 21 years, as it was written by a drive with misaligned head.
+I managed to recover it using GreaseWeazle and KryoFlux DTC.</p>
+</p>
+	</footer>
+</article>
+
+	
+</div>
+
+	</main>
+</body>
+</html>
