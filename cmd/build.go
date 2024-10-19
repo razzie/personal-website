@@ -17,7 +17,7 @@ var buildCmd = &cobra.Command{
 	Use:  "build [flags]",
 	Args: cobra.NoArgs,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		outDir, _ := cmd.Flags().GetString("o")
+		outDir, _ := cmd.Flags().GetString("output")
 		content := internal.LoadContent(".")
 		navPages := []internal.Page{
 			{

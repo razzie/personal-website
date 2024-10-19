@@ -8,7 +8,7 @@ import (
 )
 
 func init() {
-	rootCmd.PersistentFlags().String("o", "dist", "Distribution/output directory")
+	rootCmd.PersistentFlags().StringP("output", "o", "dist", "Distribution/output directory")
 }
 
 var rootCmd = &cobra.Command{
