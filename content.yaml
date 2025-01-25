@@ -10,68 +10,78 @@ hello: |
   In addition to my professional work, I am an avid hobbyist developer.
   I enjoy working on open-source projects, many of which are self-hosted.
   My recent ventures include developing a cloud platform and a range of Go-based software tools.
-  
+
   I am deeply passionate about continuous learning and knowledge sharing.
   My friends and colleagues know me as someone who thrives on engaging in philosophical and technical discussions.
   Creativity and curiosity are the cornerstones of my work ethic, driving me to explore and innovate constantly.
-  
+
   In my opinion, the greatest achievements in human history have resulted from collaborative efforts spearheaded by visionary leaders.
   My aspiration is to become one of these key individuals.
-  
-  I am currently open to full remote positions, with a strong preference for roles focused on Golang and cloud development.
-  If my [skills](/skills) and [experiences](/experience) align with your needs, please feel free to reach out to me via email at <span id="email"></span>.
+
+  I am currently **not** open for work.<br>
+  If my [skills](/skills) and [experiences](/experience) align with your needs and you wish to request my insights or to collaborate with me,
+  please feel free to reach out to me via email at <span id="email"></span>.
   I look forward to potential collaborations that challenge and inspire me.
 
 skills: |
   - **Go**/Golang (2+ years in production) has been my preferred programming language **since 2019**.
     Used it both in production and in dozens of my projects on [Github](https://github.com/razzie?tab=repositories&language=go).
     <br>
-    Read [Effective Go](https://go.dev/doc/effective_go), [A Guide to the Go Garbage Collector](https://tip.golang.org/doc/gc-guide) by the Go   authors
-    and [Efficient Go](https://www.oreilly.com/library/view/efficient-go/9781098105709/) by Bartlomiej Plotka.
-    
+    Read [Effective Go](https://go.dev/doc/effective_go),
+    [A Guide to the Go Garbage Collector](https://tip.golang.org/doc/gc-guide),
+    [Efficient Go](https://www.oreilly.com/library/view/efficient-go/9781098105709/)
+    and [Cloud Native Go](https://www.oreilly.com/library/view/cloud-native-go/9781492076322/).
+
   - 4+ formal years of **C++** experience.
     Considered an expert by my colleagues who asked for my **mentorship**.
     <br>
     Also worked on **C#/.NET**, **Java** (1-1 year) and **Python** (\<1 year) projects.
-    
+
   - **HTML5**, **CSS** (+ **Tailwind**), **JavaScript** + seen and worked with **React**.
     Rapid prototyping using **htmx**.
-    
+
   - APIs: versioned **RESTful APIs** using Gin/Chi/Echo/stdlib,
-    **Swagger**, **OpenAPI**, **gRPC/Protobuf**,
+    **OpenAPI/Swagger**, **gRPC/Protobuf**,
     **websocket** (+ **JSON-RPC**)
-    
+
   - SQL/noSQL: **PostgreSQL**, **Redis** and **MongoDB**.
     Used multiple **ORM**s and implemented **migrations**.
-    
-  - **Docker** and **docker-compose**, both in production and as a hobby.
+
+  - **Docker**, both in production and as a hobby.
     Even **mentored** colleagues with higher job roles.
-    
-  - **AWS** (2 years): IAM, RDS, S3, EC2, EKS, ELB, Route53, VPC
-    
+
+  - **AWS** (2 years): IAM, RDS, S3, EC2, EKS, ELB, Route53
+
   - **Kubernetes** (2+ years) in production combined with **Istio** service-mesh and **Nginx** or **Traefik** ingress controllers.
     Experimented with **KubeBuilder** and **Kustomize**.
-    
+
   - IAC: **Helm**/Helmfile, some **Terraform** and in-house tools
-    
-  - CI/CD: **Jenkins** and **Github Actions**
-    
+
+  - CI/CD:  **Github Actions**, **Jenkins** and **Harness**
+
   - Logging/metrics: **Prometheus**, **Grafana**, **Fluentd**,
     **OpenTelemetry**, **Elasticsearch** Query Language/DSL
-    
+
   - Messaging/streams: aware of **Kafka**, **RabbitMQ** and **Redis Pub/Sub** use-cases
-    
+
   - Software Development Lifecycle (**SDLC**),
     unit/integration/smoke/e2e **testing**, micro/macro **benchmarking**, health checks, **git**,
     event-driven architecture, **microservices**, DDD, TDD, BDD, Agile (Scrum & Kanban), CleanCode, SOLID, DRY, KISS
-    
+
   - Good understanding of **concurrency and parallelism** (async/await, threads, coroutines, race conditions, locks, atomic ops).
     <br>
     Defeated the Parallel Wizard at [deadlockempire.github.io](https://deadlockempire.github.io/)
 
 experience:
 - |-
-  ### 2023+ | sabbatical leave
+  ### 2024+ | Verint | senior software engineer
+
+  Working on all things authorization.
+  Actively involved in influencing technical decisions, doing proof-of-concept and research work
+  and in the whole software development lifecycle.
+
+- |-
+  ### 2023 - 2024 | sabbatical leave
 
   Had a long mental list of projects I could attend to, including an [online chess game](/projects/id/razchess)
   and many tools and libraries I now rely on:
@@ -86,7 +96,7 @@ experience:
   - [json2go](/projects/id/json2go):
     map third-party JSON APIs to Go structs
 
-  Currently working on a custom cloud platform for personal use.
+  Sporadically worked on an unreleased custom cloud platform for personal use.
 
 - |-
   ### 2021 - 2022 | Cloudera | senior software engineer
