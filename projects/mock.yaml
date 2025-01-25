@@ -1,0 +1,17 @@
+name: Mock
+year: 2024-2025
+tags:
+- go
+- lib
+description: |-
+  Mock generates a runtime [testify mock](https://pkg.go.dev/github.com/stretchr/testify/mock) implementation for any Go interface
+  without having to write any boilerplate (and in my opinion [mockery](https://github.com/vektra/mockery) counts as boilerplate too).
+  It was one of a kind when first implemented, and possibly still is.
+  The initial version used the goplus/reflectx package, but due to the linkname related limitations introduced in Go 1.23,
+  I had to delve deep into the Go internals (ABI, GC, reflection) to be able to develop a standalone version.
+  The only dependency is the testify package itself.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/mock
+    url: https://github.com/razzie/mock

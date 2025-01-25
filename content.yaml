@@ -75,6 +75,8 @@ experience:
 
   Had a long mental list of projects I could attend to, including an [online chess game](/projects/id/razchess)
   and many tools and libraries I now rely on:
+  - [mock](/projects/id/mock):
+    testify mock without the boilerplate
   - [broadcaster](/projects/id/broadcaster):
     add zero, one or many more listeners to an event source
   - [razcache](/projects/id/razcache):
