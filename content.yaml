@@ -41,10 +41,9 @@ skills: |
     Rapid prototyping using **htmx**.
 
   - APIs: versioned **RESTful APIs** using Gin/Chi/Echo/stdlib,
-    **OpenAPI/Swagger**, **gRPC/Protobuf**,
-    **websocket** (+ **JSON-RPC**)
+    **OpenAPI/Swagger**, **gRPC/Protobuf**, **JSON-RPC**
 
-  - SQL/noSQL: **PostgreSQL**, **Redis** and **MongoDB**.
+  - SQL/noSQL: **PostgreSQL**, **SQLite**, **Redis** and **MongoDB**.
     Used multiple **ORM**s and implemented **migrations**.
 
   - **Docker**, both in production and as a hobby.
@@ -60,9 +59,9 @@ skills: |
   - CI/CD:  **Github Actions**, **Jenkins** and **Harness**
 
   - Logging/metrics: **Prometheus**, **Grafana**, **Fluentd**,
-    **OpenTelemetry**, **Elasticsearch** Query Language/DSL
+    **OpenTelemetry**, **ElasticSearch** Query Language/DSL
 
-  - Messaging/streams: aware of **Kafka**, **RabbitMQ** and **Redis Pub/Sub** use-cases
+  - Messaging/streams: **Redis Pub/Sub**, **Redis Streams**, **websocket** and **server sent events (SSE)**
 
   - Software Development Lifecycle (**SDLC**),
     unit/integration/smoke/e2e **testing**, micro/macro **benchmarking**, health checks, **git**,
