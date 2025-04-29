@@ -1,0 +1,20 @@
+name: Blob game concept
+year: "2025"
+tags:
+- 2d
+- game
+description: |-
+  I'm fascinated by procedural generated shapes and occasionally doodle using pen and paper to test ideas.
+  This time my plan was to combine curvy vines and abstract looking rocks in a 2D sidescrolling game,
+  with a shape shifting blob being controlled by the player. After many days of running this idea in my subconscious,
+  I still lacked the imagination to come up with a design that fits my liking, and decided to test the new image
+  generator capabilities of the ChatGPT 4o model (and other AI tools).
+  After a long iterative process spanning a few days, I ended up with concept art images that felt surprisingly close
+  to what I intended to achieve.
+  The reason the game is stuck in the concept art phase is because I came up with better game/demo ideas that are
+  not compatible with this design.
+linkGroups:
+- name: Concept art
+  links:
+  - name: github.com/razzie/hobby-projects/2025/blob_game_concept
+    url: https://github.com/razzie/hobby-projects/tree/master/2025/blob_game_concept
