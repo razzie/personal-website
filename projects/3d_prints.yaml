@@ -2,6 +2,7 @@ name: 3D prints
 year: 2022-2024
 tags:
 - 3d
+- print
 description: |-
   I've been fascinated by magnets even since I was a kid, but it only turned into experimentation
   when I came across a video about Halbach arrays.

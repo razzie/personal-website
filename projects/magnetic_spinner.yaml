@@ -1,0 +1,16 @@
+name: Magnetic Spinner
+year: "2025"
+tags:
+- 3d
+- print
+description: |-
+  Spin one of the rings and the other one will spin with it if you arrange the magnets right.
+  Though it didn't take considerable effort to design, it feels like a (useless) product and I like fidgeting with it,
+  hence it received its own panel/description.
+  The stand is removable to support modularity and potential future expansion.
+  It was designed for 10x10x10mm magnet cubes, but consider scaling to 105% in your slicer before printing.
+linkGroups:
+- name: Download
+  links:
+  - name: github.com/razzie/hobby-projects/2025/magnetic_spinner
+    url: https://github.com/razzie/hobby-projects/tree/master/2025/magnetic_spinner
