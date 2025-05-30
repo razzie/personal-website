@@ -1,0 +1,16 @@
+name: Metaball squeeze shader
+year: "2025"
+tags:
+- 2d
+- demo
+description: |-
+  This is not my first time experimenting with signed distance field (SDF) functions,
+  and with this mini project I wanted to see if I could implement a sort-of soft body physics simulation with metaballs.
+  The resulting squeeze effect is fun to watch and play with,
+  though the metaballs/blobs don't retain their volume in case of collision.
+  It took me a few weeks of sporadic work and some complete rewrites, and now I consider it ready for consumption.
+linkGroups:
+- name: Try it here (with code)
+  links:
+  - name: www.shadertoy.com/view/tfc3W4
+    url: https://www.shadertoy.com/view/tfc3W4
