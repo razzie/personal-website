@@ -24,52 +24,46 @@ hello: |
   I look forward to potential collaborations that challenge and inspire me.
 
 skills: |
-  - **Go**/Golang (2+ years in production) has been my preferred programming language **since 2019**.
-    Used it both in production and in dozens of my projects on [Github](https://github.com/razzie?tab=repositories&language=go).
-    <br>
-    Read [Effective Go](https://go.dev/doc/effective_go),
-    [A Guide to the Go Garbage Collector](https://tip.golang.org/doc/gc-guide),
-    [Efficient Go](https://www.oreilly.com/library/view/efficient-go/9781098105709/)
-    and [Cloud Native Go](https://www.oreilly.com/library/view/cloud-native-go/9781492076322/).
+  - **Go**/Golang has been my preferred programming language **since 2019**.
+    Bootstrapped and worked on multiple microservices used in production and written dozens of side projects on [Github](https://github.com/razzie?tab=repositories&language=go).
 
-  - 4+ formal years of **C++** experience.
+      Read [Effective Go](https://go.dev/doc/effective_go),
+      [A Guide to the Go Garbage Collector](https://tip.golang.org/doc/gc-guide),
+      [Efficient Go](https://www.oreilly.com/library/view/efficient-go/9781098105709/)
+      and [Cloud Native Go](https://www.oreilly.com/library/view/cloud-native-go/9781492076322/).
+
+      Worked with **zerolog** (and slog), **gin**, **go-chi**, **cobra**, **viper**, **testify**, **mockery**, **testcontainers-go**, **pgx/pgxpool** and many others
+
+  - Former/side languages: 4+ formal years of **C++** experience.
     Considered an expert by my colleagues who asked for my **mentorship**.
-    <br>
-    Also worked on **C#/.NET**, **Java** (1-1 year) and **Python** (\<1 year) projects.
 
-  - **HTML5**, **CSS** (+ **Tailwind**), **JavaScript** + seen and worked with **React**.
-    Rapid prototyping using **htmx**.
+      Worked on **C#/.NET**, **Java** (1-1 year) and **Python** (\<1 year) projects.
 
-  - APIs: versioned **RESTful APIs** using Gin/Chi/Echo/stdlib,
-    **OpenAPI/Swagger**, **gRPC/Protobuf**, **JSON-RPC**
+      Familiar with **HTML5**, **CSS** (+ **Tailwind**), **JavaScript** + a little bit of **React** (though **htmx** is way better).
 
-  - SQL/noSQL: **PostgreSQL**, **SQLite**, **Redis** and **MongoDB**.
-    Used multiple **ORM**s and implemented **migrations**.
-
-  - **Docker**, both in production and as a hobby.
-    Even **mentored** colleagues with higher job roles.
-
-  - **AWS** (2 years): IAM, RDS, S3, EC2, EKS, ELB, Route53
-
-  - **Kubernetes** (2+ years) in production combined with **Istio** service-mesh and **Nginx** or **Traefik** ingress controllers.
-    Experimented with **KubeBuilder** and **Kustomize**.
-
-  - IAC: **Helm**/Helmfile, some **Terraform** and in-house tools
-
-  - CI/CD:  **Github Actions**, **Jenkins** and **Harness**
-
-  - Logging/metrics: **Prometheus**, **Grafana**, **Fluentd**,
-    **OpenTelemetry**, **ElasticSearch** Query Language/DSL
+  - SQL/noSQL: **PostgreSQL**, **SQLite** and **Redis**/**Valkey**. Migrations with **goose** and **Liquibase**.
 
   - Messaging/streams: **Redis Pub/Sub**, **Redis Streams**, **websocket** and **server sent events (SSE)**
+
+  - Others: **Docker**, versioned **RESTful APIs**, **OpenAPI/Swagger**, **gRPC/Protobuf**, **JSON-RPC**
+
+  - **Kubernetes** in production **since 2021**, including EKS and OpenShift. Worked with **istio**.
+
+  - **AWS**: IAM, RDS, S3, EKS (+ EC2 and NLB/ALB indirectly), Route53
+
+  - IAC: **Helm**/Helmfile, Kustomize, some **Terraform** and in-house tools
+
+  - CI/CD:  **Harness**, **Github Actions** and **Jenkins** 
+
+  - Logging/metrics:  **OpenTelemetry**, **DataDog**, **ElasticSearch**
 
   - Software Development Lifecycle (**SDLC**),
     unit/integration/smoke/e2e **testing**, micro/macro **benchmarking**, health checks, **git**,
     event-driven architecture, **microservices**, DDD, TDD, BDD, Agile (Scrum & Kanban), CleanCode, SOLID, DRY, KISS
 
   - Good understanding of **concurrency and parallelism** (async/await, threads, coroutines, race conditions, locks, atomic ops).
-    <br>
-    Defeated the Parallel Wizard at [deadlockempire.github.io](https://deadlockempire.github.io/)
+
+      Defeated the Parallel Wizard at [deadlockempire.github.io](https://deadlockempire.github.io/)
 
 experience:
 - |-
