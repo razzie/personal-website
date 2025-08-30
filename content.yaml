@@ -24,30 +24,24 @@ hello: |
   I look forward to potential collaborations that challenge and inspire me.
 
 skills: |
-  - **Go**/Golang has been my preferred programming language **since 2019**.
-    Bootstrapped and worked on multiple microservices used in production and written dozens of side projects on [Github](https://github.com/razzie?tab=repositories&language=go).
-
-      Read [Effective Go](https://go.dev/doc/effective_go),
+  - **Go**/Golang has been my preferred programming language **since 2019**
+    - Bootstrapped and worked on multiple **microservices** used in production and written dozens of side projects on [Github](https://github.com/razzie?tab=repositories&language=go)
+    - **Mentoring** newcomers to the language whenever I have the chance
+    - Reading / read: [The Go Blog](https://go.dev/blog/),
+      [Effective Go](https://go.dev/doc/effective_go),
       [A Guide to the Go Garbage Collector](https://tip.golang.org/doc/gc-guide),
       [Efficient Go](https://www.oreilly.com/library/view/efficient-go/9781098105709/)
-      and [Cloud Native Go](https://www.oreilly.com/library/view/cloud-native-go/9781492076322/).
+      and [Cloud Native Go](https://www.oreilly.com/library/view/cloud-native-go/9781492076322/)
+    - Working with **gin**, **go-chi**, **cobra**, **viper**, **testify**, **mockery**, **testcontainers-go**, **pgx/pgxpool**, **zerolog**, **slog** and many others
 
-      Worked with **zerolog** (and slog), **gin**, **go-chi**, **cobra**, **viper**, **testify**, **mockery**, **testcontainers-go**, **pgx/pgxpool** and many others
+  - Former / side languages:
+    - 4+ formal years of **C++** experience
+    - Worked on **C#/.NET**, **Java** (1-1 year) and **Python** (\<1 year) projects
+    - Familiar with **HTML5**, **CSS** (+ **Tailwind**), **JavaScript** + a little bit of **React** (though **htmx** is way better)
 
-  - Former/side languages: 4+ formal years of **C++** experience.
-    Considered an expert by my colleagues who asked for my **mentorship**.
+  - Also working with: **git**, **Docker**, **REST**ful **API**s, **OpenAPI**, **Swagger**, **OAuth**, **GraphQL**, **gRPC**, **Protobuf**, **JWT**, **PASETO**, **JSON-RPC**
 
-      Worked on **C#/.NET**, **Java** (1-1 year) and **Python** (\<1 year) projects.
-
-      Familiar with **HTML5**, **CSS** (+ **Tailwind**), **JavaScript** + a little bit of **React** (though **htmx** is way better).
-
-  - SQL/noSQL: **PostgreSQL**, **SQLite** and **Redis**/**Valkey**. Migrations with **goose** and **Liquibase**.
-
-  - Messaging/streams: **Redis Pub/Sub**, **Redis Streams**, **websocket** and **server sent events (SSE)**
-
-  - Others: **Docker**, versioned **RESTful APIs**, **OpenAPI/Swagger**, **gRPC/Protobuf**, **JSON-RPC**
-
-  - **Kubernetes** in production **since 2021**, including EKS and OpenShift. Worked with **istio**.
+  - **Kubernetes** in production **since 2021**, including **istio**, EKS, OpenShift and custom operators
 
   - **AWS**: IAM, RDS, S3, EKS (+ EC2 and NLB/ALB indirectly), Route53
 
@@ -55,15 +49,20 @@ skills: |
 
   - CI/CD:  **Harness**, **Github Actions** and **Jenkins** 
 
+  - SQL/noSQL: **PostgreSQL**, **SQLite** and **Redis**/**Valkey**. Migrations with **goose** and **Liquibase**.
+
+  - Messaging/streams: **Redis Pub/Sub**, **Redis Streams**, **websocket** and **server sent events (SSE)**
+
   - Logging/metrics:  **OpenTelemetry**, **DataDog**, **ElasticSearch**
 
-  - Software Development Lifecycle (**SDLC**),
-    unit/integration/smoke/e2e **testing**, micro/macro **benchmarking**, health checks, **git**,
-    event-driven architecture, **microservices**, DDD, TDD, BDD, Agile (Scrum & Kanban), CleanCode, SOLID, DRY, KISS
+  - Working with **AI**-powered tools on a daily basis
 
-  - Good understanding of **concurrency and parallelism** (async/await, threads, coroutines, race conditions, locks, atomic ops).
+  - Good understanding of **concurrency and parallelism** (async/await, threads, coroutines, race conditions, locks, atomic ops).<br>
+    Defeated the Parallel Wizard at [deadlockempire.github.io](https://deadlockempire.github.io/)
 
-      Defeated the Parallel Wizard at [deadlockempire.github.io](https://deadlockempire.github.io/)
+  - Software Development Lifecycle (**SDLC**), DDD, TDD, BDD, Agile (Scrum & Kanban),
+    unit/integration/smoke/e2e **testing**, micro/macro **benchmarking**,
+    Event-Driven Architecture, Hexagonal Architecture, The Twelve-Factor App, CleanCode, SOLID, DRY, KISS
 
 experience:
 - |-
