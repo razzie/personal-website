@@ -37,32 +37,33 @@ skills: |
   - Former / side languages:
     - 4+ formal years of **C++** experience
     - Worked on **C#/.NET**, **Java** (1-1 year) and **Python** (\<1 year) projects
-    - Familiar with **HTML5**, **CSS** (+ **Tailwind**), **JavaScript** + a little bit of **React** (though **htmx** is way better)
-
-  - Also working with: **git**, **Docker**, **REST**ful **API**s, **OpenAPI**, **Swagger**, **OAuth**, **GraphQL**, **gRPC**, **Protobuf**, **JWT**, **PASETO**, **JSON-RPC**
+    - Familiar with **HTML5**, **CSS**, **JavaScript** + a little bit of **React**
 
   - **Kubernetes** in production **since 2021**, including **istio**, EKS, OpenShift and custom operators
 
+  - Also working with: **git**, **Docker**, **REST**ful **API**s, **OpenAPI**, **OAuth**, **GraphQL**, **gRPC**, **Protobuf**, **JWT**, **PASETO**
+
+  - Good understanding of **concurrency and parallelism** (async/await, threads, coroutines, race conditions, semaphores, locks, atomic ops)
+    <br>
+    Defeated the Parallel Wizard at [deadlockempire.github.io](https://deadlockempire.github.io/)
+
   - **AWS**: IAM, RDS, S3, EKS (+ EC2 and NLB/ALB indirectly), Route53
 
-  - IAC: **Helm**/Helmfile, Kustomize, some **Terraform** and in-house tools
+  - IAC: **Helm**, Helmfile, Kustomize, **Terraform** and in-house tools
 
-  - CI/CD:  **Harness**, **Github Actions** and **Jenkins** 
+  - SQL / noSQL: **PostgreSQL**, **SQLite** and **Redis**/**Valkey**, migrations with **goose** and **Liquibase**
 
-  - SQL/noSQL: **PostgreSQL**, **SQLite** and **Redis**/**Valkey**. Migrations with **goose** and **Liquibase**.
+  - Messaging / events: **Redis Pub/Sub**, **Redis Streams**, **websocket** and **server sent events (SSE)**
 
-  - Messaging/streams: **Redis Pub/Sub**, **Redis Streams**, **websocket** and **server sent events (SSE)**
+  - CI / CD:  **Harness**, **Github Actions** and **Jenkins** 
 
-  - Logging/metrics:  **OpenTelemetry**, **DataDog**, **ElasticSearch**
+  - Logging / metrics: **DataDog**, **ElasticSearch**, **OpenTelemetry**
 
   - Working with **AI**-powered tools on a daily basis
 
-  - Good understanding of **concurrency and parallelism** (async/await, threads, coroutines, race conditions, locks, atomic ops).<br>
-    Defeated the Parallel Wizard at [deadlockempire.github.io](https://deadlockempire.github.io/)
-
-  - Software Development Lifecycle (**SDLC**), DDD, TDD, BDD, Agile (Scrum & Kanban),
+  - Software Development Lifecycle (**SDLC**), DDD, TDD, BDD, FDD, XP, Scrum, Kanban,
     unit/integration/smoke/e2e **testing**, micro/macro **benchmarking**,
-    Event-Driven Architecture, Hexagonal Architecture, The Twelve-Factor App, CleanCode, SOLID, DRY, KISS
+    event-driven architecture, hexagonal architecture, The Twelve-Factor App, CleanCode, SOLID, DRY, KISS
 
 experience:
 - |-
