@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Gábor Görzsöny's personal website">
-    <title>Projects (k8s)</title>
+    <title>Projects (other)</title>
 	<link rel="stylesheet" href="/pico.min.css">
 	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
 	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
@@ -36,7 +36,7 @@
 	<main class="container">
 		<nav>
 			<ul id="title">
-				<li><h1 data-loading-aria-busy data-loading-delay="50">Projects (k8s)</h1></li>
+				<li><h1 data-loading-aria-busy data-loading-delay="50">Projects (other)</h1></li>
 			</ul>
 			<ul>
 			
@@ -118,7 +118,7 @@
 	
 	<code style="margin-bottom: 0.25rem;">
 		
-		<a href="/projects">k8s</a>
+		<a href="/projects/tag/k8s/" class="secondary">k8s</a>
 		
 	</code>
 	
@@ -136,7 +136,7 @@
 	
 	<code style="margin-bottom: 0.25rem;">
 		
-		<a href="/projects/tag/other/" class="secondary">other</a>
+		<a href="/projects">other</a>
 		
 	</code>
 	
@@ -176,76 +176,79 @@
 	</style>
 	
 		
-<article id="raz-stack">
-	<header><a href="/projects/id/raz-stack" class="secondary">Raz-Stack</a></header>
+<article id="blob_game_concept">
+	<header><a href="/projects/id/blob_game_concept" class="secondary">Blob game concept</a></header>
 	<div class="grid">
 		<div>
-			<img src="/projects/raz-stack.webp" alt="Thumbnail of Raz-Stack" width="256">
+			<img src="/projects/blob_game_concept.webp" alt="Thumbnail of Blob game concept" width="256">
 		</div>
 		<div>
 			
 			<p>
-				Source code:<br>
+				Concept art:<br>
 				
-				<a href="https://github.com/razzie/raz-stack" target="_blank">github.com/razzie/raz-stack</a><br>
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2025/blob_game_concept" target="_blank">github.com/razzie/hobby-projects/2025/blob_game_concept</a><br>
 				
 			</p>
 			
-			<p>Year: 2022 - 2024</p>
+			<p>Year: 2025</p>
 			<span>
 				Tags:
 				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
 				
-				<code><a href="/projects/tag/k8s/" class="secondary">k8s</a></code>
+				<code><a href="/projects/tag/other/" class="secondary">other</a></code>
 				
 			</span>
 		</div>
 	</div>
 	<footer>
-		<p><p>A simple Kubernetes stack that hosted many of my own projects plus an email service (Dovecot + Postfix) and Nextcloud.
-The goal of this project was simplified deployment and cost saving, without horizontal autoscaling, though I picked K8s to be able to scale in the future.
-Many of the hosted webapps used a shared Redis (Kvrocks) instance with separate namespaces, thanks to <a href="/projects/id/k8s-db-operator">k8s-db-operator</a>.
-Deployment was done via Helmfile and Helm under the hood, but it was managed by a Makefile to make things even simpler.</p>
+		<p><p>I&rsquo;m fascinated by procedural generated shapes and occasionally doodle using pen and paper to test ideas.
+This time my plan was to combine curvy vines and abstract looking rocks in a 2D sidescrolling game,
+with a shape shifting blob being controlled by the player. After many days of running this idea in my subconscious,
+I still lacked the imagination to come up with a design that fits my liking, and decided to test the new image
+generator capabilities of the ChatGPT 4o model (and other AI tools).
+After a long iterative process spanning a few days, I ended up with concept art images that felt surprisingly close
+to what I intended to achieve.
+The reason the game is stuck in the concept art phase is because I came up with better game/demo ideas that are
+not compatible with this design.</p>
 </p>
 	</footer>
 </article>
 
 	
 		
-<article id="k8s-db-operator">
-	<header><a href="/projects/id/k8s-db-operator" class="secondary">k8s-db-operator</a></header>
+<article id="gtaonline_videos">
+	<header><a href="/projects/id/gtaonline_videos" class="secondary">GTA Online videos</a></header>
 	<div class="grid">
 		<div>
-			<img src="/projects/k8s-db-operator.webp" alt="Thumbnail of k8s-db-operator" width="256">
+			<img src="/projects/gtaonline_videos.webp" alt="Thumbnail of GTA Online videos" width="256">
 		</div>
 		<div>
 			
 			<p>
-				Source code:<br>
+				YouTube channel:<br>
 				
-				<a href="https://github.com/razzie/k8s-db-operator" target="_blank">github.com/razzie/k8s-db-operator</a><br>
+				<a href="https://www.youtube.com/c/razzquez" target="_blank">www.youtube.com/c/razzquez</a><br>
 				
 			</p>
 			
-			<p>Year: 2022 - 2023</p>
+			<p>Year: 2015 - 2019</p>
 			<span>
 				Tags:
 				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
 				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/k8s/" class="secondary">k8s</a></code>
+				<code><a href="/projects/tag/other/" class="secondary">other</a></code>
 				
 			</span>
 		</div>
 	</div>
 	<footer>
-		<p><p>Kubernetes operator to provide access to shared PostgreSQL and Redis.
-It relies on the DatabaseClaim CRD, but unlike most other operators,
-this one only deploys Kubernetes secrets containing connection strings.
-Databases and Redis namespaces are not shared between dbclaims.</p>
+		<p><p>I have way more playtime in Grand Theft Auto V (or GTA Online to be specific) than I would like to admit and most of that I&rsquo;ve spent with friends I&rsquo;ve met in the game.
+It became our little tradition to record funny, exciting or any memorable moments and later create videos of it.
+At this point there is quite a collection of those videos and I&rsquo;ve uploaded the ones I made to my youtube channel.
+Most of the content is only meaningful to us, but I still hope viewers will find them entertaining.</p>
 </p>
 	</footer>
 </article>
