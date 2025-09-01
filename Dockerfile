@@ -1,4 +1,4 @@
-FROM golang:1.22 as builder
+FROM golang:1.25 as builder
 WORKDIR /workspace
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 make
