@@ -1,7 +1,7 @@
 name: Labyrinth
 year: "2010"
 tags:
-- cpp
+- c++
 - rendering
 - game
 description: |-

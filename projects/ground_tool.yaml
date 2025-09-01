@@ -1,7 +1,7 @@
 name: Ground Tool
 year: "2016"
 tags:
-- cpp
+- c++
 - rendering
 description: |-
   The idea behind the demo was a game with floating islands.

@@ -1,7 +1,7 @@
 name: Minecraft clone
 year: 2011 - 2012
 tags:
-- cpp
+- c++
 - rendering
 description: |-
   Minecraft clone is a graphics project I worked on during the final year of the university.

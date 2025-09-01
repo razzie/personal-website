@@ -1,7 +1,7 @@
 name: Floating Islands
 year: "2016"
 tags:
-- cpp
+- c++
 - rendering
 description: |-
   Floating Islands is yet another example of my experiments with procedurally generated terrains.

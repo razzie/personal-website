@@ -1,7 +1,7 @@
 name: Doboz.NET
 year: "2019"
 tags:
-- csharp
+- c#
 - lib
 description: |-
   C# port of Attila Áfra's Doboz compression library

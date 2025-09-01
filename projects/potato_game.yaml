@@ -1,7 +1,7 @@
 name: Potato Game
 year: "2017"
 tags:
-- cpp
+- c++
 - rendering
 - game
 description: |-

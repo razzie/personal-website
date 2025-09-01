@@ -1,7 +1,7 @@
 name: LibRazzie
 year: 2016 - 2018
 tags:
-- cpp
+- c++
 - lib
 description: |-
   A header-only multi-purpose library designed to help me get started with my projects.

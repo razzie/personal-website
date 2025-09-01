@@ -2,7 +2,7 @@ name: Personal website
 year: 2015 - 2024
 tags:
 - php
-- csharp
+- c#
 - golang
 - cloud
 description: |-

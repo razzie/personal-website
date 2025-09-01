@@ -3,8 +3,10 @@ package internal
 import (
 	"io/fs"
 	"log/slog"
+	"net/url"
 	"os"
 	"path/filepath"
+	"slices"
 	"sort"
 	"strconv"
 	"strings"
@@ -12,11 +14,17 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+type Tag string
+
+func (tag Tag) Escape() string {
+	return url.QueryEscape(string(tag))
+}
+
 type Project struct {
 	ID          string   `yaml:"-"`
 	Name        string   `yaml:"name"`
 	Year        string   `yaml:"year"`
-	Tags        []string `yaml:"tags"`
+	Tags        []Tag    `yaml:"tags"`
 	Description Markdown `yaml:"description"`
 	LinkGroups  []struct {
 		Name  string `yaml:"name"`
@@ -27,13 +35,8 @@ type Project struct {
 	} `yaml:"linkGroups"`
 }
 
-func (p *Project) containsTag(tag string) bool {
-	for _, ptag := range p.Tags {
-		if ptag == tag {
-			return true
-		}
-	}
-	return false
+func (p *Project) containsTag(tag Tag) bool {
+	return slices.Contains(p.Tags, tag)
 }
 
 func orderProjectsByYear(projects []Project) {
@@ -47,7 +50,7 @@ func orderProjectsByYear(projects []Project) {
 	})
 }
 
-func FilterProjectsByTag(projects []Project, tag string) []Project {
+func FilterProjectsByTag(projects []Project, tag Tag) []Project {
 	taggedProjects := make([]Project, 0, len(projects))
 	for _, p := range projects {
 		if p.containsTag(tag) {
@@ -57,8 +60,8 @@ func FilterProjectsByTag(projects []Project, tag string) []Project {
 	return taggedProjects
 }
 
-func loadProjects(dir string) (projects []Project, tags []string) {
-	tagMap := make(map[string]struct{})
+func loadProjects(dir string) (projects []Project, tags []Tag) {
+	tagMap := make(map[Tag]struct{})
 
 	if err := filepath.WalkDir(dir, func(path string, entry fs.DirEntry, err error) error {
 		name := entry.Name()
@@ -77,7 +80,7 @@ func loadProjects(dir string) (projects []Project, tags []string) {
 			for _, tag := range p.Tags {
 				tagMap[tag] = struct{}{}
 			}
-			sort.Strings(p.Tags)
+			slices.Sort(p.Tags)
 			projects = append(projects, p)
 		}
 		return nil
@@ -90,6 +93,6 @@ func loadProjects(dir string) (projects []Project, tags []string) {
 		tags = append(tags, tag)
 	}
 	orderProjectsByYear(projects)
-	sort.Strings(tags)
+	slices.Sort(tags)
 	return
 }

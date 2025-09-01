@@ -1,7 +1,7 @@
 name: Hexagon
 year: "2015"
 tags:
-- cpp
+- c++
 - rendering
 description: |-
   I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes.

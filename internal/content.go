@@ -12,7 +12,7 @@ type Content struct {
 	Skills      Markdown      `yaml:"skills"`
 	Experience  MarkdownSlice `yaml:"experience"`
 	Projects    []Project     `yaml:"-"`
-	ProjectTags []string      `yaml:"-"`
+	ProjectTags []Tag         `yaml:"-"`
 }
 
 func LoadContent(dir string) (content Content) {

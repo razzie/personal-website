@@ -93,8 +93,8 @@ var buildCmd = &cobra.Command{
 				"Tag":      tag,
 			}
 			page := internal.Page{
-				Title:    "Projects (" + tag + ")",
-				ID:       "projects/tag/" + tag,
+				Title:    "Projects (" + string(tag) + ")",
+				ID:       "projects/tag/" + string(tag),
 				Template: "projects",
 				Data:     view,
 			}

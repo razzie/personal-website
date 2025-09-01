@@ -1,7 +1,7 @@
 name: RazTools
 year: 2018-2020
 tags:
-- csharp
+- c#
 - lib
 description: |-
   A collection of reusable helper classes:
