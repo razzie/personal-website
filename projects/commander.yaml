@@ -1,9 +1,9 @@
 name: Commander
 year: 2023 - 2024
 tags:
-- go
+- golang
 - lib
-- bot
+- chat
 description: |-
   Execute Go functions from CLI or from a chatbot.
   Register any function as a command, then supply a context variable and a string slice as input arguments.

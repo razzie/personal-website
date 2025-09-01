@@ -1,7 +1,7 @@
 name: Razproxy
 year: "2020"
 tags:
-- go
+- golang
 - proxy
 description: |-
   SOCKS5 tunneled through TLS connection.

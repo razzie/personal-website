@@ -3,10 +3,9 @@ year: "2018"
 tags:
 - csharp
 - javascript
-- web
+- cloud
 - gui
 - chat
-- docker
 description: |-
   A simple lobby/channel based registration-free webchat.
   Implemented using NancyFX + Razor + SignalR stack and relies on [RazTools](/projects/id/raztools) to support dynamic loading of bot libraries during runtime.

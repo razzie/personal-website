@@ -1,10 +1,9 @@
 name: 0x40 Hues
 year: "2023"
 tags:
-- go
+- golang
 - javascript
-- web
-- docker
+- cloud
 description: |-
   I've come across Kepstin's amazing [0x40hues](https://github.com/kepstin/0x40hues-html5) project and caught myself listening to it a lot.
   After finding community resource packs to try, it quickly became troublesome to configure and run them.

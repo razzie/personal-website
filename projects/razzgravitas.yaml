@@ -2,7 +2,7 @@ name: RazzGravitas
 year: "2017"
 tags:
 - cpp
-- 2d
+- rendering
 - game
 description: |-
   RazzGravitas is a simple multiplayer game about gravity.

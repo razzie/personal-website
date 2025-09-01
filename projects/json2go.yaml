@@ -1,9 +1,8 @@
 name: Json2Go
 year: 2023 - 2024
 tags:
-- go
-- web
-- docker
+- golang
+- cloud
 description: |-
   A webapp that helps you write Go client libraries for JSON web APIs.
   One of my experiments required building a database that included data from many third party JSON web APIs.

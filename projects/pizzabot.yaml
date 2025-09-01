@@ -1,10 +1,9 @@
 name: Telegram PizzaBot
 year: "2021"
 tags:
-- go
-- bot
+- golang
+- chat
 - lib
-- docker
 description: |-
   Do you love pizza so much that you keep talking about it in your Telegram group chat?
   Now you can include this bot and with the right permissions it will respond with a pizza sticker or interesting pizza fact

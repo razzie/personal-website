@@ -1,7 +1,7 @@
 name: RazCache
 year: 2023 - 2024
 tags:
-- go
+- golang
 - lib
 description: |-
   A minimalist abstraction layer above Redis, Badger and a custom in-memory cache.

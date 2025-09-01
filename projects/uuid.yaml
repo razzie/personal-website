@@ -1,9 +1,8 @@
 name: UUID server
 year: "2020"
 tags:
-- go
-- web
-- docker
+- golang
+- cloud
 description: |-
   A http server that serves random (version4) UUIDs.
   It uses my hybrid pseudo- and true random generator library which periodically takes seeds from [random.org](https://random.org)

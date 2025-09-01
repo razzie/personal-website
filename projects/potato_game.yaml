@@ -2,10 +2,8 @@ name: Potato Game
 year: "2017"
 tags:
 - cpp
-- 3d
+- rendering
 - game
-- demo
-- video
 description: |-
   PotatoGame was meant to be a game about little potatoes with customizable AI gaining world domination,
   though my real motivation was to make art.

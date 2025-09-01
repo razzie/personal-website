@@ -1,7 +1,7 @@
 name: Riddle Solver
 year: 2019 - 2021
 tags:
-- go
+- golang
 - gui
 description: |-
   Riddle Solver is a terminal app designed to solve Einstein's 5 house riddle (also called zebra puzzles in general).

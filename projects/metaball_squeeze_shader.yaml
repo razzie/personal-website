@@ -1,8 +1,7 @@
 name: Metaball squeeze shader
 year: "2025"
 tags:
-- 2d
-- demo
+- rendering
 description: |-
   This is not my first time experimenting with signed distance field (SDF) functions,
   and with this mini project I wanted to see if I could implement a sort-of soft body physics simulation with metaballs.

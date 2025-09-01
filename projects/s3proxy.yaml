@@ -1,8 +1,8 @@
 name: S3proxy
 year: "2020"
 tags:
-- go
-- docker
+- golang
+- cloud
 description: |-
   A super simple S3 proxy server that obfuscates file content before transmitting the request to the target.
   Obfuscation is done via a lookup table which is generated from a user provided key.

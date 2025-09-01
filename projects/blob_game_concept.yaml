@@ -1,8 +1,8 @@
 name: Blob game concept
 year: "2025"
 tags:
-- 2d
 - game
+- other
 description: |-
   I'm fascinated by procedural generated shapes and occasionally doodle using pen and paper to test ideas.
   This time my plan was to combine curvy vines and abstract looking rocks in a 2D sidescrolling game,

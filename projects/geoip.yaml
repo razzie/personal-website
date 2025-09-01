@@ -1,9 +1,8 @@
 name: Geoip server
 year: "2020"
 tags:
-- go
-- web
-- docker
+- golang
+- cloud
 description: |-
   A web service that serves IP address geolocations in JSON format.
   Instead of relying on a local database it collects data from a (configurable) series of 3rd party providers,

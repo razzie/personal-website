@@ -1,7 +1,7 @@
 name: Golang utils
 year: 2021 - 2024
 tags:
-- go
+- golang
 - lib
 description: |-
   This is my collection of Golang utilities and experiments that are not notable/worthy enough to get their own project tile.

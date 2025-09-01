@@ -2,8 +2,7 @@ name: Raz-Stack
 year: 2022 - 2024
 tags:
 - k8s
-- web
-- docker
+- cloud
 description: |-
   A simple Kubernetes stack that hosted many of my own projects plus an email service (Dovecot + Postfix) and Nextcloud.
   The goal of this project was simplified deployment and cost saving, without horizontal autoscaling, though I picked K8s to be able to scale in the future.

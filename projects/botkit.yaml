@@ -1,9 +1,9 @@
 name: Botkit
 year: 2023 - 2024
 tags:
-- go
+- golang
 - lib
-- bot
+- chat
 description: |-
   A Telegram bot library designed to handle [commands](/projects/id/commander) and dialogs.
   Both of these support replying with sticker, photo, video, audio, album or file (even files not directly uploaded by the bot).

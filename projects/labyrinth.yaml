@@ -2,7 +2,7 @@ name: Labyrinth
 year: "2010"
 tags:
 - cpp
-- 3d
+- rendering
 - game
 description: |-
   Labyrinth is a small university project I developed together with a friend.

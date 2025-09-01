@@ -3,9 +3,8 @@ year: 2015 - 2024
 tags:
 - php
 - csharp
-- go
-- web
-- docker
+- golang
+- cloud
 description: |-
   * ###### 2015 version
     The site made use of user friendly URLs (thanks to Apache web server's mod_rewrite) and loaded pages dynamically via jQuery's AJAX API.

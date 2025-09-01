@@ -2,7 +2,7 @@ name: Prepi
 year: "2014"
 tags:
 - cpp
-- 2d
+- rendering
 - game
 description: |-
   Prepi is an indie rage game project I was working on together with a friend.

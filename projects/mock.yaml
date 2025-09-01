@@ -1,7 +1,7 @@
 name: Mock
 year: 2024-2025
 tags:
-- go
+- golang
 - lib
 description: |-
   Mock generates a runtime [testify mock](https://pkg.go.dev/github.com/stretchr/testify/mock) implementation for any Go interface
