@@ -10,8 +10,10 @@
 
 		const mailtoLink = document.createElement('a');
 		mailtoLink.href = 'mailto:' + email;
-		mailtoLink.textContent = email;
+		mailtoLink.textContent = emailElement.dataset.label || email;
+		if (emailElement.dataset.linkClass)
+			mailtoLink.className = emailElement.dataset.linkClass;
 
-		emailElement.appendChild(mailtoLink);
+		emailElement.replaceChildren(mailtoLink);
 	})
 })

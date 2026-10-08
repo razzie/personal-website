@@ -1,0 +1,195 @@
+.hello-page {
+	padding: 1rem 0;
+}
+
+.hello-intro {
+	display: grid;
+	gap: 2rem;
+	padding-bottom: 2.5rem;
+}
+
+.hello-name {
+	font-weight: 600;
+	margin-bottom: 1.25rem;
+}
+
+.hello-name span {
+	display: block;
+	color: var(--pico-muted-color);
+	font-size: 0.85rem;
+	font-weight: 400;
+}
+
+.hello-headline {
+	font-size: clamp(2rem, 4vw, 3rem);
+	line-height: 1.12;
+	letter-spacing: -0.035em;
+	margin-bottom: 1.25rem;
+}
+
+.hello-headline span {
+	display: block;
+}
+
+.hello-headline span:last-child {
+	color: var(--pico-primary);
+}
+
+.hello-summary {
+	max-width: 48ch;
+}
+
+.hello-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.5rem;
+	font-size: 0.9rem;
+}
+
+.hello-about {
+	max-width: 60ch;
+	border-left: 2px solid var(--pico-muted-border-color);
+	padding-left: 1.25rem;
+}
+
+.hello-about > :last-child {
+	margin-bottom: 0;
+}
+
+.hello-section-heading {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 0.5rem 1rem;
+	margin-bottom: 1rem;
+}
+
+.hello-section-heading h2,
+.hello-collaboration h2 {
+	font-size: 1.25rem;
+	margin-bottom: 0;
+}
+
+.hello-section-heading > a {
+	font-size: 0.85rem;
+}
+
+.hello-project-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 1rem;
+}
+
+.hello-project {
+	display: block;
+	padding: 1.25rem;
+	border: 1px solid var(--pico-muted-border-color);
+	border-radius: var(--pico-border-radius);
+	background: var(--pico-card-background-color);
+	color: var(--pico-color);
+	text-decoration: none;
+}
+
+.hello-project:hover,
+.hello-project:focus-visible {
+	border-color: var(--pico-primary);
+	color: var(--pico-color);
+}
+
+.hello-project:focus-visible,
+.hello-contact-link:focus-visible {
+	outline: 2px solid var(--pico-primary);
+	outline-offset: 4px;
+}
+
+.hello-project-category {
+	color: var(--pico-muted-color);
+	font-size: 0.75rem;
+}
+
+.hello-project h3 {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	font-size: 1.1rem;
+	margin: 0.5rem 0 0.75rem;
+}
+
+.hello-project h3 span {
+	color: var(--pico-primary);
+	font-weight: 400;
+}
+
+.hello-project p {
+	font-size: 0.9rem;
+	margin-bottom: 0;
+}
+
+.hello-collaboration {
+	display: grid;
+	gap: 1.25rem;
+	margin-top: 2rem;
+	padding: 1.5rem;
+	border: 1px solid var(--pico-muted-border-color);
+	border-left: 3px solid var(--pico-primary);
+	border-radius: var(--pico-border-radius);
+	background: var(--pico-card-background-color);
+	background: color-mix(in srgb, var(--pico-primary) 5%, var(--pico-background-color));
+}
+
+.hello-collaboration h2 {
+	margin-bottom: 0.75rem;
+}
+
+.hello-collaboration p {
+	max-width: 75ch;
+	font-size: 0.9rem;
+	margin-bottom: 0;
+}
+
+.hello-contact-link {
+	display: inline-block;
+	padding: 0.65rem 1rem;
+	border: 1px solid var(--pico-primary);
+	border-radius: var(--pico-border-radius);
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.hello-contact-link:hover {
+	background: var(--pico-primary-background);
+	color: var(--pico-primary-inverse);
+}
+
+.hello-availability {
+	margin-top: 1rem;
+}
+
+.hello-availability p {
+	color: var(--pico-muted-color);
+	font-size: 0.8rem;
+	max-width: 100ch;
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.hello-intro {
+		grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+		align-items: center;
+		gap: 3rem;
+	}
+
+	.hello-project-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.hello-collaboration {
+		grid-template-columns: minmax(0, 1fr) auto;
+		align-items: center;
+		gap: 2rem;
+	}
+}

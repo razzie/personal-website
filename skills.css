@@ -1,0 +1,32 @@
+.skills-content > p {
+	max-width: 65ch;
+}
+
+.skills-content > ul {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 1.5rem 2rem;
+	padding: 0;
+}
+
+.skills-content > ul > li {
+	list-style: none;
+	margin: 0;
+	padding-top: 1rem;
+	border-top: 1px solid var(--pico-muted-border-color);
+}
+
+.skills-content h2 {
+	font-size: 1.25rem;
+	margin-bottom: 0.75rem;
+}
+
+.skills-content > ul > li > :last-child {
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.skills-content > ul {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}

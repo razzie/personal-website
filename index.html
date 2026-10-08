@@ -52,39 +52,70 @@
 			</ul>
 		</nav>
 		
-<div class="columns">
-	<style scoped>
-		@media screen and (min-width: 768px) {
-			.columns {
-				columns: 2;
-				column-gap: 1rem;
-			}
-		}
-	</style>
-	<p>My name is <strong>Gábor Görzsöny</strong>, but you might also know me as <strong>Razzie</strong> from my online presence.
-With a strong foundation in software engineering,
-I bring over 8+ years of formal experience across multiple sectors and programming languages, which doubles when including hobby projects.
-I am confident that I can deliver valuable solutions for you, your business partners and customers.</p>
+<style>@import url("/hello.css");</style>
+<div class="hello-page">
+	<section class="hello-intro" aria-labelledby="hello-headline">
+		<div>
+			<p class="hello-name">Gábor Görzsöny <span>also known as Razzie</span></p>
+			<h2 id="hello-headline" class="hello-headline"><span>Go engineer.</span><span>Tool builder.</span><span>Curious by default.</span></h2>
+			<div class="hello-summary"><p>Senior software engineer focused on <strong>Go backend services and Kubernetes</strong>.
+I build useful tools, explore ideas and enjoy helping others do the same.</p>
+</div>
+			<div class="hello-links">
+				<a href="/skills">Explore my skills <span aria-hidden="true">&rarr;</span></a>
+				<a href="/experience">Work experience <span aria-hidden="true">&rarr;</span></a>
+			</div>
+		</div>
+		<div class="hello-about"><p>My professional work spans service, API and database design, testing and deployment across multiple regions.
+I also mentor developers learning Go and enjoy helping teammates work through technical problems.</p>
 
-<p>My career began with a fascination for video games, which spurred me to self-learn coding from a young age.
-This journey has evolved significantly, steering me towards learning industry-standard techniques and cutting-edge technologies.</p>
+<p>I started programming because I wanted to make games. Outside work, I still follow that curiosity:
+building open-source tools, self-hosted services and an experimental cloud platform.</p>
+</div>
+	</section>
 
-<p>In addition to my professional work, I am an avid hobbyist developer.
-I enjoy working on open-source projects, many of which are self-hosted.
-My recent ventures include developing a cloud platform and a range of Go-based software tools.</p>
+	<section class="hello-projects" aria-labelledby="hello-projects-title">
+		<div class="hello-section-heading">
+			<h2 id="hello-projects-title">A few things I&#39;ve built</h2>
+			<a href="/projects">All projects <span aria-hidden="true">&rarr;</span></a>
+		</div>
+		<div class="hello-project-grid">
+			
+			<a class="hello-project" href="/projects/id/mock">
+				<span class="hello-project-category">Go · Testing</span>
+				<h3>Mock <span aria-hidden="true">&rarr;</span></h3>
+				<p>Runtime mocks for Go interfaces, without the boilerplate.</p>
+			</a>
+			
+			<a class="hello-project" href="/projects/id/razchess">
+				<span class="hello-project-category">Go &#43; JavaScript · Games</span>
+				<h3>RazChess <span aria-hidden="true">&rarr;</span></h3>
+				<p>Online chess with friends. Share a link and start playing, no signup needed.</p>
+			</a>
+			
+			<a class="hello-project" href="/projects/id/razvhost">
+				<span class="hello-project-category">Go · Self-hosting</span>
+				<h3>Razvhost <span aria-hidden="true">&rarr;</span></h3>
+				<p>A reverse proxy with automatic TLS and simple hosting rules.</p>
+			</a>
+			
+		</div>
+	</section>
 
-<p>I am deeply passionate about continuous learning and knowledge sharing.
-My friends and colleagues know me as someone who thrives on engaging in philosophical and technical discussions.
-Creativity and curiosity are the cornerstones of my work ethic, driving me to explore and innovate constantly.</p>
+	<section class="hello-collaboration" aria-labelledby="hello-collaboration-title">
+		<div>
+			<h2 id="hello-collaboration-title">Have an idea for a small, fun project?</h2>
+			<p>I&rsquo;d love to hear about a developer tool, game prototype or experiment we could build together over a few weeks.
+I like working with people who share ideas openly and enjoy learning from each other.</p>
 
-<p>In my opinion, the greatest achievements in human history have resulted from collaborative efforts spearheaded by visionary leaders.
-My aspiration is to become one of these key individuals.</p>
-
-<p>I am currently <strong>not</strong> open for work.<br>
-If my <a href="/skills">skills</a> and <a href="/experience">experiences</a> align with your needs and you wish to request my insights or to collaborate with me,
-please feel free to reach out to me via email at <span id="email"></span>.
-I look forward to potential collaborations that challenge and inspire me.</p>
-
+		</div>
+		<div class="hello-contact">
+			<span id="email" data-label="Let&#39;s build something" data-link-class="hello-contact-link"></span>
+			<noscript>Please enable JavaScript to reveal my email address.</noscript>
+		</div>
+	</section>
+	<div class="hello-availability"><p>I&rsquo;m not currently looking for a new role, but I&rsquo;m happy to connect about future opportunities and short-term collaborations.</p>
+</div>
 </div>
 
 	</main>

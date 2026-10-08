@@ -52,62 +52,83 @@
 			</ul>
 		</nav>
 		
-<div class="columns">
-	<style scoped>
-		@media screen and (min-width: 768px) {
-			.columns {
-				columns: 2;
-				column-gap: 1rem;
-			}
-		}
-	</style>
-	<ul>
-<li><p><strong>Go</strong>/Golang has been my preferred programming language <strong>since 2019</strong></p>
+<style scoped>@import url("/skills.css");</style>
+<div class="skills-content">
+	<p>Senior software engineer focused on <strong>Go backend services</strong> and <strong>Kubernetes</strong>.
+My work spans service, API and database design, testing, CI/CD and deployments across multiple regions.</p>
 
 <ul>
-<li>Bootstrapped and worked on multiple <strong>microservices</strong> used in production and written dozens of side projects on <a href="https://github.com/razzie?tab=repositories&amp;language=go" target="_blank">Github</a></li>
-<li><strong>Mentoring</strong> newcomers to the language whenever I have the chance</li>
-<li>Reading / read: <a href="https://go.dev/blog/" target="_blank">The Go Blog</a>,
-<a href="https://go.dev/doc/effective_go" target="_blank">Effective Go</a>,
-<a href="https://tip.golang.org/doc/gc-guide" target="_blank">A Guide to the Go Garbage Collector</a>,
-<a href="https://www.oreilly.com/library/view/efficient-go/9781098105709/" target="_blank">Efficient Go</a>
-and <a href="https://www.oreilly.com/library/view/cloud-native-go/9781492076322/" target="_blank">Cloud Native Go</a></li>
-<li>Working with <strong>gin</strong>, <strong>go-chi</strong>, <strong>cobra</strong>, <strong>viper</strong>, <strong>testify</strong>, <strong>mockery</strong>, <strong>testcontainers-go</strong>, <strong>pgx/pgxpool</strong>, <strong>zerolog</strong>, <strong>slog</strong> and many others</li>
-</ul></li>
-
-<li><p>Former / side languages:</p>
+<li>
+<h2>Go / Golang</h2>
 
 <ul>
-<li>4+ formal years of <strong>C++</strong> experience</li>
-<li>Worked on <strong>C#/.NET</strong>, <strong>Java</strong> (1-1 year) and <strong>Python</strong> (&lt;1 year) projects</li>
-<li>Familiar with <strong>HTML5</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> + a little bit of <strong>React</strong></li>
+<li>My primary programming language <strong>since 2019</strong>, building production <strong>microservices</strong>, tools and libraries</li>
+<li>Strong understanding of <strong>concurrency and parallelism</strong>, including race conditions, synchronization and atomic operations</li>
+<li><strong>Mentoring</strong> developers new to Go</li>
+<li>Creator of <a href="/projects/id/mock">Mock</a>, a testing library requiring work with Go internals: <strong>ABI, garbage collection and reflection</strong></li>
+<li>Working with <strong>gin</strong>, <strong>chi</strong>, <strong>cobra</strong>, <strong>viper</strong>, <strong>pgx/pgxpool</strong>, <strong>zerolog</strong> and <strong>slog</strong></li>
 </ul></li>
 
-<li><p><strong>Kubernetes</strong> in production <strong>since 2021</strong>, including <strong>istio</strong>, EKS, OpenShift and custom operators</p></li>
+<li>
+<h2>Kubernetes</h2>
 
-<li><p>Also working with: <strong>git</strong>, <strong>Docker</strong>, <strong>REST</strong>ful <strong>API</strong>s, <strong>OpenAPI</strong>, <strong>OAuth</strong>, <strong>GraphQL</strong>, <strong>gRPC</strong>, <strong>Protobuf</strong>, <strong>JWT</strong>, <strong>PASETO</strong></p></li>
+<ul>
+<li>Production experience <strong>since 2021</strong> with <strong>EKS</strong>, <strong>OpenShift</strong>, <strong>Istio</strong> and <strong>custom operators</strong></li>
+<li>Working with multiple clusters across multiple regions</li>
+<li>Managing deployments with <strong>Helm</strong>, <strong>Helmfile</strong> and <strong>Kustomize</strong></li>
+</ul></li>
 
-<li><p>Good understanding of <strong>concurrency and parallelism</strong> (async/await, threads, coroutines, race conditions, semaphores, locks, atomic ops)
-<br>
-Defeated the Parallel Wizard at <a href="https://deadlockempire.github.io/" target="_blank">deadlockempire.github.io</a></p></li>
+<li>
+<h2>AI-assisted development</h2>
 
-<li><p><strong>AWS</strong>: IAM, RDS, S3, EKS (+ EC2 and NLB/ALB indirectly), Route53</p></li>
+<p>Daily use of <strong>GitHub Copilot</strong> and <strong>OpenAI Codex</strong>, connecting <strong>MCP servers</strong> for additional context
+and using <strong>reusable AI skills</strong> and tools such as <strong>rtk</strong> and <strong>superpowers</strong>.</p></li>
 
-<li><p>IAC: <strong>Helm</strong>, Helmfile, Kustomize, <strong>Terraform</strong> and in-house tools</p></li>
+<li>
+<h2>APIs &amp; data</h2>
 
-<li><p>SQL / noSQL: <strong>PostgreSQL</strong>, <strong>SQLite</strong> and <strong>Redis</strong>/<strong>Valkey</strong>, migrations with <strong>goose</strong> and <strong>Liquibase</strong></p></li>
+<ul>
+<li><strong>REST</strong>, <strong>OpenAPI</strong>, <strong>gRPC</strong>, <strong>Protobuf</strong> and <strong>GraphQL</strong></li>
+<li>Authentication with <strong>OAuth</strong>, <strong>JWT</strong> and <strong>PASETO</strong></li>
+<li><strong>PostgreSQL</strong>, <strong>SQLite</strong>, <strong>Redis</strong> and <strong>Valkey</strong>; migrations with <strong>goose</strong> and <strong>Liquibase</strong></li>
+<li>Event-driven systems using <strong>Redis Pub/Sub</strong>, <strong>Redis Streams</strong>, <strong>WebSockets</strong> and <strong>server-sent events (SSE)</strong></li>
+</ul></li>
 
-<li><p>Messaging / events: <strong>Redis Pub/Sub</strong>, <strong>Redis Streams</strong>, <strong>websocket</strong> and <strong>server sent events (SSE)</strong></p></li>
+<li>
+<h2>Cloud &amp; delivery</h2>
 
-<li><p>CI / CD:  <strong>Harness</strong>, <strong>Github Actions</strong> and <strong>Jenkins</strong></p></li>
+<ul>
+<li><strong>AWS</strong>: IAM, RDS, S3, EKS and Route 53</li>
+<li><strong>Docker</strong>, <strong>Terraform</strong> and in-house infrastructure tooling</li>
+<li><strong>Git</strong>, <strong>GitHub Actions</strong>, <strong>Harness</strong> and <strong>Jenkins</strong></li>
+</ul></li>
 
-<li><p>Logging / metrics: <strong>DataDog</strong>, <strong>ElasticSearch</strong>, <strong>OpenTelemetry</strong></p></li>
+<li>
+<h2>Testing &amp; observability</h2>
 
-<li><p>Working with <strong>AI</strong>-powered tools on a daily basis</p></li>
+<ul>
+<li>Unit, integration, smoke and end-to-end <strong>testing</strong>; micro and macro <strong>benchmarking</strong></li>
+<li><strong>testify</strong>, <strong>mockery</strong> and <strong>testcontainers-go</strong></li>
+<li>Logging, metrics and instrumentation with <strong>Datadog</strong>, <strong>Elasticsearch</strong> and <strong>OpenTelemetry</strong></li>
+</ul></li>
 
-<li><p>Software Development Lifecycle (<strong>SDLC</strong>), DDD, TDD, BDD, FDD, XP, Scrum, Kanban,
-unit/integration/smoke/e2e <strong>testing</strong>, micro/macro <strong>benchmarking</strong>,
-event-driven architecture, hexagonal architecture, The Twelve-Factor App, CleanCode, SOLID, DRY, KISS</p></li>
+<li>
+<h2>Engineering practices</h2>
+
+<ul>
+<li>Service, database and API design; <strong>event-driven</strong> and <strong>hexagonal architecture</strong></li>
+<li><strong>Test-driven development</strong>, maintainable code and the <strong>Twelve-Factor App</strong> principles</li>
+<li>Collaboration in <strong>Scrum</strong> and <strong>Kanban</strong> teams</li>
+</ul></li>
+
+<li>
+<h2>Additional background</h2>
+
+<ul>
+<li><strong>4+ years</strong> of professional <strong>C++</strong> experience</li>
+<li>Previous professional work with <strong>C#/.NET</strong>, <strong>Java</strong> and <strong>Python</strong></li>
+<li>Familiar with <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>, with some <strong>React</strong> experience</li>
+</ul></li>
 </ul>
 
 </div>
