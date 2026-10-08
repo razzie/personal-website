@@ -1,0 +1,16 @@
+name: Ebiten Infinicave
+year: "2026"
+tags:
+- golang
+- rendering
+description: |-
+  I wanted to revisit my [blob game concept](/projects/id/blob_game_concept) and see if the new GPT6 Astra model
+  could implement it based on an image, since I had problems doing this with AI in the past.
+  It still took about 4 tries before I achieved something remotely resembling the concept.
+  The result is a Go library for Ebitengine that generates an infinite cave with faceted rocks, branching vines and mushrooms,
+  with an interactive viewer to scroll through the world and carve away terrain.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/ebiten-infinicave
+    url: https://github.com/razzie/ebiten-infinicave

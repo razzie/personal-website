@@ -1,0 +1,15 @@
+name: Ebiten Metaballs
+year: "2026"
+tags:
+- golang
+- rendering
+description: |-
+  Inspired by my [metaball squeeze shader](/projects/id/metaball_squeeze_shader),
+  I wanted to turn the effect into a reusable Go library for Ebitengine.
+  Metaballs of the same color merge smoothly, while different groups squeeze against each other and rigid walls.
+  There is also an optional soft body physics package to play with connected blobs.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/ebiten-metaballs
+    url: https://github.com/razzie/ebiten-metaballs
