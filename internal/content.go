@@ -12,8 +12,29 @@ type ExperienceEntry struct {
 	Sabbatical bool     `yaml:"sabbatical"`
 }
 
+type FeaturedProject struct {
+	ID       string `yaml:"id"`
+	Name     string `yaml:"name"`
+	Category string `yaml:"category"`
+	Summary  string `yaml:"summary"`
+}
+
+type HelloContent struct {
+	Name               string            `yaml:"name"`
+	Alias              string            `yaml:"alias"`
+	Headline           []string          `yaml:"headline"`
+	Summary            Markdown          `yaml:"summary"`
+	About              Markdown          `yaml:"about"`
+	FeaturedTitle      string            `yaml:"featuredTitle"`
+	FeaturedProjects   []FeaturedProject `yaml:"featuredProjects"`
+	CollaborationTitle string            `yaml:"collaborationTitle"`
+	Collaboration      Markdown          `yaml:"collaboration"`
+	ContactLabel       string            `yaml:"contactLabel"`
+	Availability       Markdown          `yaml:"availability"`
+}
+
 type Content struct {
-	Hello       Markdown          `yaml:"hello"`
+	Hello       HelloContent      `yaml:"hello"`
 	Skills      Markdown          `yaml:"skills"`
 	Experience  []ExperienceEntry `yaml:"experience"`
 	Projects    []Project         `yaml:"-"`

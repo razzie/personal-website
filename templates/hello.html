@@ -1,0 +1,45 @@
+{{ define "hello" }}
+<style>@import url("/hello.css");</style>
+<div class="hello-page">
+	<section class="hello-intro" aria-labelledby="hello-headline">
+		<div>
+			<p class="hello-name">{{ .Name }} <span>also known as {{ .Alias }}</span></p>
+			<h2 id="hello-headline" class="hello-headline">{{ range .Headline }}<span>{{ . }}</span>{{ end }}</h2>
+			<div class="hello-summary">{{ .Summary.ToHTML }}</div>
+			<div class="hello-links">
+				<a href="/skills">Explore my skills <span aria-hidden="true">&rarr;</span></a>
+				<a href="/experience">Work experience <span aria-hidden="true">&rarr;</span></a>
+			</div>
+		</div>
+		<div class="hello-about">{{ .About.ToHTML }}</div>
+	</section>
+
+	<section class="hello-projects" aria-labelledby="hello-projects-title">
+		<div class="hello-section-heading">
+			<h2 id="hello-projects-title">{{ .FeaturedTitle }}</h2>
+			<a href="/projects">All projects <span aria-hidden="true">&rarr;</span></a>
+		</div>
+		<div class="hello-project-grid">
+			{{ range .FeaturedProjects }}
+			<a class="hello-project" href="/projects/id/{{ .ID }}">
+				<span class="hello-project-category">{{ .Category }}</span>
+				<h3>{{ .Name }} <span aria-hidden="true">&rarr;</span></h3>
+				<p>{{ .Summary }}</p>
+			</a>
+			{{ end }}
+		</div>
+	</section>
+
+	<section class="hello-collaboration" aria-labelledby="hello-collaboration-title">
+		<div>
+			<h2 id="hello-collaboration-title">{{ .CollaborationTitle }}</h2>
+			{{ .Collaboration.ToHTML }}
+		</div>
+		<div class="hello-contact">
+			<span id="email" data-label="{{ .ContactLabel }}" data-link-class="hello-contact-link"></span>
+			<noscript>Please enable JavaScript to reveal my email address.</noscript>
+		</div>
+	</section>
+	<div class="hello-availability">{{ .Availability.ToHTML }}</div>
+</div>
+{{ end }}

@@ -1,27 +1,40 @@
-hello: |
-  My name is **Gábor Görzsöny**, but you might also know me as **Razzie** from my online presence.
-  With a strong foundation in software engineering,
-  I bring over 8+ years of formal experience across multiple sectors and programming languages, which doubles when including hobby projects.
-  I am confident that I can deliver valuable solutions for you, your business partners and customers.
+hello:
+  name: Gábor Görzsöny
+  alias: Razzie
+  headline:
+  - Go engineer.
+  - Tool builder.
+  - Curious by default.
+  summary: |
+    Senior software engineer focused on **Go backend services and Kubernetes**.
+    I build useful tools, explore ideas and enjoy helping others do the same.
+  about: |
+    My professional work spans service, API and database design, testing and deployment across multiple regions.
+    I also mentor developers learning Go and enjoy helping teammates work through technical problems.
 
-  My career began with a fascination for video games, which spurred me to self-learn coding from a young age.
-  This journey has evolved significantly, steering me towards learning industry-standard techniques and cutting-edge technologies.
-
-  In addition to my professional work, I am an avid hobbyist developer.
-  I enjoy working on open-source projects, many of which are self-hosted.
-  My recent ventures include developing a cloud platform and a range of Go-based software tools.
-
-  I am deeply passionate about continuous learning and knowledge sharing.
-  My friends and colleagues know me as someone who thrives on engaging in philosophical and technical discussions.
-  Creativity and curiosity are the cornerstones of my work ethic, driving me to explore and innovate constantly.
-
-  In my opinion, the greatest achievements in human history have resulted from collaborative efforts spearheaded by visionary leaders.
-  My aspiration is to become one of these key individuals.
-
-  I am currently **not** open for work.<br>
-  If my [skills](/skills) and [experiences](/experience) align with your needs and you wish to request my insights or to collaborate with me,
-  please feel free to reach out to me via email at <span id="email"></span>.
-  I look forward to potential collaborations that challenge and inspire me.
+    I started programming because I wanted to make games. Outside work, I still follow that curiosity:
+    building open-source tools, self-hosted services and an experimental cloud platform.
+  featuredTitle: A few things I've built
+  featuredProjects:
+  - id: mock
+    name: Mock
+    category: Go · Testing
+    summary: Runtime mocks for Go interfaces, without the boilerplate.
+  - id: razchess
+    name: RazChess
+    category: Go + JavaScript · Games
+    summary: Online chess with friends. Share a link and start playing, no signup needed.
+  - id: razvhost
+    name: Razvhost
+    category: Go · Self-hosting
+    summary: A reverse proxy with automatic TLS and simple hosting rules.
+  collaborationTitle: Have an idea for a small, fun project?
+  collaboration: |
+    I'd love to hear about a developer tool, game prototype or experiment we could build together over a few weeks.
+    I like working with people who share ideas openly and enjoy learning from each other.
+  contactLabel: Let's build something
+  availability: |
+    I'm not currently looking for a new role, but I'm happy to connect about future opportunities and short-term collaborations.
 
 skills: |
   Senior software engineer focused on **Go backend services** and **Kubernetes**.
