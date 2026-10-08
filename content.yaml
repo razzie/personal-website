@@ -69,9 +69,13 @@ experience:
 - content: |-
     ### 2024+ | Verint | senior software engineer
 
-    Working on all things authorization.
-    Actively involved in influencing technical decisions, doing proof-of-concept and research work
-    and in the whole software development lifecycle.
+    Working on multiple concurrent projects spanning a dozen microservices.
+    Involved in system, database and API design, day-to-day feature development and DevOps tasks,
+    including setting up CI/CD pipelines and managing deployments.
+
+    Working with multiple Kubernetes clusters across multiple regions and database replication.
+    Influencing technical decisions through proof-of-concept and research work,
+    and using AI-assisted workflows throughout the software development lifecycle.
 
 - sabbatical: true
   content: |-
