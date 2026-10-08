@@ -7,12 +7,17 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+type ExperienceEntry struct {
+	Content    Markdown `yaml:"content"`
+	Sabbatical bool     `yaml:"sabbatical"`
+}
+
 type Content struct {
-	Hello       Markdown      `yaml:"hello"`
-	Skills      Markdown      `yaml:"skills"`
-	Experience  MarkdownSlice `yaml:"experience"`
-	Projects    []Project     `yaml:"-"`
-	ProjectTags []Tag         `yaml:"-"`
+	Hello       Markdown          `yaml:"hello"`
+	Skills      Markdown          `yaml:"skills"`
+	Experience  []ExperienceEntry `yaml:"experience"`
+	Projects    []Project         `yaml:"-"`
+	ProjectTags []Tag             `yaml:"-"`
 }
 
 func LoadContent(dir string) (content Content) {

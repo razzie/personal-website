@@ -36,7 +36,7 @@ var buildCmd = &cobra.Command{
 				ID:       "experience",
 				Title:    "Experience",
 				Template: "timeline",
-				Data:     content.Experience.ToHTML(),
+				Data:     content.Experience,
 			},
 			{
 				ID:       "projects",

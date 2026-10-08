@@ -1,10 +1,27 @@
 {{ define "timeline" }}
-<div class="timeline">
-	<style scoped>@import url("/timeline.css?1");</style>
+<style scoped>@import url("/timeline.css?2");</style>
+<label class="timeline-filter">
+	<input type="checkbox" id="show-sabbaticals" role="switch" aria-controls="experience-timeline" checked>
+	Show sabbatical leaves
+</label>
+<div class="timeline" id="experience-timeline">
 	{{ range . }}
-	<div>
-		{{ . }}
+	<div class="timeline-entry{{ if .Sabbatical }} sabbatical{{ end }}">
+		{{ .Content.ToHTML }}
 	</div>
 	{{ end }}
 </div>
+<script>
+(() => {
+	const toggle = document.getElementById('show-sabbaticals');
+	const sabbaticals = document.querySelectorAll('#experience-timeline > .sabbatical');
+	const update = () => {
+		for (const entry of sabbaticals) {
+			entry.hidden = !toggle.checked;
+		}
+	};
+	toggle.addEventListener('change', update);
+	update();
+})();
+</script>
 {{ end }}
