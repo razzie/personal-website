@@ -29,7 +29,7 @@ var buildCmd = &cobra.Command{
 			{
 				ID:       "skills",
 				Title:    "Skills",
-				Template: "columns",
+				Template: "skills",
 				Data:     content.Skills.ToHTML(),
 			},
 			{

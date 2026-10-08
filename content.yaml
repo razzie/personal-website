@@ -24,46 +24,50 @@ hello: |
   I look forward to potential collaborations that challenge and inspire me.
 
 skills: |
-  - **Go**/Golang has been my preferred programming language **since 2019**
-    - Bootstrapped and worked on multiple **microservices** used in production and written dozens of side projects on [Github](https://github.com/razzie?tab=repositories&language=go)
-    - **Mentoring** newcomers to the language whenever I have the chance
-    - Reading / read: [The Go Blog](https://go.dev/blog/),
-      [Effective Go](https://go.dev/doc/effective_go),
-      [A Guide to the Go Garbage Collector](https://tip.golang.org/doc/gc-guide),
-      [Efficient Go](https://www.oreilly.com/library/view/efficient-go/9781098105709/)
-      and [Cloud Native Go](https://www.oreilly.com/library/view/cloud-native-go/9781492076322/)
-    - Working with **gin**, **go-chi**, **cobra**, **viper**, **testify**, **mockery**, **testcontainers-go**, **pgx/pgxpool**, **zerolog**, **slog** and many others
+  Senior software engineer focused on **Go backend services** and **Kubernetes**.
+  My work spans service, API and database design, testing, CI/CD and deployments across multiple regions.
 
-  - Former / side languages:
-    - 4+ formal years of **C++** experience
-    - Worked on **C#/.NET**, **Java** (1-1 year) and **Python** (\<1 year) projects
-    - Familiar with **HTML5**, **CSS**, **JavaScript** + a little bit of **React**
+  - ## Go / Golang
+    - My primary programming language **since 2019**, building production **microservices**, tools and libraries
+    - Strong understanding of **concurrency and parallelism**, including race conditions, synchronization and atomic operations
+    - **Mentoring** developers new to Go
+    - Creator of [Mock](/projects/id/mock), a testing library requiring work with Go internals: **ABI, garbage collection and reflection**
+    - Working with **gin**, **chi**, **cobra**, **viper**, **pgx/pgxpool**, **zerolog** and **slog**
 
-  - **Kubernetes** in production **since 2021**, including **istio**, EKS, OpenShift and custom operators
+  - ## Kubernetes
+    - Production experience **since 2021** with **EKS**, **OpenShift**, **Istio** and **custom operators**
+    - Working with multiple clusters across multiple regions
+    - Managing deployments with **Helm**, **Helmfile** and **Kustomize**
 
-  - Also working with: **git**, **Docker**, **REST**ful **API**s, **OpenAPI**, **OAuth**, **GraphQL**, **gRPC**, **Protobuf**, **JWT**, **PASETO**
+  - ## AI-assisted development
+    Daily use of **GitHub Copilot** and **OpenAI Codex**, connecting **MCP servers** for additional context
+    and using **reusable AI skills** and tools such as **rtk** and **superpowers**.
 
-  - Good understanding of **concurrency and parallelism** (async/await, threads, coroutines, race conditions, semaphores, locks, atomic ops)
-    <br>
-    Defeated the Parallel Wizard at [deadlockempire.github.io](https://deadlockempire.github.io/)
+  - ## APIs & data
+    - **REST**, **OpenAPI**, **gRPC**, **Protobuf** and **GraphQL**
+    - Authentication with **OAuth**, **JWT** and **PASETO**
+    - **PostgreSQL**, **SQLite**, **Redis** and **Valkey**; migrations with **goose** and **Liquibase**
+    - Event-driven systems using **Redis Pub/Sub**, **Redis Streams**, **WebSockets** and **server-sent events (SSE)**
 
-  - **AWS**: IAM, RDS, S3, EKS (+ EC2 and NLB/ALB indirectly), Route53
+  - ## Cloud & delivery
+    - **AWS**: IAM, RDS, S3, EKS and Route 53
+    - **Docker**, **Terraform** and in-house infrastructure tooling
+    - **Git**, **GitHub Actions**, **Harness** and **Jenkins**
 
-  - IAC: **Helm**, Helmfile, Kustomize, **Terraform** and in-house tools
+  - ## Testing & observability
+    - Unit, integration, smoke and end-to-end **testing**; micro and macro **benchmarking**
+    - **testify**, **mockery** and **testcontainers-go**
+    - Logging, metrics and instrumentation with **Datadog**, **Elasticsearch** and **OpenTelemetry**
 
-  - SQL / noSQL: **PostgreSQL**, **SQLite** and **Redis**/**Valkey**, migrations with **goose** and **Liquibase**
+  - ## Engineering practices
+    - Service, database and API design; **event-driven** and **hexagonal architecture**
+    - **Test-driven development**, maintainable code and the **Twelve-Factor App** principles
+    - Collaboration in **Scrum** and **Kanban** teams
 
-  - Messaging / events: **Redis Pub/Sub**, **Redis Streams**, **websocket** and **server sent events (SSE)**
-
-  - CI / CD:  **Harness**, **Github Actions** and **Jenkins** 
-
-  - Logging / metrics: **DataDog**, **ElasticSearch**, **OpenTelemetry**
-
-  - Working with **AI**-powered tools on a daily basis
-
-  - Software Development Lifecycle (**SDLC**), DDD, TDD, BDD, FDD, XP, Scrum, Kanban,
-    unit/integration/smoke/e2e **testing**, micro/macro **benchmarking**,
-    event-driven architecture, hexagonal architecture, The Twelve-Factor App, CleanCode, SOLID, DRY, KISS
+  - ## Additional background
+    - **4+ years** of professional **C++** experience
+    - Previous professional work with **C#/.NET**, **Java** and **Python**
+    - Familiar with **HTML**, **CSS** and **JavaScript**, with some **React** experience
 
 experience:
 - content: |-
