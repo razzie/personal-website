@@ -14,12 +14,40 @@
 	<script src="/loading-states.min.js" defer></script>
 	<script src="/email.js" defer></script>
 	<style>
+	body > main {
+		padding-top: 0.5rem;
+	}
+	nav {
+		align-items: flex-start;
+	}
+	#title h1 {
+		margin-bottom: 0;
+	}
+	#title.title-with-subtitle h1 {
+		font-size: 1.25rem;
+		line-height: 1.4;
+	}
+	#title.title-with-subtitle h1 span {
+		display: block;
+		color: var(--pico-muted-color);
+		font-size: 0.85rem;
+		font-weight: 400;
+	}
 	@media screen and (max-width: 768px) {
 		#title {
 			display: none;
 		}
+		#title.title-with-subtitle {
+			display: flex;
+			order: 1;
+			justify-content: center;
+			width: 100%;
+			margin: 0;
+			text-align: center;
+		}
 		nav {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 			margin-bottom: var(--pico-typography-spacing-vertical);
 		}
@@ -36,7 +64,9 @@
 	<main class="container">
 		<nav>
 			<ul id="title">
-				<li><h1 data-loading-aria-busy data-loading-delay="50">Minecraft clone</h1></li>
+				<li>
+					<h1 data-loading-aria-busy data-loading-delay="50">Minecraft clone</h1>
+				</li>
 			</ul>
 			<ul>
 			
