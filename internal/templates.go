@@ -7,10 +7,12 @@ import (
 )
 
 type Page struct {
-	ID       string
-	Title    string
-	Template string
-	Data     any
+	ID             string
+	Title          string
+	HeaderTitle    string
+	HeaderSubtitle string
+	Template       string
+	Data           any
 }
 
 type TemplateRenderer func(w io.Writer, page Page) error
@@ -27,12 +29,18 @@ func LoadTemplateRenderer(navPages []Page) TemplateRenderer {
 	}).ParseGlob("templates/*.html"))
 
 	return func(w io.Writer, page Page) error {
+		headerTitle := page.HeaderTitle
+		if headerTitle == "" {
+			headerTitle = page.Title
+		}
 		view := map[string]any{
-			"Nav":      navPages,
-			"Title":    page.Title,
-			"PageID":   page.ID,
-			"Template": page.Template,
-			"Data":     page.Data,
+			"Nav":            navPages,
+			"Title":          page.Title,
+			"HeaderTitle":    headerTitle,
+			"HeaderSubtitle": page.HeaderSubtitle,
+			"PageID":         page.ID,
+			"Template":       page.Template,
+			"Data":           page.Data,
 		}
 		return t.ExecuteTemplate(w, "layout", view)
 	}

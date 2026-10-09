@@ -1,23 +1,11 @@
 .hello-page {
-	padding: 1rem 0;
+	padding: 0.5rem 0;
 }
 
 .hello-intro {
 	display: grid;
 	gap: 2rem;
 	padding-bottom: 2.5rem;
-}
-
-.hello-name {
-	font-weight: 600;
-	margin-bottom: 1.25rem;
-}
-
-.hello-name span {
-	display: block;
-	color: var(--pico-muted-color);
-	font-size: 0.85rem;
-	font-weight: 400;
 }
 
 .hello-headline {

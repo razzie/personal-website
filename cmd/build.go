@@ -21,10 +21,12 @@ var buildCmd = &cobra.Command{
 		content := internal.LoadContent(".")
 		navPages := []internal.Page{
 			{
-				ID:       "",
-				Title:    "Hello",
-				Template: "hello",
-				Data:     content.Hello,
+				ID:             "",
+				Title:          "Hello",
+				HeaderTitle:    content.Hello.Name,
+				HeaderSubtitle: "also known as " + content.Hello.Alias,
+				Template:       "hello",
+				Data:           content.Hello,
 			},
 			{
 				ID:       "skills",
