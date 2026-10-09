@@ -1,12 +1,12 @@
 {{ define "timeline" }}
 <style scoped>@import url("/timeline.css?2");</style>
 <label class="timeline-filter">
-	<input type="checkbox" id="show-sabbaticals" role="switch" aria-controls="experience-timeline" checked>
+	<input type="checkbox" id="show-sabbaticals" role="switch" aria-controls="experience-timeline">
 	Show sabbatical leaves
 </label>
 <div class="timeline" id="experience-timeline">
 	{{ range . }}
-	<div class="timeline-entry{{ if .Sabbatical }} sabbatical{{ end }}">
+	<div class="timeline-entry{{ if .Sabbatical }} sabbatical{{ end }}"{{ if .Sabbatical }} hidden{{ end }}>
 		{{ .Content.ToHTML }}
 	</div>
 	{{ end }}
