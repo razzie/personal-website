@@ -60,7 +60,7 @@ skills: |
     - **REST**, **OpenAPI**, **gRPC**, **Protobuf** and **GraphQL**
     - Authentication with **OAuth**, **JWT** and **PASETO**
     - **PostgreSQL**, **SQLite**, **Redis** and **Valkey**; migrations with **goose** and **Liquibase**
-    - Event-driven systems using **Redis Pub/Sub**, **Redis Streams**, **WebSockets** and **server-sent events (SSE)**
+    - Event-driven systems using **NATS JetStream**, **Redis Pub/Sub**, **Redis Streams**, **WebSockets** and **server-sent events (SSE)**
 
   - ## Cloud & delivery
     - **AWS**: IAM, RDS, S3, EKS and Route 53
