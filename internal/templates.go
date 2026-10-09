@@ -17,7 +17,7 @@ type Page struct {
 
 type TemplateRenderer func(w io.Writer, page Page) error
 
-func LoadTemplateRenderer(navPages []Page) TemplateRenderer {
+func LoadTemplateRenderer(navPages []Page, siteName string) TemplateRenderer {
 	var t *template.Template
 	t = template.Must(template.New("").Funcs(map[string]interface{}{
 		"CallTemplate": func(name string, data interface{}) (ret template.HTML, err error) {
@@ -35,6 +35,7 @@ func LoadTemplateRenderer(navPages []Page) TemplateRenderer {
 		}
 		view := map[string]any{
 			"Nav":            navPages,
+			"SiteName":       siteName,
 			"Title":          page.Title,
 			"HeaderTitle":    headerTitle,
 			"HeaderSubtitle": page.HeaderSubtitle,

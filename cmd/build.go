@@ -50,7 +50,7 @@ var buildCmd = &cobra.Command{
 				},
 			},
 		}
-		render := internal.LoadTemplateRenderer(navPages)
+		render := internal.LoadTemplateRenderer(navPages, content.Hello.Name)
 
 		if err := os.MkdirAll(filepath.Join(outDir, "projects"), 0770); err != nil {
 			return err
