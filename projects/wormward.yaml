@@ -1,0 +1,14 @@
+name: Wormward
+year: "2026"
+tags:
+- golang
+- game
+description: |-
+  I wanted to try out my [Ebiten Infinicave](/projects/id/ebiten-infinicave) library in a game, so I made Wormward,
+  a real-time cave exploration game where you guide a worm through an infinite destructible cave.
+  Use a bazooka, drill, spider silk and a rope gun to carve paths and swing through the terrain.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie/wormward
+    url: https://github.com/razzie/wormward
