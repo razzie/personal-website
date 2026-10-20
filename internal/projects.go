@@ -39,15 +39,39 @@ func (p *Project) containsTag(tag Tag) bool {
 	return slices.Contains(p.Tags, tag)
 }
 
+func (p Project) startingYear() int {
+	start, _, _ := strings.Cut(p.Year, "-")
+	year, _ := strconv.Atoi(strings.TrimSpace(start))
+	return year
+}
+
 func orderProjectsByYear(projects []Project) {
-	getYear := func(i int) int {
-		years := strings.Split(projects[i].Year, "-")
-		year, _ := strconv.Atoi(strings.TrimSpace(years[len(years)-1]))
-		return year
-	}
 	sort.SliceStable(projects, func(i, j int) bool {
-		return getYear(i) > getYear(j)
+		return projects[i].startingYear() > projects[j].startingYear()
 	})
+}
+
+type ProjectYearGroup struct {
+	Year     int
+	Projects []Project
+}
+
+// GroupProjectsByYear groups projects by their starting year, newest first.
+// Projects within the same year retain their original order.
+func GroupProjectsByYear(projects []Project) []ProjectYearGroup {
+	projects = slices.Clone(projects)
+	orderProjectsByYear(projects)
+
+	var groups []ProjectYearGroup
+	for _, project := range projects {
+		year := project.startingYear()
+		if len(groups) == 0 || groups[len(groups)-1].Year != year {
+			groups = append(groups, ProjectYearGroup{Year: year})
+		}
+		group := &groups[len(groups)-1]
+		group.Projects = append(group.Projects, project)
+	}
+	return groups
 }
 
 func FilterProjectsByTag(projects []Project, tag Tag) []Project {

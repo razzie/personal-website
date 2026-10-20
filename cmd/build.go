@@ -45,8 +45,8 @@ var buildCmd = &cobra.Command{
 				Title:    "Projects",
 				Template: "projects",
 				Data: map[string]any{
-					"Projects": content.Projects,
-					"Tags":     content.ProjectTags,
+					"ProjectGroups": internal.GroupProjectsByYear(content.Projects),
+					"Tags":          content.ProjectTags,
 				},
 			},
 		}
@@ -90,9 +90,9 @@ var buildCmd = &cobra.Command{
 
 		for _, tag := range content.ProjectTags {
 			view := map[string]any{
-				"Projects": internal.FilterProjectsByTag(content.Projects, tag),
-				"Tags":     content.ProjectTags,
-				"Tag":      tag,
+				"ProjectGroups": internal.GroupProjectsByYear(internal.FilterProjectsByTag(content.Projects, tag)),
+				"Tags":          content.ProjectTags,
+				"Tag":           tag,
 			}
 			page := internal.Page{
 				Title:    "Projects (" + string(tag) + ")",

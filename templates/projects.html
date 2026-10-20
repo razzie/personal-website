@@ -1,9 +1,10 @@
 {{ define "projects" }}
+<div id="project-navigation" role="navigation" aria-label="Project tags and years" tabindex="-1">
 {{ if .Tags }}
-<p>
+<p class="project-tags">
 	{{ $tag := .Tag }}
 	{{ range .Tags }}
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		{{ if eq . $tag }}
 		<a href="/projects">{{ . }}</a>
 		{{ else }}
@@ -13,22 +14,75 @@
 	{{ end }}
 </p>
 {{ end }}
-<div class="project-grid">
-	<style scoped>
+{{ if .ProjectGroups }}
+<p class="project-tags project-years">
+	{{ range .ProjectGroups }}
+	<code><a href="#project-year-{{ .Year }}" class="secondary">{{ .Year }}</a></code>
+	{{ end }}
+</p>
+{{ end }}
+</div>
+<button type="button" id="projects-back-to-top" class="secondary project-back-to-top" aria-label="Back to project tags and years" hidden>
+	<span aria-hidden="true">↑</span> Top
+</button>
+<style>
+	.project-tags {
+		text-align: center;
+		text-wrap: balance;
+	}
+	.project-tags > code {
+		display: inline-block;
+		margin-bottom: 0.25rem;
+		white-space: nowrap;
+	}
+	.project-year {
+		padding-top: 1.5rem;
+		text-align: center;
+	}
+	.project-year-group:first-of-type > .project-year {
+		padding-top: 0.75rem;
+	}
 	.project-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		columns: 2;
 		column-gap: 1rem;
-		align-items: start;
+	}
+	.project-grid > article {
+		break-inside: avoid;
+	}
+	.project-grid-single {
+		columns: 1;
+		width: calc((100% - 1rem) / 2);
+		margin-inline: auto;
+	}
+	.project-back-to-top {
+		position: fixed;
+		right: 1rem;
+		bottom: 1rem;
+		z-index: 10;
+		margin: 0;
+		padding: 0.5rem 0.75rem;
+		box-shadow: var(--pico-card-box-shadow);
+	}
+	.project-back-to-top[hidden] {
+		display: none;
 	}
 	@media screen and (max-width: 768px) {
 		.project-grid {
-			grid-template-columns: 1fr;
+			columns: 1;
+		}
+		.project-grid-single {
+			width: 100%;
 		}
 	}
-	</style>
-	{{ range .Projects }}
-		{{ template "project" . }}
-	{{ end }}
-</div>
+</style>
+{{ range .ProjectGroups }}
+<section class="project-year-group" aria-labelledby="project-year-{{ .Year }}">
+	<h2 id="project-year-{{ .Year }}" class="project-year">{{ .Year }}</h2>
+	<div class="project-grid{{ if eq (len .Projects) 1 }} project-grid-single{{ end }}">
+		{{ range .Projects }}
+			{{ template "project" . }}
+		{{ end }}
+	</div>
+</section>
+{{ end }}
 {{ end }}
