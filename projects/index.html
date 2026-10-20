@@ -13,6 +13,7 @@
 	<script src="/htmx.min.js" defer></script>
 	<script src="/loading-states.min.js" defer></script>
 	<script src="/email.js" defer></script>
+	<script src="/projects.js" defer></script>
 	<style>
 	body > main {
 		padding-top: 0.5rem;
@@ -82,107 +83,108 @@
 			</ul>
 		</nav>
 		
+<div id="project-navigation" role="navigation" aria-label="Project tags and years" tabindex="-1">
 
-<p>
+<p class="project-tags">
 	
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/3d-print/" class="secondary">3d-print</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/c%23/" class="secondary">c#</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/chat/" class="secondary">chat</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/cloud/" class="secondary">cloud</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/game/" class="secondary">game</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/golang/" class="secondary">golang</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/gui/" class="secondary">gui</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/java/" class="secondary">java</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/javascript/" class="secondary">javascript</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/k8s/" class="secondary">k8s</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/lib/" class="secondary">lib</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/mod/" class="secondary">mod</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/other/" class="secondary">other</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/php/" class="secondary">php</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/proxy/" class="secondary">proxy</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/rendering/" class="secondary">rendering</a>
 		
@@ -190,22 +192,111 @@
 	
 </p>
 
-<div class="project-grid">
-	<style scoped>
+
+<p class="project-tags project-years">
+	
+	<code><a href="#project-year-2026" class="secondary">2026</a></code>
+	
+	<code><a href="#project-year-2025" class="secondary">2025</a></code>
+	
+	<code><a href="#project-year-2024" class="secondary">2024</a></code>
+	
+	<code><a href="#project-year-2023" class="secondary">2023</a></code>
+	
+	<code><a href="#project-year-2022" class="secondary">2022</a></code>
+	
+	<code><a href="#project-year-2021" class="secondary">2021</a></code>
+	
+	<code><a href="#project-year-2020" class="secondary">2020</a></code>
+	
+	<code><a href="#project-year-2019" class="secondary">2019</a></code>
+	
+	<code><a href="#project-year-2018" class="secondary">2018</a></code>
+	
+	<code><a href="#project-year-2017" class="secondary">2017</a></code>
+	
+	<code><a href="#project-year-2016" class="secondary">2016</a></code>
+	
+	<code><a href="#project-year-2015" class="secondary">2015</a></code>
+	
+	<code><a href="#project-year-2014" class="secondary">2014</a></code>
+	
+	<code><a href="#project-year-2013" class="secondary">2013</a></code>
+	
+	<code><a href="#project-year-2011" class="secondary">2011</a></code>
+	
+	<code><a href="#project-year-2010" class="secondary">2010</a></code>
+	
+	<code><a href="#project-year-2008" class="secondary">2008</a></code>
+	
+	<code><a href="#project-year-2007" class="secondary">2007</a></code>
+	
+	<code><a href="#project-year-2005" class="secondary">2005</a></code>
+	
+	<code><a href="#project-year-2003" class="secondary">2003</a></code>
+	
+</p>
+
+</div>
+<button type="button" id="projects-back-to-top" class="secondary project-back-to-top" aria-label="Back to project tags and years" hidden>
+	<span aria-hidden="true">↑</span> Top
+</button>
+<style>
+	.project-tags {
+		text-align: center;
+		text-wrap: balance;
+	}
+	.project-tags > code {
+		display: inline-block;
+		margin-bottom: 0.25rem;
+		white-space: nowrap;
+	}
+	.project-year {
+		padding-top: 1.5rem;
+		text-align: center;
+	}
+	.project-year-group:first-of-type > .project-year {
+		padding-top: 0.75rem;
+	}
 	.project-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		columns: 2;
 		column-gap: 1rem;
-		align-items: start;
+	}
+	.project-grid > article {
+		break-inside: avoid;
+	}
+	.project-grid-single {
+		columns: 1;
+		width: calc((100% - 1rem) / 2);
+		margin-inline: auto;
+	}
+	.project-back-to-top {
+		position: fixed;
+		right: 1rem;
+		bottom: 1rem;
+		z-index: 10;
+		margin: 0;
+		padding: 0.5rem 0.75rem;
+		box-shadow: var(--pico-card-box-shadow);
+	}
+	.project-back-to-top[hidden] {
+		display: none;
 	}
 	@media screen and (max-width: 768px) {
 		.project-grid {
-			grid-template-columns: 1fr;
+			columns: 1;
+		}
+		.project-grid-single {
+			width: 100%;
 		}
 	}
-	</style>
-	
+</style>
+
+<section class="project-year-group" aria-labelledby="project-year-2026">
+	<h2 id="project-year-2026" class="project-year">2026</h2>
+	<div class="project-grid">
 		
+			
 <article id="ebiten-infinicave">
 	<header><a href="/projects/id/ebiten-infinicave" class="secondary">Ebiten Infinicave</a></header>
 	<div class="grid">
@@ -242,8 +333,8 @@ with an interactive viewer to scroll through the world and carve away terrain.</
 	</footer>
 </article>
 
-	
 		
+			
 <article id="ebiten-metaballs">
 	<header><a href="/projects/id/ebiten-metaballs" class="secondary">Ebiten Metaballs</a></header>
 	<div class="grid">
@@ -279,8 +370,8 @@ There is also an optional soft body physics package to play with connected blobs
 	</footer>
 </article>
 
-	
 		
+			
 <article id="wormward">
 	<header><a href="/projects/id/wormward" class="secondary">Wormward</a></header>
 	<div class="grid">
@@ -315,8 +406,15 @@ Use a bazooka, drill, spider silk and a rope gun to carve paths and swing throug
 	</footer>
 </article>
 
-	
 		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2025">
+	<h2 id="project-year-2025" class="project-year">2025</h2>
+	<div class="project-grid">
+		
+			
 <article id="blob_game_concept">
 	<header><a href="/projects/id/blob_game_concept" class="secondary">Blob game concept</a></header>
 	<div class="grid">
@@ -357,8 +455,8 @@ not compatible with this design.</p>
 	</footer>
 </article>
 
-	
 		
+			
 <article id="magnetic_spinner">
 	<header><a href="/projects/id/magnetic_spinner" class="secondary">Magnetic Spinner</a></header>
 	<div class="grid">
@@ -393,8 +491,8 @@ It was designed for 10x10x10mm magnet cubes, but consider scaling to 105% in you
 	</footer>
 </article>
 
-	
 		
+			
 <article id="metaball_squeeze_shader">
 	<header><a href="/projects/id/metaball_squeeze_shader" class="secondary">Metaball squeeze shader</a></header>
 	<div class="grid">
@@ -429,8 +527,15 @@ It took me a few weeks of sporadic work and some complete rewrites, and now I co
 	</footer>
 </article>
 
-	
 		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2024">
+	<h2 id="project-year-2024" class="project-year">2024</h2>
+	<div class="project-grid project-grid-single">
+		
+			
 <article id="mock">
 	<header><a href="/projects/id/mock" class="secondary">Mock</a></header>
 	<div class="grid">
@@ -468,45 +573,60 @@ The only dependency is the testify package itself.</p>
 	</footer>
 </article>
 
-	
 		
-<article id="3d_prints">
-	<header><a href="/projects/id/3d_prints" class="secondary">3D prints</a></header>
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2023">
+	<h2 id="project-year-2023" class="project-year">2023</h2>
+	<div class="project-grid">
+		
+			
+<article id="0x40">
+	<header><a href="/projects/id/0x40" class="secondary">0x40 Hues</a></header>
 	<div class="grid">
 		<div>
-			<img src="/projects/3d_prints.webp" alt="Thumbnail of 3D prints" width="256">
+			<img src="/projects/0x40.webp" alt="Thumbnail of 0x40 Hues" width="256">
 		</div>
 		<div>
 			
 			<p>
-				Download:<br>
+				Try it here:<br>
 				
-				<a href="https://github.com/razzie/hobby-projects/tree/master/2022/3D_print_models" target="_blank">github.com/razzie/hobby-projects/2022/3D_print_models</a><br>
+				<a href="https://hues.razzie.cloud" target="_blank">hues.razzie.cloud</a><br>
 				
 			</p>
 			
-			<p>Year: 2022-2024</p>
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/0x40hues" target="_blank">github.com/razzie/0x40hues</a><br>
+				
+			</p>
+			
+			<p>Year: 2023</p>
 			<span>
 				Tags:
 				
-				<code><a href="/projects/tag/3d-print/" class="secondary">3d-print</a></code>
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/javascript/" class="secondary">javascript</a></code>
 				
 			</span>
 		</div>
 	</div>
 	<footer>
-		<p><p>I&rsquo;ve been fascinated by magnets even since I was a kid, but it only turned into experimentation
-when I came across a video about Halbach arrays.
-I wondered whether I could come up with an unassisted levitation design, so I got myself an FLSUN Q5 delta 3D printer,
-a few dozens of magnetic cubes and learned how to create models in TinkerCad.
-Even though I did not succeed in my initial plan, I still ended up with some fun magnetic toys I can show my guests
-and a bunch of rock-paper-scissors dices for boardgames.</p>
+		<p><p>I&rsquo;ve come across Kepstin&rsquo;s amazing <a href="https://github.com/kepstin/0x40hues-html5" target="_blank">0x40hues</a> project and caught myself listening to it a lot.
+After finding community resource packs to try, it quickly became troublesome to configure and run them.
+This motivated me to fork the project and after a great deal of refactoring, it now supports loading many respacks and on-the-fly configuration.</p>
 </p>
 	</footer>
 </article>
 
-	
 		
+			
 <article id="botkit">
 	<header><a href="/projects/id/botkit" class="secondary">Botkit</a></header>
 	<div class="grid">
@@ -545,8 +665,8 @@ as long as they share the same Redis database.</p>
 	</footer>
 </article>
 
-	
 		
+			
 <article id="broadcaster">
 	<header><a href="/projects/id/broadcaster" class="secondary">Broadcaster</a></header>
 	<div class="grid">
@@ -581,8 +701,8 @@ Designed for scenarios when it&rsquo;s unpractical to connect to the same event 
 	</footer>
 </article>
 
-	
 		
+			
 <article id="commander">
 	<header><a href="/projects/id/commander" class="secondary">Commander</a></header>
 	<div class="grid">
@@ -622,52 +742,8 @@ it will be extracted into a separate error return value.</p>
 	</footer>
 </article>
 
-	
 		
-<article id="golang_utils">
-	<header><a href="/projects/id/golang_utils" class="secondary">Golang utils</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/golang_utils.webp" alt="Thumbnail of Golang utils" width="256">
-		</div>
-		<div>
 			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/dlutil" target="_blank">github.com/razzie/dlutil</a><br>
-				
-				<a href="https://github.com/razzie/razgio" target="_blank">github.com/razzie/razgio</a><br>
-				
-				<a href="https://github.com/razzie/jsontime" target="_blank">github.com/razzie/jsontime</a><br>
-				
-				<a href="https://github.com/razzie/jsonchan" target="_blank">github.com/razzie/jsonchan</a><br>
-				
-				<a href="https://github.com/razzie/fakewriteseeker" target="_blank">github.com/razzie/fakewriteseeker</a><br>
-				
-				<a href="https://github.com/razzie/sleepsort" target="_blank">github.com/razzie/sleepsort</a><br>
-				
-			</p>
-			
-			<p>Year: 2021 - 2024</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>This is my collection of Golang utilities and experiments that are not notable/worthy enough to get their own project tile.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
 <article id="json2go">
 	<header><a href="/projects/id/json2go" class="secondary">Json2Go</a></header>
 	<div class="grid">
@@ -715,8 +791,1316 @@ The resulting generated structure is formatted and uses syntax highlighting.</p>
 	</footer>
 </article>
 
-	
 		
+			
+<article id="razcache">
+	<header><a href="/projects/id/razcache" class="secondary">RazCache</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razcache.webp" alt="Thumbnail of RazCache" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razcache" target="_blank">github.com/razzie/razcache</a><br>
+				
+			</p>
+			
+			<p>Year: 2023 - 2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A minimalist abstraction layer above Redis, Badger and a custom in-memory cache.
+As many of my self-hosted services rely on Redis for caching or data storage,
+I often had to fire up a local instance for manual testing.
+This process was too cumbersone for me, so I figured I could come up with a wrapper
+around Redis supporting the functionaly only I use the most, and during development
+it should mimic this functionality in-process.
+Supporting key expirations was a mandatory requirement, so the in-memory cache implements
+a &ldquo;janitor&rdquo; goroutine that cleans up these keys exactly when they expire, one at a time.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2022">
+	<h2 id="project-year-2022" class="project-year">2022</h2>
+	<div class="project-grid">
+		
+			
+<article id="3d_prints">
+	<header><a href="/projects/id/3d_prints" class="secondary">3D prints</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/3d_prints.webp" alt="Thumbnail of 3D prints" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2022/3D_print_models" target="_blank">github.com/razzie/hobby-projects/2022/3D_print_models</a><br>
+				
+			</p>
+			
+			<p>Year: 2022-2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/3d-print/" class="secondary">3d-print</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>I&rsquo;ve been fascinated by magnets even since I was a kid, but it only turned into experimentation
+when I came across a video about Halbach arrays.
+I wondered whether I could come up with an unassisted levitation design, so I got myself an FLSUN Q5 delta 3D printer,
+a few dozens of magnetic cubes and learned how to create models in TinkerCad.
+Even though I did not succeed in my initial plan, I still ended up with some fun magnetic toys I can show my guests
+and a bunch of rock-paper-scissors dices for boardgames.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="k8s-db-operator">
+	<header><a href="/projects/id/k8s-db-operator" class="secondary">k8s-db-operator</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/k8s-db-operator.webp" alt="Thumbnail of k8s-db-operator" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/k8s-db-operator" target="_blank">github.com/razzie/k8s-db-operator</a><br>
+				
+			</p>
+			
+			<p>Year: 2022 - 2023</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/k8s/" class="secondary">k8s</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Kubernetes operator to provide access to shared PostgreSQL and Redis.
+It relies on the DatabaseClaim CRD, but unlike most other operators,
+this one only deploys Kubernetes secrets containing connection strings.
+Databases and Redis namespaces are not shared between dbclaims.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="raz-stack">
+	<header><a href="/projects/id/raz-stack" class="secondary">Raz-Stack</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/raz-stack.webp" alt="Thumbnail of Raz-Stack" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/raz-stack" target="_blank">github.com/razzie/raz-stack</a><br>
+				
+			</p>
+			
+			<p>Year: 2022 - 2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/k8s/" class="secondary">k8s</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A simple Kubernetes stack that hosted many of my own projects plus an email service (Dovecot + Postfix) and Nextcloud.
+The goal of this project was simplified deployment and cost saving, without horizontal autoscaling, though I picked K8s to be able to scale in the future.
+Many of the hosted webapps used a shared Redis (Kvrocks) instance with separate namespaces, thanks to <a href="/projects/id/k8s-db-operator">k8s-db-operator</a>.
+Deployment was done via Helmfile and Helm under the hood, but it was managed by a Makefile to make things even simpler.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="razchess">
+	<header><a href="/projects/id/razchess" class="secondary">RazChess</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razchess.webp" alt="Thumbnail of RazChess" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://chess.gorzsony.com" target="_blank">chess.gorzsony.com</a><br>
+				
+				<a href="https://chess.razzie.cloud" target="_blank">chess.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razchess" target="_blank">github.com/razzie/razchess</a><br>
+				
+			</p>
+			
+			<p>Year: 2022 - 2023</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/javascript/" class="secondary">javascript</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>I&rsquo;ve had a sudden spark of interest in chess as of late 2022 and decided to build my own web chess app with focus on simplicity and ease of use.
+Also I didn&rsquo;t want to waste time convincing friends to register to [insert your favorite chess platform here]. With RazChess you just visit the website,
+copy the link of the session and pass it to the person you want to play with.
+As weeks passed I kept adding new features like chess puzzles (mate in two steps), Fischer random (chess960) game, included chess openings encyclopedia,
+custom games and the ability to download your matches as GIFs. There is also Redis support to restore active games after a restart.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2021">
+	<h2 id="project-year-2021" class="project-year">2021</h2>
+	<div class="project-grid">
+		
+			
+<article id="golang_utils">
+	<header><a href="/projects/id/golang_utils" class="secondary">Golang utils</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/golang_utils.webp" alt="Thumbnail of Golang utils" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/dlutil" target="_blank">github.com/razzie/dlutil</a><br>
+				
+				<a href="https://github.com/razzie/razgio" target="_blank">github.com/razzie/razgio</a><br>
+				
+				<a href="https://github.com/razzie/jsontime" target="_blank">github.com/razzie/jsontime</a><br>
+				
+				<a href="https://github.com/razzie/jsonchan" target="_blank">github.com/razzie/jsonchan</a><br>
+				
+				<a href="https://github.com/razzie/fakewriteseeker" target="_blank">github.com/razzie/fakewriteseeker</a><br>
+				
+				<a href="https://github.com/razzie/sleepsort" target="_blank">github.com/razzie/sleepsort</a><br>
+				
+			</p>
+			
+			<p>Year: 2021 - 2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>This is my collection of Golang utilities and experiments that are not notable/worthy enough to get their own project tile.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="pizzabot">
+	<header><a href="/projects/id/pizzabot" class="secondary">Telegram PizzaBot</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/pizzabot.webp" alt="Thumbnail of Telegram PizzaBot" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://t.me/razpizzabot" target="_blank">t.me/razpizzabot</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/pizzabot" target="_blank">github.com/razzie/pizzabot</a><br>
+				
+			</p>
+			
+			<p>Year: 2021</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/chat/" class="secondary">chat</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Do you love pizza so much that you keep talking about it in your Telegram group chat?
+Now you can include this bot and with the right permissions it will respond with a pizza sticker or interesting pizza fact
+to any mentions of pizza.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2020">
+	<h2 id="project-year-2020" class="project-year">2020</h2>
+	<div class="project-grid">
+		
+			
+<article id="beepboop">
+	<header><a href="/projects/id/beepboop" class="secondary">Beepboop</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/beepboop.webp" alt="Thumbnail of Beepboop" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/beepboop" target="_blank">github.com/razzie/beepboop</a><br>
+				
+			</p>
+			
+			<p>Year: 2020 - 2022</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A lightweight webapp framework that powers <a href="/projects/id/razbox">Razbox</a>.
+Most of the original code was taken from <a href="/projects/id/razlink">Razlink</a>, but it has heavily evolved since.
+The core mechanic consists of registering pages (which are mostly a template + handler bundle)
+and returning view objects from inside the handlers.
+There are some utilities for session handling, access management and logging too, but this library is
+not suitable for production use.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="geoip">
+	<header><a href="/projects/id/geoip" class="secondary">Geoip server</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/geoip.webp" alt="Thumbnail of Geoip server" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://geoip.razzie.cloud" target="_blank">geoip.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/geoip-server" target="_blank">github.com/razzie/geoip-server</a><br>
+				
+			</p>
+			
+			<p>Year: 2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A web service that serves IP address geolocations in JSON format.
+Instead of relying on a local database it collects data from a (configurable) series of 3rd party providers,
+converting the results to a commom format. It supports provider fallbacks and caching.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="mediaserver">
+	<header><a href="/projects/id/mediaserver" class="secondary">Mediaserver</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/mediaserver.webp" alt="Thumbnail of Mediaserver" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/mediaserver" target="_blank">github.com/razzie/mediaserver</a><br>
+				
+			</p>
+			
+			<p>Year: 2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A web service that fetches thumbnails with title from URLs.
+Originally planned to use it in a chat service to prevent the tracking of users by letting them download images directly.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="razbox">
+	<header><a href="/projects/id/razbox" class="secondary">Razbox</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razbox.webp" alt="Thumbnail of Razbox" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razbox" target="_blank">github.com/razzie/razbox</a><br>
+				
+			</p>
+			
+			<p>Year: 2020 - 2021</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Super simple cloud file storage with almost zero configuration - powered by <a href="/projects/id/beepboop">Beepboop</a>
+Razbox stores all configuration and metadata in JSON files on the local filesystem and doesn&rsquo;t rely on a relational database
+(though it has opt-in support for Redis caching).
+Each folder can contain a <em>.razbox</em> file (which can be generated by included tools) and the content is ready to be served.
+Read and write access to these folders can rely on separate passwords, so you can share read access only if you want.
+Subfolders are also supported and they inherit the read/write passwords, unless a <em>.razbox</em> file is generated for them.
+Uploaded files can have an arbitrary number of tags that allow filtering.
+Thumbnails are generated for media files (using ffmpeg for videos!), which are visible in gallery view.
+Some archive formats are also supported for read-only browsing.
+Individual files can be shared publicly, this making them readable without any password.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="razproxy">
+	<header><a href="/projects/id/razproxy" class="secondary">Razproxy</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razproxy.webp" alt="Thumbnail of Razproxy" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razproxy" target="_blank">github.com/razzie/razproxy</a><br>
+				
+			</p>
+			
+			<p>Year: 2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/proxy/" class="secondary">proxy</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>SOCKS5 tunneled through TLS connection.
+The project consists of a custom server and client, which enable encrypted traffic between them.
+The client opens a SOCKS5 port locally which can be used by multiple applications (like web browsers) running in parallel.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="razvhost">
+	<header><a href="/projects/id/razvhost" class="secondary">Razvhost</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razvhost.webp" alt="Thumbnail of Razvhost" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razvhost" target="_blank">github.com/razzie/razvhost</a><br>
+				
+			</p>
+			
+			<p>Year: 2020 - 2022</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/proxy/" class="secondary">proxy</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Virtual hosting/reverse proxy with TLS termination and automatic certificate management.
+It supports proxying, file/directory serving, redirection, accessing SFTP or S3 buckets, hosting PHP projects or even tailing log files.
+The configuration is loaded from a single file that contains simple <code>hostname -&gt; target</code> rules,
+where even templates are supported (check readme in repo).
+Changes to the config files are detected and applied during runtime.
+It can even watch Docker containers with VIRTUAL_HOST and VIRTUAL_PORT environment variables and direct traffic to them
+(though it would&rsquo;ve been better to check labels instead, but it didn&rsquo;t cross my mind at the time).</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="s3proxy">
+	<header><a href="/projects/id/s3proxy" class="secondary">S3proxy</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/s3proxy.webp" alt="Thumbnail of S3proxy" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/s3proxy" target="_blank">github.com/razzie/s3proxy</a><br>
+				
+			</p>
+			
+			<p>Year: 2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A super simple S3 proxy server that obfuscates file content before transmitting the request to the target.
+Obfuscation is done via a lookup table which is generated from a user provided key.
+Only signature v2 authentication is supported.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="uuid">
+	<header><a href="/projects/id/uuid" class="secondary">UUID server</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/uuid.webp" alt="Thumbnail of UUID server" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Try it here:<br>
+				
+				<a href="https://uuid.razzie.cloud" target="_blank">uuid.razzie.cloud</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/uuid-server" target="_blank">github.com/razzie/uuid-server</a><br>
+				
+				<a href="https://github.com/razzie/random" target="_blank">github.com/razzie/random</a><br>
+				
+			</p>
+			
+			<p>Year: 2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A http server that serves random (version4) UUIDs.
+It uses my hybrid pseudo- and true random generator library which periodically takes seeds from <a href="https://random.org" target="_blank">random.org</a>
+and uses them to generate pseudo-random UUIDs fast.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2019">
+	<h2 id="project-year-2019" class="project-year">2019</h2>
+	<div class="project-grid">
+		
+			
+<article id="doboz">
+	<header><a href="/projects/id/doboz" class="secondary">Doboz.NET</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/doboz.webp" alt="Thumbnail of Doboz.NET" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/Doboz.NET" target="_blank">github.com/razzie/Doboz.NET</a><br>
+				
+			</p>
+			
+			<p>Year: 2019</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%23/" class="secondary">c#</a></code>
+				
+				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>C# port of Attila Áfra&rsquo;s Doboz compression library</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="poccemod">
+	<header><a href="/projects/id/poccemod" class="secondary">PocceMod</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/poccemod.webp" alt="Thumbnail of PocceMod" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Releases:<br>
+				
+				<a href="https://forum.cfx.re/t/release-poccemod-fun-menu-with-ropes/645529" target="_blank">Official PocceMod page</a><br>
+				
+				<a href="https://github.com/razzie/PocceMod/releases" target="_blank">Github releases</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/PocceMod" target="_blank">github.com/razzie/PocceMod</a><br>
+				
+			</p>
+			
+			<p>Year: 2019</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%23/" class="secondary">c#</a></code>
+				
+				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/mod/" class="secondary">mod</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Created the first GTA5 (FiveM) game mod that allowed players to have fun with GTA&rsquo;s unused and undocumented rope API in a multiplayer environment.
+After sharing it with the community early on to receive feedback, the mod went through 2 months of intensive development, adding many of the requested features and changes.
+The project quickly gained popularity due to its uniqueness and led to community members requesting my services.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="razlink">
+	<header><a href="/projects/id/razlink" class="secondary">Razlink</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razlink.webp" alt="Thumbnail of Razlink" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razlink" target="_blank">github.com/razzie/razlink</a><br>
+				
+			</p>
+			
+			<p>Year: 2019</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/proxy/" class="secondary">proxy</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A lightweight link proxy/redirect service with logging.
+Can be used to create URLs that point to an external resource while tracking visits from users.
+Uses Redis for data storage.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="raztracer">
+	<header><a href="/projects/id/raztracer" class="secondary">RazTracer</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/raztracer.webp" alt="Thumbnail of RazTracer" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/raztracer" target="_blank">github.com/razzie/raztracer</a><br>
+				
+			</p>
+			
+			<p>Year: 2019</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Command line debug information explorer and function call tracer for Linux, based on the Ptrace API.
+I was in the process of implementing a GUI for the project (borrowing elements from <a href="/projects/id/riddle_solver">Riddle Solver</a>),
+but lost interest in continuing the development.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="riddle_solver">
+	<header><a href="/projects/id/riddle_solver" class="secondary">Riddle Solver</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/riddle_solver.webp" alt="Thumbnail of Riddle Solver" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Riddles:<br>
+				
+				<a href="https://raw.githubusercontent.com/razzie/riddle-solver/master/screenshots/dishonored2_jindosh_riddle.jpg" target="_blank">The Jindosh Riddle</a><br>
+				
+			</p>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-gui.exe" target="_blank">riddle-solver-gui.exe</a><br>
+				
+				<a href="https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-tui.exe" target="_blank">riddle-solver-tui.exe</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/riddle-solver" target="_blank">github.com/razzie/riddle-solver</a><br>
+				
+			</p>
+			
+			<p>
+				Component library:<br>
+				
+				<a href="https://github.com/razzie/razgio" target="_blank">github.com/razzie/razgio</a><br>
+				
+			</p>
+			
+			<p>Year: 2019 - 2021</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/gui/" class="secondary">gui</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Riddle Solver is a terminal app designed to solve Einstein&rsquo;s 5 house riddle (also called zebra puzzles in general).
+I think I came across this kind of riddle playing Dishonored 2 first, as a third option to get inside a locked place.
+It was written by a fictional genius game character named Kirin Jindosh and it&rsquo;s clearly based on Einstein&rsquo;s five house riddle.
+It took me (sadly) at least 30 minutes to solve on paper, but it earned me an achievement.
+Fast forward 3 years, I had the random idea of implementing this riddle solver, which seemed like a simple way to sharpen my Golang skills.
+I was wrong. Coming up with the UI design and the solver algorithm caused me some sleepness nights, but I&rsquo;m really proud of the result.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2018">
+	<h2 id="project-year-2018" class="project-year">2018</h2>
+	<div class="project-grid">
+		
+			
+<article id="raztalk">
+	<header><a href="/projects/id/raztalk" class="secondary">RazTalk</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/raztalk.webp" alt="Thumbnail of RazTalk" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/raztalk/releases/download/v1.0/raztalk_v1.0.zip" target="_blank">raztalk_v1.0.zip</a><br>
+				
+				<a href="https://github.com/razzie/raztalk/releases/download/v1.0/raztalk.client.exe" target="_blank">raztalk.client.exe</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/raztalk" target="_blank">github.com/razzie/raztalk</a><br>
+				
+			</p>
+			
+			<p>Year: 2018</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%23/" class="secondary">c#</a></code>
+				
+				<code><a href="/projects/tag/chat/" class="secondary">chat</a></code>
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/gui/" class="secondary">gui</a></code>
+				
+				<code><a href="/projects/tag/javascript/" class="secondary">javascript</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A simple lobby/channel based registration-free webchat.
+Implemented using NancyFX + Razor + SignalR stack and relies on <a href="/projects/id/raztools">RazTools</a> to support dynamic loading of bot libraries during runtime.
+The repo contains (outdated) bot implementations for CleverBot, Giphy, Imgur and Reddit.
+There is also a standalone desktop client, which is just a wrapper around the web interface.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="raztools">
+	<header><a href="/projects/id/raztools" class="secondary">RazTools</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/raztools.webp" alt="Thumbnail of RazTools" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/raztools" target="_blank">github.com/razzie/raztools</a><br>
+				
+			</p>
+			
+			<p>Year: 2018-2020</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%23/" class="secondary">c#</a></code>
+				
+				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A collection of reusable helper classes:</p>
+
+<ul>
+<li><em>ArchiveReader</em> and <em>ArchiveWriter</em>, based on <a href="/projects/id/doboz">Doboz.NET</a></li>
+<li>2 alternative versions of <em>CommandParser</em></li>
+<li><em>FileSystem</em> class that seamlessly integrates local OS filesystem + ArchiveReader</li>
+<li><em>ObjectDeserializer</em> to construct objects from a custom text format</li>
+<li><em>PluginManager</em> &amp; <em>RemoteLoader</em> simplify interaction with plugins using remoting</li>
+<li><em>Timeout</em> class with <em>Expired</em> event</li>
+<li><em>XmlReader</em> static class which returns dynamic objects</li>
+</ul>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="razziecraft_vanilla">
+	<header><a href="/projects/id/razziecraft_vanilla" class="secondary">RazzieCraft Vanilla</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razziecraft_vanilla.webp" alt="Thumbnail of RazzieCraft Vanilla" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://www.technicpack.net/download" target="_blank">TechnicLauncher</a><br>
+				
+				<a href="https://www.technicpack.net/modpack/razziecraft-vanilla.976147" target="_blank">RazzieCraft Vanilla mod page</a><br>
+				
+			</p>
+			
+			<p>Year: 2018</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/mod/" class="secondary">mod</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>RazzieCraft Vanilla is Minecraft version 1.12.2 on steroids!
+This pack contains a ton of strictly curated mods that enhance the visuals and gameplay of vanilla Minecraft,
+but without breaking its charm. There are a lot of recipes for uncraftable existing items (like chain armor, slime ball, spawn
+eggs, etc) and a very few brand new stuff.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2017">
+	<h2 id="project-year-2017" class="project-year">2017</h2>
+	<div class="project-grid">
+		
+			
+<article id="potato_game">
+	<header><a href="/projects/id/potato_game" class="secondary">Potato Game</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/potato_game.webp" alt="Thumbnail of Potato Game" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/PotatoGame/releases/download/pre-alpha/demos.zip" target="_blank">demos.zip</a><br>
+				
+			</p>
+			
+			<p>
+				Videos:<br>
+				
+				<a href="https://github.com/razzie/PotatoGame/releases/download/pre-alpha/potato.mp4" target="_blank">potato.mp4</a><br>
+				
+				<a href="https://github.com/razzie/PotatoGame/releases/download/pre-alpha/development.mp4" target="_blank">development.mp4</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/PotatoGame" target="_blank">github.com/razzie/PotatoGame</a><br>
+				
+			</p>
+			
+			<p>Year: 2017</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
+				
+				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>PotatoGame was meant to be a game about little potatoes with customizable AI gaining world domination,
+though my real motivation was to make art.
+I wanted to try something out of the box and build a tech demo of a completely procedurally generated abstract looking 3D game world.
+During the development I&rsquo;ve been a part of a coach guided mastermind program, where participants could follow the progress of graphical designs
+and world map and level generator algorithms.
+At the end of the mastermind program I had the chance to publicly talk about the project in front of an audience,
+where one person told me I inspired him to learn programming. This has been one of my proudest moments in life.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="razzgravitas">
+	<header><a href="/projects/id/razzgravitas" class="secondary">RazzGravitas</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razzgravitas.webp" alt="Thumbnail of RazzGravitas" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/razzgravitas/releases/download/v1.0/razzgravitas.exe" target="_blank">razzgravitas.exe</a><br>
+				
+			</p>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razzgravitas" target="_blank">github.com/razzie/razzgravitas</a><br>
+				
+			</p>
+			
+			<p>Year: 2017</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
+				
+				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>RazzGravitas is a simple multiplayer game about gravity.
+At the time of making it I just gave up on a somewhat larger project and I needed to give myself a smaller task that I can prove to be able to finish.
+The sole objective was to experiment with something simple with no regrets about design decisions and no promises about the outcome.
+After about a month of development it ended up having multiplayer support with competitive game rules I&rsquo;m satisfied with.
+I consider the game finished.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2016">
+	<h2 id="project-year-2016" class="project-year">2016</h2>
+	<div class="project-grid">
+		
+			
+<article id="floating_islands">
+	<header><a href="/projects/id/floating_islands" class="secondary">Floating Islands</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/floating_islands.webp" alt="Thumbnail of Floating Islands" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Download:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2016/floating-islands" target="_blank">github.com/razzie/hobby-projects/2016/floating-islands</a><br>
+				
+			</p>
+			
+			<p>Year: 2016</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
+				
+				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Floating Islands is yet another example of my experiments with procedurally generated terrains.
+I developed an algorithm that takes island positions and island connections as input parameters and generates a 3D grid world using a Perlin noise internally.
+I focused on the cartoonish design with edge outlining and also had an A* pathfinder algorithm set up for the little red cube.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="ground_tool">
+	<header><a href="/projects/id/ground_tool" class="secondary">Ground Tool</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/ground_tool.webp" alt="Thumbnail of Ground Tool" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code and binary:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2016/groundtool" target="_blank">github.com/razzie/hobby-projects/2016/groundtool</a><br>
+				
+			</p>
+			
+			<p>Year: 2016</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
+				
+				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>The idea behind the demo was a game with floating islands.
+Though this game never made it to the reality, Ground Tool was born as a result of experimenting with the rendering of these islands.
+The user can draw a polygon border to the island and when all points are connected, the program generates an island which can be inspected by zooming and moving the camera around.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="librazzie">
+	<header><a href="/projects/id/librazzie" class="secondary">LibRazzie</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/librazzie.webp" alt="Thumbnail of LibRazzie" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/librazzie" target="_blank">github.com/razzie/librazzie</a><br>
+				
+			</p>
+			
+			<p>Year: 2016 - 2018</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
+				
+				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A header-only multi-purpose library designed to help me get started with my projects.
+It includes helpers for logging, events, input, memory, thread and network+serialization and has some additional stuff like:
+a bitset class with iterators for true and false position, stream manipulators and parsers and an easy to use random number generator.
+Examples are provided for each of them.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2015">
+	<h2 id="project-year-2015" class="project-year">2015</h2>
+	<div class="project-grid">
+		
+			
+<article id="gtaonline_videos">
+	<header><a href="/projects/id/gtaonline_videos" class="secondary">GTA Online videos</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/gtaonline_videos.webp" alt="Thumbnail of GTA Online videos" width="256">
+		</div>
+		<div>
+			
+			<p>
+				YouTube channel:<br>
+				
+				<a href="https://www.youtube.com/c/razzquez" target="_blank">www.youtube.com/c/razzquez</a><br>
+				
+			</p>
+			
+			<p>Year: 2015 - 2019</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
+				
+				<code><a href="/projects/tag/other/" class="secondary">other</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>I have way more playtime in Grand Theft Auto V (or GTA Online to be specific) than I would like to admit and most of that I&rsquo;ve spent with friends I&rsquo;ve met in the game.
+It became our little tradition to record funny, exciting or any memorable moments and later create videos of it.
+At this point there is quite a collection of those videos and I&rsquo;ve uploaded the ones I made to my youtube channel.
+Most of the content is only meaningful to us, but I still hope viewers will find them entertaining.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
+<article id="hexagon">
+	<header><a href="/projects/id/hexagon" class="secondary">Hexagon</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/hexagon.webp" alt="Thumbnail of Hexagon" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code and binary:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2015/hexagon" target="_blank">github.com/razzie/hobby-projects/2015/hexagon</a><br>
+				
+			</p>
+			
+			<p>Year: 2015</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
+				
+				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes.
+The underlying datastructure is a 3D grid procedurally generated by Perlin noise.
+This demo does not use textures, but has a custom GLSL shader that draws grass or rock details based on the normal vectors.</p>
+</p>
+	</footer>
+</article>
+
+		
+			
 <article id="personal_website">
 	<header><a href="/projects/id/personal_website" class="secondary">Personal website</a></header>
 	<div class="grid">
@@ -784,1264 +2168,15 @@ Content is stored in a main content.yaml and individual project yaml files, ever
 	</footer>
 </article>
 
-	
 		
-<article id="raz-stack">
-	<header><a href="/projects/id/raz-stack" class="secondary">Raz-Stack</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/raz-stack.webp" alt="Thumbnail of Raz-Stack" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/raz-stack" target="_blank">github.com/razzie/raz-stack</a><br>
-				
-			</p>
-			
-			<p>Year: 2022 - 2024</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/k8s/" class="secondary">k8s</a></code>
-				
-			</span>
-		</div>
 	</div>
-	<footer>
-		<p><p>A simple Kubernetes stack that hosted many of my own projects plus an email service (Dovecot + Postfix) and Nextcloud.
-The goal of this project was simplified deployment and cost saving, without horizontal autoscaling, though I picked K8s to be able to scale in the future.
-Many of the hosted webapps used a shared Redis (Kvrocks) instance with separate namespaces, thanks to <a href="/projects/id/k8s-db-operator">k8s-db-operator</a>.
-Deployment was done via Helmfile and Helm under the hood, but it was managed by a Makefile to make things even simpler.</p>
-</p>
-	</footer>
-</article>
+</section>
 
-	
+<section class="project-year-group" aria-labelledby="project-year-2014">
+	<h2 id="project-year-2014" class="project-year">2014</h2>
+	<div class="project-grid project-grid-single">
 		
-<article id="razcache">
-	<header><a href="/projects/id/razcache" class="secondary">RazCache</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razcache.webp" alt="Thumbnail of RazCache" width="256">
-		</div>
-		<div>
 			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/razcache" target="_blank">github.com/razzie/razcache</a><br>
-				
-			</p>
-			
-			<p>Year: 2023 - 2024</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A minimalist abstraction layer above Redis, Badger and a custom in-memory cache.
-As many of my self-hosted services rely on Redis for caching or data storage,
-I often had to fire up a local instance for manual testing.
-This process was too cumbersone for me, so I figured I could come up with a wrapper
-around Redis supporting the functionaly only I use the most, and during development
-it should mimic this functionality in-process.
-Supporting key expirations was a mandatory requirement, so the in-memory cache implements
-a &ldquo;janitor&rdquo; goroutine that cleans up these keys exactly when they expire, one at a time.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="0x40">
-	<header><a href="/projects/id/0x40" class="secondary">0x40 Hues</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/0x40.webp" alt="Thumbnail of 0x40 Hues" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Try it here:<br>
-				
-				<a href="https://hues.razzie.cloud" target="_blank">hues.razzie.cloud</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/0x40hues" target="_blank">github.com/razzie/0x40hues</a><br>
-				
-			</p>
-			
-			<p>Year: 2023</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/javascript/" class="secondary">javascript</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>I&rsquo;ve come across Kepstin&rsquo;s amazing <a href="https://github.com/kepstin/0x40hues-html5" target="_blank">0x40hues</a> project and caught myself listening to it a lot.
-After finding community resource packs to try, it quickly became troublesome to configure and run them.
-This motivated me to fork the project and after a great deal of refactoring, it now supports loading many respacks and on-the-fly configuration.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="k8s-db-operator">
-	<header><a href="/projects/id/k8s-db-operator" class="secondary">k8s-db-operator</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/k8s-db-operator.webp" alt="Thumbnail of k8s-db-operator" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/k8s-db-operator" target="_blank">github.com/razzie/k8s-db-operator</a><br>
-				
-			</p>
-			
-			<p>Year: 2022 - 2023</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/k8s/" class="secondary">k8s</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Kubernetes operator to provide access to shared PostgreSQL and Redis.
-It relies on the DatabaseClaim CRD, but unlike most other operators,
-this one only deploys Kubernetes secrets containing connection strings.
-Databases and Redis namespaces are not shared between dbclaims.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="razchess">
-	<header><a href="/projects/id/razchess" class="secondary">RazChess</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razchess.webp" alt="Thumbnail of RazChess" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Try it here:<br>
-				
-				<a href="https://chess.gorzsony.com" target="_blank">chess.gorzsony.com</a><br>
-				
-				<a href="https://chess.razzie.cloud" target="_blank">chess.razzie.cloud</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/razchess" target="_blank">github.com/razzie/razchess</a><br>
-				
-			</p>
-			
-			<p>Year: 2022 - 2023</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/javascript/" class="secondary">javascript</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>I&rsquo;ve had a sudden spark of interest in chess as of late 2022 and decided to build my own web chess app with focus on simplicity and ease of use.
-Also I didn&rsquo;t want to waste time convincing friends to register to [insert your favorite chess platform here]. With RazChess you just visit the website,
-copy the link of the session and pass it to the person you want to play with.
-As weeks passed I kept adding new features like chess puzzles (mate in two steps), Fischer random (chess960) game, included chess openings encyclopedia,
-custom games and the ability to download your matches as GIFs. There is also Redis support to restore active games after a restart.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="beepboop">
-	<header><a href="/projects/id/beepboop" class="secondary">Beepboop</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/beepboop.webp" alt="Thumbnail of Beepboop" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/beepboop" target="_blank">github.com/razzie/beepboop</a><br>
-				
-			</p>
-			
-			<p>Year: 2020 - 2022</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A lightweight webapp framework that powers <a href="/projects/id/razbox">Razbox</a>.
-Most of the original code was taken from <a href="/projects/id/razlink">Razlink</a>, but it has heavily evolved since.
-The core mechanic consists of registering pages (which are mostly a template + handler bundle)
-and returning view objects from inside the handlers.
-There are some utilities for session handling, access management and logging too, but this library is
-not suitable for production use.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="razvhost">
-	<header><a href="/projects/id/razvhost" class="secondary">Razvhost</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razvhost.webp" alt="Thumbnail of Razvhost" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/razvhost" target="_blank">github.com/razzie/razvhost</a><br>
-				
-			</p>
-			
-			<p>Year: 2020 - 2022</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/proxy/" class="secondary">proxy</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Virtual hosting/reverse proxy with TLS termination and automatic certificate management.
-It supports proxying, file/directory serving, redirection, accessing SFTP or S3 buckets, hosting PHP projects or even tailing log files.
-The configuration is loaded from a single file that contains simple <code>hostname -&gt; target</code> rules,
-where even templates are supported (check readme in repo).
-Changes to the config files are detected and applied during runtime.
-It can even watch Docker containers with VIRTUAL_HOST and VIRTUAL_PORT environment variables and direct traffic to them
-(though it would&rsquo;ve been better to check labels instead, but it didn&rsquo;t cross my mind at the time).</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="pizzabot">
-	<header><a href="/projects/id/pizzabot" class="secondary">Telegram PizzaBot</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/pizzabot.webp" alt="Thumbnail of Telegram PizzaBot" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Try it here:<br>
-				
-				<a href="https://t.me/razpizzabot" target="_blank">t.me/razpizzabot</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/pizzabot" target="_blank">github.com/razzie/pizzabot</a><br>
-				
-			</p>
-			
-			<p>Year: 2021</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/chat/" class="secondary">chat</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Do you love pizza so much that you keep talking about it in your Telegram group chat?
-Now you can include this bot and with the right permissions it will respond with a pizza sticker or interesting pizza fact
-to any mentions of pizza.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="razbox">
-	<header><a href="/projects/id/razbox" class="secondary">Razbox</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razbox.webp" alt="Thumbnail of Razbox" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/razbox" target="_blank">github.com/razzie/razbox</a><br>
-				
-			</p>
-			
-			<p>Year: 2020 - 2021</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Super simple cloud file storage with almost zero configuration - powered by <a href="/projects/id/beepboop">Beepboop</a>
-Razbox stores all configuration and metadata in JSON files on the local filesystem and doesn&rsquo;t rely on a relational database
-(though it has opt-in support for Redis caching).
-Each folder can contain a <em>.razbox</em> file (which can be generated by included tools) and the content is ready to be served.
-Read and write access to these folders can rely on separate passwords, so you can share read access only if you want.
-Subfolders are also supported and they inherit the read/write passwords, unless a <em>.razbox</em> file is generated for them.
-Uploaded files can have an arbitrary number of tags that allow filtering.
-Thumbnails are generated for media files (using ffmpeg for videos!), which are visible in gallery view.
-Some archive formats are also supported for read-only browsing.
-Individual files can be shared publicly, this making them readable without any password.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="riddle_solver">
-	<header><a href="/projects/id/riddle_solver" class="secondary">Riddle Solver</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/riddle_solver.webp" alt="Thumbnail of Riddle Solver" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Riddles:<br>
-				
-				<a href="https://raw.githubusercontent.com/razzie/riddle-solver/master/screenshots/dishonored2_jindosh_riddle.jpg" target="_blank">The Jindosh Riddle</a><br>
-				
-			</p>
-			
-			<p>
-				Download:<br>
-				
-				<a href="https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-gui.exe" target="_blank">riddle-solver-gui.exe</a><br>
-				
-				<a href="https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-tui.exe" target="_blank">riddle-solver-tui.exe</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/riddle-solver" target="_blank">github.com/razzie/riddle-solver</a><br>
-				
-			</p>
-			
-			<p>
-				Component library:<br>
-				
-				<a href="https://github.com/razzie/razgio" target="_blank">github.com/razzie/razgio</a><br>
-				
-			</p>
-			
-			<p>Year: 2019 - 2021</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/gui/" class="secondary">gui</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Riddle Solver is a terminal app designed to solve Einstein&rsquo;s 5 house riddle (also called zebra puzzles in general).
-I think I came across this kind of riddle playing Dishonored 2 first, as a third option to get inside a locked place.
-It was written by a fictional genius game character named Kirin Jindosh and it&rsquo;s clearly based on Einstein&rsquo;s five house riddle.
-It took me (sadly) at least 30 minutes to solve on paper, but it earned me an achievement.
-Fast forward 3 years, I had the random idea of implementing this riddle solver, which seemed like a simple way to sharpen my Golang skills.
-I was wrong. Coming up with the UI design and the solver algorithm caused me some sleepness nights, but I&rsquo;m really proud of the result.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="geoip">
-	<header><a href="/projects/id/geoip" class="secondary">Geoip server</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/geoip.webp" alt="Thumbnail of Geoip server" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Try it here:<br>
-				
-				<a href="https://geoip.razzie.cloud" target="_blank">geoip.razzie.cloud</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/geoip-server" target="_blank">github.com/razzie/geoip-server</a><br>
-				
-			</p>
-			
-			<p>Year: 2020</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A web service that serves IP address geolocations in JSON format.
-Instead of relying on a local database it collects data from a (configurable) series of 3rd party providers,
-converting the results to a commom format. It supports provider fallbacks and caching.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="mediaserver">
-	<header><a href="/projects/id/mediaserver" class="secondary">Mediaserver</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/mediaserver.webp" alt="Thumbnail of Mediaserver" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/mediaserver" target="_blank">github.com/razzie/mediaserver</a><br>
-				
-			</p>
-			
-			<p>Year: 2020</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A web service that fetches thumbnails with title from URLs.
-Originally planned to use it in a chat service to prevent the tracking of users by letting them download images directly.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="razproxy">
-	<header><a href="/projects/id/razproxy" class="secondary">Razproxy</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razproxy.webp" alt="Thumbnail of Razproxy" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/razproxy" target="_blank">github.com/razzie/razproxy</a><br>
-				
-			</p>
-			
-			<p>Year: 2020</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/proxy/" class="secondary">proxy</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>SOCKS5 tunneled through TLS connection.
-The project consists of a custom server and client, which enable encrypted traffic between them.
-The client opens a SOCKS5 port locally which can be used by multiple applications (like web browsers) running in parallel.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="raztools">
-	<header><a href="/projects/id/raztools" class="secondary">RazTools</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/raztools.webp" alt="Thumbnail of RazTools" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/raztools" target="_blank">github.com/razzie/raztools</a><br>
-				
-			</p>
-			
-			<p>Year: 2018-2020</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%23/" class="secondary">c#</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A collection of reusable helper classes:</p>
-
-<ul>
-<li><em>ArchiveReader</em> and <em>ArchiveWriter</em>, based on <a href="/projects/id/doboz">Doboz.NET</a></li>
-<li>2 alternative versions of <em>CommandParser</em></li>
-<li><em>FileSystem</em> class that seamlessly integrates local OS filesystem + ArchiveReader</li>
-<li><em>ObjectDeserializer</em> to construct objects from a custom text format</li>
-<li><em>PluginManager</em> &amp; <em>RemoteLoader</em> simplify interaction with plugins using remoting</li>
-<li><em>Timeout</em> class with <em>Expired</em> event</li>
-<li><em>XmlReader</em> static class which returns dynamic objects</li>
-</ul>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="s3proxy">
-	<header><a href="/projects/id/s3proxy" class="secondary">S3proxy</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/s3proxy.webp" alt="Thumbnail of S3proxy" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/s3proxy" target="_blank">github.com/razzie/s3proxy</a><br>
-				
-			</p>
-			
-			<p>Year: 2020</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A super simple S3 proxy server that obfuscates file content before transmitting the request to the target.
-Obfuscation is done via a lookup table which is generated from a user provided key.
-Only signature v2 authentication is supported.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="uuid">
-	<header><a href="/projects/id/uuid" class="secondary">UUID server</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/uuid.webp" alt="Thumbnail of UUID server" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Try it here:<br>
-				
-				<a href="https://uuid.razzie.cloud" target="_blank">uuid.razzie.cloud</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/uuid-server" target="_blank">github.com/razzie/uuid-server</a><br>
-				
-				<a href="https://github.com/razzie/random" target="_blank">github.com/razzie/random</a><br>
-				
-			</p>
-			
-			<p>Year: 2020</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A http server that serves random (version4) UUIDs.
-It uses my hybrid pseudo- and true random generator library which periodically takes seeds from <a href="https://random.org" target="_blank">random.org</a>
-and uses them to generate pseudo-random UUIDs fast.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="doboz">
-	<header><a href="/projects/id/doboz" class="secondary">Doboz.NET</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/doboz.webp" alt="Thumbnail of Doboz.NET" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/Doboz.NET" target="_blank">github.com/razzie/Doboz.NET</a><br>
-				
-			</p>
-			
-			<p>Year: 2019</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%23/" class="secondary">c#</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>C# port of Attila Áfra&rsquo;s Doboz compression library</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="gtaonline_videos">
-	<header><a href="/projects/id/gtaonline_videos" class="secondary">GTA Online videos</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/gtaonline_videos.webp" alt="Thumbnail of GTA Online videos" width="256">
-		</div>
-		<div>
-			
-			<p>
-				YouTube channel:<br>
-				
-				<a href="https://www.youtube.com/c/razzquez" target="_blank">www.youtube.com/c/razzquez</a><br>
-				
-			</p>
-			
-			<p>Year: 2015 - 2019</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
-				
-				<code><a href="/projects/tag/other/" class="secondary">other</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>I have way more playtime in Grand Theft Auto V (or GTA Online to be specific) than I would like to admit and most of that I&rsquo;ve spent with friends I&rsquo;ve met in the game.
-It became our little tradition to record funny, exciting or any memorable moments and later create videos of it.
-At this point there is quite a collection of those videos and I&rsquo;ve uploaded the ones I made to my youtube channel.
-Most of the content is only meaningful to us, but I still hope viewers will find them entertaining.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="poccemod">
-	<header><a href="/projects/id/poccemod" class="secondary">PocceMod</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/poccemod.webp" alt="Thumbnail of PocceMod" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Releases:<br>
-				
-				<a href="https://forum.cfx.re/t/release-poccemod-fun-menu-with-ropes/645529" target="_blank">Official PocceMod page</a><br>
-				
-				<a href="https://github.com/razzie/PocceMod/releases" target="_blank">Github releases</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/PocceMod" target="_blank">github.com/razzie/PocceMod</a><br>
-				
-			</p>
-			
-			<p>Year: 2019</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%23/" class="secondary">c#</a></code>
-				
-				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
-				
-				<code><a href="/projects/tag/mod/" class="secondary">mod</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Created the first GTA5 (FiveM) game mod that allowed players to have fun with GTA&rsquo;s unused and undocumented rope API in a multiplayer environment.
-After sharing it with the community early on to receive feedback, the mod went through 2 months of intensive development, adding many of the requested features and changes.
-The project quickly gained popularity due to its uniqueness and led to community members requesting my services.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="razlink">
-	<header><a href="/projects/id/razlink" class="secondary">Razlink</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razlink.webp" alt="Thumbnail of Razlink" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/razlink" target="_blank">github.com/razzie/razlink</a><br>
-				
-			</p>
-			
-			<p>Year: 2019</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/proxy/" class="secondary">proxy</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A lightweight link proxy/redirect service with logging.
-Can be used to create URLs that point to an external resource while tracking visits from users.
-Uses Redis for data storage.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="raztracer">
-	<header><a href="/projects/id/raztracer" class="secondary">RazTracer</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/raztracer.webp" alt="Thumbnail of RazTracer" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/raztracer" target="_blank">github.com/razzie/raztracer</a><br>
-				
-			</p>
-			
-			<p>Year: 2019</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Command line debug information explorer and function call tracer for Linux, based on the Ptrace API.
-I was in the process of implementing a GUI for the project (borrowing elements from <a href="/projects/id/riddle_solver">Riddle Solver</a>),
-but lost interest in continuing the development.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="librazzie">
-	<header><a href="/projects/id/librazzie" class="secondary">LibRazzie</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/librazzie.webp" alt="Thumbnail of LibRazzie" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/librazzie" target="_blank">github.com/razzie/librazzie</a><br>
-				
-			</p>
-			
-			<p>Year: 2016 - 2018</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A header-only multi-purpose library designed to help me get started with my projects.
-It includes helpers for logging, events, input, memory, thread and network+serialization and has some additional stuff like:
-a bitset class with iterators for true and false position, stream manipulators and parsers and an easy to use random number generator.
-Examples are provided for each of them.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="raztalk">
-	<header><a href="/projects/id/raztalk" class="secondary">RazTalk</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/raztalk.webp" alt="Thumbnail of RazTalk" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Download:<br>
-				
-				<a href="https://github.com/razzie/raztalk/releases/download/v1.0/raztalk_v1.0.zip" target="_blank">raztalk_v1.0.zip</a><br>
-				
-				<a href="https://github.com/razzie/raztalk/releases/download/v1.0/raztalk.client.exe" target="_blank">raztalk.client.exe</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/raztalk" target="_blank">github.com/razzie/raztalk</a><br>
-				
-			</p>
-			
-			<p>Year: 2018</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%23/" class="secondary">c#</a></code>
-				
-				<code><a href="/projects/tag/chat/" class="secondary">chat</a></code>
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/gui/" class="secondary">gui</a></code>
-				
-				<code><a href="/projects/tag/javascript/" class="secondary">javascript</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A simple lobby/channel based registration-free webchat.
-Implemented using NancyFX + Razor + SignalR stack and relies on <a href="/projects/id/raztools">RazTools</a> to support dynamic loading of bot libraries during runtime.
-The repo contains (outdated) bot implementations for CleverBot, Giphy, Imgur and Reddit.
-There is also a standalone desktop client, which is just a wrapper around the web interface.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="razziecraft_vanilla">
-	<header><a href="/projects/id/razziecraft_vanilla" class="secondary">RazzieCraft Vanilla</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razziecraft_vanilla.webp" alt="Thumbnail of RazzieCraft Vanilla" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Download:<br>
-				
-				<a href="https://www.technicpack.net/download" target="_blank">TechnicLauncher</a><br>
-				
-				<a href="https://www.technicpack.net/modpack/razziecraft-vanilla.976147" target="_blank">RazzieCraft Vanilla mod page</a><br>
-				
-			</p>
-			
-			<p>Year: 2018</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
-				
-				<code><a href="/projects/tag/mod/" class="secondary">mod</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>RazzieCraft Vanilla is Minecraft version 1.12.2 on steroids!
-This pack contains a ton of strictly curated mods that enhance the visuals and gameplay of vanilla Minecraft,
-but without breaking its charm. There are a lot of recipes for uncraftable existing items (like chain armor, slime ball, spawn
-eggs, etc) and a very few brand new stuff.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="gglib">
-	<header><a href="/projects/id/gglib" class="secondary">GGlib &amp; GGlib2</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/gglib.webp" alt="Thumbnail of GGlib &amp; GGlib2" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/gglib" target="_blank">github.com/razzie/gglib</a><br>
-				
-				<a href="https://github.com/razzie/gglib2" target="_blank">github.com/razzie/gglib2</a><br>
-				
-			</p>
-			
-			<p>Year: 2013 - 2017</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>GGlib and GGlib2 were libraries I used to develop between 2013 and 2017.
-They served as a sandbox to help me to learn about the new features of the C++11 standard.
-I also found a great use of them while working on other side projects.
-Due to some early design choices (including too heavy use of virtual function calls) I finally decided to send them into retirement
-and started working on the successor: <a href="/projects/id/librazzie">LibRazzie</a>.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="potato_game">
-	<header><a href="/projects/id/potato_game" class="secondary">Potato Game</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/potato_game.webp" alt="Thumbnail of Potato Game" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Download:<br>
-				
-				<a href="https://github.com/razzie/PotatoGame/releases/download/pre-alpha/demos.zip" target="_blank">demos.zip</a><br>
-				
-			</p>
-			
-			<p>
-				Videos:<br>
-				
-				<a href="https://github.com/razzie/PotatoGame/releases/download/pre-alpha/potato.mp4" target="_blank">potato.mp4</a><br>
-				
-				<a href="https://github.com/razzie/PotatoGame/releases/download/pre-alpha/development.mp4" target="_blank">development.mp4</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/PotatoGame" target="_blank">github.com/razzie/PotatoGame</a><br>
-				
-			</p>
-			
-			<p>Year: 2017</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
-				
-				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
-				
-				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>PotatoGame was meant to be a game about little potatoes with customizable AI gaining world domination,
-though my real motivation was to make art.
-I wanted to try something out of the box and build a tech demo of a completely procedurally generated abstract looking 3D game world.
-During the development I&rsquo;ve been a part of a coach guided mastermind program, where participants could follow the progress of graphical designs
-and world map and level generator algorithms.
-At the end of the mastermind program I had the chance to publicly talk about the project in front of an audience,
-where one person told me I inspired him to learn programming. This has been one of my proudest moments in life.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="razzgravitas">
-	<header><a href="/projects/id/razzgravitas" class="secondary">RazzGravitas</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razzgravitas.webp" alt="Thumbnail of RazzGravitas" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Download:<br>
-				
-				<a href="https://github.com/razzie/razzgravitas/releases/download/v1.0/razzgravitas.exe" target="_blank">razzgravitas.exe</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/razzgravitas" target="_blank">github.com/razzie/razzgravitas</a><br>
-				
-			</p>
-			
-			<p>Year: 2017</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
-				
-				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
-				
-				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>RazzGravitas is a simple multiplayer game about gravity.
-At the time of making it I just gave up on a somewhat larger project and I needed to give myself a smaller task that I can prove to be able to finish.
-The sole objective was to experiment with something simple with no regrets about design decisions and no promises about the outcome.
-After about a month of development it ended up having multiplayer support with competitive game rules I&rsquo;m satisfied with.
-I consider the game finished.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="floating_islands">
-	<header><a href="/projects/id/floating_islands" class="secondary">Floating Islands</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/floating_islands.webp" alt="Thumbnail of Floating Islands" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Download:<br>
-				
-				<a href="https://github.com/razzie/hobby-projects/tree/master/2016/floating-islands" target="_blank">github.com/razzie/hobby-projects/2016/floating-islands</a><br>
-				
-			</p>
-			
-			<p>Year: 2016</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
-				
-				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Floating Islands is yet another example of my experiments with procedurally generated terrains.
-I developed an algorithm that takes island positions and island connections as input parameters and generates a 3D grid world using a Perlin noise internally.
-I focused on the cartoonish design with edge outlining and also had an A* pathfinder algorithm set up for the little red cube.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="ground_tool">
-	<header><a href="/projects/id/ground_tool" class="secondary">Ground Tool</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/ground_tool.webp" alt="Thumbnail of Ground Tool" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code and binary:<br>
-				
-				<a href="https://github.com/razzie/hobby-projects/tree/master/2016/groundtool" target="_blank">github.com/razzie/hobby-projects/2016/groundtool</a><br>
-				
-			</p>
-			
-			<p>Year: 2016</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
-				
-				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>The idea behind the demo was a game with floating islands.
-Though this game never made it to the reality, Ground Tool was born as a result of experimenting with the rendering of these islands.
-The user can draw a polygon border to the island and when all points are connected, the program generates an island which can be inspected by zooming and moving the camera around.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="hexagon">
-	<header><a href="/projects/id/hexagon" class="secondary">Hexagon</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/hexagon.webp" alt="Thumbnail of Hexagon" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code and binary:<br>
-				
-				<a href="https://github.com/razzie/hobby-projects/tree/master/2015/hexagon" target="_blank">github.com/razzie/hobby-projects/2015/hexagon</a><br>
-				
-			</p>
-			
-			<p>Year: 2015</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
-				
-				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>I wanted to try rendering hexagon blocks (hexagonal prisms to be correct) instead of cubes.
-The underlying datastructure is a 3D grid procedurally generated by Perlin noise.
-This demo does not use textures, but has a custom GLSL shader that draws grass or rock details based on the normal vectors.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
 <article id="prepi">
 	<header><a href="/projects/id/prepi" class="secondary">Prepi</a></header>
 	<div class="grid">
@@ -2087,8 +2222,62 @@ Due to the failure of the campaign and smaller disagreements regarding the game 
 	</footer>
 </article>
 
-	
 		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2013">
+	<h2 id="project-year-2013" class="project-year">2013</h2>
+	<div class="project-grid project-grid-single">
+		
+			
+<article id="gglib">
+	<header><a href="/projects/id/gglib" class="secondary">GGlib &amp; GGlib2</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/gglib.webp" alt="Thumbnail of GGlib &amp; GGlib2" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/gglib" target="_blank">github.com/razzie/gglib</a><br>
+				
+				<a href="https://github.com/razzie/gglib2" target="_blank">github.com/razzie/gglib2</a><br>
+				
+			</p>
+			
+			<p>Year: 2013 - 2017</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a></code>
+				
+				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>GGlib and GGlib2 were libraries I used to develop between 2013 and 2017.
+They served as a sandbox to help me to learn about the new features of the C++11 standard.
+I also found a great use of them while working on other side projects.
+Due to some early design choices (including too heavy use of virtual function calls) I finally decided to send them into retirement
+and started working on the successor: <a href="/projects/id/librazzie">LibRazzie</a>.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2011">
+	<h2 id="project-year-2011" class="project-year">2011</h2>
+	<div class="project-grid project-grid-single">
+		
+			
 <article id="minecraft_clone">
 	<header><a href="/projects/id/minecraft_clone" class="secondary">Minecraft clone</a></header>
 	<div class="grid">
@@ -2126,48 +2315,15 @@ focusing on optimizations like omitting hidden block sides and dynamic loading o
 	</footer>
 </article>
 
-	
 		
-<article id="flyff">
-	<header><a href="/projects/id/flyff" class="secondary">Flyff fansite</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/flyff.webp" alt="Thumbnail of Flyff fansite" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/hobby-projects/tree/master/2007/flyff" target="_blank">github.com/razzie/hobby-projects/2007/flyff</a><br>
-				
-			</p>
-			
-			<p>Year: 2007 - 2010</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/php/" class="secondary">php</a></code>
-				
-			</span>
-		</div>
 	</div>
-	<footer>
-		<p><p>Flyff.extra.hu was a hungarian fan site of Flyff (Fly For Fun) online game.
-During the 3-4 years of its existence I developed more and more new features to make it a fully functional web portal.
-It was very interesting to see it slowly getting attention.
-Members started generating content in the forms of forum entries, polls, screenshots and news for the home page.
-The site even had a few moderators and admins.
-In 2010 extra.hu decided to close its free hosting service and the site went offline.
-I could have moved it to a different(even paid) hosting service, but most members and I have already lost interest in the game.</p>
-</p>
-	</footer>
-</article>
+</section>
 
-	
+<section class="project-year-group" aria-labelledby="project-year-2010">
+	<h2 id="project-year-2010" class="project-year">2010</h2>
+	<div class="project-grid">
 		
+			
 <article id="labyrinth">
 	<header><a href="/projects/id/labyrinth" class="secondary">Labyrinth</a></header>
 	<div class="grid">
@@ -2205,8 +2361,8 @@ I have done the rendering part (using Irrlicht 3D engine) while my friend worked
 	</footer>
 </article>
 
-	
 		
+			
 <article id="logic_circuit_simulator">
 	<header><a href="/projects/id/logic_circuit_simulator" class="secondary">Logic Circuit Simulator</a></header>
 	<div class="grid">
@@ -2250,8 +2406,15 @@ Modules also support recursion.</p>
 	</footer>
 </article>
 
-	
 		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2008">
+	<h2 id="project-year-2008" class="project-year">2008</h2>
+	<div class="project-grid">
+		
+			
 <article id="process_manager">
 	<header><a href="/projects/id/process_manager" class="secondary">Process Manager</a></header>
 	<div class="grid">
@@ -2283,8 +2446,8 @@ It keeps running in the background after closing the main window and can be brou
 	</footer>
 </article>
 
-	
 		
+			
 <article id="razzie_messenger">
 	<header><a href="/projects/id/razzie_messenger" class="secondary">Razzie Messenger</a></header>
 	<div class="grid">
@@ -2324,8 +2487,8 @@ This solution was necessary due to the limitations of the text based protocol.</
 	</footer>
 </article>
 
-	
 		
+			
 <article id="server_client_application">
 	<header><a href="/projects/id/server_client_application" class="secondary">Server - client application</a></header>
 	<div class="grid">
@@ -2358,8 +2521,8 @@ On the server tab the user can select one of the connected clients as a message 
 	</footer>
 </article>
 
-	
 		
+			
 <article id="windows_manager">
 	<header><a href="/projects/id/windows_manager" class="secondary">Windows Manager</a></header>
 	<div class="grid">
@@ -2392,8 +2555,62 @@ One can for example change a sticky (always on top) window to act as a normal on
 	</footer>
 </article>
 
-	
 		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2007">
+	<h2 id="project-year-2007" class="project-year">2007</h2>
+	<div class="project-grid project-grid-single">
+		
+			
+<article id="flyff">
+	<header><a href="/projects/id/flyff" class="secondary">Flyff fansite</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/flyff.webp" alt="Thumbnail of Flyff fansite" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/hobby-projects/tree/master/2007/flyff" target="_blank">github.com/razzie/hobby-projects/2007/flyff</a><br>
+				
+			</p>
+			
+			<p>Year: 2007 - 2010</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/php/" class="secondary">php</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>Flyff.extra.hu was a hungarian fan site of Flyff (Fly For Fun) online game.
+During the 3-4 years of its existence I developed more and more new features to make it a fully functional web portal.
+It was very interesting to see it slowly getting attention.
+Members started generating content in the forms of forum entries, polls, screenshots and news for the home page.
+The site even had a few moderators and admins.
+In 2010 extra.hu decided to close its free hosting service and the site went offline.
+I could have moved it to a different(even paid) hosting service, but most members and I have already lost interest in the game.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2005">
+	<h2 id="project-year-2005" class="project-year">2005</h2>
+	<div class="project-grid project-grid-single">
+		
+			
 <article id="rts">
 	<header><a href="/projects/id/rts" class="secondary">RTS game</a></header>
 	<div class="grid">
@@ -2431,8 +2648,15 @@ Due to the lack of timing, the more units appeared in the game, the slower they 
 	</footer>
 </article>
 
-	
 		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2003">
+	<h2 id="project-year-2003" class="project-year">2003</h2>
+	<div class="project-grid">
+		
+			
 <article id="powerman">
 	<header><a href="/projects/id/powerman" class="secondary">PowerMan</a></header>
 	<div class="grid">
@@ -2465,8 +2689,8 @@ I managed to recover it using GreaseWeazle and KryoFlux DTC.</p>
 	</footer>
 </article>
 
-	
 		
+			
 <article id="spyland">
 	<header><a href="/projects/id/spyland" class="secondary">SpyLand</a></header>
 	<div class="grid">
@@ -2499,8 +2723,10 @@ I managed to recover it using GreaseWeazle and KryoFlux DTC.</p>
 	</footer>
 </article>
 
-	
-</div>
+		
+	</div>
+</section>
+
 
 	</main>
 </body>

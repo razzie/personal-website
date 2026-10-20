@@ -13,6 +13,7 @@
 	<script src="/htmx.min.js" defer></script>
 	<script src="/loading-states.min.js" defer></script>
 	<script src="/email.js" defer></script>
+	<script src="/projects.js" defer></script>
 	<style>
 	body > main {
 		padding-top: 0.5rem;
@@ -82,107 +83,108 @@
 			</ul>
 		</nav>
 		
+<div id="project-navigation" role="navigation" aria-label="Project tags and years" tabindex="-1">
 
-<p>
+<p class="project-tags">
 	
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/3d-print/" class="secondary">3d-print</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/c%23/" class="secondary">c#</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/chat/" class="secondary">chat</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/cloud/" class="secondary">cloud</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/game/" class="secondary">game</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/golang/" class="secondary">golang</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/gui/" class="secondary">gui</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/java/" class="secondary">java</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/javascript/" class="secondary">javascript</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/k8s/" class="secondary">k8s</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects">lib</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/mod/" class="secondary">mod</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/other/" class="secondary">other</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/php/" class="secondary">php</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/proxy/" class="secondary">proxy</a>
 		
 	</code>
 	
-	<code style="margin-bottom: 0.25rem;">
+	<code>
 		
 		<a href="/projects/tag/rendering/" class="secondary">rendering</a>
 		
@@ -190,22 +192,87 @@
 	
 </p>
 
-<div class="project-grid">
-	<style scoped>
+
+<p class="project-tags project-years">
+	
+	<code><a href="#project-year-2024" class="secondary">2024</a></code>
+	
+	<code><a href="#project-year-2023" class="secondary">2023</a></code>
+	
+	<code><a href="#project-year-2021" class="secondary">2021</a></code>
+	
+	<code><a href="#project-year-2020" class="secondary">2020</a></code>
+	
+	<code><a href="#project-year-2019" class="secondary">2019</a></code>
+	
+	<code><a href="#project-year-2018" class="secondary">2018</a></code>
+	
+	<code><a href="#project-year-2016" class="secondary">2016</a></code>
+	
+	<code><a href="#project-year-2013" class="secondary">2013</a></code>
+	
+</p>
+
+</div>
+<button type="button" id="projects-back-to-top" class="secondary project-back-to-top" aria-label="Back to project tags and years" hidden>
+	<span aria-hidden="true">↑</span> Top
+</button>
+<style>
+	.project-tags {
+		text-align: center;
+		text-wrap: balance;
+	}
+	.project-tags > code {
+		display: inline-block;
+		margin-bottom: 0.25rem;
+		white-space: nowrap;
+	}
+	.project-year {
+		padding-top: 1.5rem;
+		text-align: center;
+	}
+	.project-year-group:first-of-type > .project-year {
+		padding-top: 0.75rem;
+	}
 	.project-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		columns: 2;
 		column-gap: 1rem;
-		align-items: start;
+	}
+	.project-grid > article {
+		break-inside: avoid;
+	}
+	.project-grid-single {
+		columns: 1;
+		width: calc((100% - 1rem) / 2);
+		margin-inline: auto;
+	}
+	.project-back-to-top {
+		position: fixed;
+		right: 1rem;
+		bottom: 1rem;
+		z-index: 10;
+		margin: 0;
+		padding: 0.5rem 0.75rem;
+		box-shadow: var(--pico-card-box-shadow);
+	}
+	.project-back-to-top[hidden] {
+		display: none;
 	}
 	@media screen and (max-width: 768px) {
 		.project-grid {
-			grid-template-columns: 1fr;
+			columns: 1;
+		}
+		.project-grid-single {
+			width: 100%;
 		}
 	}
-	</style>
-	
+</style>
+
+<section class="project-year-group" aria-labelledby="project-year-2024">
+	<h2 id="project-year-2024" class="project-year">2024</h2>
+	<div class="project-grid project-grid-single">
 		
+			
 <article id="mock">
 	<header><a href="/projects/id/mock" class="secondary">Mock</a></header>
 	<div class="grid">
@@ -243,8 +310,15 @@ The only dependency is the testify package itself.</p>
 	</footer>
 </article>
 
-	
 		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2023">
+	<h2 id="project-year-2023" class="project-year">2023</h2>
+	<div class="project-grid">
+		
+			
 <article id="botkit">
 	<header><a href="/projects/id/botkit" class="secondary">Botkit</a></header>
 	<div class="grid">
@@ -283,8 +357,8 @@ as long as they share the same Redis database.</p>
 	</footer>
 </article>
 
-	
 		
+			
 <article id="broadcaster">
 	<header><a href="/projects/id/broadcaster" class="secondary">Broadcaster</a></header>
 	<div class="grid">
@@ -319,8 +393,8 @@ Designed for scenarios when it&rsquo;s unpractical to connect to the same event 
 	</footer>
 </article>
 
-	
 		
+			
 <article id="commander">
 	<header><a href="/projects/id/commander" class="secondary">Commander</a></header>
 	<div class="grid">
@@ -360,8 +434,56 @@ it will be extracted into a separate error return value.</p>
 	</footer>
 </article>
 
-	
 		
+			
+<article id="razcache">
+	<header><a href="/projects/id/razcache" class="secondary">RazCache</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/razcache.webp" alt="Thumbnail of RazCache" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/razcache" target="_blank">github.com/razzie/razcache</a><br>
+				
+			</p>
+			
+			<p>Year: 2023 - 2024</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A minimalist abstraction layer above Redis, Badger and a custom in-memory cache.
+As many of my self-hosted services rely on Redis for caching or data storage,
+I often had to fire up a local instance for manual testing.
+This process was too cumbersone for me, so I figured I could come up with a wrapper
+around Redis supporting the functionaly only I use the most, and during development
+it should mimic this functionality in-process.
+Supporting key expirations was a mandatory requirement, so the in-memory cache implements
+a &ldquo;janitor&rdquo; goroutine that cleans up these keys exactly when they expire, one at a time.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2021">
+	<h2 id="project-year-2021" class="project-year">2021</h2>
+	<div class="project-grid">
+		
+			
 <article id="golang_utils">
 	<header><a href="/projects/id/golang_utils" class="secondary">Golang utils</a></header>
 	<div class="grid">
@@ -404,90 +526,8 @@ it will be extracted into a separate error return value.</p>
 	</footer>
 </article>
 
-	
 		
-<article id="razcache">
-	<header><a href="/projects/id/razcache" class="secondary">RazCache</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razcache.webp" alt="Thumbnail of RazCache" width="256">
-		</div>
-		<div>
 			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/razcache" target="_blank">github.com/razzie/razcache</a><br>
-				
-			</p>
-			
-			<p>Year: 2023 - 2024</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A minimalist abstraction layer above Redis, Badger and a custom in-memory cache.
-As many of my self-hosted services rely on Redis for caching or data storage,
-I often had to fire up a local instance for manual testing.
-This process was too cumbersone for me, so I figured I could come up with a wrapper
-around Redis supporting the functionaly only I use the most, and during development
-it should mimic this functionality in-process.
-Supporting key expirations was a mandatory requirement, so the in-memory cache implements
-a &ldquo;janitor&rdquo; goroutine that cleans up these keys exactly when they expire, one at a time.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
-<article id="beepboop">
-	<header><a href="/projects/id/beepboop" class="secondary">Beepboop</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/beepboop.webp" alt="Thumbnail of Beepboop" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/beepboop" target="_blank">github.com/razzie/beepboop</a><br>
-				
-			</p>
-			
-			<p>Year: 2020 - 2022</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A lightweight webapp framework that powers <a href="/projects/id/razbox">Razbox</a>.
-Most of the original code was taken from <a href="/projects/id/razlink">Razlink</a>, but it has heavily evolved since.
-The core mechanic consists of registering pages (which are mostly a template + handler bundle)
-and returning view objects from inside the handlers.
-There are some utilities for session handling, access management and logging too, but this library is
-not suitable for production use.</p>
-</p>
-	</footer>
-</article>
-
-	
-		
 <article id="pizzabot">
 	<header><a href="/projects/id/pizzabot" class="secondary">Telegram PizzaBot</a></header>
 	<div class="grid">
@@ -531,8 +571,104 @@ to any mentions of pizza.</p>
 	</footer>
 </article>
 
-	
 		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2020">
+	<h2 id="project-year-2020" class="project-year">2020</h2>
+	<div class="project-grid project-grid-single">
+		
+			
+<article id="beepboop">
+	<header><a href="/projects/id/beepboop" class="secondary">Beepboop</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/beepboop.webp" alt="Thumbnail of Beepboop" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/beepboop" target="_blank">github.com/razzie/beepboop</a><br>
+				
+			</p>
+			
+			<p>Year: 2020 - 2022</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
+				
+				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
+				
+				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>A lightweight webapp framework that powers <a href="/projects/id/razbox">Razbox</a>.
+Most of the original code was taken from <a href="/projects/id/razlink">Razlink</a>, but it has heavily evolved since.
+The core mechanic consists of registering pages (which are mostly a template + handler bundle)
+and returning view objects from inside the handlers.
+There are some utilities for session handling, access management and logging too, but this library is
+not suitable for production use.</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2019">
+	<h2 id="project-year-2019" class="project-year">2019</h2>
+	<div class="project-grid project-grid-single">
+		
+			
+<article id="doboz">
+	<header><a href="/projects/id/doboz" class="secondary">Doboz.NET</a></header>
+	<div class="grid">
+		<div>
+			<img src="/projects/doboz.webp" alt="Thumbnail of Doboz.NET" width="256">
+		</div>
+		<div>
+			
+			<p>
+				Source code:<br>
+				
+				<a href="https://github.com/razzie/Doboz.NET" target="_blank">github.com/razzie/Doboz.NET</a><br>
+				
+			</p>
+			
+			<p>Year: 2019</p>
+			<span>
+				Tags:
+				
+				<code><a href="/projects/tag/c%23/" class="secondary">c#</a></code>
+				
+				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
+				
+			</span>
+		</div>
+	</div>
+	<footer>
+		<p><p>C# port of Attila Áfra&rsquo;s Doboz compression library</p>
+</p>
+	</footer>
+</article>
+
+		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2018">
+	<h2 id="project-year-2018" class="project-year">2018</h2>
+	<div class="project-grid project-grid-single">
+		
+			
 <article id="raztools">
 	<header><a href="/projects/id/raztools" class="secondary">RazTools</a></header>
 	<div class="grid">
@@ -575,42 +711,15 @@ to any mentions of pizza.</p>
 	</footer>
 </article>
 
-	
 		
-<article id="doboz">
-	<header><a href="/projects/id/doboz" class="secondary">Doboz.NET</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/doboz.webp" alt="Thumbnail of Doboz.NET" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/Doboz.NET" target="_blank">github.com/razzie/Doboz.NET</a><br>
-				
-			</p>
-			
-			<p>Year: 2019</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%23/" class="secondary">c#</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
 	</div>
-	<footer>
-		<p><p>C# port of Attila Áfra&rsquo;s Doboz compression library</p>
-</p>
-	</footer>
-</article>
+</section>
 
-	
+<section class="project-year-group" aria-labelledby="project-year-2016">
+	<h2 id="project-year-2016" class="project-year">2016</h2>
+	<div class="project-grid project-grid-single">
 		
+			
 <article id="librazzie">
 	<header><a href="/projects/id/librazzie" class="secondary">LibRazzie</a></header>
 	<div class="grid">
@@ -646,8 +755,15 @@ Examples are provided for each of them.</p>
 	</footer>
 </article>
 
-	
 		
+	</div>
+</section>
+
+<section class="project-year-group" aria-labelledby="project-year-2013">
+	<h2 id="project-year-2013" class="project-year">2013</h2>
+	<div class="project-grid project-grid-single">
+		
+			
 <article id="gglib">
 	<header><a href="/projects/id/gglib" class="secondary">GGlib &amp; GGlib2</a></header>
 	<div class="grid">
@@ -686,8 +802,10 @@ and started working on the successor: <a href="/projects/id/librazzie">LibRazzie
 	</footer>
 </article>
 
-	
-</div>
+		
+	</div>
+</section>
+
 
 	</main>
 </body>
