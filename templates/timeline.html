@@ -1,9 +1,5 @@
 {{ define "timeline" }}
-<style scoped>@import url("/timeline.css?3");</style>
-<label class="timeline-filter">
-	<input type="checkbox" id="show-sabbaticals" role="switch" aria-controls="experience-timeline">
-	Show sabbatical leaves
-</label>
+<style scoped>@import url("/timeline.css?5");</style>
 <div class="timeline" id="experience-timeline">
 	{{ range . }}
 	<div class="timeline-entry{{ if .Sabbatical }} sabbatical{{ end }}"{{ if .Sabbatical }} hidden{{ end }}>
@@ -11,6 +7,10 @@
 	</div>
 	{{ end }}
 </div>
+<label class="timeline-filter">
+	<input type="checkbox" id="show-sabbaticals" role="switch" aria-controls="experience-timeline">
+	Show sabbatical leaves
+</label>
 <script>
 (() => {
 	const toggle = document.getElementById('show-sabbaticals');
@@ -22,7 +22,12 @@
 			entry.hidden = !toggle.checked;
 		}
 	};
-	toggle.addEventListener('change', update);
+	toggle.addEventListener('change', () => {
+		update();
+		if (toggle.checked) {
+			window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
+		}
+	});
 	update();
 })();
 </script>

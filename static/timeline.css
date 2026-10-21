@@ -1,5 +1,8 @@
 .timeline-filter {
+	padding-top: 2rem;
 	margin-bottom: 2rem;
+	margin-inline: auto;
+	text-align: center;
 }
 
 .timeline > .timeline-entry[hidden] {
