@@ -78,10 +78,15 @@ var buildCmd = &cobra.Command{
 
 		for _, p := range content.Projects {
 			page := internal.Page{
-				Title:    p.Name,
-				ID:       "projects/id/" + p.ID,
-				Template: "project",
-				Data:     p,
+				Title:       p.Name,
+				HeaderTitle: "Projects",
+				ID:          "projects/id/" + p.ID,
+				Template:    "projects",
+				Data: map[string]any{
+					"ProjectGroups":   internal.GroupProjectsByYear(content.Projects),
+					"Tags":            content.ProjectTags,
+					"SelectedProject": p,
+				},
 			}
 			if err := createPage(outDir, page, render); err != nil {
 				return err

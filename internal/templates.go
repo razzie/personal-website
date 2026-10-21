@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"html/template"
 	"io"
+	"strings"
 )
 
 type Page struct {
@@ -40,6 +41,7 @@ func LoadTemplateRenderer(navPages []Page, siteName string) TemplateRenderer {
 			"HeaderTitle":    headerTitle,
 			"HeaderSubtitle": page.HeaderSubtitle,
 			"PageID":         page.ID,
+			"ActivePageID":   strings.SplitN(page.ID, "/", 2)[0],
 			"Template":       page.Template,
 			"Data":           page.Data,
 		}

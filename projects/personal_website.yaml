@@ -6,26 +6,26 @@ tags:
 - golang
 - cloud
 description: |-
-  * ###### 2015 version
-    The site made use of user friendly URLs (thanks to Apache web server's mod_rewrite) and loaded pages dynamically via jQuery's AJAX API.
-    A server side PHP script automatically parsed the static HTML pages for sections, which could then be accessed individually by the user.
-    It wasn't very CPU friendly, but made it easy for me to add new content to the page without using a database.
-    Later my Twitter feed was integrated as a news feed, using OAuth and Twitter's API.
-
-  * ###### 2018 version
-    Implemented in C# using NancyFX and a brand new design.
-    It used Github API to list my latest open-source interests and contributions.
-    Project data was stored in XML.
+  * ###### 2024 version
+    Completely rewritten everything again using Go + PicoCSS + HTMX stack, featuring static site building with Github Actions.
+    It supports light and dark themes (based on user preferences reported by the browser) and uses HTMX boosted page loads and loading spinner.
+    Content is stored in a main content.yaml and individual project yaml files, everything else is in HTML templates.
 
   * ###### 2019 version
     Everything completely rewritten in Go.
     Data was still stored in XML files initially, but later all the content (including resume) was moved to
     a single yaml file, which was periodically updated directly from the repository.
 
-  * ###### 2024 version
-    Completely rewritten everythign again using Go + PicoCSS + HTMX stack, featuring static site building with Github Actions.
-    It supports light and dark themes (based on user preferences reported by the browser) and uses HTMX boosted page loads and loading spinner.
-    Content is stored in a main content.yaml and individual project yaml files, everything else is in HTML templates.
+  * ###### 2018 version
+    Implemented in C# using NancyFX and a brand new design.
+    It used Github API to list my latest open-source interests and contributions.
+    Project data was stored in XML.
+
+  * ###### 2015 version
+    The site made use of user friendly URLs (thanks to Apache web server's mod_rewrite) and loaded pages dynamically via jQuery's AJAX API.
+    A server side PHP script automatically parsed the static HTML pages for sections, which could then be accessed individually by the user.
+    It wasn't very CPU friendly, but made it easy for me to add new content to the page without using a database.
+    Later my Twitter feed was integrated as a news feed, using OAuth and Twitter's API.
 linkGroups:
 - name: Source code
   links:

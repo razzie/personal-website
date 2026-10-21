@@ -14,8 +14,6 @@ description: |-
 linkGroups:
 - name: Try it here
   links:
-  - name: chess.gorzsony.com
-    url: https://chess.gorzsony.com
   - name: chess.razzie.cloud
     url: https://chess.razzie.cloud
 - name: Source code

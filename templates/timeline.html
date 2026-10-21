@@ -16,6 +16,8 @@
 	const toggle = document.getElementById('show-sabbaticals');
 	const sabbaticals = document.querySelectorAll('#experience-timeline > .sabbatical');
 	const update = () => {
+		// HTMX history snapshots serialize attributes, not checkbox properties.
+		toggle.toggleAttribute('checked', toggle.checked);
 		for (const entry of sabbaticals) {
 			entry.hidden = !toggle.checked;
 		}
