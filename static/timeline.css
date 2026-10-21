@@ -142,12 +142,12 @@
 	}
 
 	.timeline::after {
-		left: 1rem;
+		left: 0;
 	}
 	
 	.timeline > .timeline-entry {
-		width: calc(100% - 3rem);
-		margin-left: 3rem;
+		width: calc(100% - 1rem);
+		margin-left: 1rem;
 		margin-bottom: 0.5rem;
 	}
 	
@@ -160,7 +160,7 @@
 
 	.timeline > :nth-child(n of .timeline-entry:not([hidden]))::after {
 		top: 2.25rem;
-		left: -2.5rem;
+		left: -1.5rem;
 	}
 	
 	.timeline > :nth-child(even of .timeline-entry:not([hidden])) {
