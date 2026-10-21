@@ -3,6 +3,7 @@
 <div class="hello-page">
 	<section class="hello-intro" aria-labelledby="hello-headline">
 		<div>
+			<h1 class="hello-identity" data-loading-aria-busy data-loading-delay="50">{{ .Name }} &middot; {{ .Alias }}</h1>
 			<h2 id="hello-headline" class="hello-headline">{{ range .Headline }}<span>{{ . }}</span>{{ end }}</h2>
 			<div class="hello-summary">{{ .Summary.ToHTML }}</div>
 			<div class="hello-links">
