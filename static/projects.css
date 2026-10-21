@@ -1,4 +1,5 @@
 .projects-page {
+	--project-years-height: 8.25rem;
 	max-width: 1100px;
 	margin-inline: auto;
 }
@@ -32,8 +33,11 @@
 }
 
 .project-years-navigation {
-	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 3;
 	margin-bottom: 1rem;
+	background: linear-gradient(to bottom, var(--pico-background-color) calc(100% - 0.75rem), transparent);
 }
 
 .project-years-navigation[data-overflow] {
@@ -221,7 +225,7 @@
 	margin-bottom: 1.25rem;
 	font-size: 1.2rem;
 	color: var(--pico-h2-color);
-	scroll-margin-top: 1rem;
+	scroll-margin-top: calc(var(--project-years-height) + 1rem);
 }
 
 .project-year::before,
@@ -249,7 +253,7 @@
 	min-width: 0;
 	margin: 0;
 	padding: 1rem;
-	scroll-margin-top: 1rem;
+	scroll-margin-top: calc(var(--project-years-height) + 1rem);
 }
 
 .project-card > .project-heading {

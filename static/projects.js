@@ -133,14 +133,16 @@
 		const headings = [...document.querySelectorAll('.project-year')];
 		if (!headings.length) return;
 		const selected = document.querySelector('.project-years a[aria-current]');
+		const track = document.querySelector('.project-years-navigation').getBoundingClientRect();
 		// Returning to the timeline should retain the year we were reading.
-		if (selected && document.querySelector('.project-years-navigation').getBoundingClientRect().bottom > 0) {
+		if (selected && track.top > 0) {
 			if (reveal) revealYear(selected);
 			return;
 		}
+		const threshold = Math.max(innerHeight * 0.3, track.bottom + headings[0].getBoundingClientRect().height);
 		let active = headings[0];
 		for (const heading of headings) {
-			if (heading.getBoundingClientRect().top > innerHeight * 0.3) break;
+			if (heading.getBoundingClientRect().top > threshold) break;
 			active = heading;
 		}
 		selectYear(`#${active.id}`, reveal);
@@ -198,6 +200,7 @@
 		};
 		timelineObserver = new ResizeObserver(() => {
 			updateControls();
+			track.closest('.projects-page').style.setProperty('--project-years-height', `${track.offsetHeight}px`);
 			revealYear(track.querySelector('[aria-current]'));
 		});
 		timelineObserver.observe(track);
@@ -214,6 +217,7 @@
 		button.onclick = () => {
 			navigation.focus({ preventScroll: true });
 			window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+			selectYear(document.querySelector('.project-years a')?.hash, true);
 		};
 		navigationObserver = new IntersectionObserver(([entry]) => {
 			button.hidden = entry.isIntersecting || entry.boundingClientRect.bottom > 0;

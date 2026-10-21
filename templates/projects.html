@@ -5,7 +5,7 @@
 </div>
 {{ end }}
 <div class="projects-page">
-	<div id="project-navigation" role="navigation" aria-label="Project tags and years" tabindex="-1">
+	<div id="project-navigation" role="navigation" aria-label="Project tags" tabindex="-1">
 		{{ if .Tags }}
 		<p class="project-tags">
 			{{ $tag := .Tag }}
@@ -18,8 +18,9 @@
 			{{ end }}
 		</p>
 		{{ end }}
-		{{ if .ProjectGroups }}
-		<div class="project-years-navigation">
+	</div>
+	{{ if .ProjectGroups }}
+		<div class="project-years-navigation" role="navigation" aria-label="Project years">
 			<button type="button" class="project-years-arrow" data-year-scroll="-1" aria-label="Scroll to newer project years" aria-controls="project-years-scroll" hidden><span aria-hidden="true">‹</span></button>
 			<div id="project-years-scroll" class="project-years-scroll" role="region" aria-label="Browse projects by year" tabindex="0">
 				<ol class="project-years" style="--project-year-count: {{ len .ProjectGroups }}">
@@ -30,8 +31,7 @@
 			</div>
 			<button type="button" class="project-years-arrow" data-year-scroll="1" aria-label="Scroll to older project years" aria-controls="project-years-scroll" hidden><span aria-hidden="true">›</span></button>
 		</div>
-		{{ end }}
-	</div>
+	{{ end }}
 	{{ range .ProjectGroups }}
 	<section class="project-year-group" aria-labelledby="project-year-{{ .Year }}">
 		<h2 id="project-year-{{ .Year }}" class="project-year">{{ .Year }}</h2>
