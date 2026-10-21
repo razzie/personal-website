@@ -13,7 +13,9 @@ linkGroups:
   links:
   - name: t.me/razpizzabot
     url: https://t.me/razpizzabot
+    cardLabel: Website
 - name: Source code
   links:
   - name: github.com/razzie/pizzabot
     url: https://github.com/razzie/pizzabot
+    cardLabel: Source

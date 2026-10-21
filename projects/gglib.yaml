@@ -14,5 +14,7 @@ linkGroups:
   links:
   - name: github.com/razzie/gglib
     url: https://github.com/razzie/gglib
+    cardLabel: Source 1
   - name: github.com/razzie/gglib2
     url: https://github.com/razzie/gglib2
+    cardLabel: Source 2

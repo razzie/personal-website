@@ -9,5 +9,5 @@ description: |-
 linkGroups:
 - name: Download
   links:
-  - name: server-client.exe
+  - name: server-client.exe (Windows)
     url: https://github.com/razzie/hobby-projects/blob/master/2008/server-client/server-client.exe

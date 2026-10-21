@@ -17,3 +17,4 @@ linkGroups:
   links:
   - name: github.com/razzie/raztools
     url: https://github.com/razzie/raztools
+    cardLabel: Source

@@ -13,3 +13,4 @@ linkGroups:
   links:
   - name: github.com/razzie/librazzie
     url: https://github.com/razzie/librazzie
+    cardLabel: Source

@@ -21,9 +21,11 @@ linkGroups:
   links:
   - name: potato.mp4
     url: https://github.com/razzie/PotatoGame/releases/download/pre-alpha/potato.mp4
+    cardLabel: Video
   - name: development.mp4
     url: https://github.com/razzie/PotatoGame/releases/download/pre-alpha/development.mp4
 - name: Source code
   links:
   - name: github.com/razzie/PotatoGame
     url: https://github.com/razzie/PotatoGame
+    cardLabel: Source

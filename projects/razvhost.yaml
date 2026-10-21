@@ -17,3 +17,4 @@ linkGroups:
   links:
   - name: github.com/razzie/razvhost
     url: https://github.com/razzie/razvhost
+    cardLabel: Source

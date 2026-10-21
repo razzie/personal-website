@@ -18,7 +18,9 @@ linkGroups:
   links:
   - name: json2go.razzie.cloud
     url: https://json2go.razzie.cloud
+    cardLabel: Website
 - name: Source code
   links:
   - name: github.com/razzie/json2go
     url: https://github.com/razzie/json2go
+    cardLabel: Source

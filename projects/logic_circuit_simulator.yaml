@@ -18,3 +18,4 @@ linkGroups:
   links:
   - name: github.com/razzie/LogicCircuitSimulator
     url: https://github.com/razzie/LogicCircuitSimulator
+    cardLabel: Source

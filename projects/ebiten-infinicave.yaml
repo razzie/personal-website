@@ -14,3 +14,4 @@ linkGroups:
   links:
   - name: github.com/razzie/ebiten-infinicave
     url: https://github.com/razzie/ebiten-infinicave
+    cardLabel: Source

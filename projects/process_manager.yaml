@@ -8,5 +8,5 @@ description: |-
 linkGroups:
 - name: Download
   links:
-  - name: Process Manager.exe
+  - name: Process Manager.exe (Windows)
     url: https://github.com/razzie/hobby-projects/raw/master/2008/process-manager/Process%20Manager.exe

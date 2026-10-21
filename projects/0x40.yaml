@@ -13,7 +13,9 @@ linkGroups:
   links:
   - name: hues.razzie.cloud
     url: https://hues.razzie.cloud
+    cardLabel: Website
 - name: Source code
   links:
   - name: github.com/razzie/0x40hues
     url: https://github.com/razzie/0x40hues
+    cardLabel: Source

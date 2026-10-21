@@ -12,6 +12,7 @@ linkGroups:
   links:
   - name: uuid.razzie.cloud
     url: https://uuid.razzie.cloud
+    cardLabel: Website
 - name: Source code
   links:
   - name: github.com/razzie/uuid-server

@@ -17,14 +17,15 @@ linkGroups:
     url: https://raw.githubusercontent.com/razzie/riddle-solver/master/screenshots/dishonored2_jindosh_riddle.jpg
 - name: Download
   links:
-  - name: riddle-solver-gui.exe
+  - name: riddle-solver-gui.exe (Windows)
     url: https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-gui.exe
-  - name: riddle-solver-tui.exe
+  - name: riddle-solver-tui.exe (Windows)
     url: https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-tui.exe
 - name: Source code
   links:
   - name: github.com/razzie/riddle-solver
     url: https://github.com/razzie/riddle-solver
+    cardLabel: Source
 - name: Component library
   links:
   - name: github.com/razzie/razgio

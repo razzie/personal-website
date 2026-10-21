@@ -21,12 +21,13 @@ func (tag Tag) Escape() string {
 }
 
 type Project struct {
-	ID          string             `yaml:"-"`
-	Name        string             `yaml:"name"`
-	Year        string             `yaml:"year"`
-	Tags        []Tag              `yaml:"tags"`
-	Description Markdown           `yaml:"description"`
-	LinkGroups  []ProjectLinkGroup `yaml:"linkGroups"`
+	ID               string             `yaml:"-"`
+	Name             string             `yaml:"name"`
+	Year             string             `yaml:"year"`
+	Tags             []Tag              `yaml:"tags"`
+	Description      Markdown           `yaml:"description"`
+	LinkGroups       []ProjectLinkGroup `yaml:"linkGroups"`
+	DetailsLinkLabel string             `yaml:"detailsLabel"`
 }
 
 type ProjectLinkGroup struct {
@@ -35,20 +36,9 @@ type ProjectLinkGroup struct {
 }
 
 type ProjectLink struct {
-	Name string `yaml:"name"`
-	URL  string `yaml:"url"`
-}
-
-func (link ProjectLink) IsExecutable() bool {
-	u, err := url.Parse(link.URL)
-	return err == nil && strings.EqualFold(filepath.Ext(u.Path), ".exe")
-}
-
-func (link ProjectLink) DownloadLabel() string {
-	if link.IsExecutable() {
-		return link.Name + " (Windows)"
-	}
-	return link.Name
+	Name      string `yaml:"name"`
+	URL       string `yaml:"url"`
+	CardLabel string `yaml:"cardLabel"`
 }
 
 func (p Project) DisplayYear() string {
@@ -59,50 +49,27 @@ func (p Project) DisplayYear() string {
 	return strings.Join(parts, "–")
 }
 
-// CardLinks promotes one destination per primary group. Collections and
-// executable downloads remain available in the project detail view.
+// CardLinks returns up to two explicitly labeled links in content order.
+// Unlabeled links remain in the detail view only.
 func (p Project) CardLinks() []ProjectLink {
 	var links []ProjectLink
 	for _, group := range p.LinkGroups {
-		label := ""
-		switch group.Name {
-		case "Source code":
-			if len(group.Links) == 1 {
-				label = "Source"
-			}
-		case "Try it here", "Try it here (with code)":
-			label = "Website"
-			if p.containsTag("game") {
-				label = "Play"
-			}
-		case "Download":
-			label = "Download"
-		case "Releases":
-			label = "Releases"
-		case "YouTube channel":
-			label = "YouTube"
-		case "Source code and binary", "Source code and download":
-			label = "Source & downloads"
-		}
-		if label == "" {
-			continue
-		}
 		for _, link := range group.Links {
-			if !link.IsExecutable() {
-				links = append(links, ProjectLink{Name: label, URL: link.URL})
-				break
+			if link.CardLabel == "" {
+				continue
 			}
-		}
-		if len(links) == 2 {
-			break
+			links = append(links, ProjectLink{Name: link.CardLabel, URL: link.URL})
+			if len(links) == 2 {
+				return links
+			}
 		}
 	}
 	return links
 }
 
 func (p Project) DetailsLabel() string {
-	if len(p.LinkGroups) == 1 && p.LinkGroups[0].Name == "Source code" && len(p.LinkGroups[0].Links) > 2 {
-		return "All " + strconv.Itoa(len(p.LinkGroups[0].Links)) + " repositories"
+	if p.DetailsLinkLabel != "" {
+		return p.DetailsLinkLabel
 	}
 	return "Details"
 }

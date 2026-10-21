@@ -5,6 +5,7 @@ tags:
 - lib
 description: |-
   This is my collection of Golang utilities and experiments that are not notable/worthy enough to get their own project tile.
+detailsLabel: All 6 repositories
 linkGroups:
 - name: Source code
   links:

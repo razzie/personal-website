@@ -16,3 +16,4 @@ linkGroups:
   links:
   - name: github.com/razzie/hobby-projects/2007/flyff
     url: https://github.com/razzie/hobby-projects/tree/master/2007/flyff
+    cardLabel: Source

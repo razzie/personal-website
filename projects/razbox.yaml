@@ -19,3 +19,4 @@ linkGroups:
   links:
   - name: github.com/razzie/razbox
     url: https://github.com/razzie/razbox
+    cardLabel: Source

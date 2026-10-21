@@ -13,3 +13,4 @@ linkGroups:
   links:
   - name: github.com/razzie/ebiten-metaballs
     url: https://github.com/razzie/ebiten-metaballs
+    cardLabel: Source

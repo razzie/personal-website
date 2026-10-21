@@ -13,3 +13,4 @@ linkGroups:
   links:
   - name: github.com/razzie/raz-stack
     url: https://github.com/razzie/raz-stack
+    cardLabel: Source

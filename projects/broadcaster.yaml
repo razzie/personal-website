@@ -12,3 +12,4 @@ linkGroups:
   links:
   - name: github.com/razzie/broadcaster
     url: https://github.com/razzie/broadcaster
+    cardLabel: Source

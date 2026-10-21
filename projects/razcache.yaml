@@ -17,3 +17,4 @@ linkGroups:
   links:
   - name: github.com/razzie/razcache
     url: https://github.com/razzie/razcache
+    cardLabel: Source

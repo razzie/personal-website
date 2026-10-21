@@ -11,3 +11,4 @@ linkGroups:
   links:
   - name: github.com/razzie/raztracer
     url: https://github.com/razzie/raztracer
+    cardLabel: Source

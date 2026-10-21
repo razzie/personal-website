@@ -4,9 +4,14 @@ tags:
 - c#
 - lib
 description: |-
-  C# port of Attila Áfra's Doboz compression library
+  I ported Attila Áfra's Doboz compression library to C# to experiment with
+  a custom archive format in my other projects.
+
+  The first version used unsafe pointers, but I later reworked it into safe,
+  managed C#.
 linkGroups:
 - name: Source code
   links:
   - name: github.com/razzie/Doboz.NET
     url: https://github.com/razzie/Doboz.NET
+    cardLabel: Source

@@ -12,3 +12,4 @@ linkGroups:
   links:
   - name: github.com/razzie/s3proxy
     url: https://github.com/razzie/s3proxy
+    cardLabel: Source

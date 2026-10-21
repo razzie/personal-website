@@ -11,3 +11,4 @@ linkGroups:
   links:
   - name: github.com/razzie/mediaserver
     url: https://github.com/razzie/mediaserver
+    cardLabel: Source

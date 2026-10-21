@@ -12,7 +12,9 @@ linkGroups:
   links:
   - name: geoip.razzie.cloud
     url: https://geoip.razzie.cloud
+    cardLabel: Website
 - name: Source code
   links:
   - name: github.com/razzie/geoip-server
     url: https://github.com/razzie/geoip-server
+    cardLabel: Source

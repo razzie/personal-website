@@ -13,9 +13,10 @@ description: |-
 linkGroups:
 - name: Download
   links:
-  - name: razzgravitas.exe
+  - name: razzgravitas.exe (Windows)
     url: https://github.com/razzie/razzgravitas/releases/download/v1.0/razzgravitas.exe
 - name: Source code
   links:
   - name: github.com/razzie/razzgravitas
     url: https://github.com/razzie/razzgravitas
+    cardLabel: Source

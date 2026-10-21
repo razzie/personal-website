@@ -14,3 +14,4 @@ linkGroups:
   links:
   - name: github.com/razzie/k8s-db-operator
     url: https://github.com/razzie/k8s-db-operator
+    cardLabel: Source

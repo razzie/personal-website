@@ -13,9 +13,11 @@ linkGroups:
   links:
   - name: Official PocceMod page
     url: https://forum.cfx.re/t/release-poccemod-fun-menu-with-ropes/645529
+    cardLabel: Releases
   - name: Github releases
     url: https://github.com/razzie/PocceMod/releases
 - name: Source code
   links:
   - name: github.com/razzie/PocceMod
     url: https://github.com/razzie/PocceMod
+    cardLabel: Source

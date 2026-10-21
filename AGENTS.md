@@ -74,6 +74,17 @@ inside `dist/` can also alter its source.
   and public URL, so renaming it changes links.
 - Project fields are `name`, `year`, `tags`, `description`, and `linkGroups`.
   Use existing records as examples for nested link groups and YAML block text.
+- Each link has `name` and `url`, plus an optional `cardLabel` to show it on
+  project cards with that label. Cards show the first two labeled links in
+  group/link order. Omit `cardLabel` to keep a link in the detail view only;
+  group names and tags do not select card links.
+- Omit `cardLabel` on software downloads without source code, including
+  binary-only repository directories, archives, and binaries for any platform.
+  Links that include source code, 3D print models, and videos may appear on cards.
+  Visibility and platform labels are explicit content, never inferred from URLs;
+  include any platform description in the link's `name`.
+- The optional project field `detailsLabel` overrides the card's default
+  `Details` link text (for example, `All 6 repositories` for a collection).
 - Pair each project record with `projects/<id>.webp`. Images are referenced by
   convention, not by an image field in the YAML.
 - Generate WebP images with `cwebp` at quality **60**:
@@ -120,7 +131,7 @@ go test -mod=vendor ./...
 go vet -mod=vendor ./...
 ```
 
-`internal/projects_test.go` covers executable-link detection and project card
+`internal/projects_test.go` covers explicit link visibility and project card
 links, including checks against repository content. Successful `go test` alone
 does not verify generated HTML or browser behavior. Add focused tests when
 changing nontrivial generator logic. For browser changes, preview the affected

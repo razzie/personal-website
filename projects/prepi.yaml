@@ -19,3 +19,4 @@ linkGroups:
   links:
   - name: github.com/razzie/prepi
     url: https://github.com/razzie/prepi
+    cardLabel: Source

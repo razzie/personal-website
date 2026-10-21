@@ -13,5 +13,6 @@ linkGroups:
   links:
   - name: github.com/razzie/hobby-projects/2011/minecraft-clone-v1
     url: https://github.com/razzie/hobby-projects/tree/master/2011/minecraft-clone-v1
+    cardLabel: Source & downloads
   - name: github.com/razzie/hobby-projects/2012/minecraft-clone-v2
     url: https://github.com/razzie/hobby-projects/tree/master/2012/minecraft-clone-v2

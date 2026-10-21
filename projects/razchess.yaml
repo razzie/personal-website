@@ -16,7 +16,9 @@ linkGroups:
   links:
   - name: chess.razzie.cloud
     url: https://chess.razzie.cloud
+    cardLabel: Play
 - name: Source code
   links:
   - name: github.com/razzie/razchess
     url: https://github.com/razzie/razchess
+    cardLabel: Source

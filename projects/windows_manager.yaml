@@ -9,5 +9,5 @@ description: |-
 linkGroups:
 - name: Download
   links:
-  - name: wmanager.exe
+  - name: wmanager.exe (Windows)
     url: https://github.com/razzie/hobby-projects/raw/master/2008/windows-manager/wmanager.exe
