@@ -8,6 +8,7 @@
     <title>Gábor Görzsöny</title>
 	<link rel="stylesheet" href="/pico.min.css">
 	<link rel="stylesheet" href="/projects.css">
+	<link rel="stylesheet" href="/navigation.css">
 	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
 	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
 	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
@@ -15,6 +16,7 @@
 	<script src="/loading-states.min.js" defer></script>
 	<script src="/email.js" defer></script>
 	<script src="/projects.js" defer></script>
+	<script src="/navigation.js" defer></script>
 	<style>
 	body > main {
 		padding-top: 0.5rem;
@@ -39,14 +41,6 @@
 		#title {
 			display: none;
 		}
-		#title.title-with-subtitle {
-			display: flex;
-			order: 1;
-			justify-content: center;
-			width: 100%;
-			margin: 0;
-			text-align: center;
-		}
 		nav {
 			display: flex;
 			flex-wrap: wrap;
@@ -64,30 +58,34 @@
 </head>
 <body hx-boost="true" hx-ext="loading-states">
 	<main class="container">
-		<nav>
+		<nav aria-label="Main navigation" class="hello-navigation">
 			<ul id="title" class="title-with-subtitle">
 				<li>
 					<h1 data-loading-aria-busy data-loading-delay="50">Gábor Görzsöny <span>also known as Razzie</span></h1>
 				</li>
 			</ul>
-			<ul>
-			
-			
-				<li><a href="/" aria-current="page">Hello</a></li>
-			
-				<li><a href="/skills">Skills</a></li>
-			
-				<li><a href="/experience">Experience</a></li>
-			
-				<li><a href="/projects">Projects</a></li>
-			
+			<ul class="desktop-navigation">
+				
+	
+	
+		<li><a href="/" aria-current="page">Hello</a></li>
+	
+		<li><a href="/skills">Skills</a></li>
+	
+		<li><a href="/experience">Experience</a></li>
+	
+		<li><a href="/projects">Projects</a></li>
+	
+
 			</ul>
+			
 		</nav>
 		
 <style>@import url("/hello.css");</style>
 <div class="hello-page">
 	<section class="hello-intro" aria-labelledby="hello-headline">
 		<div>
+			<h1 class="hello-identity" data-loading-aria-busy data-loading-delay="50">Gábor Görzsöny &middot; Razzie</h1>
 			<h2 id="hello-headline" class="hello-headline"><span>Go engineer.</span><span>Tool builder.</span><span>Curious by default.</span></h2>
 			<div class="hello-summary"><p>Senior software engineer focused on <strong>Go backend services and Kubernetes</strong>.
 I build useful tools, explore ideas and enjoy helping others do the same.</p>

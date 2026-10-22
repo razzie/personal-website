@@ -8,6 +8,17 @@
 	padding-bottom: 2.5rem;
 }
 
+.hello-identity {
+	display: none;
+	margin: 0 0 0.375rem;
+	color: var(--pico-muted-color);
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+}
+
 .hello-headline {
 	font-size: clamp(2rem, 4vw, 3rem);
 	line-height: 1.12;
@@ -160,6 +171,12 @@
 	font-size: 0.8rem;
 	max-width: 100ch;
 	margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.hello-identity {
+		display: block;
+	}
 }
 
 @media screen and (min-width: 768px) {

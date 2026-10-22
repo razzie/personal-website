@@ -8,6 +8,7 @@
     <title>Gábor Görzsöny - k8s-db-operator</title>
 	<link rel="stylesheet" href="/pico.min.css">
 	<link rel="stylesheet" href="/projects.css">
+	<link rel="stylesheet" href="/navigation.css">
 	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
 	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
 	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
@@ -15,6 +16,7 @@
 	<script src="/loading-states.min.js" defer></script>
 	<script src="/email.js" defer></script>
 	<script src="/projects.js" defer></script>
+	<script src="/navigation.js" defer></script>
 	<style>
 	body > main {
 		padding-top: 0.5rem;
@@ -39,14 +41,6 @@
 		#title {
 			display: none;
 		}
-		#title.title-with-subtitle {
-			display: flex;
-			order: 1;
-			justify-content: center;
-			width: 100%;
-			margin: 0;
-			text-align: center;
-		}
 		nav {
 			display: flex;
 			flex-wrap: wrap;
@@ -64,24 +58,50 @@
 </head>
 <body hx-boost="true" hx-ext="loading-states">
 	<main class="container">
-		<nav>
+		<nav aria-label="Main navigation" class="collapsible-navigation">
 			<ul id="title">
 				<li>
 					<h1 data-loading-aria-busy data-loading-delay="50">Projects</h1>
 				</li>
 			</ul>
-			<ul>
-			
-			
-				<li><a href="/">Hello</a></li>
-			
-				<li><a href="/skills">Skills</a></li>
-			
-				<li><a href="/experience">Experience</a></li>
-			
-				<li><a href="/projects" aria-current="page">Projects</a></li>
-			
+			<ul class="desktop-navigation">
+				
+	
+	
+		<li><a href="/">Hello</a></li>
+	
+		<li><a href="/skills">Skills</a></li>
+	
+		<li><a href="/experience">Experience</a></li>
+	
+		<li><a href="/projects" aria-current="page">Projects</a></li>
+	
+
 			</ul>
+			
+			<a class="mobile-identity" href="/">
+				<strong data-loading-aria-busy data-loading-delay="50">Gábor Görzsöny</strong>
+				<span>also known as Razzie</span>
+			</a>
+			<details class="site-menu">
+				<summary>
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 5h12M2 11h8"/></svg>
+					Projects
+				</summary>
+				<ul>
+	
+	
+		<li><a href="/">Hello</a></li>
+	
+		<li><a href="/skills">Skills</a></li>
+	
+		<li><a href="/experience">Experience</a></li>
+	
+		<li><a href="/projects" aria-current="page">Projects</a></li>
+	
+</ul>
+			</details>
+			
 		</nav>
 		
 
