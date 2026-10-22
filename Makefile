@@ -11,7 +11,7 @@ build:
 
 .PHONY: run
 run: build
-	./personal-website serve
+	./personal-website serve --delay 250ms
 
 .PHONY: docker-build
 docker-build:
