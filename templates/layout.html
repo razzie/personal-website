@@ -7,7 +7,10 @@
 	<meta name="description" content="Gábor Görzsöny's personal website">
     <title>{{ .SiteName }}{{ if .PageID }} - {{ .Title }}{{ end }}</title>
 	<link rel="stylesheet" href="/pico.min.css">
-	<link rel="stylesheet" href="/projects.css">
+	{{/* Load all page styles up front because boosted navigation only swaps the body. */}}
+	{{ range .Nav }}
+	<link rel="stylesheet" href="/{{ .Template }}.css">
+	{{ end }}
 	<link rel="stylesheet" href="/navigation.css">
 	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
 	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
@@ -27,11 +30,11 @@
 	#title h1 {
 		margin-bottom: 0;
 	}
-	#title.title-with-subtitle h1 {
+	#title h1.title-with-subtitle {
 		font-size: 1.25rem;
 		line-height: 1.4;
 	}
-	#title.title-with-subtitle h1 span {
+	#title h1.title-with-subtitle span {
 		display: block;
 		color: var(--pico-muted-color);
 		font-size: 0.85rem;
@@ -59,9 +62,10 @@
 <body hx-boost="true" hx-ext="loading-states">
 	<main class="container">
 		<nav aria-label="Main navigation" class="{{ if .PageID }}collapsible-navigation{{ else }}hello-navigation{{ end }}">
-			<ul id="title"{{ if .HeaderSubtitle }} class="title-with-subtitle"{{ end }}>
+			<ul id="title">
 				<li>
-					<h1 data-loading-aria-busy data-loading-delay="50">{{ .HeaderTitle }}{{ if .HeaderSubtitle }} <span>{{ .HeaderSubtitle }}</span>{{ end }}</h1>
+					{{/* HTMX briefly reuses old classes on elements with IDs; keep subtitle sizing on the heading. */}}
+					<h1{{ if .HeaderSubtitle }} class="title-with-subtitle"{{ end }} data-loading-aria-busy data-loading-delay="50">{{ .HeaderTitle }}{{ if .HeaderSubtitle }} <span>{{ .HeaderSubtitle }}</span>{{ end }}</h1>
 				</li>
 			</ul>
 			<ul class="desktop-navigation">

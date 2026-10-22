@@ -1,5 +1,4 @@
 {{ define "timeline" }}
-<style scoped>@import url("/timeline.css?5");</style>
 <div class="timeline" id="experience-timeline">
 	{{ range . }}
 	<div class="timeline-entry{{ if .Sabbatical }} sabbatical{{ end }}"{{ if .Sabbatical }} hidden{{ end }}>
