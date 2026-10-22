@@ -8,6 +8,7 @@
     <title>{{ .SiteName }}{{ if .PageID }} - {{ .Title }}{{ end }}</title>
 	<link rel="stylesheet" href="/pico.min.css">
 	<link rel="stylesheet" href="/projects.css">
+	<link rel="stylesheet" href="/navigation.css">
 	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
 	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
 	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
@@ -15,6 +16,7 @@
 	<script src="/loading-states.min.js" defer></script>
 	<script src="/email.js" defer></script>
 	<script src="/projects.js" defer></script>
+	<script src="/navigation.js" defer></script>
 	<style>
 	body > main {
 		padding-top: 0.5rem;
@@ -56,18 +58,28 @@
 </head>
 <body hx-boost="true" hx-ext="loading-states">
 	<main class="container">
-		<nav>
+		<nav aria-label="Main navigation" class="{{ if .PageID }}collapsible-navigation{{ else }}hello-navigation{{ end }}">
 			<ul id="title"{{ if .HeaderSubtitle }} class="title-with-subtitle"{{ end }}>
 				<li>
 					<h1 data-loading-aria-busy data-loading-delay="50">{{ .HeaderTitle }}{{ if .HeaderSubtitle }} <span>{{ .HeaderSubtitle }}</span>{{ end }}</h1>
 				</li>
 			</ul>
-			<ul>
-			{{ $pageID := .ActivePageID }}
-			{{ range .Nav }}
-				<li><a href="/{{ .ID }}"{{ if eq .ID $pageID }} aria-current="page"{{ end }}>{{ .Title }}</a></li>
-			{{ end }}
+			<ul class="desktop-navigation">
+				{{ template "navigation-links" . }}
 			</ul>
+			{{ if .PageID }}
+			<a class="mobile-identity" href="/">
+				<strong data-loading-aria-busy data-loading-delay="50">{{ .SiteName }}</strong>
+				<span>{{ (index .Nav 0).HeaderSubtitle }}</span>
+			</a>
+			<details class="site-menu">
+				<summary>
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 5h12M2 11h8"/></svg>
+					{{ range .Nav }}{{ if eq .ID $.ActivePageID }}{{ .Title }}{{ end }}{{ end }}
+				</summary>
+				<ul>{{ template "navigation-links" . }}</ul>
+			</details>
+			{{ end }}
 		</nav>
 		{{ CallTemplate .Template .Data }}
 	</main>
@@ -81,4 +93,11 @@
 	</dialog>
 </body>
 </html>
+{{ end }}
+
+{{ define "navigation-links" }}
+	{{ $pageID := .ActivePageID }}
+	{{ range .Nav }}
+		<li><a href="/{{ .ID }}"{{ if eq .ID $pageID }} aria-current="page"{{ end }}>{{ .Title }}</a></li>
+	{{ end }}
 {{ end }}
