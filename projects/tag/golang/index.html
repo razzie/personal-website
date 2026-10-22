@@ -7,6 +7,7 @@
 	<meta name="description" content="Gábor Görzsöny's personal website">
     <title>Gábor Görzsöny - Projects (golang)</title>
 	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="stylesheet" href="/projects.css">
 	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
 	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
 	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
@@ -53,7 +54,7 @@
 			margin-bottom: var(--pico-typography-spacing-vertical);
 		}
 		nav ul li {
-			font-size: 1.5rem;
+			font-size: clamp(1rem, 4.8vw, 1.5rem);
 		}
 		a[aria-current="page"] {
 			font-weight: bold;
@@ -78,562 +79,470 @@
 			
 				<li><a href="/experience">Experience</a></li>
 			
-				<li><a href="/projects">Projects</a></li>
+				<li><a href="/projects" aria-current="page">Projects</a></li>
 			
 			</ul>
 		</nav>
 		
-<div id="project-navigation" role="navigation" aria-label="Project tags and years" tabindex="-1">
 
-<p class="project-tags">
-	
-	
-	<code>
+<div class="projects-page">
+	<div id="project-navigation" role="navigation" aria-label="Project tags" tabindex="-1">
 		
-		<a href="/projects/tag/3d-print/" class="secondary">3d-print</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/c%23/" class="secondary">c#</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/c%2B%2B/" class="secondary">c&#43;&#43;</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/chat/" class="secondary">chat</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/cloud/" class="secondary">cloud</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/game/" class="secondary">game</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects">golang</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/gui/" class="secondary">gui</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/java/" class="secondary">java</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/javascript/" class="secondary">javascript</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/k8s/" class="secondary">k8s</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/lib/" class="secondary">lib</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/mod/" class="secondary">mod</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/other/" class="secondary">other</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/php/" class="secondary">php</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/proxy/" class="secondary">proxy</a>
-		
-	</code>
-	
-	<code>
-		
-		<a href="/projects/tag/rendering/" class="secondary">rendering</a>
-		
-	</code>
-	
-</p>
-
-
-<p class="project-tags project-years">
-	
-	<code><a href="#project-year-2026" class="secondary">2026</a></code>
-	
-	<code><a href="#project-year-2024" class="secondary">2024</a></code>
-	
-	<code><a href="#project-year-2023" class="secondary">2023</a></code>
-	
-	<code><a href="#project-year-2022" class="secondary">2022</a></code>
-	
-	<code><a href="#project-year-2021" class="secondary">2021</a></code>
-	
-	<code><a href="#project-year-2020" class="secondary">2020</a></code>
-	
-	<code><a href="#project-year-2019" class="secondary">2019</a></code>
-	
-	<code><a href="#project-year-2015" class="secondary">2015</a></code>
-	
-</p>
-
-</div>
-<button type="button" id="projects-back-to-top" class="secondary project-back-to-top" aria-label="Back to project tags and years" hidden>
-	<span aria-hidden="true">↑</span> Top
-</button>
-<style>
-	.project-tags {
-		text-align: center;
-		text-wrap: balance;
-	}
-	.project-tags > code {
-		display: inline-block;
-		margin-bottom: 0.25rem;
-		white-space: nowrap;
-	}
-	.project-year {
-		padding-top: 1.5rem;
-		text-align: center;
-	}
-	.project-year-group:first-of-type > .project-year {
-		padding-top: 0.75rem;
-	}
-	.project-grid {
-		columns: 2;
-		column-gap: 1rem;
-	}
-	.project-grid > article {
-		break-inside: avoid;
-	}
-	.project-grid-single {
-		columns: 1;
-		width: calc((100% - 1rem) / 2);
-		margin-inline: auto;
-	}
-	.project-back-to-top {
-		position: fixed;
-		right: 1rem;
-		bottom: 1rem;
-		z-index: 10;
-		margin: 0;
-		padding: 0.5rem 0.75rem;
-		box-shadow: var(--pico-card-box-shadow);
-	}
-	.project-back-to-top[hidden] {
-		display: none;
-	}
-	@media screen and (max-width: 768px) {
-		.project-grid {
-			columns: 1;
-		}
-		.project-grid-single {
-			width: 100%;
-		}
-	}
-</style>
-
-<section class="project-year-group" aria-labelledby="project-year-2026">
-	<h2 id="project-year-2026" class="project-year">2026</h2>
-	<div class="project-grid">
-		
+		<p class="project-tags">
 			
-<article id="ebiten-infinicave">
-	<header><a href="/projects/id/ebiten-infinicave" class="secondary">Ebiten Infinicave</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/ebiten-infinicave.webp" alt="Thumbnail of Ebiten Infinicave" width="256">
-		</div>
-		<div>
 			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/ebiten-infinicave" target="_blank">github.com/razzie/ebiten-infinicave</a><br>
-				
-			</p>
 			
-			<p>Year: 2026</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
-				
-			</span>
-		</div>
+			<a href="/projects/tag/3d-print/" class="project-tag secondary">3d-print</a>
+			
+			
+			
+			<a href="/projects/tag/c%23/" class="project-tag secondary">c#</a>
+			
+			
+			
+			<a href="/projects/tag/c%2B%2B/" class="project-tag secondary">c&#43;&#43;</a>
+			
+			
+			
+			<a href="/projects/tag/chat/" class="project-tag secondary">chat</a>
+			
+			
+			
+			<a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a>
+			
+			
+			
+			<a href="/projects/tag/game/" class="project-tag secondary">game</a>
+			
+			
+			
+			<a href="/projects" class="project-tag" aria-current="true" aria-label="golang — remove filter">golang</a>
+			
+			
+			
+			<a href="/projects/tag/gui/" class="project-tag secondary">gui</a>
+			
+			
+			
+			<a href="/projects/tag/java/" class="project-tag secondary">java</a>
+			
+			
+			
+			<a href="/projects/tag/javascript/" class="project-tag secondary">javascript</a>
+			
+			
+			
+			<a href="/projects/tag/k8s/" class="project-tag secondary">k8s</a>
+			
+			
+			
+			<a href="/projects/tag/lib/" class="project-tag secondary">lib</a>
+			
+			
+			
+			<a href="/projects/tag/mod/" class="project-tag secondary">mod</a>
+			
+			
+			
+			<a href="/projects/tag/other/" class="project-tag secondary">other</a>
+			
+			
+			
+			<a href="/projects/tag/php/" class="project-tag secondary">php</a>
+			
+			
+			
+			<a href="/projects/tag/proxy/" class="project-tag secondary">proxy</a>
+			
+			
+			
+			<a href="/projects/tag/rendering/" class="project-tag secondary">rendering</a>
+			
+			
+		</p>
+		
 	</div>
-	<footer>
-		<p><p>I wanted to revisit my <a href="/projects/id/blob_game_concept">blob game concept</a> and see if the new GPT6 Astra model
+	
+		<div class="project-years-navigation" role="navigation" aria-label="Project years">
+			<button type="button" class="project-years-arrow" data-year-scroll="-1" aria-label="Scroll to newer project years" aria-controls="project-years-scroll" hidden><span aria-hidden="true">‹</span></button>
+			<div id="project-years-scroll" class="project-years-scroll" role="region" aria-label="Browse projects by year" tabindex="0">
+				<ol class="project-years" style="--project-year-count: 8">
+					
+					<li><a href="#project-year-2026"><span>2026</span></a></li>
+					
+					<li><a href="#project-year-2024"><span>2024</span></a></li>
+					
+					<li><a href="#project-year-2023"><span>2023</span></a></li>
+					
+					<li><a href="#project-year-2022"><span>2022</span></a></li>
+					
+					<li><a href="#project-year-2021"><span>2021</span></a></li>
+					
+					<li><a href="#project-year-2020"><span>2020</span></a></li>
+					
+					<li><a href="#project-year-2019"><span>2019</span></a></li>
+					
+					<li><a href="#project-year-2015"><span>2015</span></a></li>
+					
+				</ol>
+			</div>
+			<button type="button" class="project-years-arrow" data-year-scroll="1" aria-label="Scroll to older project years" aria-controls="project-years-scroll" hidden><span aria-hidden="true">›</span></button>
+		</div>
+	
+	
+	<section class="project-year-group" aria-labelledby="project-year-2026">
+		<h2 id="project-year-2026" class="project-year">2026</h2>
+		<div class="project-grid">
+			
+				
+<article id="ebiten-infinicave" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/ebiten-infinicave/" class="secondary">Ebiten Infinicave</a></h3>
+		<span class="project-date">2026</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/ebiten-infinicave/" class="project-image-link" aria-label="View Ebiten Infinicave details">
+			<img src="/projects/ebiten-infinicave.webp" alt="Thumbnail of Ebiten Infinicave" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-ebiten-infinicave" class="project-description"><p>I wanted to revisit my <a href="/projects/id/blob_game_concept">blob game concept</a> and see if the new GPT6 Astra model
 could implement it based on an image, since I had problems doing this with AI in the past.
 It still took about 4 tries before I achieved something remotely resembling the concept.
 The result is a Go library for Ebitengine that generates an infinite cave with faceted rocks, branching vines and mushrooms,
 with an interactive viewer to scroll through the world and carve away terrain.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-ebiten-infinicave" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/rendering/" class="project-tag secondary">rendering</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/ebiten-infinicave" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/ebiten-infinicave/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="ebiten-metaballs">
-	<header><a href="/projects/id/ebiten-metaballs" class="secondary">Ebiten Metaballs</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/ebiten-metaballs.webp" alt="Thumbnail of Ebiten Metaballs" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/ebiten-metaballs" target="_blank">github.com/razzie/ebiten-metaballs</a><br>
-				
-			</p>
-			
-			<p>Year: 2026</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/rendering/" class="secondary">rendering</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Inspired by my <a href="/projects/id/metaball_squeeze_shader">metaball squeeze shader</a>,
+<article id="ebiten-metaballs" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/ebiten-metaballs/" class="secondary">Ebiten Metaballs</a></h3>
+		<span class="project-date">2026</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/ebiten-metaballs/" class="project-image-link" aria-label="View Ebiten Metaballs details">
+			<img src="/projects/ebiten-metaballs.webp" alt="Thumbnail of Ebiten Metaballs" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-ebiten-metaballs" class="project-description"><p>Inspired by my <a href="/projects/id/metaball_squeeze_shader">metaball squeeze shader</a>,
 I wanted to turn the effect into a reusable Go library for Ebitengine.
 Metaballs of the same color merge smoothly, while different groups squeeze against each other and rigid walls.
 There is also an optional soft body physics package to play with connected blobs.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-ebiten-metaballs" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/rendering/" class="project-tag secondary">rendering</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/ebiten-metaballs" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/ebiten-metaballs/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="wormward">
-	<header><a href="/projects/id/wormward" class="secondary">Wormward</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/wormward.webp" alt="Thumbnail of Wormward" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/wormward" target="_blank">github.com/razzie/wormward</a><br>
-				
-			</p>
-			
-			<p>Year: 2026</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>I wanted to try out my <a href="/projects/id/ebiten-infinicave">Ebiten Infinicave</a> library in a game, so I made Wormward,
+<article id="wormward" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/wormward/" class="secondary">Wormward</a></h3>
+		<span class="project-date">2026</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/wormward/" class="project-image-link" aria-label="View Wormward details">
+			<img src="/projects/wormward.webp" alt="Thumbnail of Wormward" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-wormward" class="project-description"><p>I wanted to try out my <a href="/projects/id/ebiten-infinicave">Ebiten Infinicave</a> library in a game, so I made Wormward,
 a real-time cave exploration game where you guide a worm through an infinite destructible cave.
 Use a bazooka, drill, spider silk and a rope gun to carve paths and swing through the terrain.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-wormward" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/game/" class="project-tag secondary">game</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/wormward" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/wormward/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
-	</div>
-</section>
-
-<section class="project-year-group" aria-labelledby="project-year-2024">
-	<h2 id="project-year-2024" class="project-year">2024</h2>
-	<div class="project-grid project-grid-single">
-		
 			
-<article id="mock">
-	<header><a href="/projects/id/mock" class="secondary">Mock</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/mock.webp" alt="Thumbnail of Mock" width="256">
 		</div>
-		<div>
+	</section>
+	
+	<section class="project-year-group" aria-labelledby="project-year-2024">
+		<h2 id="project-year-2024" class="project-year">2024</h2>
+		<div class="project-grid">
 			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/mock" target="_blank">github.com/razzie/mock</a><br>
-				
-			</p>
-			
-			<p>Year: 2024-2025</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Mock generates a runtime <a href="https://pkg.go.dev/github.com/stretchr/testify/mock" target="_blank">testify mock</a> implementation for any Go interface
+<article id="mock" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/mock/" class="secondary">Mock</a></h3>
+		<span class="project-date">2024–2025</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/mock/" class="project-image-link" aria-label="View Mock details">
+			<img src="/projects/mock.webp" alt="Thumbnail of Mock" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-mock" class="project-description"><p>Mock generates a runtime <a href="https://pkg.go.dev/github.com/stretchr/testify/mock" target="_blank">testify mock</a> implementation for any Go interface
 without having to write any boilerplate (and in my opinion <a href="https://github.com/vektra/mockery" target="_blank">mockery</a> counts as boilerplate too).
 It was one of a kind when first implemented, and possibly still is.
 The initial version used the goplus/reflectx package, but due to the linkname related limitations introduced in Go 1.23,
 I had to delve deep into the Go internals (ABI, GC, reflection) to be able to develop a standalone version.
 The only dependency is the testify package itself.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-mock" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/lib/" class="project-tag secondary">lib</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/mock" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/mock/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
-	</div>
-</section>
-
-<section class="project-year-group" aria-labelledby="project-year-2023">
-	<h2 id="project-year-2023" class="project-year">2023</h2>
-	<div class="project-grid">
-		
 			
-<article id="0x40">
-	<header><a href="/projects/id/0x40" class="secondary">0x40 Hues</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/0x40.webp" alt="Thumbnail of 0x40 Hues" width="256">
 		</div>
-		<div>
+	</section>
+	
+	<section class="project-year-group" aria-labelledby="project-year-2023">
+		<h2 id="project-year-2023" class="project-year">2023</h2>
+		<div class="project-grid">
 			
-			<p>
-				Try it here:<br>
 				
-				<a href="https://hues.razzie.cloud" target="_blank">hues.razzie.cloud</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/0x40hues" target="_blank">github.com/razzie/0x40hues</a><br>
-				
-			</p>
-			
-			<p>Year: 2023</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/javascript/" class="secondary">javascript</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>I&rsquo;ve come across Kepstin&rsquo;s amazing <a href="https://github.com/kepstin/0x40hues-html5" target="_blank">0x40hues</a> project and caught myself listening to it a lot.
+<article id="0x40" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/0x40/" class="secondary">0x40 Hues</a></h3>
+		<span class="project-date">2023</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/0x40/" class="project-image-link" aria-label="View 0x40 Hues details">
+			<img src="/projects/0x40.webp" alt="Thumbnail of 0x40 Hues" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-0x40" class="project-description"><p>I&rsquo;ve come across Kepstin&rsquo;s amazing <a href="https://github.com/kepstin/0x40hues-html5" target="_blank">0x40hues</a> project and caught myself listening to it a lot.
 After finding community resource packs to try, it quickly became troublesome to configure and run them.
 This motivated me to fork the project and after a great deal of refactoring, it now supports loading many respacks and on-the-fly configuration.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-0x40" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/javascript/" class="project-tag secondary">javascript</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://hues.razzie.cloud" target="_blank" rel="noopener noreferrer">Website <span aria-hidden="true">↗</span></a>
+			
+			<a href="https://github.com/razzie/0x40hues" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/0x40/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="botkit">
-	<header><a href="/projects/id/botkit" class="secondary">Botkit</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/botkit.webp" alt="Thumbnail of Botkit" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/botkit" target="_blank">github.com/razzie/botkit</a><br>
-				
-			</p>
-			
-			<p>Year: 2023 - 2024</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/chat/" class="secondary">chat</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A Telegram bot library designed to handle <a href="/projects/id/commander">commands</a> and dialogs.
+<article id="botkit" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/botkit/" class="secondary">Botkit</a></h3>
+		<span class="project-date">2023–2024</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/botkit/" class="project-image-link" aria-label="View Botkit details">
+			<img src="/projects/botkit.webp" alt="Thumbnail of Botkit" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-botkit" class="project-description"><p>A Telegram bot library designed to handle <a href="/projects/id/commander">commands</a> and dialogs.
 Both of these support replying with sticker, photo, video, audio, album or file (even files not directly uploaded by the bot).
 Dialogs are composed of one or more queries, which can be single choice, multi choice or file queries.
 In theory you could run multiple instances to help balance the load,
 as long as they share the same Redis database.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-botkit" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/chat/" class="project-tag secondary">chat</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/lib/" class="project-tag secondary">lib</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/botkit" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/botkit/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="broadcaster">
-	<header><a href="/projects/id/broadcaster" class="secondary">Broadcaster</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/broadcaster.webp" alt="Thumbnail of Broadcaster" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/broadcaster" target="_blank">github.com/razzie/broadcaster</a><br>
-				
-			</p>
-			
-			<p>Year: 2023 - 2024</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Broadcast messages from one channel to many, with timeouts, server sent events and much more.
+<article id="broadcaster" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/broadcaster/" class="secondary">Broadcaster</a></h3>
+		<span class="project-date">2023–2024</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/broadcaster/" class="project-image-link" aria-label="View Broadcaster details">
+			<img src="/projects/broadcaster.webp" alt="Thumbnail of Broadcaster" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-broadcaster" class="project-description"><p>Broadcast messages from one channel to many, with timeouts, server sent events and much more.
 Zero external dependencies.
 Designed for scenarios when it&rsquo;s unpractical to connect to the same event source using many parallel connections.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-broadcaster" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/lib/" class="project-tag secondary">lib</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/broadcaster" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/broadcaster/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="commander">
-	<header><a href="/projects/id/commander" class="secondary">Commander</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/commander.webp" alt="Thumbnail of Commander" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/commander" target="_blank">github.com/razzie/commander</a><br>
-				
-			</p>
-			
-			<p>Year: 2023 - 2024</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/chat/" class="secondary">chat</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Execute Go functions from CLI or from a chatbot.
+<article id="commander" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/commander/" class="secondary">Commander</a></h3>
+		<span class="project-date">2023–2024</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/commander/" class="project-image-link" aria-label="View Commander details">
+			<img src="/projects/commander.webp" alt="Thumbnail of Commander" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-commander" class="project-description"><p>Execute Go functions from CLI or from a chatbot.
 Register any function as a command, then supply a context variable and a string slice as input arguments.
 If the original function has Context parameter(s), the context variable will be passed,
 otherwise the arguments from the string slice will be converted using Sscanf.
 The function&rsquo;s return values are converted into a []any slice and if any of these values is an error,
 it will be extracted into a separate error return value.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-commander" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/chat/" class="project-tag secondary">chat</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/lib/" class="project-tag secondary">lib</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/commander" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/commander/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="json2go">
-	<header><a href="/projects/id/json2go" class="secondary">Json2Go</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/json2go.webp" alt="Thumbnail of Json2Go" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Try it here:<br>
 				
-				<a href="https://json2go.razzie.cloud" target="_blank">json2go.razzie.cloud</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/json2go" target="_blank">github.com/razzie/json2go</a><br>
-				
-			</p>
-			
-			<p>Year: 2023 - 2024</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A webapp that helps you write Go client libraries for JSON web APIs.
+<article id="json2go" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/json2go/" class="secondary">Json2Go</a></h3>
+		<span class="project-date">2023–2024</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/json2go/" class="project-image-link" aria-label="View Json2Go details">
+			<img src="/projects/json2go.webp" alt="Thumbnail of Json2Go" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-json2go" class="project-description"><p>A webapp that helps you write Go client libraries for JSON web APIs.
 One of my experiments required building a database that included data from many third party JSON web APIs.
 The process of deserializing data into manually crafted Go structs quickly got exhausting,
 so I had to come up with a solution. Json2Go is by no means perfect (it only looks at the fields of the first item of a JSON array),
@@ -642,40 +551,44 @@ You can input a JSON or a URL that returns a JSON.
 Field names are automatically converted into camel case, stripped of unsupported characters
 and correctly annotated with the original name.
 The resulting generated structure is formatted and uses syntax highlighting.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-json2go" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://json2go.razzie.cloud" target="_blank" rel="noopener noreferrer">Website <span aria-hidden="true">↗</span></a>
+			
+			<a href="https://github.com/razzie/json2go" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/json2go/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="razcache">
-	<header><a href="/projects/id/razcache" class="secondary">RazCache</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razcache.webp" alt="Thumbnail of RazCache" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/razcache" target="_blank">github.com/razzie/razcache</a><br>
-				
-			</p>
-			
-			<p>Year: 2023 - 2024</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A minimalist abstraction layer above Redis, Badger and a custom in-memory cache.
+<article id="razcache" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/razcache/" class="secondary">RazCache</a></h3>
+		<span class="project-date">2023–2024</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/razcache/" class="project-image-link" aria-label="View RazCache details">
+			<img src="/projects/razcache.webp" alt="Thumbnail of RazCache" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-razcache" class="project-description"><p>A minimalist abstraction layer above Redis, Badger and a custom in-memory cache.
 As many of my self-hosted services rely on Redis for caching or data storage,
 I often had to fire up a local instance for manual testing.
 This process was too cumbersone for me, so I figured I could come up with a wrapper
@@ -683,359 +596,346 @@ around Redis supporting the functionaly only I use the most, and during developm
 it should mimic this functionality in-process.
 Supporting key expirations was a mandatory requirement, so the in-memory cache implements
 a &ldquo;janitor&rdquo; goroutine that cleans up these keys exactly when they expire, one at a time.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-razcache" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/lib/" class="project-tag secondary">lib</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/razcache" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/razcache/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
-	</div>
-</section>
-
-<section class="project-year-group" aria-labelledby="project-year-2022">
-	<h2 id="project-year-2022" class="project-year">2022</h2>
-	<div class="project-grid">
-		
 			
-<article id="k8s-db-operator">
-	<header><a href="/projects/id/k8s-db-operator" class="secondary">k8s-db-operator</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/k8s-db-operator.webp" alt="Thumbnail of k8s-db-operator" width="256">
 		</div>
-		<div>
+	</section>
+	
+	<section class="project-year-group" aria-labelledby="project-year-2022">
+		<h2 id="project-year-2022" class="project-year">2022</h2>
+		<div class="project-grid">
 			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/k8s-db-operator" target="_blank">github.com/razzie/k8s-db-operator</a><br>
-				
-			</p>
-			
-			<p>Year: 2022 - 2023</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/k8s/" class="secondary">k8s</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Kubernetes operator to provide access to shared PostgreSQL and Redis.
+<article id="k8s-db-operator" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/k8s-db-operator/" class="secondary">k8s-db-operator</a></h3>
+		<span class="project-date">2022–2023</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/k8s-db-operator/" class="project-image-link" aria-label="View k8s-db-operator details">
+			<img src="/projects/k8s-db-operator.webp" alt="Thumbnail of k8s-db-operator" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-k8s-db-operator" class="project-description"><p>Kubernetes operator to provide access to shared PostgreSQL and Redis.
 It relies on the DatabaseClaim CRD, but unlike most other operators,
 this one only deploys Kubernetes secrets containing connection strings.
 Databases and Redis namespaces are not shared between dbclaims.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-k8s-db-operator" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/k8s/" class="project-tag secondary">k8s</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/k8s-db-operator" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/k8s-db-operator/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="razchess">
-	<header><a href="/projects/id/razchess" class="secondary">RazChess</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razchess.webp" alt="Thumbnail of RazChess" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Try it here:<br>
 				
-				<a href="https://chess.gorzsony.com" target="_blank">chess.gorzsony.com</a><br>
-				
-				<a href="https://chess.razzie.cloud" target="_blank">chess.razzie.cloud</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/razchess" target="_blank">github.com/razzie/razchess</a><br>
-				
-			</p>
-			
-			<p>Year: 2022 - 2023</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/game/" class="secondary">game</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/javascript/" class="secondary">javascript</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>I&rsquo;ve had a sudden spark of interest in chess as of late 2022 and decided to build my own web chess app with focus on simplicity and ease of use.
+<article id="razchess" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/razchess/" class="secondary">RazChess</a></h3>
+		<span class="project-date">2022–2023</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/razchess/" class="project-image-link" aria-label="View RazChess details">
+			<img src="/projects/razchess.webp" alt="Thumbnail of RazChess" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-razchess" class="project-description"><p>I&rsquo;ve had a sudden spark of interest in chess as of late 2022 and decided to build my own web chess app with focus on simplicity and ease of use.
 Also I didn&rsquo;t want to waste time convincing friends to register to [insert your favorite chess platform here]. With RazChess you just visit the website,
 copy the link of the session and pass it to the person you want to play with.
 As weeks passed I kept adding new features like chess puzzles (mate in two steps), Fischer random (chess960) game, included chess openings encyclopedia,
 custom games and the ability to download your matches as GIFs. There is also Redis support to restore active games after a restart.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-razchess" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/game/" class="project-tag secondary">game</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/javascript/" class="project-tag secondary">javascript</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://chess.razzie.cloud" target="_blank" rel="noopener noreferrer">Play <span aria-hidden="true">↗</span></a>
+			
+			<a href="https://github.com/razzie/razchess" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/razchess/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
+			
+		</div>
+	</section>
+	
+	<section class="project-year-group" aria-labelledby="project-year-2021">
+		<h2 id="project-year-2021" class="project-year">2021</h2>
+		<div class="project-grid">
+			
+				
+<article id="golang_utils" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/golang_utils/" class="secondary">Golang utils</a></h3>
+		<span class="project-date">2021–2024</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/golang_utils/" class="project-image-link" aria-label="View Golang utils details">
+			<img src="/projects/golang_utils.webp" alt="Thumbnail of Golang utils" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-golang_utils" class="project-description"><p>This is my collection of Golang utilities and experiments that are not notable/worthy enough to get their own project tile.</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-golang_utils" aria-expanded="false" hidden>Read more</button>
+		</div>
 	</div>
-</section>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/lib/" class="project-tag secondary">lib</a></li>
+	
+</ul>
 
-<section class="project-year-group" aria-labelledby="project-year-2021">
-	<h2 id="project-year-2021" class="project-year">2021</h2>
-	<div class="project-grid">
-		
+		<div class="project-actions">
 			
-<article id="golang_utils">
-	<header><a href="/projects/id/golang_utils" class="secondary">Golang utils</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/golang_utils.webp" alt="Thumbnail of Golang utils" width="256">
+			<a href="/projects/id/golang_utils/" class="project-details-link">All 6 repositories <span aria-hidden="true">→</span></a>
 		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/dlutil" target="_blank">github.com/razzie/dlutil</a><br>
-				
-				<a href="https://github.com/razzie/razgio" target="_blank">github.com/razzie/razgio</a><br>
-				
-				<a href="https://github.com/razzie/jsontime" target="_blank">github.com/razzie/jsontime</a><br>
-				
-				<a href="https://github.com/razzie/jsonchan" target="_blank">github.com/razzie/jsonchan</a><br>
-				
-				<a href="https://github.com/razzie/fakewriteseeker" target="_blank">github.com/razzie/fakewriteseeker</a><br>
-				
-				<a href="https://github.com/razzie/sleepsort" target="_blank">github.com/razzie/sleepsort</a><br>
-				
-			</p>
-			
-			<p>Year: 2021 - 2024</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>This is my collection of Golang utilities and experiments that are not notable/worthy enough to get their own project tile.</p>
-</p>
 	</footer>
 </article>
 
-		
 			
-<article id="pizzabot">
-	<header><a href="/projects/id/pizzabot" class="secondary">Telegram PizzaBot</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/pizzabot.webp" alt="Thumbnail of Telegram PizzaBot" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Try it here:<br>
 				
-				<a href="https://t.me/razpizzabot" target="_blank">t.me/razpizzabot</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/pizzabot" target="_blank">github.com/razzie/pizzabot</a><br>
-				
-			</p>
-			
-			<p>Year: 2021</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/chat/" class="secondary">chat</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Do you love pizza so much that you keep talking about it in your Telegram group chat?
+<article id="pizzabot" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/pizzabot/" class="secondary">Telegram PizzaBot</a></h3>
+		<span class="project-date">2021</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/pizzabot/" class="project-image-link" aria-label="View Telegram PizzaBot details">
+			<img src="/projects/pizzabot.webp" alt="Thumbnail of Telegram PizzaBot" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-pizzabot" class="project-description"><p>Do you love pizza so much that you keep talking about it in your Telegram group chat?
 Now you can include this bot and with the right permissions it will respond with a pizza sticker or interesting pizza fact
 to any mentions of pizza.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-pizzabot" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/chat/" class="project-tag secondary">chat</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/lib/" class="project-tag secondary">lib</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://t.me/razpizzabot" target="_blank" rel="noopener noreferrer">Website <span aria-hidden="true">↗</span></a>
+			
+			<a href="https://github.com/razzie/pizzabot" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/pizzabot/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
-	</div>
-</section>
-
-<section class="project-year-group" aria-labelledby="project-year-2020">
-	<h2 id="project-year-2020" class="project-year">2020</h2>
-	<div class="project-grid">
-		
 			
-<article id="beepboop">
-	<header><a href="/projects/id/beepboop" class="secondary">Beepboop</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/beepboop.webp" alt="Thumbnail of Beepboop" width="256">
 		</div>
-		<div>
+	</section>
+	
+	<section class="project-year-group" aria-labelledby="project-year-2020">
+		<h2 id="project-year-2020" class="project-year">2020</h2>
+		<div class="project-grid">
 			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/beepboop" target="_blank">github.com/razzie/beepboop</a><br>
-				
-			</p>
-			
-			<p>Year: 2020 - 2022</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/lib/" class="secondary">lib</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A lightweight webapp framework that powers <a href="/projects/id/razbox">Razbox</a>.
+<article id="beepboop" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/beepboop/" class="secondary">Beepboop</a></h3>
+		<span class="project-date">2020–2022</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/beepboop/" class="project-image-link" aria-label="View Beepboop details">
+			<img src="/projects/beepboop.webp" alt="Thumbnail of Beepboop" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-beepboop" class="project-description"><p>A lightweight webapp framework that powers <a href="/projects/id/razbox">Razbox</a>.
 Most of the original code was taken from <a href="/projects/id/razlink">Razlink</a>, but it has heavily evolved since.
 The core mechanic consists of registering pages (which are mostly a template + handler bundle)
 and returning view objects from inside the handlers.
 There are some utilities for session handling, access management and logging too, but this library is
 not suitable for production use.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-beepboop" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/lib/" class="project-tag secondary">lib</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/beepboop" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/beepboop/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="geoip">
-	<header><a href="/projects/id/geoip" class="secondary">Geoip server</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/geoip.webp" alt="Thumbnail of Geoip server" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Try it here:<br>
 				
-				<a href="https://geoip.razzie.cloud" target="_blank">geoip.razzie.cloud</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/geoip-server" target="_blank">github.com/razzie/geoip-server</a><br>
-				
-			</p>
-			
-			<p>Year: 2020</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A web service that serves IP address geolocations in JSON format.
+<article id="geoip" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/geoip/" class="secondary">Geoip server</a></h3>
+		<span class="project-date">2020</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/geoip/" class="project-image-link" aria-label="View Geoip server details">
+			<img src="/projects/geoip.webp" alt="Thumbnail of Geoip server" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-geoip" class="project-description"><p>A web service that serves IP address geolocations in JSON format.
 Instead of relying on a local database it collects data from a (configurable) series of 3rd party providers,
 converting the results to a commom format. It supports provider fallbacks and caching.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-geoip" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://geoip.razzie.cloud" target="_blank" rel="noopener noreferrer">Website <span aria-hidden="true">↗</span></a>
+			
+			<a href="https://github.com/razzie/geoip-server" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/geoip/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="mediaserver">
-	<header><a href="/projects/id/mediaserver" class="secondary">Mediaserver</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/mediaserver.webp" alt="Thumbnail of Mediaserver" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/mediaserver" target="_blank">github.com/razzie/mediaserver</a><br>
-				
-			</p>
-			
-			<p>Year: 2020</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A web service that fetches thumbnails with title from URLs.
+<article id="mediaserver" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/mediaserver/" class="secondary">Mediaserver</a></h3>
+		<span class="project-date">2020</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/mediaserver/" class="project-image-link" aria-label="View Mediaserver details">
+			<img src="/projects/mediaserver.webp" alt="Thumbnail of Mediaserver" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-mediaserver" class="project-description"><p>A web service that fetches thumbnails with title from URLs.
 Originally planned to use it in a chat service to prevent the tracking of users by letting them download images directly.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-mediaserver" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/mediaserver" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/mediaserver/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="razbox">
-	<header><a href="/projects/id/razbox" class="secondary">Razbox</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razbox.webp" alt="Thumbnail of Razbox" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/razbox" target="_blank">github.com/razzie/razbox</a><br>
-				
-			</p>
-			
-			<p>Year: 2020 - 2021</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Super simple cloud file storage with almost zero configuration - powered by <a href="/projects/id/beepboop">Beepboop</a>
+<article id="razbox" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/razbox/" class="secondary">Razbox</a></h3>
+		<span class="project-date">2020–2021</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/razbox/" class="project-image-link" aria-label="View Razbox details">
+			<img src="/projects/razbox.webp" alt="Thumbnail of Razbox" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-razbox" class="project-description"><p>Super simple cloud file storage with almost zero configuration - powered by <a href="/projects/id/beepboop">Beepboop</a>
 Razbox stores all configuration and metadata in JSON files on the local filesystem and doesn&rsquo;t rely on a relational database
 (though it has opt-in support for Redis caching).
 Each folder can contain a <em>.razbox</em> file (which can be generated by included tools) and the content is ready to be served.
@@ -1045,367 +945,337 @@ Uploaded files can have an arbitrary number of tags that allow filtering.
 Thumbnails are generated for media files (using ffmpeg for videos!), which are visible in gallery view.
 Some archive formats are also supported for read-only browsing.
 Individual files can be shared publicly, this making them readable without any password.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-razbox" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/razbox" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/razbox/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="razproxy">
-	<header><a href="/projects/id/razproxy" class="secondary">Razproxy</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razproxy.webp" alt="Thumbnail of Razproxy" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/razproxy" target="_blank">github.com/razzie/razproxy</a><br>
-				
-			</p>
-			
-			<p>Year: 2020</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/proxy/" class="secondary">proxy</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>SOCKS5 tunneled through TLS connection.
+<article id="razproxy" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/razproxy/" class="secondary">Razproxy</a></h3>
+		<span class="project-date">2020</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/razproxy/" class="project-image-link" aria-label="View Razproxy details">
+			<img src="/projects/razproxy.webp" alt="Thumbnail of Razproxy" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-razproxy" class="project-description"><p>SOCKS5 tunneled through TLS connection.
 The project consists of a custom server and client, which enable encrypted traffic between them.
 The client opens a SOCKS5 port locally which can be used by multiple applications (like web browsers) running in parallel.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-razproxy" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/proxy/" class="project-tag secondary">proxy</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/razproxy" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/razproxy/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="razvhost">
-	<header><a href="/projects/id/razvhost" class="secondary">Razvhost</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razvhost.webp" alt="Thumbnail of Razvhost" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/razvhost" target="_blank">github.com/razzie/razvhost</a><br>
-				
-			</p>
-			
-			<p>Year: 2020 - 2022</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/proxy/" class="secondary">proxy</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Virtual hosting/reverse proxy with TLS termination and automatic certificate management.
+<article id="razvhost" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/razvhost/" class="secondary">Razvhost</a></h3>
+		<span class="project-date">2020–2022</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/razvhost/" class="project-image-link" aria-label="View Razvhost details">
+			<img src="/projects/razvhost.webp" alt="Thumbnail of Razvhost" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-razvhost" class="project-description"><p>Virtual hosting/reverse proxy with TLS termination and automatic certificate management.
 It supports proxying, file/directory serving, redirection, accessing SFTP or S3 buckets, hosting PHP projects or even tailing log files.
 The configuration is loaded from a single file that contains simple <code>hostname -&gt; target</code> rules,
 where even templates are supported (check readme in repo).
 Changes to the config files are detected and applied during runtime.
 It can even watch Docker containers with VIRTUAL_HOST and VIRTUAL_PORT environment variables and direct traffic to them
 (though it would&rsquo;ve been better to check labels instead, but it didn&rsquo;t cross my mind at the time).</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-razvhost" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/proxy/" class="project-tag secondary">proxy</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/razvhost" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/razvhost/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="s3proxy">
-	<header><a href="/projects/id/s3proxy" class="secondary">S3proxy</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/s3proxy.webp" alt="Thumbnail of S3proxy" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/s3proxy" target="_blank">github.com/razzie/s3proxy</a><br>
-				
-			</p>
-			
-			<p>Year: 2020</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A super simple S3 proxy server that obfuscates file content before transmitting the request to the target.
+<article id="s3proxy" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/s3proxy/" class="secondary">S3proxy</a></h3>
+		<span class="project-date">2020</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/s3proxy/" class="project-image-link" aria-label="View S3proxy details">
+			<img src="/projects/s3proxy.webp" alt="Thumbnail of S3proxy" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-s3proxy" class="project-description"><p>A super simple S3 proxy server that obfuscates file content before transmitting the request to the target.
 Obfuscation is done via a lookup table which is generated from a user provided key.
 Only signature v2 authentication is supported.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-s3proxy" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/s3proxy" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/s3proxy/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="uuid">
-	<header><a href="/projects/id/uuid" class="secondary">UUID server</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/uuid.webp" alt="Thumbnail of UUID server" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Try it here:<br>
 				
-				<a href="https://uuid.razzie.cloud" target="_blank">uuid.razzie.cloud</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/uuid-server" target="_blank">github.com/razzie/uuid-server</a><br>
-				
-				<a href="https://github.com/razzie/random" target="_blank">github.com/razzie/random</a><br>
-				
-			</p>
-			
-			<p>Year: 2020</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A http server that serves random (version4) UUIDs.
+<article id="uuid" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/uuid/" class="secondary">UUID server</a></h3>
+		<span class="project-date">2020</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/uuid/" class="project-image-link" aria-label="View UUID server details">
+			<img src="/projects/uuid.webp" alt="Thumbnail of UUID server" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-uuid" class="project-description"><p>A http server that serves random (version4) UUIDs.
 It uses my hybrid pseudo- and true random generator library which periodically takes seeds from <a href="https://random.org" target="_blank">random.org</a>
 and uses them to generate pseudo-random UUIDs fast.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-uuid" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://uuid.razzie.cloud" target="_blank" rel="noopener noreferrer">Website <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/uuid/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
-	</div>
-</section>
-
-<section class="project-year-group" aria-labelledby="project-year-2019">
-	<h2 id="project-year-2019" class="project-year">2019</h2>
-	<div class="project-grid">
-		
 			
-<article id="razlink">
-	<header><a href="/projects/id/razlink" class="secondary">Razlink</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/razlink.webp" alt="Thumbnail of Razlink" width="256">
 		</div>
-		<div>
+	</section>
+	
+	<section class="project-year-group" aria-labelledby="project-year-2019">
+		<h2 id="project-year-2019" class="project-year">2019</h2>
+		<div class="project-grid">
 			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/razlink" target="_blank">github.com/razzie/razlink</a><br>
-				
-			</p>
-			
-			<p>Year: 2019</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/proxy/" class="secondary">proxy</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>A lightweight link proxy/redirect service with logging.
+<article id="razlink" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/razlink/" class="secondary">Razlink</a></h3>
+		<span class="project-date">2019</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/razlink/" class="project-image-link" aria-label="View Razlink details">
+			<img src="/projects/razlink.webp" alt="Thumbnail of Razlink" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-razlink" class="project-description"><p>A lightweight link proxy/redirect service with logging.
 Can be used to create URLs that point to an external resource while tracking visits from users.
 Uses Redis for data storage.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-razlink" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/proxy/" class="project-tag secondary">proxy</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/razlink" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/razlink/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="raztracer">
-	<header><a href="/projects/id/raztracer" class="secondary">RazTracer</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/raztracer.webp" alt="Thumbnail of RazTracer" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/raztracer" target="_blank">github.com/razzie/raztracer</a><br>
-				
-			</p>
-			
-			<p>Year: 2019</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Command line debug information explorer and function call tracer for Linux, based on the Ptrace API.
+<article id="raztracer" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/raztracer/" class="secondary">RazTracer</a></h3>
+		<span class="project-date">2019</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/raztracer/" class="project-image-link" aria-label="View RazTracer details">
+			<img src="/projects/raztracer.webp" alt="Thumbnail of RazTracer" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-raztracer" class="project-description"><p>Command line debug information explorer and function call tracer for Linux, based on the Ptrace API.
 I was in the process of implementing a GUI for the project (borrowing elements from <a href="/projects/id/riddle_solver">Riddle Solver</a>),
 but lost interest in continuing the development.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-raztracer" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/raztracer" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/raztracer/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
 			
-<article id="riddle_solver">
-	<header><a href="/projects/id/riddle_solver" class="secondary">Riddle Solver</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/riddle_solver.webp" alt="Thumbnail of Riddle Solver" width="256">
-		</div>
-		<div>
-			
-			<p>
-				Riddles:<br>
 				
-				<a href="https://raw.githubusercontent.com/razzie/riddle-solver/master/screenshots/dishonored2_jindosh_riddle.jpg" target="_blank">The Jindosh Riddle</a><br>
-				
-			</p>
-			
-			<p>
-				Download:<br>
-				
-				<a href="https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-gui.exe" target="_blank">riddle-solver-gui.exe</a><br>
-				
-				<a href="https://github.com/razzie/riddle-solver/releases/download/v1.2/riddle-solver-tui.exe" target="_blank">riddle-solver-tui.exe</a><br>
-				
-			</p>
-			
-			<p>
-				Source code:<br>
-				
-				<a href="https://github.com/razzie/riddle-solver" target="_blank">github.com/razzie/riddle-solver</a><br>
-				
-			</p>
-			
-			<p>
-				Component library:<br>
-				
-				<a href="https://github.com/razzie/razgio" target="_blank">github.com/razzie/razgio</a><br>
-				
-			</p>
-			
-			<p>Year: 2019 - 2021</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/gui/" class="secondary">gui</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><p>Riddle Solver is a terminal app designed to solve Einstein&rsquo;s 5 house riddle (also called zebra puzzles in general).
+<article id="riddle_solver" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/riddle_solver/" class="secondary">Riddle Solver</a></h3>
+		<span class="project-date">2019–2021</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/riddle_solver/" class="project-image-link" aria-label="View Riddle Solver details">
+			<img src="/projects/riddle_solver.webp" alt="Thumbnail of Riddle Solver" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-riddle_solver" class="project-description"><p>Riddle Solver is a terminal app designed to solve Einstein&rsquo;s 5 house riddle (also called zebra puzzles in general).
 I think I came across this kind of riddle playing Dishonored 2 first, as a third option to get inside a locked place.
 It was written by a fictional genius game character named Kirin Jindosh and it&rsquo;s clearly based on Einstein&rsquo;s five house riddle.
 It took me (sadly) at least 30 minutes to solve on paper, but it earned me an achievement.
 Fast forward 3 years, I had the random idea of implementing this riddle solver, which seemed like a simple way to sharpen my Golang skills.
 I was wrong. Coming up with the UI design and the solver algorithm caused me some sleepness nights, but I&rsquo;m really proud of the result.</p>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-riddle_solver" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/gui/" class="project-tag secondary">gui</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie/riddle-solver" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/riddle_solver/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
-	</div>
-</section>
-
-<section class="project-year-group" aria-labelledby="project-year-2015">
-	<h2 id="project-year-2015" class="project-year">2015</h2>
-	<div class="project-grid project-grid-single">
-		
 			
-<article id="personal_website">
-	<header><a href="/projects/id/personal_website" class="secondary">Personal website</a></header>
-	<div class="grid">
-		<div>
-			<img src="/projects/personal_website.webp" alt="Thumbnail of Personal website" width="256">
 		</div>
-		<div>
+	</section>
+	
+	<section class="project-year-group" aria-labelledby="project-year-2015">
+		<h2 id="project-year-2015" class="project-year">2015</h2>
+		<div class="project-grid">
 			
-			<p>
-				Source code:<br>
 				
-				<a href="https://github.com/razzie/first_personal_website" target="_blank">github.com/razzie/first_personal_website</a><br>
-				
-				<a href="https://github.com/razzie/personal-website" target="_blank">github.com/razzie/personal-website</a><br>
-				
-			</p>
-			
-			<p>Year: 2015 - 2024</p>
-			<span>
-				Tags:
-				
-				<code><a href="/projects/tag/c%23/" class="secondary">c#</a></code>
-				
-				<code><a href="/projects/tag/cloud/" class="secondary">cloud</a></code>
-				
-				<code><a href="/projects/tag/golang/" class="secondary">golang</a></code>
-				
-				<code><a href="/projects/tag/php/" class="secondary">php</a></code>
-				
-			</span>
-		</div>
-	</div>
-	<footer>
-		<p><ul>
+<article id="personal_website" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/personal_website/" class="secondary">Personal website</a></h3>
+		<span class="project-date">2015–2024</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/personal_website/" class="project-image-link" aria-label="View Personal website details">
+			<img src="/projects/personal_website.webp" alt="Thumbnail of Personal website" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-personal_website" class="project-description"><ul>
 <li>
-<h6>2015 version</h6>
+<h6>2024 version</h6>
 
-<p>The site made use of user friendly URLs (thanks to Apache web server&rsquo;s mod_rewrite) and loaded pages dynamically via jQuery&rsquo;s AJAX API.
-A server side PHP script automatically parsed the static HTML pages for sections, which could then be accessed individually by the user.
-It wasn&rsquo;t very CPU friendly, but made it easy for me to add new content to the page without using a database.
-Later my Twitter feed was integrated as a news feed, using OAuth and Twitter&rsquo;s API.</p></li>
-
-<li>
-<h6>2018 version</h6>
-
-<p>Implemented in C# using NancyFX and a brand new design.
-It used Github API to list my latest open-source interests and contributions.
-Project data was stored in XML.</p></li>
+<p>Completely rewritten everything again using Go + PicoCSS + HTMX stack, featuring static site building with Github Actions.
+It supports light and dark themes (based on user preferences reported by the browser) and uses HTMX boosted page loads and loading spinner.
+Content is stored in a main content.yaml and individual project yaml files, everything else is in HTML templates.</p></li>
 
 <li>
 <h6>2019 version</h6>
@@ -1415,21 +1285,62 @@ Data was still stored in XML files initially, but later all the content (includi
 a single yaml file, which was periodically updated directly from the repository.</p></li>
 
 <li>
-<h6>2024 version</h6>
+<h6>2018 version</h6>
 
-<p>Completely rewritten everythign again using Go + PicoCSS + HTMX stack, featuring static site building with Github Actions.
-It supports light and dark themes (based on user preferences reported by the browser) and uses HTMX boosted page loads and loading spinner.
-Content is stored in a main content.yaml and individual project yaml files, everything else is in HTML templates.</p></li>
+<p>Implemented in C# using NancyFX and a brand new design.
+It used Github API to list my latest open-source interests and contributions.
+Project data was stored in XML.</p></li>
+
+<li>
+<h6>2015 version</h6>
+
+<p>The site made use of user friendly URLs (thanks to Apache web server&rsquo;s mod_rewrite) and loaded pages dynamically via jQuery&rsquo;s AJAX API.
+A server side PHP script automatically parsed the static HTML pages for sections, which could then be accessed individually by the user.
+It wasn&rsquo;t very CPU friendly, but made it easy for me to add new content to the page without using a database.
+Later my Twitter feed was integrated as a news feed, using OAuth and Twitter&rsquo;s API.</p></li>
 </ul>
-</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-personal_website" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/c%23/" class="project-tag secondary">c#</a></li>
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+	<li><a href="/projects/tag/php/" class="project-tag secondary">php</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="/projects/id/personal_website/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
 	</footer>
 </article>
 
-		
-	</div>
-</section>
-
+			
+		</div>
+	</section>
+	
+</div>
+<button type="button" id="projects-back-to-top" class="secondary project-back-to-top" aria-label="Back to project tags and years" hidden>
+	<span aria-hidden="true">↑</span> Top
+</button>
 
 	</main>
+	<p id="project-request-status" class="project-request-status" role="status" hidden></p>
+	<dialog id="project-dialog" aria-labelledby="project-detail-title">
+		<article class="project-dialog-shell">
+			<a href="/projects/" role="button" class="project-dialog-close secondary" data-project-close hx-replace-url="true" aria-label="Close project details">×</a>
+			<div id="project-dialog-content"></div>
+			<p id="project-dialog-status" role="status" hidden></p>
+		</article>
+	</dialog>
 </body>
 </html>

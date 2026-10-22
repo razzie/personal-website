@@ -1,0 +1,602 @@
+.projects-page {
+	--project-years-height: 8.25rem;
+	max-width: 1100px;
+	margin-inline: auto;
+}
+
+.project-tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.35rem;
+	margin-bottom: 0.75rem;
+}
+
+.project-tag {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.15rem 0.5rem;
+	font-size: 0.7rem;
+	line-height: 1.5;
+	text-decoration: none;
+	white-space: nowrap;
+	color: var(--pico-secondary-hover);
+	background-color: var(--pico-code-background-color);
+	background-color: color-mix(in srgb, var(--pico-code-background-color) 85%, var(--pico-code-color));
+	border-radius: calc(var(--pico-border-radius) * 1.5);
+	outline-offset: 2px;
+}
+
+.project-tag:is(:hover, :focus-visible, [aria-current]) {
+	color: var(--pico-primary);
+	background-color: var(--pico-primary-focus);
+}
+
+.project-years-navigation {
+	position: sticky;
+	top: 0;
+	z-index: 3;
+	margin-bottom: 1rem;
+	background: linear-gradient(to bottom, var(--pico-background-color) calc(100% - 0.75rem), transparent);
+}
+
+.project-years-navigation[data-overflow] {
+	padding-inline: 2.75rem;
+}
+
+.project-years-navigation::before,
+.project-years-navigation::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+	width: 2rem;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.project-years-navigation::before {
+	left: 2.75rem;
+	background: linear-gradient(to right, var(--pico-background-color), transparent);
+}
+
+.project-years-navigation::after {
+	right: 2.75rem;
+	background: linear-gradient(to left, var(--pico-background-color), transparent);
+}
+
+.project-years-navigation[data-can-scroll-back]::before,
+.project-years-navigation[data-can-scroll-forward]::after {
+	opacity: 1;
+}
+
+.project-years-navigation > .project-years-arrow {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	min-width: 36px;
+	height: 2.25rem;
+	margin: 0;
+	padding: 0;
+	transform: translateY(-50%);
+	font-size: 1.5rem;
+	line-height: 1;
+	color: var(--pico-h2-color);
+	background: var(--pico-card-sectioning-background-color);
+	border: 1px solid var(--pico-muted-border-color);
+	border-radius: 50%;
+}
+
+.project-years-arrow[data-year-scroll="1"] {
+	left: auto;
+	right: 0;
+}
+
+.project-years-navigation > .project-years-arrow[hidden] {
+	display: none;
+}
+
+.project-years-arrow:disabled {
+	opacity: 0.3;
+}
+
+.project-years-scroll {
+	overflow-x: auto;
+	overscroll-behavior-inline: contain;
+	padding: 0.25rem 0.75rem 0.5rem;
+	scrollbar-width: none;
+}
+
+.project-years-scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.project-years {
+	/* Capture the page colors before Pico overrides them on links. */
+	--project-timeline-color: var(--pico-color);
+	--project-timeline-background: var(--pico-background-color);
+	display: flex;
+	position: relative;
+	width: 100%;
+	min-width: calc(var(--project-year-count) * 2.4rem);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.project-years::before {
+	content: '';
+	position: absolute;
+	inset: calc(50% - 2px) calc(50% / var(--project-year-count)) auto;
+	height: 4px;
+	background: var(--pico-color);
+	border-radius: var(--pico-border-radius);
+}
+
+.project-years li {
+	position: relative;
+	flex: 1 0 0;
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.project-years a {
+	display: flex;
+	position: relative;
+	align-items: flex-start;
+	justify-content: center;
+	min-height: 7.5rem;
+	padding: 0.35rem 0.15rem;
+	color: var(--pico-muted-color);
+	text-decoration: none;
+	border-radius: var(--pico-border-radius);
+}
+
+.project-years a::after {
+	content: '';
+	position: absolute;
+	top: calc(50% - 0.4rem);
+	width: 0.8rem;
+	height: 0.8rem;
+	background: var(--project-timeline-background);
+	border: 3px solid var(--project-timeline-color);
+	border-radius: 50%;
+}
+
+.project-years a span {
+	position: relative;
+	padding: 0.35rem 0.45rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	white-space: nowrap;
+	background: var(--pico-card-sectioning-background-color);
+	border-radius: var(--pico-border-radius);
+	box-shadow: var(--pico-card-box-shadow);
+}
+
+.project-years a span::after {
+	content: '';
+	position: absolute;
+	left: calc(50% - 0.4rem);
+	bottom: -0.4rem;
+	border-inline: 0.4rem solid transparent;
+	border-top: 0.4rem solid var(--pico-card-sectioning-background-color);
+}
+
+.project-years li:nth-child(even) a {
+	align-items: flex-end;
+}
+
+.project-years li:nth-child(even) span::after {
+	top: -0.4rem;
+	bottom: auto;
+	border-top: 0;
+	border-bottom: 0.4rem solid var(--pico-card-sectioning-background-color);
+}
+
+.project-years a:hover,
+.project-years a[aria-current] {
+	color: var(--pico-primary);
+}
+
+.project-years a[aria-current]::after {
+	background: var(--pico-primary);
+}
+
+.project-years a:focus-visible {
+	outline: 2px solid var(--pico-primary);
+	outline-offset: -2px;
+}
+
+.project-year {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	font-size: 1.2rem;
+	color: var(--pico-h2-color);
+	scroll-margin-top: calc(var(--project-years-height) + 1rem);
+}
+
+.project-year::before,
+.project-year::after {
+	content: '';
+	flex: 0 1 3rem;
+	border-top: var(--pico-border-width) solid var(--pico-form-element-border-color);
+}
+
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.project-grid > .project-card:last-child:nth-child(odd) {
+	grid-column: 1 / -1;
+	justify-self: center;
+	width: 60%;
+}
+
+.project-card {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	margin: 0;
+	padding: 1rem;
+	scroll-margin-top: calc(var(--project-years-height) + 1rem);
+}
+
+.project-card > .project-heading {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) max-content;
+	align-items: start;
+	margin: 0 0 1.2rem;
+	padding: 0;
+	background: transparent;
+	border: 0;
+}
+
+.project-card > .project-heading h3 {
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+.project-card > .project-heading .project-date {
+	justify-self: end;
+	text-align: right;
+}
+
+.project-heading {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.25rem 0.75rem;
+}
+
+.project-heading h2,
+.project-heading h3 {
+	margin: 0;
+}
+
+.project-heading h3 {
+	font-size: 1.25rem;
+}
+
+.project-heading h3 a {
+	text-decoration: none;
+}
+
+.project-heading h3 a:hover {
+	text-decoration: underline;
+}
+
+.project-date {
+	font-size: 0.8rem;
+	color: var(--pico-muted-color);
+	white-space: nowrap;
+}
+
+.project-body {
+	display: grid;
+	grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+	align-items: start;
+	gap: 1.5rem;
+}
+
+.project-card > .project-body {
+	flex: 1;
+	gap: 1rem;
+}
+
+.project-card .project-image-link {
+	padding: 0.5rem;
+}
+
+.project-image-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 0;
+	padding: 1rem;
+	background: var(--pico-card-sectioning-background-color);
+	border-radius: var(--pico-border-radius);
+}
+
+.project-image-link img {
+	display: block;
+	width: 100%;
+	max-width: 256px;
+	height: auto;
+	aspect-ratio: 1;
+	object-fit: contain;
+	border-radius: var(--pico-border-radius);
+}
+
+.project-description {
+	min-width: 0;
+	overflow-wrap: anywhere;
+	font-size: 0.9rem;
+}
+
+.project-description > :last-child {
+	margin-bottom: 0;
+}
+
+.project-description-preview {
+	min-width: 0;
+}
+
+.project-description-preview[data-description-ready]:not([data-description-expanded]) > .project-description {
+	max-height: 10.8rem;
+	overflow: hidden;
+}
+
+.project-description-preview[data-description-truncated]:not([data-description-expanded]) > .project-description {
+	mask-image: linear-gradient(to bottom, black calc(100% - 1.5rem), transparent);
+}
+
+.project-description-preview > .project-description-toggle {
+	display: inline-flex;
+	width: auto;
+	margin: 0.25rem 0 0;
+	padding: 0.35rem 0;
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-align: left;
+	text-decoration: underline;
+	color: var(--pico-primary);
+	background: transparent;
+	border: 0;
+}
+
+.project-description-toggle[hidden] {
+	display: none;
+}
+
+.project-card > .project-footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem 1.5rem;
+	margin: 1rem -1rem -1rem;
+	padding: 0.8rem 1rem;
+	font-size: 0.8rem;
+}
+
+.project-card-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	margin: 0;
+	padding: 0;
+	font-size: 0.8rem;
+}
+
+.project-card-tags li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.project-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1rem;
+}
+
+.project-details-link {
+	font-weight: 600;
+}
+
+.project-back-to-top {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	z-index: 10;
+	margin: 0;
+	padding: 0.5rem 0.75rem;
+	box-shadow: var(--pico-card-box-shadow);
+}
+
+.project-back-to-top[hidden] {
+	display: none;
+}
+
+html:has(#project-dialog[open]) {
+	overflow: hidden;
+}
+
+html {
+	scrollbar-gutter: stable;
+}
+
+#project-dialog {
+	padding: 1rem;
+}
+
+#project-dialog::backdrop {
+	background: rgb(0 0 0 / 55%);
+	backdrop-filter: blur(3px);
+}
+
+#project-dialog > .project-dialog-shell {
+	position: relative;
+	width: min(960px, 100%);
+	max-width: 960px;
+	max-height: calc(100dvh - 2rem);
+	margin: 0;
+	padding: 1.5rem;
+	overscroll-behavior: contain;
+}
+
+#project-dialog .project-dialog-close[role=button] {
+	position: sticky;
+	top: 0;
+	float: right;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	margin: 0 0 0.5rem 0.5rem;
+	padding: 0;
+	font-size: 1.5rem;
+	line-height: 1;
+	color: var(--pico-h2-color);
+	background: var(--pico-card-background-color);
+	border-color: var(--pico-muted-border-color);
+}
+
+.project-detail-heading {
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 1.5rem;
+	padding-right: 0.5rem;
+}
+
+.project-detail-heading h2 {
+	font-size: 1.5rem;
+}
+
+.project-detail-footer {
+	margin-top: 1.5rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--pico-muted-border-color);
+}
+
+.project-link-groups {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+	gap: 1rem 1.5rem;
+	margin-top: 1.25rem;
+}
+
+.project-link-groups section,
+.project-link-groups ul {
+	margin: 0;
+}
+
+.project-link-groups h3 {
+	margin-bottom: 0.5rem;
+	font-size: 0.9rem;
+}
+
+.project-link-groups ul {
+	padding: 0;
+	font-size: 0.8rem;
+	overflow-wrap: anywhere;
+}
+
+.project-link-groups li {
+	list-style: none;
+	margin-bottom: 0.5rem;
+}
+
+#project-initial-detail {
+	margin-bottom: 2rem;
+	padding: 1.5rem;
+	background: var(--pico-card-background-color);
+	border-radius: var(--pico-border-radius);
+}
+
+.project-request-status {
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	z-index: 11;
+	max-width: min(30rem, calc(100% - 2rem));
+	margin: 0;
+	padding: 0.75rem 1rem;
+	font-size: 0.85rem;
+	background: var(--pico-card-background-color);
+	box-shadow: var(--pico-card-box-shadow);
+	border-radius: var(--pico-border-radius);
+}
+
+@media (max-width: 768px) {
+	.project-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.project-grid > .project-card:last-child:nth-child(odd) {
+		width: 100%;
+	}
+
+	.project-body {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.project-image-link {
+		padding: 0.75rem;
+	}
+
+	.project-image-link img {
+		max-width: 224px;
+	}
+
+	.project-card {
+		padding: 1rem;
+	}
+
+	.project-card > .project-footer {
+		margin-inline: -1rem;
+		margin-bottom: -1rem;
+		padding-inline: 1rem;
+	}
+
+	.project-actions a,
+	.project-card-tags a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 2rem;
+	}
+
+	#project-dialog {
+		padding: 0.5rem;
+	}
+
+	#project-dialog > .project-dialog-shell {
+		max-height: calc(100dvh - 1rem);
+		padding: 1rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#project-dialog,
+	#project-dialog * {
+		animation: none !important;
+	}
+}

@@ -7,6 +7,7 @@
 	<meta name="description" content="Gábor Görzsöny's personal website">
     <title>Gábor Görzsöny - Skills</title>
 	<link rel="stylesheet" href="/pico.min.css">
+	<link rel="stylesheet" href="/projects.css">
 	<link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64x64.webp">
 	<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
 	<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
@@ -53,7 +54,7 @@
 			margin-bottom: var(--pico-typography-spacing-vertical);
 		}
 		nav ul li {
-			font-size: 1.5rem;
+			font-size: clamp(1rem, 4.8vw, 1.5rem);
 		}
 		a[aria-current="page"] {
 			font-weight: bold;
@@ -165,5 +166,13 @@ and using <strong>reusable AI skills</strong> and tools such as <strong>rtk</str
 </div>
 
 	</main>
+	<p id="project-request-status" class="project-request-status" role="status" hidden></p>
+	<dialog id="project-dialog" aria-labelledby="project-detail-title">
+		<article class="project-dialog-shell">
+			<a href="/projects/" role="button" class="project-dialog-close secondary" data-project-close hx-replace-url="true" aria-label="Close project details">×</a>
+			<div id="project-dialog-content"></div>
+			<p id="project-dialog-status" role="status" hidden></p>
+		</article>
+	</dialog>
 </body>
 </html>
