@@ -536,6 +536,62 @@ It took me a few weeks of sporadic work and some complete rewrites, and now I co
 </article>
 
 			
+				
+<article id="razzie-cloud" class="project-card">
+	<header class="project-heading">
+		<h3><a href="/projects/id/razzie-cloud/" class="secondary">Razzie Cloud</a></h3>
+		<span class="project-date">2025–2026</span>
+	</header>
+	<div class="project-body">
+		<a href="/projects/id/razzie-cloud/" class="project-image-link" aria-label="View Razzie Cloud details">
+			<img src="/projects/razzie-cloud.webp" alt="Thumbnail of Razzie Cloud" width="256" height="256" loading="lazy">
+		</a>
+		<div class="project-description-preview">
+			<div id="project-description-razzie-cloud" class="project-description"><p>A self-hosted platform for my own apps, with shared database provisioning and passkey authentication.
+Docker Swarm runs the services and Caddy handles HTTPS and routing.</p>
+
+<p>It started in 2020 with a few apps hosted behind <a href="/projects/id/razvhost">Razvhost</a>:
+<a href="/projects/id/uuid">UUID server</a>, <a href="/projects/id/geoip">Geoip server</a>, <a href="/projects/id/mediaserver">Mediaserver</a>,
+<a href="/projects/id/razbox">Razbox</a> and <a href="/projects/id/razproxy">Razproxy</a>.
+Later I started learning Kubernetes and moved my apps to <a href="/projects/id/raz-stack">Raz-Stack</a>,
+deployed via Helmfile and Helm, along with Nextcloud.
+I also wrote <a href="/projects/id/k8s-db-operator">k8s-db-operator</a> to provide databases and Redis namespaces to the services,
+which became the predecessor to database-broker.</p>
+
+<p>Eventually I wanted a simpler setup and simpler user management, so I created razzie-cloud.
+The two main services are database-broker and access-gateway:
+the broker provisions separate PostgreSQL databases and Dragonfly/Redis namespaces for each app,
+while the gateway handles passkey sign-in, device enrollment and user access.
+Apps request their database connection strings at startup and receive the signed-in user&rsquo;s identity through Caddy,
+so they don&rsquo;t have to implement their own account management.</p>
+
+<p>Files uses both services: an S3 file manager with optional rclone encryption
+and public read-only share links.
+The infrastructure repo contains the Swarm stack, deployment tools and NixOS host configuration.</p>
+</div>
+			<button type="button" class="project-description-toggle" aria-controls="project-description-razzie-cloud" aria-expanded="false" hidden>Read more</button>
+		</div>
+	</div>
+	<footer class="project-footer">
+		
+<ul class="project-card-tags" aria-label="Project tags">
+	
+	<li><a href="/projects/tag/cloud/" class="project-tag secondary">cloud</a></li>
+	
+	<li><a href="/projects/tag/golang/" class="project-tag secondary">golang</a></li>
+	
+</ul>
+
+		<div class="project-actions">
+			
+			<a href="https://github.com/razzie-cloud" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+			
+			<a href="/projects/id/razzie-cloud/" class="project-details-link">Details <span aria-hidden="true">→</span></a>
+		</div>
+	</footer>
+</article>
+
+			
 		</div>
 	</section>
 	
