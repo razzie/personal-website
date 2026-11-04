@@ -1,0 +1,41 @@
+name: Razzie Cloud
+year: 2025 - 2026
+tags:
+- golang
+- cloud
+description: |-
+  A self-hosted platform for my own apps, with shared database provisioning and passkey authentication.
+  Docker Swarm runs the services and Caddy handles HTTPS and routing.
+
+  It started in 2020 with a few apps hosted behind [Razvhost](/projects/id/razvhost):
+  [UUID server](/projects/id/uuid), [Geoip server](/projects/id/geoip), [Mediaserver](/projects/id/mediaserver),
+  [Razbox](/projects/id/razbox) and [Razproxy](/projects/id/razproxy).
+  Later I started learning Kubernetes and moved my apps to [Raz-Stack](/projects/id/raz-stack),
+  deployed via Helmfile and Helm, along with Nextcloud.
+  I also wrote [k8s-db-operator](/projects/id/k8s-db-operator) to provide databases and Redis namespaces to the services,
+  which became the predecessor to database-broker.
+
+  Eventually I wanted a simpler setup and simpler user management, so I created razzie-cloud.
+  The two main services are database-broker and access-gateway:
+  the broker provisions separate PostgreSQL databases and Dragonfly/Redis namespaces for each app,
+  while the gateway handles passkey sign-in, device enrollment and user access.
+  Apps request their database connection strings at startup and receive the signed-in user's identity through Caddy,
+  so they don't have to implement their own account management.
+
+  Files uses both services: an S3 file manager with optional rclone encryption
+  and public read-only share links.
+  The infrastructure repo contains the Swarm stack, deployment tools and NixOS host configuration.
+linkGroups:
+- name: Source code
+  links:
+  - name: github.com/razzie-cloud
+    url: https://github.com/razzie-cloud
+    cardLabel: Source
+  - name: github.com/razzie-cloud/database-broker
+    url: https://github.com/razzie-cloud/database-broker
+  - name: github.com/razzie-cloud/access-gateway
+    url: https://github.com/razzie-cloud/access-gateway
+  - name: github.com/razzie-cloud/files
+    url: https://github.com/razzie-cloud/files
+  - name: github.com/razzie-cloud/infra
+    url: https://github.com/razzie-cloud/infra

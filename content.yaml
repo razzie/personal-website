@@ -24,10 +24,10 @@ hello:
     name: RazChess
     category: Go + JavaScript · Games
     summary: Online chess with friends. Share a link and start playing, no signup needed.
-  - id: razvhost
-    name: Razvhost
+  - id: razzie-cloud
+    name: Razzie Cloud
     category: Go · Self-hosting
-    summary: A reverse proxy with automatic TLS and simple hosting rules.
+    summary: A self-hosted platform for my apps, with shared databases and passkey sign-in.
   collaborationTitle: Have an idea for a small, fun project?
   collaboration: |
     I'd love to hear about a developer tool, game prototype or experiment we could build together over a few weeks.
