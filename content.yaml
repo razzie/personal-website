@@ -53,8 +53,10 @@ skills: |
     - Managing deployments with **Helm**, **Helmfile** and **Kustomize**
 
   - ## AI-assisted development
-    Daily use of **GitHub Copilot** and **OpenAI Codex**, connecting **MCP servers** for additional context
-    and using **reusable AI skills** and tools such as **rtk** and **superpowers**.
+    - **Context engineering**: shaping repository instructions, task context and access to relevant tools through **MCP servers**
+    - **Agent orchestration**: breaking work into focused tasks, coordinating agents and validating their results
+    - **Skill writing**: turning recurring development workflows into **reusable AI skills** with clear instructions and checks
+    - Daily use of **Anthropic Claude**, **GitHub Copilot** and **OpenAI Codex**
 
   - ## APIs & data
     - **REST**, **OpenAPI**, **gRPC**, **Protobuf** and **GraphQL**
