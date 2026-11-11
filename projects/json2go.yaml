@@ -14,11 +14,6 @@ description: |-
   and correctly annotated with the original name.
   The resulting generated structure is formatted and uses syntax highlighting.
 linkGroups:
-- name: Try it here
-  links:
-  - name: json2go.razzie.cloud
-    url: https://json2go.razzie.cloud
-    cardLabel: Website
 - name: Source code
   links:
   - name: github.com/razzie/json2go

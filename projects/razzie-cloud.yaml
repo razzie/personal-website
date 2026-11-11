@@ -26,6 +26,11 @@ description: |-
   and public read-only share links.
   The infrastructure repo contains the Swarm stack, deployment tools and NixOS host configuration.
 linkGroups:
+- name: Website
+  links:
+  - name: razzie.cloud
+    url: https://razzie.cloud
+    cardLabel: Website
 - name: Source code
   links:
   - name: github.com/razzie-cloud
