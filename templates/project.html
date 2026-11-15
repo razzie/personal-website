@@ -17,7 +17,7 @@
 		{{ template "project-tags" . }}
 		<div class="project-actions">
 			{{ range .CardLinks }}
-			<a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">{{ .Name }} <span aria-hidden="true">↗</span></a>
+			<a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">{{ .Name }} <span aria-hidden="true">&#8599;&#65038;</span></a>
 			{{ end }}
 			<a href="/projects/id/{{ .ID }}/" class="project-details-link">{{ .DetailsLabel }} <span aria-hidden="true">→</span></a>
 		</div>
@@ -53,7 +53,7 @@
 				<h3>{{ .Name }}</h3>
 				<ul>
 					{{ range .Links }}
-					<li><a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">{{ .Name }} <span aria-hidden="true">↗</span></a></li>
+					<li><a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">{{ .Name }} <span aria-hidden="true">&#8599;&#65038;</span></a></li>
 					{{ end }}
 				</ul>
 			</section>
