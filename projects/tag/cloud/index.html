@@ -248,13 +248,15 @@ which became the predecessor to database-broker.</p>
 
 <p>Eventually I wanted a simpler setup and simpler user management, so I created razzie-cloud.
 The two main services are database-broker and access-gateway:
-the broker provisions separate PostgreSQL databases and Dragonfly/Redis namespaces for each app,
+the broker provisions separate PostgreSQL databases and Valkey users with ACLs restricting each app to its own database,
 while the gateway handles passkey sign-in, device enrollment and user access.
 Apps request their database connection strings at startup and receive the signed-in user&rsquo;s identity through Caddy,
 so they don&rsquo;t have to implement their own account management.</p>
 
-<p>Files uses both services: an S3 file manager with optional rclone encryption
-and public read-only share links.
+<p>The apps share this infrastructure: Files is an S3 file manager with optional rclone encryption
+and public read-only share links; Notes stores Markdown notes and attachments in S3, also with optional encryption.
+Chess offers matches against guests or Stockfish and mate-in-two puzzles,
+while Sudoku has random games and numbered puzzle collections with saved progress.
 The infrastructure repo contains the Swarm stack, deployment tools and NixOS host configuration.</p>
 </div>
 			<button type="button" class="project-description-toggle" aria-controls="project-description-razzie-cloud" aria-expanded="false" hidden>Read more</button>
@@ -498,7 +500,7 @@ custom games and the ability to download your matches as GIFs. There is also Red
 
 		<div class="project-actions">
 			
-			<a href="https://chess.razzie.cloud" target="_blank" rel="noopener noreferrer">Play <span aria-hidden="true">&#8599;&#65038;</span></a>
+			<a href="https://razchess.razzie.cloud" target="_blank" rel="noopener noreferrer">Play <span aria-hidden="true">&#8599;&#65038;</span></a>
 			
 			<a href="https://github.com/razzie/razchess" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">&#8599;&#65038;</span></a>
 			
