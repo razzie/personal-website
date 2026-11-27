@@ -17,13 +17,15 @@ description: |-
 
   Eventually I wanted a simpler setup and simpler user management, so I created razzie-cloud.
   The two main services are database-broker and access-gateway:
-  the broker provisions separate PostgreSQL databases and Dragonfly/Redis namespaces for each app,
+  the broker provisions separate PostgreSQL databases and Valkey users with ACLs restricting each app to its own database,
   while the gateway handles passkey sign-in, device enrollment and user access.
   Apps request their database connection strings at startup and receive the signed-in user's identity through Caddy,
   so they don't have to implement their own account management.
 
-  Files uses both services: an S3 file manager with optional rclone encryption
-  and public read-only share links.
+  The apps share this infrastructure: Files is an S3 file manager with optional rclone encryption
+  and public read-only share links; Notes stores Markdown notes and attachments in S3, also with optional encryption.
+  Chess offers matches against guests or Stockfish and mate-in-two puzzles,
+  while Sudoku has random games and numbered puzzle collections with saved progress.
   The infrastructure repo contains the Swarm stack, deployment tools and NixOS host configuration.
 linkGroups:
 - name: Website
@@ -42,5 +44,11 @@ linkGroups:
     url: https://github.com/razzie-cloud/access-gateway
   - name: github.com/razzie-cloud/files
     url: https://github.com/razzie-cloud/files
+  - name: github.com/razzie-cloud/notes
+    url: https://github.com/razzie-cloud/notes
+  - name: github.com/razzie-cloud/chess
+    url: https://github.com/razzie-cloud/chess
+  - name: github.com/razzie-cloud/sudoku
+    url: https://github.com/razzie-cloud/sudoku
   - name: github.com/razzie-cloud/infra
     url: https://github.com/razzie-cloud/infra
